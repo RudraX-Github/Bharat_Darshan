@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chhattisgarh - Full of Surprises & Ancient Wonders</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-heritage {
+      font-family: 'Cinzel', serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-amber-200 selection:text-amber-900">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-emerald-950 via-teal-900 to-slate-950 text-emerald-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-emerald-800/50 flex items-center justify-center gap-2 shadow-sm">
+    <span>🌿 Jai Johar! Welcome to Chhattisgarh — The Heart of India's Tribal Heritage, Mighty Waterfalls & Ancient Temples</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 via-orange-700 to-emerald-900 flex items-center justify-center text-white shadow-lg shadow-orange-700/20 text-2xl font-bold border border-amber-300">
+          🏛️
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Chhattisgarh Explorer</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">Your Welcoming Guide to Bastar, Chitrakote, Sirpur, Mainpat, Raipur & Barnawapara</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Controls -->
+      <div class="flex items-center gap-2 sm:gap-2.5 overflow-x-auto pb-1 md:pb-0">
+        <!-- Chime Bell Button -->
+        <button id="audio-bell-btn" class="bg-amber-100/70 hover:bg-amber-200/80 text-amber-900 px-3 py-1.5 rounded-xl border border-amber-300 text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs flex-shrink-0" title="Play peaceful temple bell chime">
+          <span>🔔</span>
+          <span class="hidden sm:inline">Temple Chime</span>
+        </button>
+
+        <!-- Navigation Shortcut Links -->
+        <a href="#itinerary-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🗓️ Itineraries</span>
+        </a>
+
+        <a href="#cuisine-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🍲 Cuisine</span>
+        </a>
+
+        <a href="#festivals-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🎉 Festivals</span>
+        </a>
+
+        <a href="#checklist-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🎒 Packing</span>
+        </a>
+
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-900 px-3.5 py-1.5 rounded-xl border border-amber-300 text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs flex-shrink-0">
+          <span class="text-amber-600">★</span>
+          <span>Saved (<span id="saved-count">0</span>)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Welcoming Section -->
+  <section class="bg-gradient-to-b from-slate-950 via-emerald-950 to-stone-900 text-white py-12 px-4 sm:px-6 lg:px-8 shadow-inner relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-900/60 border border-amber-500/30 px-3.5 py-1 rounded-full mb-3">
+        ✨ Jai Johar • The Heart of Incredible India
+      </span>
+      <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight leading-tight max-w-4xl mx-auto text-amber-50">
+        Welcome to Chhattisgarh
+      </h2>
+      <p class="mt-2 text-base sm:text-xl font-medium text-amber-300 font-heritage tracking-wide">
+        Where the Roar of Chitrakote, 7th-Century Brick Temples & Dense Sal Forests Greet You
+      </p>
+      <p class="mt-3 text-xs sm:text-base text-emerald-100/90 max-w-3xl mx-auto leading-relaxed">
+        Experience the warmth of Central Indian tribal hospitality — every destination now equipped with direct Google Maps navigation, authentic tribal gastronomy, living festival calendars, forest transit matrices, and eco-safari packing checklists.
+      </p>
+
+      <!-- Search and Filter Card -->
+      <div class="mt-8 max-w-4xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-2xl border border-white/20 text-slate-900">
+        <!-- Live Search Input -->
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search any destination, waterfall, temple, or dynasty (e.g. 'Chitrakote', 'Tirathgarh', 'Kutumsar', 'Sirpur', 'Mainpat', 'Barnawapara')..."
+            class="w-full pl-10 pr-24 py-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-sm sm:text-base border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all placeholder-slate-400"
+          >
+          <button id="clear-search-btn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-600 hidden">
+            Clear ✕
+          </button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2.5">
+          <div class="flex flex-wrap items-center gap-1.5" id="category-filters">
+            <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-amber-600 text-white shadow-sm transition-all">All 5 Circuits</button>
+            <button data-cat="Waterfalls, Canyons & Rainforests" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Bastar & Niagara</button>
+            <button data-cat="Ancient Monuments & Brick Temples" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Sirpur Heritage</button>
+            <button data-cat="Hill Stations & Tibetan Culture" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Mainpat Hills</button>
+            <button data-cat="Capital Heritage & Sacred Shrines" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Raipur & Champaran</button>
+            <button data-cat="Wildlife & Teak Forests" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Barnawapara Wildlife</button>
+          </div>
+          <button id="reset-all-btn" class="text-xs text-amber-700 hover:text-amber-900 font-bold underline px-2 py-1">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Features Section (Multi-Tool Row) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20 space-y-6">
+
+    <!-- 1. Itinerary Planner Feature -->
+    <div id="itinerary-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-lg">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">Interactive Feature</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Travel Itinerary & Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended day-by-day routes and transit windows:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-600 text-white shadow-xs transition-all">3 Days (Bastar & Niagara Express)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Waterfalls & Ancient Sirpur)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Grand Chhattisgarh Expedition)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- 2. Dual Feature Row: Taste of Chhattisgarh & Sacred Festivals Calendar -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Feature A: Taste of Chhattisgarh - Traditional Gastronomy & Tribal Food Guide -->
+      <div id="cuisine-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">Gastronomy & Culture</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Chhattisgarh: Indigenous Flavours</h4>
+            </div>
+            <span class="text-2xl">🍲</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Explore traditional rice-based delicacies, forest-foraged ingredients, and tribal superfoods:</p>
+
+          <div class="space-y-2.5 text-xs">
+            <!-- Chila & Faraa -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🥞</span> Chusela & Faraa (Rice Flour Dumplings)
+                </strong>
+                <span class="text-[10px] font-bold bg-amber-200 text-amber-950 px-2 py-0.5 rounded-full">Breakfast Staple</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Crispy rice-flour puries (*Chusela*) and steamed rice-dough fingers (*Faraa*) tempered in mustard seeds, curry leaves, and green chillies, served with spicy green coriander-tomato chutney.
+              </p>
+            </div>
+
+            <!-- Bastar Chaprah -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🐜</span> Bastar Chaprah (Red Ant Chutney - GI)
+                </strong>
+                <span class="text-[10px] font-bold bg-rose-100 text-rose-900 px-2 py-0.5 rounded-full">GI Superfood • Bastar</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                World-famous indigenous delicacy crafted by tribal communities from red weaver ants (*Oecophylla smaragdina*) and their eggs harvested from sal canopies, ground with fiery chillies and ginger. Rich in formic acid and zinc.
+              </p>
+            </div>
+
+            <!-- Aamat & Bafauri -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🍲</span> Bastar Aamat & Steamed Bafauri
+                </strong>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded-full">Tribal Soup & Snack</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Aamat is a nutritious forest soup made with mixed vegetables, tender bamboo shoots (*Karil*), and rice starch paste; paired with Bafauri, oil-free steamed chana dal dumplings seasoned with garlic.
+              </p>
+            </div>
+
+            <!-- Mahua Sweets & Drinks -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🌺</span> Mahua Delicacies & Herbal Drinks
+                </strong>
+                <span class="text-[10px] font-bold bg-blue-100 text-blue-900 px-2 py-0.5 rounded-full">Forest Essence</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Sweet floral dishes crafted from sun-dried wild Mahua flowers (*Madhuca longifolia*), including roasted Mahua laddoos and traditional organic fermented herbal beverages served in sal-leaf cups.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-amber-900/70 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Chhattisgarh cuisine is grounded in the 'Rice Bowl of India' heritage and natural forest foraging.</p>
+      </div>
+
+      <!-- Feature B: Sacred Festivals & Cultural Calendar -->
+      <div id="festivals-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-rose-800 bg-rose-100 px-2.5 py-0.5 rounded-full">Living Traditions</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Sacred Festivals & Cultural Calendar</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Time your journey with Chhattisgarh’s grandest tribal spectacles and classical temple dance festivals:</p>
+
+          <div class="space-y-2.5 text-xs">
+            <!-- Bastar Dussehra -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🏹</span> Bastar Dussehra (75-Day World Record)
+                </strong>
+                <span class="text-[10px] font-bold bg-amber-200 text-amber-950 px-2 py-0.5 rounded-full">Aug to Oct • Jagdalpur</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                The longest festival in the world, spanning 75 days. Unlike the rest of India, no effigies of Ravana are burned; instead, tribal clans pull an enormous multi-wheeled chariot of Goddess Danteshwari through town.
+              </p>
+            </div>
+
+            <!-- Madai Festival -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🥁</span> Bastar Madai Festival
+                </strong>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded-full">Dec to Mar • Across Bastar</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Vibrant touring tribal carnival celebrating local clan deities. Features ceremonial wooden palanquins (*Anga Dev*), hypnotic Gaur Maria horned dances, and bustling traditional weekly bazaars.
+              </p>
+            </div>
+
+            <!-- Sirpur National Dance Festival -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>💃</span> Sirpur National Dance & Music Festival
+                </strong>
+                <span class="text-[10px] font-bold bg-purple-100 text-purple-900 px-2 py-0.5 rounded-full">January • Laxman Temple</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Acclaimed international cultural festival set against the illuminated 7th-century terracotta brick facade of Laxman Temple, presenting classical Kathak, Odissi, and tribal musical performances.
+              </p>
+            </div>
+
+            <!-- Champaran Mela & Goncha -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🛕</span> Champaran Mela & Goncha Festival
+                </strong>
+                <span class="text-[10px] font-bold bg-blue-100 text-blue-900 px-2 py-0.5 rounded-full">Jan/Feb & July</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Champaran Mela gathers lakhs of Vaishnava pilgrims celebrating Mahaprabhu Vallabhacharya's birthplace; while Goncha features mock battles using traditional bamboo toy guns (*Tupki*).
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-amber-900/70 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Experiencing these festivals offers deep insight into Chhattisgarh's living devotional and tribal soul.</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Packing, Forest Safari & Transit Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Packing & Forest Preparation Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-purple-800 bg-purple-100 px-2 py-0.5 rounded-full">Forest & Canyons</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Chhattisgarh Safari Checklist</h4>
+            </div>
+            <div class="text-right">
+              <span id="pack-progress" class="text-xs font-bold text-amber-700">0 / 6 Ready</span>
+            </div>
+          </div>
+
+          <div class="my-3 space-y-2 text-xs" id="checklist-items">
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Government Photo ID</strong> (Aadhaar / Passport for forest safari entry & eco-resorts)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Sturdy Non-Slip Walking Shoes</strong> (Essential for wet, mossy rock steps at Tirathgarh & Chitrakote)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Waterproof Mobile Pouch & Camera Cover</strong> (Protects electronics from intense spray at Chitrakote Falls)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Powerful LED Flashlight & Headlamp</strong> (Crucial for exploring dark chambers inside Kutumsar Caves)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Light Warm Jacket / Fleece</strong> (Required for chilly Mainpat plateau & early Barnawapara safaris)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Cash in Indian Rupees (₹)</strong> (Weekly tribal haats and village boatmen operate in cash)</span>
+            </label>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+          <span class="text-[11px] text-slate-400">Items saved automatically in your browser.</span>
+          <button id="reset-checklist-btn" class="text-[11px] text-amber-700 hover:underline font-bold">Reset</button>
+        </div>
+      </div>
+
+      <!-- Regional Highway Transit Matrix -->
+      <div class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-800 bg-teal-100 px-2 py-0.5 rounded-full">Road Corridors</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Inter-City Highway Transit Matrix</h4>
+            </div>
+            <span class="text-2xl">🚗</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs text-center my-3">
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Raipur ➔ Sirpur</span>
+              <strong class="text-slate-800 text-sm">85 km</strong> • <span class="text-amber-700 font-semibold">~1.5 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Raipur ➔ Barnawapara</span>
+              <strong class="text-slate-800 text-sm">95 km</strong> • <span class="text-amber-700 font-semibold">~2.0 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Raipur ➔ Champaran</span>
+              <strong class="text-slate-800 text-sm">55 km</strong> • <span class="text-amber-700 font-semibold">~1.2 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Raipur ➔ Jagdalpur</span>
+              <strong class="text-slate-800 text-sm">300 km</strong> • <span class="text-amber-700 font-semibold">~6.0 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Jagdalpur ➔ Chitrakote</span>
+              <strong class="text-slate-800 text-sm">38 km</strong> • <span class="text-amber-700 font-semibold">~45 Mins</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Raipur ➔ Mainpat</span>
+              <strong class="text-slate-800 text-sm">360 km</strong> • <span class="text-amber-700 font-semibold">~7.5 Hrs</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2 pt-2 border-t border-slate-100">
+          Connected via NH-30 (Raipur–Jagdalpur corridor) and NH-53. Regular trains connect Raipur and Jagdalpur.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+    <!-- Active Status Bar -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6 pb-3 border-b border-slate-300">
+      <div class="text-sm text-slate-700">
+        Displaying <strong id="visible-clusters-count" class="text-amber-800 font-bold">5</strong> major circuits containing <strong id="visible-sites-count" class="text-slate-900 font-bold">10</strong> destinations across Chhattisgarh
+        <span id="active-filter-label" class="text-xs text-slate-500 font-medium ml-1"></span>
+      </div>
+      <div class="text-xs text-slate-500">
+        Click "📍 Open in Google Maps" on any monument to start direct turn-by-turn navigation.
+      </div>
+    </div>
+
+    <!-- Cluster Cards Container -->
+    <div id="clusters-container" class="space-y-10">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden text-center py-16 px-4 bg-white rounded-2xl border border-slate-200 my-8 shadow-sm">
+      <div class="w-16 h-16 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto text-2xl mb-4 font-bold">
+        🔍
+      </div>
+      <h3 class="text-lg font-bold text-slate-800 font-heritage">No matching destinations found</h3>
+      <p class="text-sm text-slate-500 mt-1 max-w-md mx-auto">
+        We could not find any destination, waterfall, or temple matching your search query. Try searching for "Chitrakote", "Sirpur", "Mainpat", or "Barnawapara".
+      </p>
+      <button id="empty-reset-btn" class="mt-4 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-semibold shadow transition-all">
+        Reset Search & Filters
+      </button>
+    </div>
+  </main>
+
+  <!-- Deep Dive Reading Modal with Google Maps Details -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 hidden opacity-0 transition-opacity duration-200">
+    <div id="modal-container" class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200 transform scale-95 transition-transform duration-200">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-emerald-950 via-teal-900 to-slate-950 text-white px-6 py-4 flex items-center justify-between border-b border-emerald-800">
+        <div>
+          <span id="modal-cluster-cat" class="text-[11px] font-bold uppercase tracking-wider text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30">Category</span>
+          <h3 id="modal-cluster-title" class="text-xl sm:text-2xl font-black font-heritage tracking-tight mt-1 text-amber-50">Cluster Title</h3>
+          <p id="modal-cluster-tagline" class="text-xs text-amber-200 mt-0.5">Tagline description</p>
+        </div>
+        <button id="modal-close-x" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-xl transition-colors">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div id="modal-scroll-body" class="p-6 overflow-y-auto space-y-6 text-sm text-slate-700 flex-grow">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-slate-50 px-6 py-3.5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <span class="text-slate-500 font-medium">Chhattisgarh Tourism • Jai Johar & Happy Travels!</span>
+        <div class="flex items-center gap-2">
+          <button id="modal-copy-all-btn" class="px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-lg font-bold transition-colors flex items-center gap-1.5 shadow-2xs">
+            <span>📋</span> Copy Itinerary Notes
+          </button>
+          <button id="modal-close-action" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-semibold transition-colors">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-Page Toast Notification (Safe alternative to alert) -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2.5 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 border border-slate-700">
+    <span class="text-amber-400 font-bold">✓</span>
+    <span id="toast-text">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-slate-200 font-heritage text-sm font-bold">
+        <span>🌿</span> Chhattisgarh Tourism & Culture Archive
+      </div>
+      <p class="text-center md:text-left">
+        Covering Chitrakote Falls, Tirathgarh Falls, Kanger Valley Kutumsar Caves, Sirpur Laxman Temple, Gandheshwar Temple, Mainpat Tibetan Settlement, Raipur, Champaran, and Barnawapara Sanctuary.
+      </p>
+      <div class="flex items-center gap-4">
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    const data = [{"id": "bastar-jagdalpur", "title": "Bastar & Jagdalpur", "tagline": "The Niagara of India, Sacred Indravati River & Tribal Heartland", "category": "Waterfalls, Canyons & Rainforests", "tags": ["Chitrakote Falls", "Tirathgarh Falls", "Kanger Valley", "Kutumsar Caves", "Dhokra Art"], "bestTime": "October to March (Roaring post-monsoon waterfalls, 14\u00b0C \u2013 28\u00b0C)", "duration": "3 to 4 Days", "overview": "Set in the southern heartland of Chhattisgarh, Bastar and its district capital Jagdalpur represent one of India's richest epicenters of indigenous tribal culture, thunderous horseshoe waterfalls on the Indravati River, dense sal canopies, and subterranean limestone caves.", "places": [{"name": "Chitrakote Waterfalls (The Niagara of India)", "type": "Horseshoe River Waterfall", "detailedInfo": "Located 38 km west of Jagdalpur on the Indravati River, Chitrakote is the widest waterfall in India, earning the title 'The Niagara of India'. During the monsoon and post-monsoon, the Indravati River spans nearly 300 meters (985 feet) across a dramatic horseshoe-shaped cliff edge, plunging 30 meters (98 feet) into a roaring mist-drenched gorge. Local boatmen steer traditional country rowboats near the thundering mist basin, where afternoon sunlight paints permanent rainbow arcs across the spray.", "historicalImportance": "Flows through the historic Dandakaranya forest described in the Ramayana as the wilderness where Lord Rama, Sita, and Lakshmana spent significant years of their exile. Rebuilt as a focal center of tribal river trade under the 14th-century Kakatiya rulers who fled Warangal to establish the Kingdom of Bastar in Jagdalpur.", "keyFacts": ["Widest natural waterfall in India, whose crescent cliff rim changes color from muddy golden-brown in monsoons to crystalline white in winter.", "Night illuminations installed by Chhattisgarh Tourism project multi-colored floodlights onto the roaring water wall.", "The plunge pool at the base of the gorge is home to unique indigenous fish species that thrive in turbulent aerated water."], "bestTimeToVisit": "July to October to witness the waterfall at its widest, thunderous peak volume; November to February for pleasant boating, camping, and clear weather.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Chitrakote+Waterfalls+Bastar+Chhattisgarh", "coords": "19.2014\u00b0 N, 81.7061\u00b0 E", "locationName": "Chitrakote, Bastar District"}, {"name": "Tirathgarh Waterfalls", "type": "Multi-Tiered Forest Cascade", "detailedInfo": "Situated inside the dense sal forests of Kanger Valley National Park along the Mugabahar River, 32 km from Jagdalpur. Unlike the wide plunge of Chitrakote, Tirathgarh is a multi-tiered block waterfall that cascades 300 feet (91 meters) down multiple terraced rock steps like a white bridal veil. Visitors can walk down stone stairways into the valley canyon, cross wooden footbridges, and explore a small Shiva temple perched on an adjacent rock cliff.", "historicalImportance": "A sacred ecological landmark revered by the local Maria and Gond tribes, who have preserved the surrounding sacred groves (*Devgudi*) and virgin sal trees from commercial exploitation for centuries.", "keyFacts": ["Splits into multiple distinct cascading channels over rugged stepped sandstone rock formations, creating a natural amphitheater of water.", "The spray from the multi-tiered falls keeps the gorge humid and cool even in warm months, nurturing wild ferns and orchids."], "bestTimeToVisit": "October to March. Morning sunlight provides stunning photography as water droplets sparkle against the white limestone steps.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tirathgarh+Waterfalls+Kanger+Valley+Bastar+Chhattisgarh", "coords": "18.9133\u00b0 N, 81.8631\u00b0 E", "locationName": "Kanger Valley, Bastar District"}, {"name": "Kanger Valley National Park & Kutumsar Caves", "type": "National Biosphere Park & Subterranean Caves", "detailedInfo": "Spanning 200 sq km of virgin hilly rainforest along the Kanger River, this national park is renowned for deep limestone caves, river ravines, and the state bird\u2014the Bastar Hill Myna. Its crown jewel is the subterranean Kutumsar Caves, situated 35 meters below ground level. Entering through a narrow vertical shaft, travelers descend into pitch-black chambers reaching 330 meters in length, filled with extraordinary stalactites, stalagmites, and subterranean pools.", "historicalImportance": "Explored scientifically in the 1950s by Indian geographer Dr. Shankarlal Tiwari. The caves represent millions of years of subterranean karst erosion in the Cuddapah limestone formations of the Kanger Valley.", "keyFacts": ["Home to a unique blind fish species (Nemacheilus kutumsarensis) and blind crickets that evolved completely without eyesight in the perpetual darkness.", "The limestone stalactite formations inside include the 'Shivling Stupa', where groundwater calcification has formed a natural glistening pillar.", "The park is the natural habitat of the endangered Bastar Hill Myna (*Gracula religiosa peninsularis*), capable of mimicking human speech with remarkable clarity."], "bestTimeToVisit": "November to April. Kutumsar Caves remain strictly closed during monsoons (June to October) due to underground flooding and carbon dioxide accumulation.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kanger+Valley+National+Park+Kutumsar+Caves+Chhattisgarh", "coords": "18.8822\u00b0 N, 81.9472\u00b0 E", "locationName": "Kanger Valley, Jagdalpur"}]}, {"id": "sirpur", "title": "Sirpur Heritage Complex", "tagline": "7th-Century Brick Architecture, Ancient Monasteries & The River Mahanadi", "category": "Ancient Monuments & Brick Temples", "tags": ["Laxman Temple", "Gandheshwar Temple", "7th Century Brick", "Pala & Somvanshi", "Surang Tila"], "bestTime": "October to March (12\u00b0C \u2013 25\u00b0C)", "duration": "1 to 2 Days", "overview": "Nestled on the eastern bank of the sacred Mahanadi River in Mahasamund district, Sirpur (ancient Shripura, the 'City of Wealth') was the glorious imperial capital of the Sarabhapuriya and Somvanshi dynasties between the 5th and 8th centuries CE, boasting the finest surviving ancient terracotta brick temple in India.", "places": [{"name": "Laxman Temple & Excavated Monasteries", "type": "7th-Century Terracotta Brick Temple & Viharas", "detailedInfo": "One of the finest surviving early brick temples in India, standing on a massive 7-foot stone plinth. Built entirely with finely polished baked terracotta bricks, the temple features an exquisitely carved red-sandstone doorframe depicting the incarnations of Lord Vishnu (Dashavatara), Krishna Leela scenes, and floral friezes. Surrounding excavations over 300 acres have uncovered dozens of Buddhist viharas, a market complex, an ancient ayurvedic hospital with surgical instruments, and the monumental stepped stone temple of Surang Tila.", "historicalImportance": "Constructed around 625\u2013650 CE by Queen Vasata, daughter of King Suryavarman of Magadha and widow of King Harshagupta of the Somvanshi dynasty, in memory of her deceased husband. Chinese traveler Xuanzang (Hiuen Tsang) visited Sirpur in 639 CE, chronicling a thriving metropolis with over 100 Buddhist monasteries, 10,000 monks, and peaceful co-existence between Shaivite, Vaishnavite, and Buddhist traditions.", "keyFacts": ["Considered the architectural precursor and model for subsequent stone temple shikhara engineering across Central and Eastern India.", "Surang Tila features an imposing 30-foot stone stairway leading to a pillared platform that survived a catastrophic 12th-century earthquake due to unique seismic-resistant architectural joints.", "Houses an excavated 7th-century Buddhist monastery (*Ananda Prabha Vihara*) with a monumental 7-foot stone Buddha seated in bhumisparsha mudra."], "bestTimeToVisit": "October to March. The annual Sirpur National Dance and Music Festival held every January brings international classical dancers to perform in front of the illuminated brick temple.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Laxman+Temple+Sirpur+Mahasamund+Chhattisgarh", "coords": "21.3431\u00b0 N, 82.1764\u00b0 E", "locationName": "Sirpur, Mahasamund District"}, {"name": "Gandheshwar Temple", "type": "Riverfront Shaivite Temple", "detailedInfo": "Situated right on the scenic banks of the sacred Mahanadi River, the Gandheshwar Temple is a historic living Shaivite shrine constructed using architectural elements, carved pillars, and ancient statues salvaged from 7th-century ruins. The temple courtyard houses rare antique sculptures of Nataraja, Varaha, Kartikeya, and an elaborate Buddha statue, creating a syncretic sacred atmosphere.", "historicalImportance": "Served as the spiritual epicenter for Shaivite river rituals during the Somvanshi reign. Devotees have gathered at this river ghat during Kartik Purnima and Mahashivaratri for over a thousand years.", "keyFacts": ["Features ancient stone inscriptions in Sanskrit dating to the 8th century CE praising the fragrant scent (*Gandha*) of the Shiva lingam.", "The riverside ghats offer tranquil boat rides and sunset vistas across the broad sandy bed of the Mahanadi River."], "bestTimeToVisit": "October to March. Open daily 6:00 AM \u2013 8:00 PM. Visiting during the evening river aarti provides a deeply spiritual experience.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gandheshwar+Temple+Sirpur+Chhattisgarh", "coords": "21.3481\u00b0 N, 82.1794\u00b0 E", "locationName": "Mahanadi Riverfront, Sirpur"}]}, {"id": "mainpat", "title": "Mainpat (The Shimla of Chhattisgarh)", "tagline": "Tibetan Monasteries, Bouncing Earth & Highland Waterfalls", "category": "Hill Stations & Tibetan Culture", "tags": ["Shimla of Chhattisgarh", "Tibetan Settlement", "Jaljali Bouncing Land", "Tiger Point"], "bestTime": "October to March (Pleasant plateau weather, 8\u00b0C \u2013 22\u00b0C)", "duration": "2 Days", "overview": "Perched on a lush green plateau at 3,600 feet in Surguja district, Mainpat is affectionately termed the 'Shimla of Chhattisgarh' or 'Mini Tibet'. Known for its rolling green pastures, Tibetan carpet weaving, mist-draped waterfalls, and the mysterious geological phenomenon of bouncing soil (*Jaljali*).", "places": [{"name": "Tibetan Settlements & Dhakpo Shedupling Monastery", "type": "Tibetan Monastic Culture & Handicrafts", "detailedInfo": "Mainpat is home to seven Tibetan settlement camps established in the 1960s. The centerpiece is the Dhakpo Shedupling Monastery (popularly known as the Mainpat Gelugpa Gompa), featuring ornate traditional Tibetan Buddhist architecture, vibrant wall frescoes, gilded prayer wheels, and a peaceful prayer hall. Surrounding villages are famous for traditional Tibetan handloom weaving centers producing pure wool carpets, shawls, and Tibetan dragon motifs.", "historicalImportance": "In 1962, following the Chinese annexation of Tibet and the exile of His Holiness the 14th Dalai Lama, the Government of India provided asylum to thousands of Tibetan refugees. In 1963, 1,400 Tibetan families were rehabilitated on the cool, fertile plateau of Mainpat, creating a self-sustaining Himalayan cultural sanctuary in the heart of central India.", "keyFacts": ["Known as 'Mini Tibet of Central India', preserving traditional Tibetan language, monastic arts, and agricultural practices including organic buckwheat cultivation.", "The local Tibetan co-operative society operates handloom carpet workshops where visitors can watch artisans weave knotted wool rugs exported worldwide.", "Local cafes and settlement kitchens serve authentic hot Tibetan momos, thukpa, and butter tea."], "bestTimeToVisit": "October to March when mountain breezes are crisp and sunny days illuminate the monastery prayer flags.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mainpat+Tibetan+Settlement+Surguja+Chhattisgarh", "coords": "22.8122\u00b0 N, 83.2842\u00b0 E", "locationName": "Mainpat Plateau, Surguja District"}, {"name": "Tiger Point, Fish Falls & Jaljali (Bouncing Land)", "type": "Geological Wonders & Forest Waterfalls", "detailedInfo": "A cluster of natural wonders across the Mainpat plateau. Tiger Point is a breathtaking 60-meter waterfall plunging through dense sal jungle into a rocky gorge, named after tigers that historically came to drink at the basin. Fish Falls (Machhli Point) cascades over sloping stepped rocks. Nearby Jaljali is a globally unique geological phenomenon: a marshy meadow where the ground behaves like a giant natural sponge trampoline\u2014when visitors jump or stomp on the earth, the ground vibrates and bounces visibly beneath their feet.", "historicalImportance": "Celebrated in Surguja tribal lore and researched by geologists, Jaljali\u2019s bouncing phenomenon is caused by subterranean water reservoirs trapped beneath spongy layers of alluvial soil and compressed peat, creating an elastic hydraulic cushion.", "keyFacts": ["At Jaljali, jumping on the turf causes waves of movement in the soil for several meters around, offering a delightfully surreal natural trampoline experience.", "Tiger Point features newly built viewing galleries and stone pathways overlooking the deep green river ravine.", "Mehta Point offers sweeping panoramic views of the boundary hills separating Surguja and Raigarh districts."], "bestTimeToVisit": "October to February. Visit Tiger Point at sunrise to watch mountain mist rise out of the forest valley.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tiger+Point+Waterfalls+Mainpat+Chhattisgarh", "coords": "22.8250\u00b0 N, 83.3100\u00b0 E", "locationName": "Mainpat, Surguja District"}]}, {"id": "raipur-champaran", "title": "Raipur & Champaran", "tagline": "Capital Heritage, Sacred Lakes & The Birthplace of Vallabhacharya", "category": "Capital Heritage & Sacred Shrines", "tags": ["Mahant Ghasidas Museum", "Vivekananda Sarovar", "Pushtimarg", "Champaran Shrine"], "bestTime": "October to March (14\u00b0C \u2013 28\u00b0C)", "duration": "2 Days", "overview": "Raipur, the vibrant capital city of Chhattisgarh, blends historic lake promenades and one of India's oldest colonial museums with the nearby sacred pilgrimage town of Champaran, the birthplace of the revered 15th-century Vaishnavite philosopher-saint Mahaprabhu Vallabhacharya.", "places": [{"name": "Mahant Ghasidas Memorial Museum & Swami Vivekananda Sarovar", "type": "Premier Heritage Museum & Sacred City Lake", "detailedInfo": "Mahant Ghasidas Memorial Museum is one of India's oldest public museums, established in 1875 by Raja Mahant Ghasidas of Rajnandgaon. The two-story museum houses extraordinary galleries of 6th\u201312th century Kalachuri stone sculptures, copper plates, tribal crafts, ancient coins, and excavated relics from Sirpur. Just 3 km away lies Swami Vivekananda Sarovar (Budha Talab), a historic lake centered around a colossal 37-foot-tall bronze statue of Swami Vivekananda seated in meditation upon a lotus island.", "historicalImportance": "Swami Vivekananda spent two formative adolescent years (1877\u20131879) living in Raipur with his family, during which he meditated beside this very lake, leaving an indelible imprint on his spiritual journey. The museum preserves inscribed stone records documenting the Kalachuri and Panduvamshi dynasties.", "keyFacts": ["The 37-foot statue of Swami Vivekananda on the lake island is recorded in the Limca Book of Records as India's largest bronze model of Vivekananda.", "The museum library houses over 10,000 rare historical manuscripts, copper grants, and palm-leaf texts.", "Swami Vivekananda Sarovar features illuminated dancing musical fountains and evening jogging promenades."], "bestTimeToVisit": "October to March. Museum is open Tuesday to Sunday 10:00 AM \u2013 5:00 PM (closed Mondays). Lake gardens are best visited in late afternoon.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mahant+Ghasidas+Memorial+Museum+Raipur+Chhattisgarh", "coords": "21.2464\u00b0 N, 81.6375\u00b0 E", "locationName": "Civil Lines, Raipur"}, {"name": "Champaran (Vallabhacharya Birthplace Shrine)", "type": "Sacred Pushtimarg Vaishnavite Pilgrimage", "detailedInfo": "Situated 55 km south of Raipur on the banks of the sacred Mahanadi River. Champaran (ancient Champaranya) is a peaceful pilgrimage town celebrated as the holy birthplace of Mahaprabhu Vallabhacharya (1479\u20131531 CE), the great Vaishnavite philosopher who founded the Pushtimarg (Path of Divine Grace) tradition and Shuddhadvaita school of Vedanta. The town features two magnificent marble shrines: the Prakatya Baithakji (commemorating the exact spot of birth) and the ornate Champakeshwar Mahadev Temple.", "historicalImportance": "Legend relates that Vallabhacharya\u2019s parents (Telugu Brahmins from Andhra Pradesh) were fleeing Varanasi during religious upheavals when his mother gave birth prematurely to a seemingly lifeless child under a Champaranya tree in 1479 CE. Surrounding the child with wild leaves, they fled; on returning the next day, they miraculously discovered the radiant infant safe and playing in the middle of a protective ring of sacrificial fire (*Prakatya*).", "keyFacts": ["Revered as one of the 84 Baithaks (sacred seats) of Shri Vallabhacharya, attracting Pushtimarg Vaishnava pilgrims from Gujarat, Rajasthan, and worldwide.", "The annual Champaran Mela held every Magh Purnima (January/February) features grand devotional bhajan congregations and sacred Chhappan Bhog offerings."], "bestTimeToVisit": "October to March. Open daily 6:00 AM \u2013 8:30 PM. Easily accessible as a day excursion from Raipur.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Champaran+Vallabhacharya+Temple+Raipur+Chhattisgarh", "coords": "21.0378\u00b0 N, 81.9161\u00b0 E", "locationName": "Champaran, Raipur District"}]}, {"id": "barnawapara", "title": "Barnawapara Wildlife Sanctuary", "tagline": "Dense Teak Reserves, Sloth Bears & Majestic Gaur Herds", "category": "Wildlife & Teak Forests", "tags": ["Barnawapara", "Indian Gaur Bison", "Sloth Bears", "Teak Forest", "Eco-Tourism"], "bestTime": "November to April (Crisp winter forest safaris, 12\u00b0C \u2013 26\u00b0C)", "duration": "2 Days", "overview": "Spanning 245 square kilometers of gently rolling teak, sal, and bamboo forests in Mahasamund district, Barnawapara is one of Chhattisgarh's most popular wildlife sanctuaries, celebrated for frequent daylight sightings of massive Indian Gaur (bison), leopards, and sloth bears.", "places": [{"name": "Barnawapara Wildlife Reserve & Eco-Tourism Safari", "type": "Protected Teak & Sal Forest Sanctuary", "detailedInfo": "Characterized by flat and undulating terrain crisscrossed by the Balamdehi and Jonk rivers. Dominated by dense tropical moist deciduous teak (*Tectona grandis*), sal, mahua, and bamboo clumps, interspersed with open watering reservoirs. Famous for healthy populations of Indian Gaur (one of the largest herds in Central India), leopards, sloth bears, sambar deer, barking deer, nilgai, wild boars, and the elusive Indian flying squirrel.", "historicalImportance": "Formed in 1976 under the Wildlife Protection Act, deriving its name from the twin forest villages of Bar and Nawapara that historically inhabited the forest interior. Developed into a model eco-tourism hub with sustainable tribal forest guides.", "keyFacts": ["Known for offering some of the highest chances in Central India to observe the formidable Indian Gaur (*Bos gaurus*), which can weigh over 1,000 kg.", "Over 150 species of resident and migratory birds flock to the sanctuary\u2019s waterholes, including the White-rumped Vulture, Lesser Adjutant Stork, and Crested Serpent Eagle.", "Open-top 4x4 gypsy safaris operate twice daily (early morning 6:00 AM \u2013 9:30 AM and afternoon 2:30 PM \u2013 6:00 PM)."], "bestTimeToVisit": "November to April when watering holes dry up, concentrating wildlife along the main safari tracks. The sanctuary remains closed during the monsoon season (July to October).", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Barnawapara+Wildlife+Sanctuary+Mahasamund+Chhattisgarh", "coords": "21.4014\u00b0 N, 82.4181\u00b0 E", "locationName": "Barnawapara, Mahasamund District"}]}];
+
+    let activeCategory = 'All';
+    let searchQuery = '';
+    let showSavedOnly = false;
+    let savedClusters = [];
+
+    // Pre-defined Itinerary Plans
+    const itineraries = {
+      "3": [
+        { day: "Day 1", title: "Raipur to Jagdalpur", desc: "Scenic highway drive to Bastar, evening boating at illuminated Chitrakote Waterfalls." },
+        { day: "Day 2", title: "Canyons & Subterranean Caves", desc: "Tirathgarh multi-tiered waterfall, descent into Kutumsar limestone caves, and Kanger Valley forest trails." },
+        { day: "Day 3", title: "Tribal Arts & Return", desc: "Bastar tribal haat, Bell Metal (Dhokra) craft shopping in Jagdalpur, and return transit to Raipur." }
+      ],
+      "5": [
+        { day: "Day 1", title: "Raipur & Ancient Sirpur", desc: "Explore 7th-century terracotta brick Laxman Temple, Gandheshwar temple, and excavated Buddhist viharas." },
+        { day: "Day 2", title: "Barnawapara Wildlife Safari", desc: "Morning teak forest open jeep safari tracking Indian Gaur bison herds, leopards, and sloth bears." },
+        { day: "Day 3", title: "Drive to Bastar Heartland", desc: "Travel to Jagdalpur through Sal forests, evening sunset view over Chitrakote horseshoe falls." },
+        { day: "Day 4", title: "Waterfalls & Caves", desc: "Tirathgarh forest cascade, limestone formations of Kutumsar Caves, and Bastar Hill Myna spotting." },
+        { day: "Day 5", title: "Champaran & Return", desc: "Visit sacred Mahaprabhu Vallabhacharya birthplace shrine on the Mahanadi River before departure." }
+      ],
+      "7": [
+        { day: "Day 1", title: "Raipur Capital Heritage", desc: "Mahant Ghasidas Memorial Museum, Swami Vivekananda Sarovar, and local Chila-Faraa breakfast." },
+        { day: "Day 2", title: "Sirpur Archaeological Marvel", desc: "Queen Vasata's 7th-century brick temple, Surang Tila earthquake-resistant platform, and museum." },
+        { day: "Day 3", title: "Barnawapara Safari", desc: "Wildlife photography across teak reserves, Balamdehi riverbanks, and night eco-resort stay." },
+        { day: "Day 4-5", title: "Bastar & The Niagara of India", desc: "Chitrakote Falls boat rides, Tirathgarh cascades, Kutumsar subterranean caves, and Danteshwari temple." },
+        { day: "Day 6-7", title: "Mainpat 'Mini Tibet'", desc: "Dhakpo Shedupling Monastery, Tibetan carpet weaving, Tiger Point gorge, and bouncing Jaljali meadow." }
+      ]
+    };
+
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      if (!container) return;
+      const plan = itineraries[days] || itineraries["3"];
+      container.innerHTML = plan.map(function(item) {
+        return '<div class="p-3 bg-amber-50/70 border border-amber-200/80 rounded-xl">' +
+          '<span class="font-extrabold text-amber-950 block">' + item.day + ': ' + item.title + '</span>' +
+          '<p class="text-slate-600 mt-1 leading-relaxed">' + item.desc + '</p>' +
+        '</div>';
+      }).join('');
+    }
+
+    // Packing Checklist Storage
+    function updateChecklistProgress() {
+      const boxes = document.querySelectorAll('.pack-box');
+      let checked = 0;
+      const states = [];
+      boxes.forEach(function(b) {
+        if (b.checked) checked++;
+        states.push(b.checked);
+      });
+      document.getElementById('pack-progress').textContent = checked + ' / ' + boxes.length + ' Ready';
+      try {
+        localStorage.setItem('cg_pack_states', JSON.stringify(states));
+      } catch(e) {}
+    }
+
+    function loadChecklist() {
+      try {
+        const stored = localStorage.getItem('cg_pack_states');
+        if (stored) {
+          const states = JSON.parse(stored);
+          const boxes = document.querySelectorAll('.pack-box');
+          boxes.forEach(function(b, idx) {
+            if (states[idx]) b.checked = true;
+          });
+        }
+      } catch(e) {}
+      updateChecklistProgress();
+    }
+
+    // Audio Temple Bell (Web Audio API)
+    let audioCtx = null;
+    function playTempleBell() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(432, audioCtx.currentTime); // 432 Hz healing harmonic
+        osc.frequency.exponentialRampToValueAtTime(216, audioCtx.currentTime + 3.0);
+
+        gain.gain.setValueAtTime(0.35, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 3.5);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + 3.5);
+        showToast('🔔 Chime: Peace & Harmony');
+      } catch (e) {
+        showToast('Temple bell chime activated');
+      }
+    }
+
+    // Safely load saved from localStorage
+    try {
+      const stored = localStorage.getItem('cg_saved_clusters');
+      if (stored) savedClusters = JSON.parse(stored);
+    } catch(e) {
+      savedClusters = [];
+    }
+
+    function saveToStorage() {
+      try {
+        localStorage.setItem('cg_saved_clusters', JSON.stringify(savedClusters));
+      } catch(e) {}
+      updateSavedCount();
+    }
+
+    function toggleSaveCluster(id) {
+      const idx = savedClusters.indexOf(id);
+      if (idx > -1) {
+        savedClusters.splice(idx, 1);
+        showToast('Removed circuit from bookmarks');
+      } else {
+        savedClusters.push(id);
+        showToast('Saved circuit to bookmarks');
+      }
+      saveToStorage();
+      renderClusters();
+    }
+
+    function updateSavedCount() {
+      const countEl = document.getElementById('saved-count');
+      if (countEl) countEl.textContent = savedClusters.length;
+      const btn = document.getElementById('bookmark-filter-btn');
+      if (btn) {
+        if (showSavedOnly) {
+          btn.classList.add('bg-amber-600', 'text-white', 'border-amber-700');
+          btn.classList.remove('bg-amber-50', 'text-amber-900', 'border-amber-300');
+        } else {
+          btn.classList.remove('bg-amber-600', 'text-white', 'border-amber-700');
+          btn.classList.add('bg-amber-50', 'text-amber-900', 'border-amber-300');
+        }
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const textEl = document.getElementById('toast-text');
+      if (!toast || !textEl) return;
+      textEl.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(function() {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    function getFilteredClusters() {
+      return data.filter(function(cluster) {
+        if (activeCategory !== 'All' && cluster.category !== activeCategory) {
+          return false;
+        }
+        if (showSavedOnly && !savedClusters.includes(cluster.id)) {
+          return false;
+        }
+        if (searchQuery.trim() !== '') {
+          const q = searchQuery.toLowerCase();
+          const matchCluster = cluster.title.toLowerCase().includes(q) ||
+                               cluster.tagline.toLowerCase().includes(q) ||
+                               cluster.category.toLowerCase().includes(q) ||
+                               cluster.overview.toLowerCase().includes(q) ||
+                               cluster.tags.some(function(t) { return t.toLowerCase().includes(q); });
+          
+          const matchPlaces = cluster.places.some(function(p) {
+            return p.name.toLowerCase().includes(q) ||
+                   p.type.toLowerCase().includes(q) ||
+                   p.detailedInfo.toLowerCase().includes(q) ||
+                   p.historicalImportance.toLowerCase().includes(q) ||
+                   p.bestTimeToVisit.toLowerCase().includes(q) ||
+                   (p.locationName && p.locationName.toLowerCase().includes(q)) ||
+                   p.keyFacts.some(function(kf) { return kf.toLowerCase().includes(q); });
+          });
+
+          if (!matchCluster && !matchPlaces) {
+            return false;
+          }
+        }
+        return true;
+      });
+    }
+
+    function renderClusters() {
+      const container = document.getElementById('clusters-container');
+      const emptyState = document.getElementById('empty-state');
+      const clusterCountEl = document.getElementById('visible-clusters-count');
+      const sitesCountEl = document.getElementById('visible-sites-count');
+      const filterLabel = document.getElementById('active-filter-label');
+
+      if (!container) return;
+
+      const clusters = getFilteredClusters();
+      const totalSites = clusters.reduce(function(acc, c) { return acc + c.places.length; }, 0);
+
+      if (clusterCountEl) clusterCountEl.textContent = clusters.length;
+      if (sitesCountEl) sitesCountEl.textContent = totalSites;
+
+      if (filterLabel) {
+        let parts = [];
+        if (activeCategory !== 'All') parts.push('Category: ' + activeCategory);
+        if (showSavedOnly) parts.push('Bookmarks only');
+        if (searchQuery.trim()) parts.push('Search: "' + searchQuery + '"');
+        filterLabel.textContent = parts.length ? '(' + parts.join(' • ') + ')' : '';
+      }
+
+      if (clusters.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = clusters.map(function(cluster) {
+        const isSaved = savedClusters.includes(cluster.id);
+
+        const placesHtml = cluster.places.map(function(p, pIdx) {
+          const factsList = p.keyFacts.map(function(kf) {
+            return '<li class="flex items-start gap-2 text-xs text-slate-700 leading-relaxed">' +
+              '<span class="text-amber-600 font-bold flex-shrink-0 mt-0.5">✦</span>' +
+              '<span>' + kf + '</span>' +
+            '</li>';
+          }).join('');
+
+          return '<div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:border-amber-400 transition-all">' +
+            '<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-3 border-b border-slate-100">' +
+              '<div>' +
+                '<div class="flex items-center gap-2">' +
+                  '<span class="w-6 h-6 rounded-full bg-amber-100 text-amber-900 text-xs font-bold flex items-center justify-center flex-shrink-0">' + (pIdx + 1) + '</span>' +
+                  '<h4 class="text-base font-bold text-slate-900 font-heritage tracking-tight">' + p.name + '</h4>' +
+                '</div>' +
+                '<div class="flex flex-wrap items-center gap-2 mt-1 ml-8 text-[11px] text-slate-500">' +
+                  '<span class="font-semibold text-slate-600">' + p.type + '</span>' +
+                  '<span>•</span>' +
+                  '<span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-mono">' + (p.coords || 'Chhattisgarh') + '</span>' +
+                '</div>' +
+              '</div>' +
+
+              '<!-- Google Map Direct Link Button -->' +
+              '<div class="flex items-center gap-2 self-start sm:self-auto">' +
+                '<a href="' + p.mapUrl + '" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors shadow-2xs" title="Open verified location in Google Maps">' +
+                  '<span>📍 View on Google Maps</span>' +
+                  '<span class="text-[10px]">↗</span>' +
+                '</a>' +
+              '</div>' +
+            '</div>' +
+
+            '<div class="mt-4">' +
+              '<span class="text-xs font-bold text-slate-800 uppercase tracking-wider block mb-1">Detailed Information:</span>' +
+              '<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">' + p.detailedInfo + '</p>' +
+            '</div>' +
+
+            '<div class="mt-3.5 bg-amber-50/70 border border-amber-200/80 rounded-xl p-3.5 text-slate-800">' +
+              '<span class="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-1 flex items-center gap-1.5">' +
+                '<span>📜</span> Historical Importance & Regional Lore:' +
+              '</span>' +
+              '<p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">' + p.historicalImportance + '</p>' +
+            '</div>' +
+
+            '<div class="mt-3.5 bg-slate-50 rounded-xl p-3.5 border border-slate-200">' +
+              '<span class="text-xs font-bold text-slate-800 uppercase tracking-wider block mb-2">Key Facts & Ecological / Architectural Highlights:</span>' +
+              '<ul class="space-y-1.5">' + factsList + '</ul>' +
+            '</div>' +
+
+            '<div class="mt-3.5 text-xs text-amber-950 bg-amber-100/70 px-3 py-2 rounded-lg font-medium border border-amber-200 flex items-start justify-between gap-2">' +
+              '<div class="flex items-start gap-1.5">' +
+                '<span class="font-bold flex-shrink-0">⏱️ Best Time & Visit Notes:</span>' +
+                '<span>' + p.bestTimeToVisit + '</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+        }).join('');
+
+        const tagsHtml = cluster.tags.map(function(t) {
+          return '<span class="text-[11px] font-medium bg-white/10 text-amber-100 px-2.5 py-0.5 rounded-full border border-white/20">' + t + '</span>';
+        }).join('');
+
+        return '<article class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden transition-all">' +
+          '<div class="p-6 bg-gradient-to-r from-slate-950 via-emerald-950 to-slate-900 text-white relative">' +
+            '<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">' +
+              '<div>' +
+                '<div class="flex flex-wrap items-center gap-2 mb-2">' +
+                  '<span class="text-xs font-bold uppercase tracking-wider bg-amber-500 text-slate-950 px-2.5 py-0.5 rounded-full">' + cluster.category + '</span>' +
+                  tagsHtml +
+                '</div>' +
+                '<h3 class="text-xl sm:text-2xl font-black font-heritage tracking-tight text-amber-100">' + cluster.title + '</h3>' +
+                '<p class="text-xs sm:text-sm text-amber-200 mt-1 font-medium">' + cluster.tagline + '</p>' +
+              '</div>' +
+
+              '<div class="flex items-center gap-2.5">' +
+                '<button data-save-id="' + cluster.id + '" class="save-btn p-2.5 rounded-xl border transition-colors ' + (isSaved ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-white/10 hover:bg-white/20 text-white border-white/20') + '" title="' + (isSaved ? 'Remove bookmark' : 'Bookmark this circuit') + '">' +
+                  '<svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">' +
+                    '<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>' +
+                  '</svg>' +
+                '</button>' +
+                '<button data-open-modal="' + cluster.id + '" class="modal-open-btn px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center gap-1.5">' +
+                  '<span>Explore Journey</span> →' +
+                '</button>' +
+              '</div>' +
+            '</div>' +
+
+            '<div class="mt-4 pt-3 border-t border-white/15 flex flex-wrap items-center gap-3 text-xs text-amber-100">' +
+              '<span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-lg">🗓️ <strong>Best Time:</strong> ' + cluster.bestTime + '</span>' +
+              '<span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-lg">⏱️ <strong>Circuit:</strong> ' + cluster.duration + '</span>' +
+              '<span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-lg">📍 <strong>Locations:</strong> ' + cluster.places.length + ' Featured Sites</span>' +
+            '</div>' +
+
+            '<p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">' + cluster.overview + '</p>' +
+          '</div>' +
+
+          '<div class="p-6 bg-slate-50 space-y-5">' +
+            placesHtml +
+          '</div>' +
+        '</article>';
+      }).join('');
+
+      document.querySelectorAll('.save-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const id = btn.getAttribute('data-save-id');
+          if (id) toggleSaveCluster(id);
+        });
+      });
+
+      document.querySelectorAll('.modal-open-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const id = btn.getAttribute('data-open-modal');
+          if (id) openReadingModal(id);
+        });
+      });
+    }
+
+    function openReadingModal(id) {
+      const cluster = data.find(function(c) { return c.id === id; });
+      if (!cluster) return;
+
+      const modal = document.getElementById('reading-modal');
+      const box = document.getElementById('modal-container');
+      const catEl = document.getElementById('modal-cluster-cat');
+      const titleEl = document.getElementById('modal-cluster-title');
+      const tagEl = document.getElementById('modal-cluster-tagline');
+      const bodyEl = document.getElementById('modal-scroll-body');
+
+      if (!modal || !bodyEl) return;
+
+      catEl.textContent = cluster.category;
+      titleEl.textContent = cluster.title;
+      tagEl.textContent = cluster.tagline + ' • Best Season: ' + cluster.bestTime + ' • Duration: ' + cluster.duration;
+
+      const placesDetailedHtml = cluster.places.map(function(p, idx) {
+        const facts = p.keyFacts.map(function(kf) {
+          return '<li class="text-xs text-slate-700 leading-relaxed flex items-start gap-2">' +
+            '<span class="text-amber-600 font-bold mt-0.5">✔</span>' +
+            '<span>' + kf + '</span>' +
+          '</li>';
+        }).join('');
+
+        return '<div class="border border-slate-200 rounded-2xl p-5 bg-white shadow-2xs space-y-3">' +
+          '<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 pb-2 border-b border-slate-100">' +
+            '<div>' +
+              '<h4 class="text-base font-bold text-slate-900 flex items-center gap-2">' +
+                '<span class="w-6 h-6 rounded-full bg-amber-600 text-white text-xs font-bold flex items-center justify-center">' + (idx + 1) + '</span>' +
+                p.name +
+              '</h4>' +
+              '<span class="text-xs font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 mt-1 inline-block">' + p.type + '</span>' +
+              '<span class="text-xs text-slate-400 font-mono ml-2">' + p.coords + '</span>' +
+            '</div>' +
+            '<a href="' + p.mapUrl + '" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1 shadow-2xs self-start">' +
+              '<span>📍 Open Map</span> ↗' +
+            '</a>' +
+          '</div>' +
+          '<div>' +
+            '<strong class="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-1">Overview & Terrain:</strong>' +
+            '<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">' + p.detailedInfo + '</p>' +
+          '</div>' +
+          '<div class="bg-amber-50/70 p-3.5 rounded-xl border border-amber-200/80">' +
+            '<strong class="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-1 flex items-center gap-1.5">' +
+              '<span>📜</span> Historical Importance & Lore:' +
+            '</strong>' +
+            '<p class="text-xs sm:text-sm text-slate-800 leading-relaxed italic">' + p.historicalImportance + '</p>' +
+          '</div>' +
+          '<div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">' +
+            '<strong class="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-1.5">Key Facts & Ecological / Architectural Records:</strong>' +
+            '<ul class="space-y-1">' + facts + '</ul>' +
+          '</div>' +
+          '<div class="text-xs text-amber-900 bg-amber-100/60 p-2.5 rounded-lg border border-amber-200 font-medium">' +
+            '<strong>🗓️ Visiting Logistics:</strong> ' + p.bestTimeToVisit +
+          '</div>' +
+        '</div>';
+      }).join('');
+
+      bodyEl.innerHTML = '<div class="bg-amber-50 p-4 rounded-xl border border-amber-200 mb-2">' +
+        '<strong class="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-1">Circuit Synthesis:</strong>' +
+        '<p class="text-xs sm:text-sm text-slate-800 leading-relaxed">' + cluster.overview + '</p>' +
+      '</div>' +
+      '<div class="space-y-5">' + placesDetailedHtml + '</div>';
+
+      const copyBtn = document.getElementById('modal-copy-all-btn');
+      if (copyBtn) {
+        copyBtn.onclick = function() {
+          const parts = [
+            cluster.title + ' (' + cluster.category + ')',
+            'Tagline: ' + cluster.tagline,
+            'Best Season: ' + cluster.bestTime,
+            'Recommended Duration: ' + cluster.duration,
+            'Overview: ' + cluster.overview,
+            ''
+          ];
+
+          cluster.places.forEach(function(p, i) {
+            parts.push((i + 1) + '. ' + p.name + ' [' + p.type + ']');
+            parts.push('Location / GPS: ' + (p.locationName || '') + ' (' + (p.coords || '') + ')');
+            parts.push('Google Map: ' + p.mapUrl);
+            parts.push('Detailed Info: ' + p.detailedInfo);
+            parts.push('Historical Importance: ' + p.historicalImportance);
+            parts.push('Key Facts:');
+            p.keyFacts.forEach(function(kf) { parts.push(' - ' + kf); });
+            parts.push('Best Time & Notes: ' + p.bestTimeToVisit);
+            parts.push('');
+          });
+
+          const fullText = parts.join('\n');
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(fullText).then(function() {
+              showToast('Copied travel guide notes to clipboard!');
+            }).catch(function() {
+              fallbackCopy(fullText);
+            });
+          } else {
+            fallbackCopy(fullText);
+          }
+        };
+      }
+
+      modal.classList.remove('hidden');
+      setTimeout(function() {
+        modal.classList.remove('opacity-0');
+        if (box) box.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast('Copied travel guide notes to clipboard!');
+      } catch(e) {
+        showToast('Unable to copy automatically');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function closeReadingModal() {
+      const modal = document.getElementById('reading-modal');
+      const box = document.getElementById('modal-container');
+      if (!modal) return;
+      if (box) box.classList.add('scale-95');
+      modal.classList.add('opacity-0');
+      setTimeout(function() {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Initialization
+    window.addEventListener('DOMContentLoaded', function() {
+      updateSavedCount();
+      renderClusters();
+      renderItinerary("3");
+      loadChecklist();
+
+      // Audio Bell Button Listener
+      const audioBtn = document.getElementById('audio-bell-btn');
+      if (audioBtn) {
+        audioBtn.addEventListener('click', playTempleBell);
+      }
+
+      // Packing Checklist Event Listeners
+      document.querySelectorAll('.pack-box').forEach(function(box) {
+        box.addEventListener('change', updateChecklistProgress);
+      });
+
+      const resetPackBtn = document.getElementById('reset-checklist-btn');
+      if (resetPackBtn) {
+        resetPackBtn.addEventListener('click', function() {
+          document.querySelectorAll('.pack-box').forEach(function(b) { b.checked = false; });
+          updateChecklistProgress();
+          showToast('Checklist reset');
+        });
+      }
+
+      // Itinerary Selector Pills
+      document.querySelectorAll('#itinerary-selector .itinerary-pill').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('#itinerary-selector .itinerary-pill').forEach(function(b) {
+            b.classList.remove('bg-amber-600', 'text-white');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.add('bg-amber-600', 'text-white');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+          const days = btn.getAttribute('data-days') || "3";
+          renderItinerary(days);
+        });
+      });
+
+      // Search input
+      const searchInput = document.getElementById('search-input');
+      const clearBtn = document.getElementById('clear-search-btn');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+          searchQuery = e.target.value;
+          if (clearBtn) {
+            if (searchQuery.trim()) {
+              clearBtn.classList.remove('hidden');
+            } else {
+              clearBtn.classList.add('hidden');
+            }
+          }
+          renderClusters();
+        });
+      }
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+          if (searchInput) searchInput.value = '';
+          searchQuery = '';
+          clearBtn.classList.add('hidden');
+          renderClusters();
+        });
+      }
+
+      // Category filters
+      document.querySelectorAll('#category-filters .filter-tab').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('#category-filters .filter-tab').forEach(function(b) {
+            b.classList.remove('bg-amber-600', 'text-white', 'active');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.add('bg-amber-600', 'text-white', 'active');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+          activeCategory = btn.getAttribute('data-cat') || 'All';
+          renderClusters();
+        });
+      });
+
+      // Reset filters button
+      const resetBtn = document.getElementById('reset-all-btn');
+      const emptyResetBtn = document.getElementById('empty-reset-btn');
+
+      function resetAll() {
+        activeCategory = 'All';
+        searchQuery = '';
+        showSavedOnly = false;
+        if (searchInput) searchInput.value = '';
+        if (clearBtn) clearBtn.classList.add('hidden');
+        document.querySelectorAll('#category-filters .filter-tab').forEach(function(b) {
+          if (b.getAttribute('data-cat') === 'All') {
+            b.classList.add('bg-amber-600', 'text-white', 'active');
+            b.classList.remove('bg-slate-100', 'text-slate-700');
+          } else {
+            b.classList.remove('bg-amber-600', 'text-white', 'active');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          }
+        });
+        updateSavedCount();
+        renderClusters();
+      }
+
+      if (resetBtn) resetBtn.addEventListener('click', resetAll);
+      if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
+
+      // Bookmarks toggle
+      const bookmarkFilterBtn = document.getElementById('bookmark-filter-btn');
+      if (bookmarkFilterBtn) {
+        bookmarkFilterBtn.addEventListener('click', function() {
+          showSavedOnly = !showSavedOnly;
+          updateSavedCount();
+          renderClusters();
+        });
+      }
+
+      // Modal close handlers
+      const modalCloseX = document.getElementById('modal-close-x');
+      const modalCloseAction = document.getElementById('modal-close-action');
+      const modalOverlay = document.getElementById('reading-modal');
+
+      if (modalCloseX) modalCloseX.addEventListener('click', closeReadingModal);
+      if (modalCloseAction) modalCloseAction.addEventListener('click', closeReadingModal);
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', function(e) {
+          if (e.target === modalOverlay) closeReadingModal();
+        });
+      }
+
+      // Back to top button
+      const topBtn = document.getElementById('back-to-top-btn');
+      if (topBtn) {
+        topBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

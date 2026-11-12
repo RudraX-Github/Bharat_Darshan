@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incredible India — Heritage & Scenic Atlas (28 States & 8 Union Territories)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #faf7f2;
+    }
+    .font-heritage {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-royal {
+      font-family: 'Cinzel', Georgia, serif;
+    }
+    .mandala-bg {
+      background-image: radial-gradient(circle at 20% 25%, rgba(251, 191, 36, 0.14) 0%, transparent 45%),
+                        radial-gradient(circle at 80% 30%, rgba(20, 184, 166, 0.14) 0%, transparent 45%);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="text-slate-900 min-h-screen flex flex-col antialiased selection:bg-amber-200 selection:text-amber-950">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-indigo-950 via-amber-950 to-slate-950 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-amber-700/40 flex items-center justify-center gap-2 shadow-sm">
+    <span>🪷 Atithi Devo Bhava • Explore All 28 States & 8 Union Territories of Incredible India</span>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-amber-200/70 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 via-orange-700 to-indigo-950 flex items-center justify-center text-white shadow-lg shadow-amber-900/20 text-2xl font-bold border border-amber-300">
+          🪷
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Incredible India Atlas</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">🙏 Namaste! Welcome to Incredible India — Your Welcoming Guide to All 28 States & 8 Union Territories</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <button id="audio-bell-btn" class="bg-amber-100/80 hover:bg-amber-200 text-amber-950 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5 transition-all border border-amber-300/80 shadow-2xs active:scale-95" title="Play all 36 State & UT chimes sequentially">
+          <span id="chime-btn-label">🎶 Heritage Chime (All 36)</span>
+        </button>
+        <a href="#seasonal-compass" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🧭 Seasonal Compass</span>
+        </a>
+        <a href="#atlas-grid-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🗺️ All 36 Guides</span>
+        </a>
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-950 px-3.5 py-1.5 rounded-xl font-bold transition-all border border-amber-300/80 flex items-center gap-1.5">
+          <span>⭐ Bucket List</span>
+          <span id="saved-badge" class="bg-indigo-900 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scenic & Heritage Hero Banner with Custom Layered Landscape SVG -->
+  <section class="relative bg-gradient-to-b from-indigo-950 via-slate-900 to-amber-950 text-white pt-12 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden mandala-bg border-b border-amber-700/40">
+    <!-- Scenic SVG Backdrop: Himalayas, Taj/Temple Silhouettes, Palm Coast & Golden Sun -->
+    <svg class="absolute bottom-0 left-0 w-full h-56 sm:h-72 pointer-events-none opacity-25" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+      <circle cx="720" cy="140" r="95" fill="url(#sunGrad)" />
+      <path fill="#1e293b" d="M0,240 L140,140 L260,205 L410,95 L560,195 L720,115 L880,190 L1030,100 L1180,185 L1310,130 L1440,210 L1440,320 L0,320 Z"/>
+      <path fill="#0f172a" d="M0,275 L220,275 L240,245 L260,245 L265,220 L275,245 L295,245 L315,275 L610,275 L625,240 L635,240 L635,215 L645,215 L645,240 L665,240 C675,205 700,190 720,178 C740,190 765,205 775,240 L795,240 L795,215 L805,215 L805,240 L815,240 L830,275 L1080,275 L1100,235 L1115,205 L1130,235 L1150,275 L1440,275 L1440,320 L0,320 Z"/>
+      <path fill="#020617" d="M0,295 Q360,260 720,295 T1440,285 L1440,320 L0,320 Z"/>
+      <defs>
+        <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+    </svg>
+
+    <div class="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+      <div class="max-w-3xl space-y-4 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold tracking-wide uppercase">
+          <span>✨ 5,000+ Years of Living Heritage</span>
+          <span>•</span>
+          <span>Himalayas to Coral Lagoons</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heritage tracking-tight text-white leading-tight">
+          Discover the Soul of <span class="text-amber-300">Incredible India</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Journey from snow-crowned Himalayan monasteries and golden Thar dunes to emerald Kerala backwaters, ancient temple cities, and bioluminescent coral islands. Filter every State and Union Territory by region or your ideal season to travel.
+        </p>
+      </div>
+
+      <!-- 4 Heritage Stat Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3.5 w-full lg:w-96 text-center">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-lg">
+          <div class="text-3xl font-black text-amber-300 font-heritage">28</div>
+          <div class="text-[11px] text-slate-200 uppercase tracking-wider font-semibold mt-0.5">States</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-lg">
+          <div class="text-3xl font-black text-amber-300 font-heritage">8</div>
+          <div class="text-[11px] text-slate-200 uppercase tracking-wider font-semibold mt-0.5">Union Territories</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-lg">
+          <div class="text-3xl font-black text-amber-300 font-heritage">36</div>
+          <div class="text-[11px] text-slate-200 uppercase tracking-wider font-semibold mt-0.5">Interactive Guides</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-4 rounded-2xl shadow-lg">
+          <div class="text-3xl font-black text-amber-300 font-heritage">42</div>
+          <div class="text-[11px] text-slate-200 uppercase tracking-wider font-semibold mt-0.5">UNESCO Sites</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Designer Filter & Search Console -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-30 w-full">
+    <div class="bg-white rounded-3xl shadow-2xl border border-amber-200/80 p-5 sm:p-6 space-y-5">
+
+      <!-- Top Row: Search + State/UT Type Toggle -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <div class="relative flex-1">
+          <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">🔍</span>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search any State, UT, capital, or landmark (e.g. 'Kerala', 'Ladakh', 'Taj Mahal', 'Hampi', 'Goa')..."
+            class="w-full pl-11 pr-24 py-3.5 bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-sm rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent transition-all placeholder:text-slate-400"
+          />
+          <button id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-xs font-bold text-slate-400 hover:text-slate-700">Clear ✕</button>
+        </div>
+
+        <!-- State vs Union Territory Filter -->
+        <div class="flex items-center gap-1.5 bg-slate-100 p-1.5 rounded-2xl border border-slate-200/80 self-start lg:self-auto" id="type-filters">
+          <button data-type="All" class="type-tab active px-4 py-2 rounded-xl text-xs font-bold bg-indigo-950 text-white shadow-xs transition-all">All (36)</button>
+          <button data-type="State" class="type-tab px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-white transition-all">States (28)</button>
+          <button data-type="Union Territory" class="type-tab px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-white transition-all">Union Territories (8)</button>
+        </div>
+      </div>
+
+      <!-- Second Row: Best Time to Visit Filter (Season Pills + Month Selector + Link Mode) -->
+      <div class="pt-4 border-t border-slate-100 flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-2" id="season-filters">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mr-1">🌤️ Best Time to Visit:</span>
+          <button data-season="All" class="season-tab active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-700 text-white shadow-xs transition-all">All Seasons</button>
+          <button data-season="winter" class="season-tab px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-amber-50 hover:bg-amber-100 text-amber-950 border border-amber-200 transition-all">❄️ Winter & Pleasant (Oct – Mar)</button>
+          <button data-season="summer" class="season-tab px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sky-50 hover:bg-sky-100 text-sky-950 border border-sky-200 transition-all">☀️ Summer & Himalayas (Apr – Jun)</button>
+          <button data-season="monsoon" class="season-tab px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-950 border border-emerald-200 transition-all">🌧️ Monsoon & Lush Greens (Jul – Sep)</button>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <label for="month-select" class="text-xs font-bold text-slate-500 uppercase tracking-wider">📅 Month:</label>
+          <select id="month-select" class="bg-slate-50 border border-slate-200 text-slate-800 text-xs font-semibold rounded-xl px-2.5 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600">
+            <option value="0">Any Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+
+          <label for="region-select" class="text-xs font-bold text-slate-500 uppercase tracking-wider">🧭 Region:</label>
+          <select id="region-select" class="bg-slate-50 border border-slate-200 text-slate-800 text-xs font-semibold rounded-xl px-2.5 py-2 focus:outline-none focus:ring-2 focus:ring-amber-600">
+            <option value="All">All Regions</option>
+            <option value="North">North India</option>
+            <option value="South">South India</option>
+            <option value="East">East India</option>
+            <option value="West">West India</option>
+            <option value="Central">Central India</option>
+            <option value="Northeast">Northeast India</option>
+            <option value="Islands">Island Territories</option>
+          </select>
+
+          <label for="link-mode-select" class="text-xs font-bold text-slate-500 uppercase tracking-wider">🔗 Links:</label>
+          <select id="link-mode-select" class="bg-indigo-50 border border-indigo-200 text-indigo-950 text-xs font-bold rounded-xl px-2.5 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+            <option value="drive">☁️ Google Drive</option>
+            <option value="local">📁 Local Folder</option>
+          </select>
+
+          <button id="reset-all-btn" class="text-xs text-amber-800 hover:text-amber-950 font-bold underline px-2 py-1">Reset</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full flex-1 space-y-12">
+
+    <!-- Seasonal Travel Compass (Quick-Pick Landscapes) -->
+    <section id="seasonal-compass" class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Seasonal Travel Compass</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 font-heritage mt-1">Scenic Landscapes by Season</h3>
+        </div>
+        <p class="text-xs text-slate-500">Click any seasonal card below to filter matching States & Union Territories.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <button data-quick-season="winter" class="quick-season-card text-left bg-gradient-to-br from-amber-950 via-orange-950 to-slate-900 text-white p-5 rounded-2xl border border-amber-700/40 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-300">Oct – Mar • Peak Season</span>
+            <span class="text-2xl">🏰</span>
+          </div>
+          <h4 class="text-lg font-black font-heritage mt-2 text-white group-hover:text-amber-200 transition-colors">Royal Palaces, Deserts & Coasts</h4>
+          <p class="text-xs text-slate-300 mt-1 leading-relaxed">Crisp sunny days across Rajasthan, Gujarat's White Rann, Agra & Varanasi, Kerala backwaters, Goa, and coral islands.</p>
+        </button>
+
+        <button data-quick-season="summer" class="quick-season-card text-left bg-gradient-to-br from-sky-950 via-indigo-950 to-slate-900 text-white p-5 rounded-2xl border border-sky-700/40 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-300">Apr – Jun • Alpine Escape</span>
+            <span class="text-2xl">🏔️</span>
+          </div>
+          <h4 class="text-lg font-black font-heritage mt-2 text-white group-hover:text-sky-200 transition-colors">Snow Passes, Meadows & Tea Hills</h4>
+          <p class="text-xs text-slate-300 mt-1 leading-relaxed">High mountain roads open across Ladakh, Kashmir, Himachal, Uttarakhand, Sikkim, and Arunachal's Tawang Valley.</p>
+        </button>
+
+        <button data-quick-season="monsoon" class="quick-season-card text-left bg-gradient-to-br from-emerald-950 via-teal-950 to-slate-900 text-white p-5 rounded-2xl border border-emerald-700/40 shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all group">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-300">Jul – Sep • Monsoon Magic</span>
+            <span class="text-2xl">🌧️</span>
+          </div>
+          <h4 class="text-lg font-black font-heritage mt-2 text-white group-hover:text-emerald-200 transition-colors">Roaring Falls & Misty Ghats</h4>
+          <p class="text-xs text-slate-300 mt-1 leading-relaxed">Witness Meghalaya's living root bridges, Chhattisgarh's Chitrakote Falls, Sahyadri forts, and rejuvenating Kerala Ayurveda.</p>
+        </button>
+      </div>
+    </section>
+
+    <!-- Atlas Grid Header & Active Filter Status -->
+    <section id="atlas-grid-section" class="space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200 text-xs text-slate-600">
+        <div class="flex flex-wrap items-center gap-2">
+          <span>Showing:</span>
+          <strong id="visible-total-count" class="text-slate-900 font-bold text-sm">36</strong>
+          <span>Destinations</span>
+          <span>•</span>
+          <span class="text-amber-800 font-semibold"><span id="visible-states-count">28</span> States</span>
+          <span>•</span>
+          <span class="text-indigo-800 font-semibold"><span id="visible-uts-count">8</span> Union Territories</span>
+          <span id="active-filter-label" class="font-medium text-amber-900 ml-1"></span>
+        </div>
+        <div class="text-slate-400">
+          Switch between <strong class="text-slate-600">☁️ Google Drive</strong> and <strong class="text-slate-600">📁 Local Folder</strong> links above anytime
+        </div>
+      </div>
+
+      <!-- Cards Grid -->
+      <div id="cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden bg-white rounded-3xl border border-slate-200 p-12 text-center max-w-md mx-auto my-12 shadow-sm">
+        <div class="text-4xl mb-3">🗺️</div>
+        <h4 class="text-base font-bold text-slate-800 font-heritage">No matching States or UTs found</h4>
+        <p class="text-xs text-slate-500 mt-1">Try clearing your search query or switching to All Seasons.</p>
+        <button id="empty-reset-btn" class="mt-4 px-4 py-2 bg-amber-700 hover:bg-amber-800 text-white rounded-xl text-xs font-bold transition-all shadow-xs">Reset All Filters</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-8 border-t border-slate-800 text-xs mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-heritage font-bold text-sm">🪷 Incredible India Atlas</span>
+        <span>•</span>
+        <span>28 States & 8 Union Territories • Heritage, Landscapes & Seasonal Guide</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Atithi Devo Bhava</span>
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const INDIA_ATLAS = [{"name": "Andhra Pradesh", "type": "State", "region": "South", "file": "Andhra_pradesh.html", "driveUrl": "https://drive.google.com/file/d/1Bftrvzb1JX9B8EE6WdurVRAQk2QGaeoj/view?usp=drivesdk", "greeting": "🌺 Swagatham", "capital": "Amaravati", "tagline": "Sacred Peaks, Golden Shores & Ancient Dynasties", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 9, 10, 11, 12], "landscape": "Coastal & Eastern Ghats", "gradient": "from-amber-900 via-orange-900 to-slate-900", "icon": "🔱", "highlights": ["Tirupati & Tirumala", "Visakhapatnam & Araku", "Gandikota Canyon", "Lepakshi & Amaravati"], "chime": {"label": "Tirupati Temple Bell", "notes": [528, 660, 792], "wave": "sine"}}, {"name": "Arunachal Pradesh", "type": "State", "region": "Northeast", "file": "Arunachal_pradesh.html", "driveUrl": "https://drive.google.com/file/d/1zkOns8XMnfoC4dNH8RsM4UZ8x3zryXME/view?usp=drivesdk", "greeting": "🏔️ Tashi Delek", "capital": "Itanagar", "tagline": "Land of the Dawn-Lit Mountains & Monastic Passes", "bestTimeLabel": "Mar – May, Oct – Nov", "seasons": ["winter", "summer"], "months": [3, 4, 5, 10, 11], "landscape": "Eastern Himalayas", "gradient": "from-emerald-950 via-teal-900 to-slate-900", "icon": "☸️", "highlights": ["Tawang Monastery", "Sela Pass (13,700 ft)", "Ziro Valley (Apatani)", "Namdapha & Mechuka"], "chime": {"label": "Tawang Singing Bowl", "notes": [432, 648, 864], "wave": "sine"}}, {"name": "Assam", "type": "State", "region": "Northeast", "file": "Assam.html", "driveUrl": "https://drive.google.com/file/d/1qmWEKwRzAB4dUFtNu4DIkPIyKPzwr1vJ/view?usp=drivesdk", "greeting": "🦏 Rongali Greetings", "capital": "Dispur", "tagline": "Land of the Red River, One-Horned Rhinos & Tea", "bestTimeLabel": "Nov – Apr", "seasons": ["winter"], "months": [1, 2, 3, 4, 11, 12], "landscape": "Brahmaputra Valley & Floodplains", "gradient": "from-emerald-900 via-green-950 to-slate-900", "icon": "🦏", "highlights": ["Kaziranga National Park", "Kamakhya & Umananda", "Majuli River Island", "Sivasagar & Jorhat Tea"], "chime": {"label": "Brahmaputra River Bell", "notes": [392, 493.88, 587.33], "wave": "triangle"}}, {"name": "Bihar", "type": "State", "region": "East", "file": "Bihar.html", "driveUrl": "https://drive.google.com/file/d/1zdGuXRs2KCkpXF0aTI0MZFrE4xjEcQrM/view?usp=drivesdk", "greeting": "☸️ Pranam", "capital": "Patna", "tagline": "Cradle of Buddhism, Jainism & Ancient Nalanda", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Gangetic Plains & Sacred Hills", "gradient": "from-amber-950 via-stone-900 to-slate-950", "icon": "🪷", "highlights": ["Bodh Gaya (Mahabodhi)", "Nalanda University Ruins", "Rajgir & Vishwa Shanti Stupa", "Vaishali & Pawapuri"], "chime": {"label": "Bodh Gaya Meditation Chime", "notes": [349.23, 523.25, 698.46], "wave": "sine"}}, {"name": "Chhattisgarh", "type": "State", "region": "Central", "file": "Chhattisgarh.html", "driveUrl": "https://drive.google.com/file/d/1jccKTgYOqSM4BS7oGhc09b3fLh8mK0R6/view?usp=drivesdk", "greeting": "🌿 Jai Johar", "capital": "Raipur", "tagline": "Niagara of India, Tribal Art & Ancient Forest Caves", "bestTimeLabel": "Oct – Mar (Falls Jul – Oct)", "seasons": ["winter", "monsoon"], "months": [1, 2, 3, 7, 8, 9, 10, 11, 12], "landscape": "Forests & Waterfalls", "gradient": "from-teal-950 via-emerald-950 to-slate-900", "icon": "🌊", "highlights": ["Chitrakote Waterfalls", "Kanger Valley & Bastar", "Sirpur Heritage", "Bhoramdeo Temple"], "chime": {"label": "Bastar Bamboo Flute", "notes": [440, 523.25, 659.25], "wave": "sine"}}, {"name": "Goa", "type": "State", "region": "West", "file": "Goa.html", "driveUrl": "https://drive.google.com/file/d/1skRYtZ6zAVeIMpz2tmLyC3qHu4BRNHUk/view?usp=drivesdk", "greeting": "🌴 Dev Borem Korum", "capital": "Panaji", "tagline": "Golden Konkan Shores, Baroque Churches & Spice Groves", "bestTimeLabel": "Nov – Feb (Lush Jul – Sep)", "seasons": ["winter", "monsoon"], "months": [1, 2, 7, 8, 9, 11, 12], "landscape": "Arabian Sea Coast & Ghats", "gradient": "from-cyan-900 via-sky-950 to-slate-900", "icon": "🏖️", "highlights": ["Old Goa Basilica", "Palolem & Baga Beaches", "Dudhsagar Waterfalls", "Fontainhas Latin Quarter"], "chime": {"label": "Konkan Guitar & Wave Chime", "notes": [329.63, 415.3, 493.88], "wave": "triangle"}}, {"name": "Gujarat", "type": "State", "region": "West", "file": "Gujarat.html", "driveUrl": "https://drive.google.com/file/d/1trJ2wFpBhl6cL1QDwA3Rc4usH9SHQNy6/view?usp=drivesdk", "greeting": "🦁 Kem Cho & Namaste", "capital": "Gandhinagar", "tagline": "White Rann Salt Desert, Asiatic Lions & Stepwells", "bestTimeLabel": "Nov – Feb", "seasons": ["winter"], "months": [1, 2, 11, 12], "landscape": "Salt Desert, Coast & Gir Forests", "gradient": "from-orange-950 via-amber-900 to-slate-900", "icon": "🦁", "highlights": ["Rann of Kutch", "Gir National Park", "Statue of Unity & Somnath", "Rani ki Vav & Dwarka"], "chime": {"label": "Somnath Shankh & Garba Chime", "notes": [293.66, 440, 587.33], "wave": "triangle"}}, {"name": "Haryana", "type": "State", "region": "North", "file": "Haryana.html", "driveUrl": "https://drive.google.com/file/d/1QjqJ7nrUnjpCfX84ZOFmr734LMnnSVM1/view?usp=drivesdk", "greeting": "🌾 Ram Ram & Namaste", "capital": "Chandigarh", "tagline": "Sacred Kurukshetra, Heritage Gardens & Bird Sanctuaries", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Plains & Aravalli Foothills", "gradient": "from-amber-900 via-yellow-950 to-slate-900", "icon": "🏹", "highlights": ["Kurukshetra (Brahma Sarovar)", "Pinjore Mughal Gardens", "Sultanpur Bird Sanctuary", "Surajkund Crafts Mela"], "chime": {"label": "Kurukshetra Panchajanya Chime", "notes": [392, 523.25, 659.25], "wave": "sine"}}, {"name": "Himachal Pradesh", "type": "State", "region": "North", "file": "Himachal_pradesh.html", "driveUrl": "https://drive.google.com/file/d/1fhmE2kkZLko5onYcm54oWQJNoMtL4lra/view?usp=drivesdk", "greeting": "🏔️ Julley & Namaste", "capital": "Shimla", "tagline": "Snow-Capped Valleys, Toy Trains & High Spiti Gompas", "bestTimeLabel": "Mar – Jun, Sep – Dec", "seasons": ["summer", "winter"], "months": [3, 4, 5, 6, 9, 10, 11, 12], "landscape": "Western Himalayas", "gradient": "from-sky-950 via-indigo-950 to-slate-900", "icon": "🏔️", "highlights": ["Shimla & Toy Train", "Manali & Rohtang", "Spiti Valley (Key Monastery)", "Dharamshala & McLeod Ganj"], "chime": {"label": "Spiti Monastery & Flute Chime", "notes": [493.88, 587.33, 739.99], "wave": "sine"}}, {"name": "Jharkhand", "type": "State", "region": "East", "file": "Jharkhand.html", "driveUrl": "https://drive.google.com/file/d/1Md1xCwYr_x6ml5hBfSC-iTH1ppGymIcF/view?usp=drivesdk", "greeting": "🌿 Johar", "capital": "Ranchi", "tagline": "Land of Forests, Sacred Parasnath & Thundering Falls", "bestTimeLabel": "Oct – Mar", "seasons": ["winter", "monsoon"], "months": [1, 2, 3, 8, 9, 10, 11, 12], "landscape": "Chota Nagpur Plateau & Forests", "gradient": "from-emerald-950 via-stone-900 to-slate-950", "icon": "🌲", "highlights": ["Hundru & Dassam Falls", "Deoghar (Baidyanath Dham)", "Betla National Park", "Parasnath Hill (Shikharji)"], "chime": {"label": "Parasnath Mandar Chime", "notes": [349.23, 440, 523.25], "wave": "triangle"}}, {"name": "Karnataka", "type": "State", "region": "South", "file": "Karnataka.html", "driveUrl": "https://drive.google.com/file/d/1Ck5WU-JHUNjJ0XoxYJOVKr5UF57NMapn/view?usp=drivesdk", "greeting": "🐘 Namaskara", "capital": "Bengaluru", "tagline": "Hampi Boulders, Mysore Palaces, Coorg & Jog Falls", "bestTimeLabel": "Oct – Mar (Ghats Jul – Sep)", "seasons": ["winter", "monsoon"], "months": [1, 2, 3, 7, 8, 9, 10, 11, 12], "landscape": "Deccan Heritage, Western Ghats & Coast", "gradient": "from-rose-950 via-amber-950 to-slate-900", "icon": "🏛️", "highlights": ["Hampi UNESCO Ruins", "Mysore Palace", "Coorg & Chikmagalur", "Badami, Belur & Gokarna"], "chime": {"label": "Hampi Musical Stone Pillar", "notes": [523.25, 659.25, 783.99], "wave": "triangle"}}, {"name": "Kerala", "type": "State", "region": "South", "file": "Kerala.html", "driveUrl": "https://drive.google.com/file/d/1PRLRuZ4ZhSwXCehJDSVHqP_HgFMeRDCp/view?usp=drivesdk", "greeting": "🌴 Namaskaram", "capital": "Thiruvananthapuram", "tagline": "Emerald Backwaters, Munnar Tea Hills & Ayurveda", "bestTimeLabel": "Sep – Mar (Ayurveda Jun – Aug)", "seasons": ["winter", "monsoon"], "months": [1, 2, 3, 6, 7, 8, 9, 10, 11, 12], "landscape": "Backwaters, Tea Hills & Coast", "gradient": "from-teal-950 via-emerald-900 to-slate-900", "icon": "🛶", "highlights": ["Alleppey Backwaters", "Munnar Tea Estates", "Fort Kochi & Wayanad", "Thekkady & Varkala"], "chime": {"label": "Kerala Edakka & Temple Chime", "notes": [392, 493.88, 659.25], "wave": "sine"}}, {"name": "Madhya Pradesh", "type": "State", "region": "Central", "file": "Madhya_pradesh.html", "driveUrl": "https://drive.google.com/file/d/1NPtWbWt3LCT3SbCrDYGBu71jOZw9vPXV/view?usp=drivesdk", "greeting": "🐅 Namaste", "capital": "Bhopal", "tagline": "The Heart of India — Khajuraho, Sanchi & Tiger Reserves", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Vindhya Plateaus & Tiger Forests", "gradient": "from-amber-950 via-red-950 to-slate-900", "icon": "🐅", "highlights": ["Khajuraho Temples", "Sanchi Stupa & Bhimbetka", "Bandhavgarh & Kanha", "Orchha, Mandu & Ujjain"], "chime": {"label": "Sanchi & Mahakal Bell", "notes": [261.63, 392, 523.25], "wave": "sine"}}, {"name": "Maharashtra", "type": "State", "region": "West", "file": "Maharashtra.html", "driveUrl": "https://drive.google.com/file/d/1OlDSGkp-6GtIMufPBdr_xmrziePv9SDU/view?usp=drivesdk", "greeting": "🚩 Namaskar", "capital": "Mumbai", "tagline": "Ajanta-Ellora Caves, Sahyadri Forts & Konkan Coast", "bestTimeLabel": "Oct – Mar (Sahyadris Jul – Sep)", "seasons": ["winter", "monsoon"], "months": [1, 2, 3, 7, 8, 9, 10, 11, 12], "landscape": "Western Ghats, Caves & Coastline", "gradient": "from-orange-950 via-stone-900 to-slate-950", "icon": "⛰️", "highlights": ["Ajanta & Ellora Caves", "Mumbai & Elephanta", "Lonavala & Mahabaleshwar", "Tadoba & Shirdi"], "chime": {"label": "Sahyadri Tutari & Bell", "notes": [329.63, 440, 659.25], "wave": "triangle"}}, {"name": "Manipur", "type": "State", "region": "Northeast", "file": "Manipur.html", "driveUrl": "https://drive.google.com/file/d/1WD8HlEfJtG0ZzBlxUuVSwXT3wh4cFq-W/view?usp=drivesdk", "greeting": "🪷 Khurumjari", "capital": "Imphal", "tagline": "Jewel of India — Floating Loktak Lake & Sangai Deer", "bestTimeLabel": "Oct – Apr", "seasons": ["winter"], "months": [1, 2, 3, 4, 10, 11, 12], "landscape": "Floating Lakes & Lush Hills", "gradient": "from-teal-900 via-cyan-950 to-slate-900", "icon": "🦢", "highlights": ["Loktak Lake & Keibul Lamjao", "Kangla Fort & Ima Keithel", "Dzukou & Shirui Hills", "INA Memorial Moirang"], "chime": {"label": "Loktak Pena & Pung Chime", "notes": [392, 440, 587.33], "wave": "sine"}}, {"name": "Meghalaya", "type": "State", "region": "Northeast", "file": "Meghalaya.html", "driveUrl": "https://drive.google.com/file/d/19b051rBsV-vaNX8HBYMyEaVF5BNgRHGR/view?usp=drivesdk", "greeting": "🌦️ Khublei", "capital": "Shillong", "tagline": "Abode of Clouds, Living Root Bridges & Crystal Rivers", "bestTimeLabel": "Oct – May (Falls Jun – Sep)", "seasons": ["winter", "summer", "monsoon"], "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "landscape": "Cloud-Kissed Plateaus & Canyons", "gradient": "from-sky-900 via-teal-950 to-slate-900", "icon": "🌉", "highlights": ["Living Root Bridges (Nongriat)", "Cherrapunji & Nohkalikai", "Dawki Umngot River", "Shillong & Mawlynnong"], "chime": {"label": "Khasi Duitara & Rain Chime", "notes": [440, 554.37, 659.25], "wave": "triangle"}}, {"name": "Mizoram", "type": "State", "region": "Northeast", "file": "Mizoram.html", "driveUrl": "https://drive.google.com/file/d/1DdUn7_RoJWzzY3WtnC2RYuVWi6l6XxQU/view?usp=drivesdk", "greeting": "🎋 Chibai", "capital": "Aizawl", "tagline": "Land of Blue Mountains, Bamboo Valleys & Vantawng Falls", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Rolling Blue Ridges", "gradient": "from-indigo-950 via-teal-950 to-slate-900", "icon": "⛰️", "highlights": ["Aizawl & Reiek Tlang", "Vantawng Waterfalls", "Phawngpui (Blue Mountain)", "Tam Dil & Champhai"], "chime": {"label": "Cheraw Bamboo Chime", "notes": [349.23, 440, 587.33], "wave": "triangle"}}, {"name": "Nagaland", "type": "State", "region": "Northeast", "file": "Nagaland.html", "driveUrl": "https://drive.google.com/file/d/1yDgdjWTOlwYP630Kri5li2_RRWq8-iG6/view?usp=drivesdk", "greeting": "🪶 Alo / Khublei", "capital": "Kohima", "tagline": "Land of Festivals, Hornbill Heritage & Dzukou Valley", "bestTimeLabel": "Oct – May (Hornbill Dec)", "seasons": ["winter", "summer"], "months": [1, 2, 3, 4, 5, 10, 11, 12], "landscape": "Naga Hills & Alpine Meadows", "gradient": "from-red-950 via-stone-900 to-slate-950", "icon": "🪶", "highlights": ["Kisama Hornbill Festival", "Dzukou Valley", "Kohima War Cemetery", "Khonoma & Mon"], "chime": {"label": "Naga Log Drum & Horn Chime", "notes": [293.66, 392, 523.25], "wave": "triangle"}}, {"name": "Odisha", "type": "State", "region": "East", "file": "Odisha.html", "driveUrl": "https://drive.google.com/file/d/1-MZ15t5r7cebWY8c-HY-XqOfrGEPNL-P/view?usp=drivesdk", "greeting": "🙏 Namaskar & Jai Jagannath", "capital": "Bhubaneswar", "tagline": "Konark Sun Chariot, Puri Dham & Chilika Lagoon", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Temple Coast & Brackish Lagoons", "gradient": "from-amber-900 via-rose-950 to-slate-900", "icon": "☸️", "highlights": ["Konark Sun Temple", "Jagannath Puri", "Chilika Lake Dolphins", "Bhubaneswar & Simlipal"], "chime": {"label": "Puri Jagannath Temple Bell", "notes": [440, 523.25, 659.25], "wave": "sine"}}, {"name": "Punjab", "type": "State", "region": "North", "file": "Punjab.html", "driveUrl": "https://drive.google.com/file/d/1VUzqoX3cEBAQ6PyDYigQawYNZiRu1tP1/view?usp=drivesdk", "greeting": "🙏 Sat Sri Akal", "capital": "Chandigarh", "tagline": "Golden Temple Serenity, Wagah & Vibrant Heritage", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Five-River Plains", "gradient": "from-amber-800 via-yellow-950 to-slate-900", "icon": "✨", "highlights": ["Golden Temple (Amritsar)", "Jallianwala Bagh & Wagah", "Virasat-e-Khalsa", "Patiala Qila Mubarak"], "chime": {"label": "Amritsar Harmonium & Rabab", "notes": [392, 493.88, 587.33], "wave": "triangle"}}, {"name": "Rajasthan", "type": "State", "region": "North", "file": "Rajasthan.html", "driveUrl": "https://drive.google.com/file/d/1aC6rm-6TbyFkkB1gNRNhasj0INfj0nvE/view?usp=drivesdk", "greeting": "🐪 Padharo Mhare Desh", "capital": "Jaipur", "tagline": "Land of Kings — Amber Forts, Thar Dunes & Udaipur Lakes", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Thar Desert, Aravallis & Lakes", "gradient": "from-rose-950 via-amber-900 to-slate-900", "icon": "🏰", "highlights": ["Jaipur Pink City & Amber", "Udaipur Lakes & Palaces", "Jaisalmer Golden Dunes", "Jodhpur & Ranthambore"], "chime": {"label": "Rajasthani Sarangi & Morchang", "notes": [293.66, 369.99, 440], "wave": "triangle"}}, {"name": "Sikkim", "type": "State", "region": "Northeast", "file": "Sikkim.html", "driveUrl": "https://drive.google.com/file/d/1tosSEL6v57S5HKs3DoZEw5x1AbenWNAq/view?usp=drivesdk", "greeting": "🏔️ Tashi Delek", "capital": "Gangtok", "tagline": "Kanchenjunga Majesty, Alpine Lakes & Rumtek Monasteries", "bestTimeLabel": "Mar – May, Oct – Dec", "seasons": ["summer", "winter"], "months": [3, 4, 5, 10, 11, 12], "landscape": "High Eastern Himalayas", "gradient": "from-indigo-950 via-sky-950 to-slate-900", "icon": "🏔️", "highlights": ["Gangtok & Rumtek", "Tsomgo Lake & Nathula", "Yumthang & Gurudongmar", "Pelling & Kanchenjunga"], "chime": {"label": "Rumtek Monastery Bowl", "notes": [432, 540, 648], "wave": "sine"}}, {"name": "Tamil Nadu", "type": "State", "region": "South", "file": "Tamil_nadu.html", "driveUrl": "https://drive.google.com/file/d/1Ene8xmo0jFa_w_p3xiaZRbbdPl3TKQzv/view?usp=drivesdk", "greeting": "🙏 Vanakkam", "capital": "Chennai", "tagline": "Chola Bronzes, Dravidian Gopurams & Misty Nilgiris", "bestTimeLabel": "Nov – Mar (Hills Apr – Jun)", "seasons": ["winter", "summer"], "months": [1, 2, 3, 4, 5, 6, 11, 12], "landscape": "Coromandel Coast & Nilgiri Hills", "gradient": "from-red-950 via-amber-950 to-slate-900", "icon": "🛕", "highlights": ["Madurai Meenakshi Temple", "Mahabalipuram & Thanjavur", "Rameswaram & Kanyakumari", "Ooty & Kodaikanal"], "chime": {"label": "Madurai Veena & Nadaswaram", "notes": [392, 523.25, 659.25], "wave": "triangle"}}, {"name": "Telangana", "type": "State", "region": "South", "file": "Telangana.html", "driveUrl": "https://drive.google.com/file/d/1LqWmE4xx6UehxnREqxhEUarBX18T05cs/view?usp=drivesdk", "greeting": "🏰 Namaskaram & Aadab", "capital": "Hyderabad", "tagline": "Charminar, Golconda Diamonds & Kakatiya Ramappa", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Deccan Plateau & Granite Forts", "gradient": "from-purple-950 via-rose-950 to-slate-900", "icon": "🕌", "highlights": ["Charminar & Golconda Fort", "Ramoji Film City", "Ramappa Temple (UNESCO)", "Warangal & Nagarjuna Sagar"], "chime": {"label": "Golconda & Kakatiya Bell", "notes": [349.23, 440, 523.25], "wave": "sine"}}, {"name": "Tripura", "type": "State", "region": "Northeast", "file": "Tripura.html", "driveUrl": "https://drive.google.com/file/d/18NgGQS0cwlJHm87pLCNSrKTXqhOd01Zu/view?usp=drivesdk", "greeting": "🪷 Khulumkha & Namaskar", "capital": "Agartala", "tagline": "Neermahal Water Palace, Ujjayanta & Unakoti Carvings", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Emerald Hills & Lake Palaces", "gradient": "from-teal-950 via-emerald-950 to-slate-900", "icon": "🏯", "highlights": ["Ujjayanta Palace", "Neermahal Lake Palace", "Unakoti Rock Reliefs", "Tripura Sundari & Sepahijala"], "chime": {"label": "Neermahal Sarinda Chime", "notes": [392, 493.88, 587.33], "wave": "sine"}}, {"name": "Uttar Pradesh", "type": "State", "region": "North", "file": "Uttar_pradesh.html", "driveUrl": "https://drive.google.com/file/d/1-3FWSii8saVUDcYWBidTP5z0AOVihGH-/view?usp=drivesdk", "greeting": "🙏 Namaste & Aadaab", "capital": "Lucknow", "tagline": "Taj Mahal Wonder, Varanasi Ghats, Ayodhya & Nawabi Grace", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Ganga-Yamuna Plains", "gradient": "from-rose-950 via-amber-950 to-slate-900", "icon": "🕌", "highlights": ["Taj Mahal & Agra Fort", "Varanasi Ganga Aarti", "Ayodhya & Mathura-Vrindavan", "Lucknow & Triveni Sangam"], "chime": {"label": "Kashi Ganga Aarti & Sitar", "notes": [523.25, 659.25, 783.99], "wave": "sine"}}, {"name": "Uttarakhand", "type": "State", "region": "North", "file": "Uttarakhand.html", "driveUrl": "https://drive.google.com/file/d/1UIyottNgiI4RnGWNtm3dzyyHRSCAM-Dh/view?usp=drivesdk", "greeting": "🙏 Namaste & Har Har Gange", "capital": "Dehradun", "tagline": "Devbhoomi — Char Dham, Rishikesh, Nainital & Corbett", "bestTimeLabel": "Mar – Jun, Sep – Nov", "seasons": ["summer", "winter"], "months": [3, 4, 5, 6, 9, 10, 11], "landscape": "Garhwal & Kumaon Himalayas", "gradient": "from-teal-950 via-sky-950 to-slate-900", "icon": "🏔️", "highlights": ["Rishikesh & Haridwar", "Nainital & Mussoorie", "Jim Corbett National Park", "Char Dham & Valley of Flowers"], "chime": {"label": "Har Ki Pauri Ganga Bell", "notes": [440, 587.33, 880], "wave": "sine"}}, {"name": "West Bengal", "type": "State", "region": "East", "file": "West_bengal.html", "driveUrl": "https://drive.google.com/file/d/1axr7rZ3LEf3pmU4_hzAgrNMnXwAGzZo3/view?usp=drivesdk", "greeting": "🙏 Nomoshkar", "capital": "Kolkata", "tagline": "Victoria Memorial, Darjeeling Toy Train & Sundarbans", "bestTimeLabel": "Oct – Mar (Hills Mar – May)", "seasons": ["winter", "summer"], "months": [1, 2, 3, 4, 5, 10, 11, 12], "landscape": "Himalayan Tea Hills to Mangrove Delta", "gradient": "from-rose-950 via-red-950 to-slate-900", "icon": "🚋", "highlights": ["Kolkata & Victoria Memorial", "Darjeeling & Tiger Hill", "Sundarbans Mangrove Delta", "Shantiniketan & Dooars"], "chime": {"label": "Baul Ektara & Dakshineswar", "notes": [392, 523.25, 659.25], "wave": "triangle"}}, {"name": "Andaman & Nicobar Islands", "type": "Union Territory", "region": "Islands", "file": "Andaman_nicobar.html", "driveUrl": "https://drive.google.com/file/d/1R5wzopA5VIOBKdH5qnG0zX2PIh75dLki/view?usp=drivesdk", "greeting": "🐚 Namaste & Island Greetings", "capital": "Sri Vijaya Puram (Port Blair)", "tagline": "Emerald Coral Archipelagos, Radhanagar & Cellular Jail", "bestTimeLabel": "Oct – May", "seasons": ["winter", "summer"], "months": [1, 2, 3, 4, 5, 10, 11, 12], "landscape": "Bay of Bengal Coral Islands", "gradient": "from-cyan-950 via-teal-900 to-slate-900", "icon": "🐚", "highlights": ["Cellular Jail & Ross Island", "Havelock (Radhanagar Beach)", "Neil Island Coral Bridge", "Baratang Limestone Caves"], "chime": {"label": "Andaman Conch & Ocean Harp", "notes": [392, 493.88, 783.99], "wave": "sine"}}, {"name": "Chandigarh", "type": "Union Territory", "region": "North", "file": "Chandigarh.html", "driveUrl": "https://drive.google.com/file/d/1tijsuFW8bXtHON4Ad-SQkvrMQfBGrqLp/view?usp=drivesdk", "greeting": "🌹 Sat Sri Akal & Namaste", "capital": "Chandigarh", "tagline": "The City Beautiful — Le Corbusier, Sukhna & Rock Garden", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Shivalik Foothills & Urban Gardens", "gradient": "from-emerald-950 via-slate-900 to-teal-950", "icon": "✋", "highlights": ["Rock Garden of Chandigarh", "Sukhna Lake Promenade", "Zakir Hussain Rose Garden", "Capitol Complex (UNESCO)"], "chime": {"label": "Sukhna Morning Chime", "notes": [440, 554.37, 659.25], "wave": "sine"}}, {"name": "Dadra & Nagar Haveli and Daman & Diu", "type": "Union Territory", "region": "West", "file": "DNH_daman_and_diu.html", "driveUrl": "https://drive.google.com/file/d/1tIlzw4FikfYVaNaiBHT-oNsK2Jt4KDiA/view?usp=drivesdk", "greeting": "🌊 Kem Cho & Olá", "capital": "Daman", "tagline": "Sea-Ringed Portuguese Forts, Naida Caves & Tribal Silvassa", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Arabian Sea Forts & Forests", "gradient": "from-sky-950 via-amber-950 to-slate-900", "icon": "🏰", "highlights": ["Diu Fort & Naida Caves", "Nagoa & Jampore Beaches", "Moti Daman & St. Paul's", "Silvassa & Dudhni Lake"], "chime": {"label": "Diu Sea Fort Bell", "notes": [329.63, 440, 587.33], "wave": "triangle"}}, {"name": "Delhi (NCT)", "type": "Union Territory", "region": "North", "file": "Delhi_NCT.html", "driveUrl": "https://drive.google.com/file/d/1nw4Rb67194xucBtNssP5ReG8wT7MovdX/view?usp=drivesdk", "greeting": "🕌 Namaste & Aadaab", "capital": "New Delhi", "tagline": "Seven Historic Cities, Mughal Wonders & Kartavya Path", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Imperial Monuments & Urban Greens", "gradient": "from-red-950 via-amber-950 to-slate-900", "icon": "🕌", "highlights": ["Red Fort & Qutub Minar", "Humayun's Tomb & India Gate", "Akshardham & Lotus Temple", "Chandni Chowk & Dilli Haat"], "chime": {"label": "Indraprastha Shehnai & Bell", "notes": [392, 523.25, 783.99], "wave": "triangle"}}, {"name": "Jammu & Kashmir", "type": "Union Territory", "region": "North", "file": "Jammu_kashmir.html", "driveUrl": "https://drive.google.com/file/d/1kZbKJ8puokDFQ6zdeoNyvnV0xLMDZJJG/view?usp=drivesdk", "greeting": "🍁 Namaste & Aadaab", "capital": "Srinagar / Jammu", "tagline": "Heaven on Earth — Dal Lake Shikaras, Gulmarg & Vaishno Devi", "bestTimeLabel": "Apr – Oct (Skiing Dec – Mar)", "seasons": ["summer", "winter"], "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12], "landscape": "Alpine Valleys, Glaciers & Lakes", "gradient": "from-teal-950 via-rose-950 to-slate-900", "icon": "🍁", "highlights": ["Dal Lake & Mughal Gardens", "Gulmarg Gondola & Skiing", "Pahalgam & Sonamarg", "Mata Vaishno Devi & Patnitop"], "chime": {"label": "Kashmiri Santoor & Rabab", "notes": [523.25, 659.25, 880], "wave": "triangle"}}, {"name": "Ladakh", "type": "Union Territory", "region": "North", "file": "Ladakh.html", "driveUrl": "https://drive.google.com/file/d/1XGjCzRiil6EZ1znQ1-2Xaraeqv-SdGO4/view?usp=drivesdk", "greeting": "🏔️ Julley", "capital": "Leh", "tagline": "Land of High Passes — Pangong Tso, Nubra & Cliffside Gompas", "bestTimeLabel": "May – Sep (Chadar Jan – Feb)", "seasons": ["summer", "monsoon"], "months": [1, 2, 5, 6, 7, 8, 9], "landscape": "Trans-Himalayan Cold Desert", "gradient": "from-sky-950 via-red-950 to-slate-900", "icon": "🏔️", "highlights": ["Leh Palace & Shanti Stupa", "Pangong Tso (14,270 ft)", "Khardung La & Nubra Dunes", "Zanskar Phuktal & Thiksey"], "chime": {"label": "Ladakh Singing Bowl & Gompa", "notes": [220, 440, 659.25], "wave": "sine"}}, {"name": "Lakshadweep", "type": "Union Territory", "region": "Islands", "file": "Lakshadweep.html", "driveUrl": "https://drive.google.com/file/d/1Jl2z7ml1yhxy2yrFtoU3l5Zz0TU3H7OU/view?usp=drivesdk", "greeting": "🏝️ Marhaba & Namaskaram", "capital": "Kavaratti", "tagline": "36 Emerald Coral Atolls, Bioluminescent Shores & Lagoons", "bestTimeLabel": "Oct – May", "seasons": ["winter", "summer"], "months": [1, 2, 3, 4, 5, 10, 11, 12], "landscape": "Arabian Sea Coral Atolls", "gradient": "from-cyan-950 via-teal-950 to-slate-900", "icon": "🏝️", "highlights": ["Agatti Coral Gateway", "Bangaram & Thinnakara", "Kavaratti Marine Aquarium", "Kadmat & Minicoy Lighthouse"], "chime": {"label": "Ocean Lagoon & Daffu Chime", "notes": [392, 493.88, 783.99], "wave": "sine"}}, {"name": "Puducherry", "type": "Union Territory", "region": "South", "file": "Puducherry.html", "driveUrl": "https://drive.google.com/file/d/1ik2NrHi1zUf1JB91w1UmNmMAjVDQeH2P/view?usp=drivesdk", "greeting": "🌺 Vanakkam & Bonjour", "capital": "Puducherry", "tagline": "Franco-Tamil Riviera, Bougainvillea Lanes & Matrimandir", "bestTimeLabel": "Oct – Mar", "seasons": ["winter"], "months": [1, 2, 3, 10, 11, 12], "landscape": "Coromandel Coast & Backwaters", "gradient": "from-indigo-950 via-pink-950 to-slate-900", "icon": "🌺", "highlights": ["White Town French Quarter", "Promenade Rock Beach", "Auroville & Matrimandir", "Paradise & Serenity Beaches"], "chime": {"label": "Franco-Tamil & Matrimandir Chime", "notes": [329.63, 493.88, 659.25], "wave": "triangle"}}];
+
+    let activeType = "All";
+    let activeSeason = "All";
+    let activeMonth = 0;
+    let activeRegion = "All";
+    let searchQuery = "";
+    let showSavedOnly = false;
+    let savedNames = [];
+    // Default to 'local' only when opened directly from a local file:// folder; use 'drive' in Canvas/web preview
+    let linkMode = window.location.protocol === 'file:' ? 'local' : 'drive';
+
+    // Sequential 36-State & UT Chime Player state
+    let chimePlaying = false;
+    let chimeTimer = null;
+    let chimeCtx = null;
+
+    try {
+      savedNames = JSON.parse(localStorage.getItem('india_atlas_bucket_list') || '[]');
+    } catch (e) {
+      savedNames = [];
+    }
+
+    function showToast(msg, icon = '✨') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+      }, 2200);
+    }
+
+    function stopHeritageChime() {
+      chimePlaying = false;
+      if (chimeTimer) {
+        clearTimeout(chimeTimer);
+        chimeTimer = null;
+      }
+      if (chimeCtx) {
+        try { chimeCtx.close(); } catch (e) {}
+        chimeCtx = null;
+      }
+      const lbl = document.getElementById('chime-btn-label');
+      const btn = document.getElementById('audio-bell-btn');
+      if (lbl) lbl.textContent = '🎶 Heritage Chime (All 36)';
+      if (btn) btn.classList.remove('bg-rose-100', 'text-rose-950', 'border-rose-300');
+    }
+
+    function playSingleStateChime(ctx, item) {
+      const now = ctx.currentTime;
+      const notes = item.chime.notes;
+      const wave = item.chime.wave || 'sine';
+      notes.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = wave;
+        const t = now + idx * 0.14;
+        osc.frequency.setValueAtTime(freq, t);
+
+        gain.gain.setValueAtTime(0, t);
+        gain.gain.linearRampToValueAtTime(0.18, t + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + 0.65);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(t);
+        osc.stop(t + 0.7);
+      });
+    }
+
+    function toggleAllHeritageChimes() {
+      if (chimePlaying) {
+        stopHeritageChime();
+        showToast('Stopped Heritage Chime medley', '⏹️');
+        return;
+      }
+
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        chimeCtx = new AudioContext();
+        chimePlaying = true;
+        const btn = document.getElementById('audio-bell-btn');
+        const lbl = document.getElementById('chime-btn-label');
+        if (btn) btn.classList.add('bg-rose-100', 'text-rose-950', 'border-rose-300');
+
+        let index = 0;
+        function playNext() {
+          if (!chimePlaying || index >= INDIA_ATLAS.length) {
+            if (index >= INDIA_ATLAS.length) {
+              showToast('Completed all 36 State & UT chimes!', '🪷');
+            }
+            stopHeritageChime();
+            return;
+          }
+          const item = INDIA_ATLAS[index];
+          if (lbl) lbl.textContent = `⏹️ Stop (${index + 1}/36: ${item.name})`;
+          showToast(`${item.icon} ${index + 1}/36 ${item.name} — ${item.chime.label}`, '🎶');
+          playSingleStateChime(chimeCtx, item);
+          index++;
+          chimeTimer = setTimeout(playNext, 1150);
+        }
+
+        playNext();
+      } catch (e) {
+        showToast('Audio playback unavailable in this browser', '🎶');
+        stopHeritageChime();
+      }
+    }
+
+    function updateSavedBadge() {
+      const badge = document.getElementById('saved-badge');
+      if (badge) badge.textContent = savedNames.length;
+    }
+
+    function getFilteredDestinations() {
+      return INDIA_ATLAS.filter(d => {
+        if (activeType !== "All" && d.type !== activeType) return false;
+        if (activeSeason !== "All" && !d.seasons.includes(activeSeason)) return false;
+        if (activeMonth > 0 && !d.months.includes(activeMonth)) return false;
+        if (activeRegion !== "All" && d.region !== activeRegion) return false;
+        if (showSavedOnly && !savedNames.includes(d.name)) return false;
+
+        if (searchQuery.trim() !== "") {
+          const q = searchQuery.toLowerCase().trim();
+          const inName = d.name.toLowerCase().includes(q);
+          const inCapital = d.capital.toLowerCase().includes(q);
+          const inTagline = d.tagline.toLowerCase().includes(q);
+          const inLandscape = d.landscape.toLowerCase().includes(q);
+          const inHighlights = d.highlights.some(h => h.toLowerCase().includes(q));
+          if (!inName && !inCapital && !inTagline && !inLandscape && !inHighlights) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderCards() {
+      const grid = document.getElementById('cards-grid');
+      const emptyState = document.getElementById('empty-state');
+      const totalEl = document.getElementById('visible-total-count');
+      const statesEl = document.getElementById('visible-states-count');
+      const utsEl = document.getElementById('visible-uts-count');
+      const filterLabel = document.getElementById('active-filter-label');
+
+      const items = getFilteredDestinations();
+      const statesCount = items.filter(i => i.type === 'State').length;
+      const utsCount = items.filter(i => i.type === 'Union Territory').length;
+
+      if (totalEl) totalEl.textContent = items.length;
+      if (statesEl) statesEl.textContent = statesCount;
+      if (utsEl) utsEl.textContent = utsCount;
+
+      if (filterLabel) {
+        const parts = [];
+        if (activeType !== "All") parts.push(activeType + 's');
+        if (activeSeason !== "All") parts.push('Season: ' + activeSeason);
+        if (activeMonth > 0) {
+          const mSelect = document.getElementById('month-select');
+          parts.push('Month: ' + mSelect.options[mSelect.selectedIndex].text);
+        }
+        if (activeRegion !== "All") parts.push('Region: ' + activeRegion);
+        if (showSavedOnly) parts.push('Bucket List Only');
+        if (searchQuery.trim()) parts.push('Search: "' + searchQuery + '"');
+        filterLabel.textContent = parts.length ? '(' + parts.join(' • ') + ')' : '';
+      }
+
+      if (items.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = items.map(d => {
+        const isSaved = savedNames.includes(d.name);
+        const typeBadgeClass = d.type === 'State'
+          ? 'bg-amber-400 text-slate-950'
+          : 'bg-sky-300 text-slate-950';
+        const primaryHref = linkMode === 'drive' ? d.driveUrl : d.file;
+        const targetAttr = linkMode === 'drive' ? 'target="_blank" rel="noopener noreferrer"' : '';
+
+        return `
+          <article class="bg-white rounded-3xl border border-slate-200/90 shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div>
+              <!-- Scenic Card Header -->
+              <div class="bg-gradient-to-br ${d.gradient} text-white p-5 relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 text-7xl opacity-15 pointer-events-none select-none">${d.icon}</div>
+                <div class="flex items-center justify-between gap-2 relative z-10">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider ${typeBadgeClass}">${d.type}</span>
+                  <button data-save-name="${d.name}" class="save-btn w-8 h-8 rounded-full flex items-center justify-center text-sm transition-colors ${isSaved ? 'bg-amber-400 text-slate-950' : 'bg-white/15 hover:bg-white/25 text-white'}" title="Save to Bucket List">
+                    ${isSaved ? '★' : '☆'}
+                  </button>
+                </div>
+
+                <div class="mt-3 relative z-10">
+                  <span class="text-[11px] font-semibold text-amber-200">${d.greeting} • ${d.region}</span>
+                  <h3 class="text-xl font-black font-heritage tracking-tight text-white mt-0.5">${d.name}</h3>
+                  <p class="text-[11px] text-slate-200 mt-1 line-clamp-2">${d.tagline}</p>
+                </div>
+              </div>
+
+              <!-- Card Body -->
+              <div class="p-5 space-y-3.5">
+                <div class="flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                  <span class="bg-amber-50 text-amber-900 border border-amber-200 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1">
+                    <span>🌤️</span> Best: ${d.bestTimeLabel}
+                  </span>
+                  <span class="text-slate-500 font-medium">🏛️ ${d.capital}</span>
+                </div>
+
+                <div class="text-[11px] text-slate-500 font-medium">
+                  🌄 <span class="text-slate-700">${d.landscape}</span>
+                </div>
+
+                <ul class="space-y-1.5 pt-2 border-t border-slate-100">
+                  ${d.highlights.map(h => `
+                    <li class="flex items-center gap-2 text-xs text-slate-700">
+                      <span class="text-amber-600 font-bold text-[10px]">✦</span>
+                      <span>${h}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+            </div>
+
+            <!-- Card Footer CTA -->
+            <div class="px-5 pb-5 pt-1 flex items-center gap-2">
+              <a href="${primaryHref}" ${targetAttr} class="flex-1 py-2.5 px-4 bg-slate-900 hover:bg-amber-700 text-white rounded-xl text-xs font-bold flex items-center justify-between transition-colors shadow-xs">
+                <span>Explore ${d.name}</span>
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+              <a href="${d.driveUrl}" target="_blank" rel="noopener noreferrer" class="py-2.5 px-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-900 border border-indigo-200 rounded-xl text-xs font-bold transition-colors" title="Open ${d.file} in Google Drive">
+                ☁️
+              </a>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      document.querySelectorAll('.save-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const name = e.currentTarget.getAttribute('data-save-name');
+          if (savedNames.includes(name)) {
+            savedNames = savedNames.filter(n => n !== name);
+            showToast('Removed ' + name + ' from Bucket List', '☆');
+          } else {
+            savedNames.push(name);
+            showToast('Added ' + name + ' to Bucket List!', '★');
+          }
+          localStorage.setItem('india_atlas_bucket_list', JSON.stringify(savedNames));
+          updateSavedBadge();
+          renderCards();
+        });
+      });
+    }
+
+    function resetAllFilters() {
+      activeType = "All";
+      activeSeason = "All";
+      activeMonth = 0;
+      activeRegion = "All";
+      searchQuery = "";
+      showSavedOnly = false;
+
+      const sInput = document.getElementById('search-input');
+      const cBtn = document.getElementById('clear-search-btn');
+      const mSelect = document.getElementById('month-select');
+      const rSelect = document.getElementById('region-select');
+      const bBtn = document.getElementById('bookmark-filter-btn');
+
+      if (sInput) sInput.value = "";
+      if (cBtn) cBtn.classList.add('hidden');
+      if (mSelect) mSelect.value = "0";
+      if (rSelect) rSelect.value = "All";
+      if (bBtn) bBtn.classList.remove('bg-amber-200', 'border-amber-400');
+
+      document.querySelectorAll('.type-tab').forEach(t => {
+        if (t.getAttribute('data-type') === 'All') {
+          t.classList.add('active', 'bg-indigo-950', 'text-white');
+          t.classList.remove('text-slate-700');
+        } else {
+          t.classList.remove('active', 'bg-indigo-950', 'text-white');
+          t.classList.add('text-slate-700');
+        }
+      });
+
+      document.querySelectorAll('.season-tab').forEach(t => {
+        if (t.getAttribute('data-season') === 'All') {
+          t.classList.add('active', 'bg-amber-700', 'text-white');
+        } else {
+          t.classList.remove('active', 'bg-amber-700', 'text-white');
+        }
+      });
+
+      renderCards();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const linkSelect = document.getElementById('link-mode-select');
+      if (linkSelect) {
+        linkSelect.value = linkMode;
+        linkSelect.addEventListener('change', (e) => {
+          linkMode = e.target.value;
+          showToast(linkMode === 'drive' ? 'Using Google Drive file links' : 'Using local folder file links', '🔗');
+          renderCards();
+        });
+      }
+
+      updateSavedBadge();
+      renderCards();
+
+      const bellBtn = document.getElementById('audio-bell-btn');
+      if (bellBtn) bellBtn.addEventListener('click', toggleAllHeritageChimes);
+
+      // Search
+      const searchInput = document.getElementById('search-input');
+      const clearBtn = document.getElementById('clear-search-btn');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          if (clearBtn) {
+            if (searchQuery.trim()) clearBtn.classList.remove('hidden');
+            else clearBtn.classList.add('hidden');
+          }
+          renderCards();
+        });
+      }
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearBtn.classList.add('hidden');
+          renderCards();
+        });
+      }
+
+      // Type Tabs (State vs UT)
+      document.querySelectorAll('.type-tab').forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          document.querySelectorAll('.type-tab').forEach(t => {
+            t.classList.remove('active', 'bg-indigo-950', 'text-white');
+            t.classList.add('text-slate-700');
+          });
+          e.currentTarget.classList.add('active', 'bg-indigo-950', 'text-white');
+          e.currentTarget.classList.remove('text-slate-700');
+          activeType = e.currentTarget.getAttribute('data-type');
+          renderCards();
+        });
+      });
+
+      // Season Tabs
+      document.querySelectorAll('.season-tab').forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          document.querySelectorAll('.season-tab').forEach(t => {
+            t.classList.remove('active', 'bg-amber-700', 'text-white');
+          });
+          e.currentTarget.classList.add('active', 'bg-amber-700', 'text-white');
+          activeSeason = e.currentTarget.getAttribute('data-season');
+          renderCards();
+        });
+      });
+
+      // Quick Season Cards
+      document.querySelectorAll('.quick-season-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          const s = e.currentTarget.getAttribute('data-quick-season');
+          activeSeason = s;
+          document.querySelectorAll('.season-tab').forEach(t => {
+            if (t.getAttribute('data-season') === s) {
+              t.classList.add('active', 'bg-amber-700', 'text-white');
+            } else {
+              t.classList.remove('active', 'bg-amber-700', 'text-white');
+            }
+          });
+          renderCards();
+          document.getElementById('atlas-grid-section').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Month & Region Selects
+      const monthSelect = document.getElementById('month-select');
+      if (monthSelect) {
+        monthSelect.addEventListener('change', (e) => {
+          activeMonth = parseInt(e.target.value, 10) || 0;
+          renderCards();
+        });
+      }
+
+      const regionSelect = document.getElementById('region-select');
+      if (regionSelect) {
+        regionSelect.addEventListener('change', (e) => {
+          activeRegion = e.target.value;
+          renderCards();
+        });
+      }
+
+      // Bookmark Toggle
+      const bBtn = document.getElementById('bookmark-filter-btn');
+      if (bBtn) {
+        bBtn.addEventListener('click', () => {
+          showSavedOnly = !showSavedOnly;
+          if (showSavedOnly) bBtn.classList.add('bg-amber-200', 'border-amber-400');
+          else bBtn.classList.remove('bg-amber-200', 'border-amber-400');
+          renderCards();
+        });
+      }
+
+      // Reset Buttons
+      const rBtn = document.getElementById('reset-all-btn');
+      const eBtn = document.getElementById('empty-reset-btn');
+      if (rBtn) rBtn.addEventListener('click', resetAllFilters);
+      if (eBtn) eBtn.addEventListener('click', resetAllFilters);
+
+      // Back to Top
+      const topBtn = document.getElementById('back-to-top-btn');
+      if (topBtn) {
+        topBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

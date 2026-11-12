@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakshadweep Explorer — Interactive Travel & Cultural Heritage Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    .font-heritage {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-cyan-200 selection:text-cyan-950">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-cyan-950 via-teal-900 to-slate-950 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-cyan-800/50 flex items-center justify-center gap-2 shadow-sm">
+    <span>🏝️ Marhaba & Namaskaram! Welcome to Lakshadweep — Agatti Coral Lagoons, Bangaram Bioluminescence, Kavaratti & Minicoy Lighthouse</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-700 via-teal-700 to-sky-900 flex items-center justify-center text-white shadow-lg shadow-cyan-900/20 text-2xl font-bold border border-amber-300">
+          🏝️
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Lakshadweep Explorer</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">🙏 Marhaba & Namaskaram! Welcome to Lakshadweep — Your Welcoming Guide to Agatti Island, Bangaram & Thinnakara, Kavaratti, and Kadmat & Minicoy</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <button id="audio-bell-btn" class="bg-cyan-100/80 hover:bg-cyan-200 text-cyan-950 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5 transition-all border border-cyan-300/80 shadow-2xs active:scale-95" title="Play Ocean Lagoon & Daffu Chime">
+          <span>🎶 Ocean Lagoon & Daffu Chime</span>
+        </button>
+        <a href="#itinerary-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🗓️ Itineraries</span>
+        </a>
+        <a href="#cuisine-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🍲 Cuisine</span>
+        </a>
+        <a href="#festivals-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎉 Festivals</span>
+        </a>
+        <a href="#checklist-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎒 Checklist</span>
+        </a>
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-950 px-3.5 py-1.5 rounded-xl font-bold transition-all border border-amber-300/80 flex items-center gap-1.5">
+          <span>⭐ Bookmarks</span>
+          <span id="saved-badge" class="bg-cyan-800 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-b from-cyan-950 via-teal-950 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 border-b border-cyan-900">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-900/80 border border-cyan-700 text-cyan-200 text-xs font-semibold">
+          <span>✨ Emerald Coral Archipelago (36 Islands)</span>
+          <span>•</span>
+          <span>Turquoise Lagoons, Bioluminescent Shores & Maritime Heritage</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight text-amber-300 leading-tight">
+          Coral Atolls, Phosphorescent Nights & Historic Lighthouses
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+          Touch down beside Agatti's glowing turquoise reef, watch phosphorescent waves shimmer along uninhabited Bangaram and Thinnakara, explore marine research and carved coral-stone mosques in Kavaratti, and dive Kadmat's coral walls before climbing Minicoy's 1885 British-era lighthouse.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full lg:w-auto text-center">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">4</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Atoll Groups</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">7</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Key Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">36</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Coral Islands</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">1,300+</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Yrs Heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Controls & Search Toolbar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 z-20 w-full">
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Search Input -->
+      <div class="relative w-full md:w-80">
+        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">🔍</span>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search Agatti, Bangaram, Kavaratti, Minicoy..." 
+          class="w-full pl-10 pr-24 py-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:border-transparent transition-all placeholder:text-slate-400"
+        />
+        <button id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-700">Clear</button>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="filter-tabs">
+        <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-cyan-800 text-white shadow-xs transition-all flex-shrink-0">All Atolls</button>
+        <button data-cat="Aviation Gateway, Coral Reefs & Turquoise Lagoons" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Agatti Island</button>
+        <button data-cat="Uninhabited Coral Islands, Bioluminescence & Deep-Sea Diving" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Bangaram & Thinnakara</button>
+        <button data-cat="Island Capital, Marine Aquarium Research & Islamic Architecture" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Kavaratti</button>
+        <button data-cat="Scuba Diving Atolls, Windsurfing & Maldivian-Influenced Culture" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Kadmat & Minicoy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 space-y-10">
+
+    <!-- 1. Interactive Route Planner / Itinerary Feature -->
+    <div id="itinerary-section" class="bg-white rounded-2xl border border-cyan-200 p-5 shadow-lg">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-900 bg-cyan-100 px-2.5 py-0.5 rounded-full">Interactive Feature</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Island-Hopping Itinerary & Lagoon Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended island circuits across Lakshadweep:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-800 text-white shadow-xs transition-all">3 Days (Agatti & Bangaram Escape)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Atolls & Kavaratti)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Complete Coral Circuit & Minicoy)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- 2. Dual Feature Row: Taste of Lakshadweep + Festivals Calendar -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Feature A: Taste of Lakshadweep -->
+      <div id="cuisine-section" class="bg-white rounded-2xl border border-cyan-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-900 bg-cyan-100 px-2.5 py-0.5 rounded-full">Gastronomy & Culture</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Lakshadweep: Tuna, Coconut & Island Sweets</h4>
+            </div>
+            <span class="text-2xl">🍲</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Freshly caught Arabian Sea tuna paired with fragrant coconut milk, Malabari spices, and Mahl delicacies:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🥥 Kavaratti Tuna Curry</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Freshly caught skipjack tuna simmered in roasted coconut, curry leaves, turmeric, and tangy Malabar tamarind.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🥥 Mus Kavaab</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Spiced boneless bonito tuna cubes slow-cooked with aromatic cardamom, cloves, coriander, and rich coconut milk.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🥥 Kilangi & Batla Appam</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Steamed rice-and-coconut cakes and crisp tapioca fritters enjoyed across island tea stalls with spiced black tea.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🥥 Smoked Tuna & Coconut Halwa</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Traditional Minicoy sun-dried tuna relish (*Mas*) paired with sweet palm-jaggery and grated coconut halwa.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-cyan-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Dining Tip: Try fresh grilled reef fish and Kilangi rice cakes with black tea at local island homestays on Agatti and Kavaratti!</p>
+      </div>
+
+      <!-- Feature B: Festivals & Cultural Calendar -->
+      <div id="festivals-section" class="bg-white rounded-2xl border border-cyan-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-900 bg-cyan-100 px-2.5 py-0.5 rounded-full">Culture & Festivities</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Island Folk Dances, Boat Races & Celebrations</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Experience rhythmic Lava and Kolkali dances, Daffu music, and Minicoy lagoon boat races:</p>
+
+          <div class="space-y-2.5 text-xs">
+            
+            <div class="bg-teal-50/60 p-3 rounded-xl border border-teal-200/70 hover:border-teal-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🥁</span> Lava & Kolkali Folk Dances
+                </h5>
+                <span class="text-[10px] font-bold bg-teal-200/80 text-teal-950 px-2 py-0.5 rounded">Cultural Evenings & Island Festivals</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Vibrant rhythmic folk dances—especially Minicoy's colorful *Lava* drum-and-ribbon dance and northern *Kolkali* stick dances.
+              </p>
+            </div>
+            
+            <div class="bg-teal-50/60 p-3 rounded-xl border border-teal-200/70 hover:border-teal-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🥁</span> Eid-ul-Fitr & Milad-un-Nabi
+                </h5>
+                <span class="text-[10px] font-bold bg-teal-200/80 text-teal-950 px-2 py-0.5 rounded">Lunar Calendar (Community Celebrations)</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Joyous island-wide feasts featuring illuminated coral-stone mosques, traditional *Daffu* frame-drum ensembles, and shared sweets.
+              </p>
+            </div>
+            
+            <div class="bg-teal-50/60 p-3 rounded-xl border border-teal-200/70 hover:border-teal-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🥁</span> Jahadhoni Boat Races (Minicoy)
+                </h5>
+                <span class="text-[10px] font-bold bg-teal-200/80 text-teal-950 px-2 py-0.5 rounded">Post-Monsoon / Festive Season</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Thrilling traditional *Jahadhoni* wooden boat races across Minicoy's crescent lagoon showcasing centuries-old seamanship.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-cyan-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Planning Advice: Apply for your Lakshadweep Entry Permit & Police Clearance Certificate at least 3–4 weeks ahead of your flight!</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Packing & Transit Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Packing & Island Permit Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-cyan-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-900 bg-cyan-100 px-2.5 py-0.5 rounded-full">Travel Essentials</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Permit, Reef-Safe & Lagoon Checklist</h4>
+            </div>
+            <span class="text-2xl">🎒</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Interactive permit, eco-tourism, and water-sports readiness checklist for the atolls:</p>
+
+          <div class="my-3 space-y-2 text-xs" id="checklist-items">
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="0" class="pack-checkbox rounded border-slate-300 text-cyan-700 focus:ring-cyan-600 w-4 h-4">
+              <span class="text-slate-700">Obtain mandatory Lakshadweep Entry Permit & Police Clearance Certificate (PCC) well before travel</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="1" class="pack-checkbox rounded border-slate-300 text-cyan-700 focus:ring-cyan-600 w-4 h-4">
+              <span class="text-slate-700">Pack reef-safe biodegradable sunscreen (SPF 50+) to protect delicate coral ecosystems</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="2" class="pack-checkbox rounded border-slate-300 text-cyan-700 focus:ring-cyan-600 w-4 h-4">
+              <span class="text-slate-700">Carry sufficient INR cash—ATMs exist mainly on Agatti & Kavaratti and run out quickly</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="3" class="pack-checkbox rounded border-slate-300 text-cyan-700 focus:ring-cyan-600 w-4 h-4">
+              <span class="text-slate-700">Use BSNL or Airtel SIM cards for best island connectivity (Jio/Vi have limited reach on outer atolls)</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="4" class="pack-checkbox rounded border-slate-300 text-cyan-700 focus:ring-cyan-600 w-4 h-4">
+              <span class="text-slate-700">Bring personal snorkeling mask, waterproof phone pouch & motion-sickness tablets for speedboats</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="5" class="pack-checkbox rounded border-slate-300 text-cyan-700 focus:ring-cyan-600 w-4 h-4">
+              <span class="text-slate-700">Respect local island customs: dress modestly in inhabited villages & do not collect corals or shells</span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-slate-500">Progress:</span>
+            <span id="pack-progress-text" class="font-bold text-cyan-800">0/6 Completed</span>
+          </div>
+          <button id="reset-checklist-btn" class="text-[11px] text-cyan-800 hover:underline font-bold">Reset</button>
+        </div>
+      </div>
+
+      <!-- Regional Atoll Transit Matrix -->
+      <div class="bg-white rounded-2xl border border-cyan-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-900 bg-cyan-100 px-2.5 py-0.5 rounded-full">Transit Logistics</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Regional Flight, Speedboat & Ferry Matrix</h4>
+            </div>
+            <span class="text-2xl">🛥️</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Key sea and air links connecting Kochi, Agatti, Bangaram, Kavaratti, Kadmat, and Minicoy:</p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold">
+                  <th class="py-2 px-3">Route / Corridor</th>
+                  <th class="py-2 px-2 text-center">Distance</th>
+                  <th class="py-2 px-2 text-center">Travel Time</th>
+                  <th class="py-2 px-3">Recommended Access</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Kochi (COK) → Agatti (AGX)</td>
+                  <td class="py-2 px-2 text-center font-mono">459 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-900 font-medium">1 hr 30 min</td>
+                  <td class="py-2 px-3 text-[11px]">Daily Alliance Air / IndiGo ATR Flights</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Agatti → Bangaram & Thinnakara</td>
+                  <td class="py-2 px-2 text-center font-mono">14 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-900 font-medium">45 min</td>
+                  <td class="py-2 px-3 text-[11px]">Licensed Resort / SPORTS Speedboat</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Agatti → Kavaratti</td>
+                  <td class="py-2 px-2 text-center font-mono">58 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-900 font-medium">2 hrs / 20 min</td>
+                  <td class="py-2 px-3 text-[11px]">High-Speed Ferry or Pawan Hans Helicopter</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Kavaratti → Kadmat</td>
+                  <td class="py-2 px-2 text-center font-mono">72 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-900 font-medium">2.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Inter-Island High-Speed Vessel</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Kochi → Minicoy (Samudram)</td>
+                  <td class="py-2 px-2 text-center font-mono">398 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-900 font-medium">14 – 16 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Overnight Passenger Ship (MV Kavaratti / Corals)</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="text-[11px] text-cyan-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">💡 Transit Tip: Alcohol is strictly prohibited on all inhabited islands (permitted only inside the Bangaram Island resort).</p>
+      </div>
+
+    </div>
+
+    <!-- Active Filter Status Bar -->
+    <div class="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-200">
+      <div class="flex items-center gap-2">
+        <span>Showing:</span>
+        <span id="visible-clusters-count" class="font-bold text-slate-900">4</span> Atoll Groups
+        <span>•</span>
+        <span id="visible-sites-count" class="font-bold text-cyan-800">7</span> Key Sites
+        <span id="active-filter-label" class="font-medium text-cyan-900 ml-1"></span>
+      </div>
+      <div>
+        <span class="text-slate-400">All coordinates verified with official Google Maps</span>
+      </div>
+    </div>
+
+    <!-- Clusters Container (Cards Injected Here) -->
+    <div id="clusters-container" class="space-y-12">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State (When no search matches) -->
+    <div id="empty-state" class="hidden bg-white rounded-3xl border border-slate-200 p-12 text-center max-w-md mx-auto my-12 shadow-sm">
+      <div class="text-4xl mb-3">🔍</div>
+      <h4 class="text-base font-bold text-slate-800 font-heritage">No matching islands found</h4>
+      <p class="text-xs text-slate-500 mt-1">Try searching for "Agatti", "Bangaram", "Kavaratti", "Kadmat", or "Minicoy".</p>
+      <button id="empty-reset-btn" class="mt-4 px-4 py-2 bg-cyan-800 hover:bg-cyan-900 text-white rounded-xl text-xs font-bold transition-all shadow-xs">Reset All Filters</button>
+    </div>
+
+  </main>
+
+  <!-- Detailed Reading Modal -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div id="modal-container" class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-cyan-950 via-teal-950 to-slate-900 text-white p-5 flex items-start justify-between gap-4">
+        <div>
+          <span id="modal-category" class="text-[11px] font-bold text-amber-300 uppercase tracking-wider bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Category</span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-black font-heritage text-white mt-1.5">Cluster Title</h3>
+          <p id="modal-tagline" class="text-xs text-slate-300 mt-0.5">Tagline and description</p>
+        </div>
+        <button id="modal-close-x" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-200 hover:text-white transition-colors text-lg" title="Close Modal">✕</button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="modal-body" class="p-6 overflow-y-auto space-y-6 text-sm text-slate-700 divide-y divide-slate-100">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-3.5 flex items-center justify-between text-xs">
+        <span class="text-slate-500 font-medium">📍 Verified with Google Maps & Live GPS</span>
+        <div class="flex items-center gap-2">
+          <button id="modal-copy-all-btn" class="px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-xl font-bold transition-colors flex items-center gap-1.5">
+            <span>📋 Copy Travel Notes</span>
+          </button>
+          <button id="modal-close-action" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-semibold transition-colors">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-heritage font-bold">Lakshadweep Explorer</span>
+        <span>•</span>
+        <span>Dedicated to Coral Reef Conservation, Lagoon Ecotourism & Island Heritage</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Curated with 🏝️ Lakshadweep Pride</span>
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    // Tourism Data
+    const LAKSHADWEEP_DATA = [{"id": "agatti-gateway-lagoon", "title": "Agatti Island: Coral Gateway & Turquoise Lagoon", "tagline": "Gateway airport island surrounded by coral reefs, lagoons, and clear turquoise waters", "category": "Aviation Gateway, Coral Reefs & Turquoise Lagoons", "tags": ["Agatti Island", "Gateway airport island surrounded by coral reefs", "lagoons", "clear turquoise waters", "Glass-Bottom Boats"], "bestTime": "October to May (Calm glassy lagoons, 25–30°C sunshine, and clear underwater visibility)", "duration": "1 to 2 Days (Direct 90-minute flight from Kochi)", "overview": "Stretching like a slender emerald ribbon across the Arabian Sea, Agatti Island hosts Lakshadweep's sole commercial airstrip—dramatically flanked on both sides by shallow coral reefs and glowing turquoise lagoons. Serving as the welcoming gateway to the northern atolls, Agatti invites travelers straight from the tarmac onto powdery white sands, glass-bottom coral boat rides, kayaking, and vibrant reef snorkeling.", "places": [{"name": "Agatti Island (Gateway airport island)", "type": "Coral Atoll Aviation Hub, Shallow Lagoon & Reef Snorkeling", "coords": "10.8559° N, 72.1942° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Agatti+Island+Lakshadweep", "history": "Situated 459 km west of Kochi, Agatti was historically an ancient tuna-fishing and coir-weaving island settlement before its iconic sea-skimming runway opened Lakshadweep to eco-tourism.", "keyFacts": ["Gateway airport island surrounded by coral reefs, lagoons, and clear turquoise waters visible right from the aircraft window.", "Stretches 7.6 km in length with a massive protected western lagoon teeming with staghorn corals, sea turtles, and parrotfish.", "Offers effortless shore-entry snorkeling, kayaking, glass-bottom boat tours, and sunset strolls along the southern tip jetty.", "Serves as the speedboat transfer hub to nearby uninhabited Bangaram and Thinnakara islands."], "bestTime": "October to May (Calm sea state for speedboat transfers and reef visibility)", "insiderTip": "Book a window seat on the left side when flying from Kochi to Agatti for breathtaking aerial views of the coral-ringed runway."}]}, {"id": "bangaram-thinnakara-atoll", "title": "Bangaram & Thinnakara: Bioluminescent Teardrop Isles", "tagline": "Uninhabited postcard teardrop islands featuring phosphorescent night waters and deep-sea diving", "category": "Uninhabited Coral Islands, Bioluminescence & Deep-Sea Diving", "tags": ["Bangaram & Thinnakara", "Uninhabited postcard teardrop islands", "phosphorescent night waters", "deep-sea diving", "Sandbanks"], "bestTime": "October to May (Peak bioluminescence on dark new-moon nights and 25m+ diving visibility)", "duration": "2 Days (45-minute speedboat ride from Agatti)", "overview": "Set inside a vast shared coral lagoon just north of Agatti, Bangaram and Thinnakara are twin uninhabited teardrop islands ringed by dazzling white sandbanks. Completely free of urban crowds, their shores come alive after dusk with glowing blue phosphorescent phytoplankton, while by day divers explore dramatic coral drop-offs, manta rays, and sunken shipwrecks.", "places": [{"name": "Bangaram Island", "type": "Uninhabited Teardrop Coral Atoll & Deep-Sea Diving Sanctuary", "coords": "10.9378° N, 72.2886° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bangaram+Island+Lakshadweep", "history": "Historically uninhabited save for seasonal coconut harvesters, Bangaram gained international acclaim in the 1970s as India's premier secluded coral-atoll eco-retreat.", "keyFacts": ["Uninhabited postcard teardrop islands featuring phosphorescent night waters and deep-sea diving amidst pristine coral walls.", "Surrounded by a 12-square-kilometer shallow turquoise lagoon ideal for swimming alongside harmless reef sharks and green sea turtles.", "Famous for glowing blue bioluminescent waves washing onto the dark sandbar at night.", "The only island in Lakshadweep where regulated resort hospitality operates amidst total coconut-palm solitude."], "bestTime": "November to April (New-moon nights showcase the brightest phosphorescent glow along the shoreline)", "insiderTip": "Walk barefoot along the water's edge after 9:00 PM away from resort lights to see every footstep sparkle with bioluminescent plankton."}, {"name": "Thinnakara Island", "type": "Secluded Sandbank Atoll & Manta Ray Snorkeling Lagoon", "coords": "10.9461° N, 72.3239° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Thinnakara+Island+Lakshadweep", "history": "Located across a shallow turquoise channel from Bangaram, Thinnakara remains an untouched eco-camp island linked at low tide to neighboring Parali sandbanks.", "keyFacts": ["Encircled by an expansive milky-blue lagoon where visitors can walk far out onto natural tidal sandbars.", "Renowned for deep-sea diving sites, vibrant coral gardens, and frequent sightings of stingrays and sea turtles.", "Offers tranquil beachfront eco-tents with zero light pollution for stargazing.", "Popular for kayaking across the calm lagoon toward Parali I & II islets."], "bestTime": "October to May (Early morning low tide reveals stunning white sandbars stretching into the sea)", "insiderTip": "Join a morning guided snorkel drift near the outer reef channel to spot graceful eagle rays and hawksbill turtles."}]}, {"id": "kavaratti-capital-heritage", "title": "Kavaratti: Marine Research, Lagoons & Heritage Mosques", "tagline": "Administrative capital known for marine aquarium research, water sports, and Ajjara Mosque", "category": "Island Capital, Marine Aquarium Research & Islamic Architecture", "tags": ["Kavaratti", "marine aquarium research", "water sports", "Ajjara Mosque", "Ujra Mosque"], "bestTime": "October to May (Pleasant sea breezes for kayaking, glass-bottom boating, and cultural walks)", "duration": "1 to 2 Days (High-speed ferry or helicopter from Agatti)", "overview": "As the administrative capital of Lakshadweep, Kavaratti balances vibrant island community life with rich maritime heritage. Its calm western lagoon is a hub for scuba diving, windsurfing, and marine conservation at the renowned Marine Aquarium & Museum, while narrow coral-stone lanes lead to intricately carved historic shrines including the revered Ajjara Mosque and Ujra Mosque.", "places": [{"name": "Kavaratti Marine Aquarium & Water Sports Lagoon", "type": "Marine Biodiversity Research Museum & Lagoon Adventure Hub", "coords": "10.5669° N, 72.6417° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kavaratti+Marine+Aquarium+Lakshadweep", "history": "Established to study and showcase the fragile coral-reef ecosystems of the Laccadive Sea, the Kavaratti Marine Aquarium has educated generations of visitors and marine biologists.", "keyFacts": ["Kavaratti is the administrative capital known for marine aquarium research, water sports, and Ajjara Mosque.", "The Marine Aquarium & Museum displays live tropical reef fish, rare coral specimens, shark jaws, and deep-sea invertebrates.", "Adjoining Dolphin Dive Centre and lagoon beach offer kayaking, jet-skiing, windsurfing, and glass-bottom boat excursions.", "Features India's first low-temperature thermal desalination plant converting seawater into pure drinking water."], "bestTime": "9:30 AM to 5:30 PM (Morning hours offer calmest glass-bottom boat water clarity)", "insiderTip": "Take a glass-bottom boat ride straight from the Kavaratti lagoon jetty after touring the aquarium to see the same reef species in the wild."}, {"name": "Ajjara Mosque (and Ujra Heritage Quarter)", "type": "Historic Coral-Stone & Driftwood Carved Island Mosque", "coords": "10.5712° N, 72.6365° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ajjara+Mosque+Kavaratti+Lakshadweep", "history": "Kavaratti is home to over fifty historic mosques, with Ajjara Mosque and the 17th-century Ujra Mosque celebrated for masterwork Lakshadweep woodcarving crafted by island artisans.", "keyFacts": ["Constructed using locally quarried coral-stone blocks and intricately carved teak and driftwood ceilings.", "Features a sacred freshwater well within the courtyard traditionally believed by islanders to hold healing properties.", "Showcases centuries-old Malabari-Islamic calligraphy and floral pillar motifs carved by hand without nails.", "Surrounded by peaceful shaded coconut groves and traditional island residences."], "bestTime": "Open daily (Respectful modest attire required; avoid visiting during Friday afternoon congregation prayers)", "insiderTip": "Remove footwear at the outer courtyard gate and admire the hand-carved wooden ceiling rafters inside the prayer veranda."}]}, {"id": "kadmat-minicoy-atolls", "title": "Kadmat & Minicoy: Coral Atolls & Historic Lighthouse", "tagline": "Extensive coral atolls offering scuba diving, windsurfing, and Minicoy’s historic British-era lighthouse with Maldivian-influenced culture", "category": "Scuba Diving Atolls, Windsurfing & Maldivian-Influenced Culture", "tags": ["Kadmat & Minicoy", "scuba diving", "windsurfing", "Minicoy's historic British-era lighthouse", "Maldivian-influenced culture"], "bestTime": "October to May (Ideal trade winds for windsurfing at Kadmat and calm boat landings at Minicoy)", "duration": "2 to 4 Days (Accessible via high-speed vessel or overnight ship from Kochi)", "overview": "Spanning the central and southernmost reaches of the archipelago, Kadmat and Minicoy showcase Lakshadweep's dual soul. Kadmat's 8-kilometer coral atoll is a world-class center for certified scuba diving and lagoon windsurfing, while distant Minicoy (Maliku)—separated by the Nine Degree Channel—preserves a distinct Mahl-speaking, Maldivian-influenced culture watched over by its towering 1885 British-era lighthouse.", "places": [{"name": "Kadmat Island (Coral Atoll Diving & Windsurfing)", "type": "8-Km Silver-Sand Coral Atoll & PADI Scuba Diving Center", "coords": "11.2178° N, 72.7736° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kadmat+Island+Lakshadweep", "history": "Part of the Amindivi subgroup of Lakshadweep, Kadmat was long famed for its limestone coral-stone masonry and peaceful fishing hamlets before becoming India's premier scuba-training lagoon.", "keyFacts": ["Extensive coral atolls offering scuba diving, windsurfing, kayaking, and parasailing across a shallow 1.5-km-wide western lagoon.", "Houses a nationally recognized Water Sports Institute and certified dive school ideal for both beginners and advanced wall divers.", "Features dramatic underwater drop-offs teeming with napoleon wrasse, barracudas, rays, and vibrant soft corals.", "Its southern tip narrows into a breathtaking sandspit surrounded on three sides by ocean."], "bestTime": "November to April (Steady gentle breezes for windsurfing and crystal-clear scuba visibility)", "insiderTip": "Try a Discover Scuba Dive in Kadmat's calm outer reef—the visibility often exceeds 25 meters with gentle currents."}, {"name": "Minicoy Island & Historic British-Era Lighthouse", "type": "1885 CE 300-Foot Coastal Lighthouse & Maldivian-Influenced Mahl Culture", "coords": "8.2740° N, 73.0496° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Minicoy+Lighthouse+Lakshadweep", "history": "Situated just north of the Maldives across the Eight Degree Channel, Minicoy ('Maliku') shares Mahl language, matrilineal *Athiri* village traditions, and maritime heritage with the Maldives. Its iconic 300-foot lighthouse was built by the British in 1885.", "keyFacts": ["Minicoy’s historic British-era lighthouse (built 1885) rises 49 meters above the southern coconut palms, offering panoramic 360-degree views of the crescent lagoon.", "Unlike northern Malayalam-speaking islands, Minicoy speaks Mahl (Divehi script) and celebrates traditional *Lava* dances and *Jahadhoni* boat races.", "Organized into vibrant, spotless *Athiris* (villages) renowned for brightly painted houses and traditional tuna-smoking crafts.", "Encircled by one of Lakshadweep's largest lagoons, dotted with untouched Viringili islet."], "bestTime": "October to May (Check lighthouse visitor staircase hours locally for afternoon panoramic climbs)", "insiderTip": "Climb the spiral staircase inside the 1885 lighthouse before sunset for an unforgettable bird's-eye view of Minicoy's crescent lagoon."}]}];
+    const ITINERARIES = {"3": [{"day": "Day 1", "title": "Fly to Agatti & Lagoon Snorkeling", "desc": "Land at Agatti Island's sea-skimming runway, check in to your beachside stay, and enjoy glass-bottom coral boat rides and sunset."}, {"day": "Day 2", "title": "Bangaram & Thinnakara Day Excursion", "desc": "Speedboat across the turquoise reef to uninhabited Bangaram & Thinnakara islands for deep-sea diving and sandbar walks."}, {"day": "Day 3", "title": "Agatti Kayaking & Return Flight", "desc": "Enjoy sunrise kayaking on Agatti's glassy lagoon before boarding your return flight to Kochi."}], "5": [{"day": "Day 1", "title": "Agatti Island Arrival & Coral Lagoon", "desc": "Arrive at Agatti, explore the western lagoon reefs by kayak and snorkel, and stroll along the southern jetty at dusk."}, {"day": "Day 2", "title": "Bangaram Island & Phosphorescent Night", "desc": "Transfer by speedboat to Bangaram Island; dive the outer reef walls and witness glowing phosphorescent night waters."}, {"day": "Day 3", "title": "Thinnakara Sandbars & Turtle Trail", "desc": "Visit neighboring Thinnakara Island at low tide to walk the white sandbanks and spot sea turtles in the clear lagoon."}, {"day": "Day 4", "title": "Kavaratti Capital & Marine Aquarium", "desc": "Travel to Kavaratti to visit the Marine Aquarium research center, Ajjara Mosque, and try windsurfing on the lagoon."}, {"day": "Day 5", "title": "Kavaratti to Agatti & Departure", "desc": "Morning lagoon swim before returning to Agatti Airport for your onward flight."}], "7": [{"day": "Day 1", "title": "Agatti Island Coral Welcome", "desc": "Arrive at Agatti Island, acclimatize to island pace, and enjoy glass-bottom reef viewing."}, {"day": "Day 2", "title": "Bangaram & Thinnakara Islands", "desc": "Spend two full days exploring uninhabited teardrop islands, deep-sea diving, and bioluminescent beaches."}, {"day": "Day 3", "title": "Kadmat Coral Atoll & Scuba Diving", "desc": "Head to Kadmat Island's 8-km atoll for certified scuba diving, windsurfing, and sandspit sunsets."}, {"day": "Day 4", "title": "Kavaratti Marine Research & Mosques", "desc": "Explore Kavaratti's Marine Aquarium, water sports lagoon, and the carved woodwork of Ajjara Mosque."}, {"day": "Day 5", "title": "Cruise South Across Nine Degree Channel", "desc": "Board the Samudram / inter-island vessel overnight toward the southernmost atoll of Minicoy."}, {"day": "Day 6", "title": "Minicoy Island & 1885 Lighthouse", "desc": "Climb Minicoy's historic British-era lighthouse, explore Mahl village culture, and watch traditional Lava folk music."}, {"day": "Day 7", "title": "Lagoon Farewell & Return Voyage", "desc": "Morning swim at Minicoy's crescent lagoon before cruising back to Kochi or Agatti."}]};
+
+    // State Variables
+    let activeCategory = "All";
+    let searchQuery = "";
+    let savedClusters = [];
+    let checkedItems = [];
+
+    // LocalStorage Initialization
+    try {
+      savedClusters = JSON.parse(localStorage.getItem('lakshadweep_saved_clusters') || '[]');
+      checkedItems = JSON.parse(localStorage.getItem('lakshadweep_packing_checklist') || '[]');
+    } catch(e) {
+      savedClusters = [];
+      checkedItems = [];
+    }
+
+    // Toast Function
+    function showToast(msg, icon = '✨') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+      }, 2500);
+    }
+
+    // Packing Checklist Storage
+    function updateChecklistProgress() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      let count = 0;
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (box.checked) {
+          count++;
+          if (!checkedItems.includes(idx)) checkedItems.push(idx);
+        } else {
+          checkedItems = checkedItems.filter(i => i !== idx);
+        }
+      });
+      localStorage.setItem('lakshadweep_packing_checklist', JSON.stringify(checkedItems));
+      const progEl = document.getElementById('pack-progress-text');
+      if (progEl) progEl.textContent = count + '/' + boxes.length + ' Completed';
+    }
+
+    function loadChecklist() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (checkedItems.includes(idx)) {
+          box.checked = true;
+        }
+      });
+      updateChecklistProgress();
+    }
+
+    // Web Audio API Ocean Lagoon & Daffu Chime
+    function playOceanDaffuChime() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const now = audioCtx.currentTime;
+
+        // 1. Shimmering Lagoon Marimba / Sea Harp Notes
+        const lagoonNotes = [392.00, 493.88, 587.33, 783.99, 659.25, 587.33];
+        lagoonNotes.forEach((freq, idx) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          const t = now + idx * 0.16;
+          osc.frequency.setValueAtTime(freq, t);
+
+          gain.gain.setValueAtTime(0, t);
+          gain.gain.linearRampToValueAtTime(0.22, t + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.95);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(t);
+          osc.stop(t + 1.0);
+        });
+
+        // 2. Warm Coastal Daffu Frame-Drum Pulse
+        [0.0, 0.48, 0.96].forEach(offset => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          const t = now + offset;
+          osc.frequency.setValueAtTime(140, t);
+          osc.frequency.exponentialRampToValueAtTime(75, t + 0.18);
+
+          gain.gain.setValueAtTime(0, t);
+          gain.gain.linearRampToValueAtTime(0.24, t + 0.01);
+          gain.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(t);
+          osc.stop(t + 0.4);
+        });
+
+        showToast('🎶 Melody: Ocean Lagoon & Daffu Chime', '🏝️');
+      } catch (e) {
+        showToast('Ocean lagoon chime played', '🎶');
+      }
+    }
+
+    // Filter Logic
+    function getFilteredClusters() {
+      let result = LAKSHADWEEP_DATA;
+
+      if (activeCategory !== 'All') {
+        result = result.filter(c => c.category === activeCategory);
+      }
+
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase().trim();
+        result = result.filter(c => {
+          const inTitle = c.title.toLowerCase().includes(q);
+          const inOverview = c.overview.toLowerCase().includes(q);
+          const inPlaces = c.places.some(p => 
+            p.name.toLowerCase().includes(q) ||
+            p.type.toLowerCase().includes(q) ||
+            p.history.toLowerCase().includes(q) ||
+            p.keyFacts.some(f => f.toLowerCase().includes(q))
+          );
+          return inTitle || inOverview || inPlaces;
+        });
+      }
+
+      return result;
+    }
+
+    // Render Itinerary Function
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      if (!container) return;
+      const list = ITINERARIES[days] || ITINERARIES["3"];
+      container.innerHTML = list.map(item => `
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-3 hover:border-cyan-500 transition-all">
+          <div class="flex items-center justify-between pb-1 mb-1 border-b border-slate-200">
+            <span class="font-bold text-cyan-900">${item.day}</span>
+            <span class="text-[10px] bg-cyan-100 text-cyan-950 px-1.5 py-0.2 rounded font-semibold">${days}-Day Tour</span>
+          </div>
+          <h5 class="font-bold text-slate-800 text-[11px] mb-1">${item.title}</h5>
+          <p class="text-[11px] text-slate-600 leading-relaxed">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    // Render Places & Clusters
+    function renderClusters() {
+      const container = document.getElementById('clusters-container');
+      const emptyState = document.getElementById('empty-state');
+      const clusterCountEl = document.getElementById('visible-clusters-count');
+      const sitesCountEl = document.getElementById('visible-sites-count');
+      const filterLabel = document.getElementById('active-filter-label');
+
+      if (!container) return;
+
+      const clusters = getFilteredClusters();
+      const totalSites = clusters.reduce((acc, c) => acc + c.places.length, 0);
+
+      if (clusterCountEl) clusterCountEl.textContent = clusters.length;
+      if (sitesCountEl) sitesCountEl.textContent = totalSites;
+
+      if (filterLabel) {
+        let parts = [];
+        if (activeCategory !== 'All') parts.push('Category: ' + activeCategory);
+        if (searchQuery.trim()) parts.push('Search: "' + searchQuery + '"');
+        filterLabel.textContent = parts.length ? '(' + parts.join(' • ') + ')' : '';
+      }
+
+      if (clusters.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = clusters.map(cluster => {
+        const isSaved = savedClusters.includes(cluster.id);
+
+        const placesHtml = cluster.places.map((p, pIdx) => {
+          const factsList = p.keyFacts.map(kf => `
+            <li class="flex items-start gap-2 text-xs text-slate-700 leading-relaxed">
+              <span class="text-cyan-800 font-bold flex-shrink-0 mt-0.5">✦</span>
+              <span>${kf}</span>
+            </li>
+          `).join('');
+
+          return `
+            <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:border-cyan-500 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-3 border-b border-slate-100">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-cyan-100 text-cyan-900 text-xs font-bold flex items-center justify-center flex-shrink-0">${pIdx + 1}</span>
+                    <h4 class="text-base font-bold text-slate-900 font-heritage tracking-tight">${p.name}</h4>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2 mt-1 ml-8 text-[11px] text-slate-500">
+                    <span class="font-semibold text-slate-600">${p.type}</span>
+                    <span>•</span>
+                    <span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-mono">${p.coords || 'Lakshadweep, India'}</span>
+                  </div>
+                </div>
+
+                <!-- Google Map Direct Link Button -->
+                <div class="flex items-center gap-2 self-start sm:self-auto">
+                  <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors shadow-2xs" title="Open verified location in Google Maps">
+                    <span>📍 View on Google Maps</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Historical Importance -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-900 bg-cyan-50 border border-cyan-200 px-2 py-0.5 rounded">Historical Importance & Significance</span>
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">${p.history}</p>
+              </div>
+
+              <!-- Key Facts -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">Key Facts & Unique Highlights</span>
+                <ul class="space-y-1 pt-1 ml-1">
+                  ${factsList}
+                </ul>
+              </div>
+
+              <!-- Best Time & Insider Tip Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-xs">
+                <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                  <span class="text-base flex-shrink-0">🌤️</span>
+                  <div>
+                    <span class="font-bold text-slate-800 text-[11px]">Best Time & Hours:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.bestTime || 'October to May (Calm lagoon seas)'}</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2 bg-amber-50/50 p-2.5 rounded-xl border border-amber-100">
+                  <span class="text-base flex-shrink-0">💡</span>
+                  <div>
+                    <span class="font-bold text-amber-900 text-[11px]">Insider Travel Tip:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.insiderTip || 'Carry reef-safe sunscreen and valid Entry Permits.'}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <article class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden transition-all hover:shadow-lg">
+            
+            <!-- Cluster Header Banner -->
+            <div class="bg-gradient-to-r from-cyan-950 via-teal-950 to-slate-900 text-white p-6 sm:p-7 border-b border-cyan-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-slate-950">${cluster.category}</span>
+                  <span class="text-xs text-slate-300">⏱️ ${cluster.duration}</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black font-heritage tracking-tight text-white">${cluster.title}</h3>
+                <p class="text-xs sm:text-sm text-cyan-200 font-medium">${cluster.tagline}</p>
+              </div>
+
+              <!-- Header Actions: Bookmark & Full Dossier Modal -->
+              <div class="flex items-center gap-2.5 flex-shrink-0">
+                <button data-save-id="${cluster.id}" class="save-btn p-2.5 rounded-xl border transition-colors flex items-center gap-1.5 text-xs font-bold ${isSaved ? 'bg-amber-400 text-slate-950 border-amber-300' : 'bg-white/10 hover:bg-white/20 text-white border-white/20'}" title="Save Island Group to Bookmarks">
+                  <span>${isSaved ? '★' : '☆'}</span>
+                  <span>${isSaved ? 'Saved' : 'Bookmark'}</span>
+                </button>
+
+                <button data-open-modal="${cluster.id}" class="modal-open-btn px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all shadow-md flex items-center gap-1.5">
+                  <span>📖 Read Full Dossier</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Regional Overview Block -->
+            <div class="bg-slate-50/70 p-5 sm:p-6 border-b border-slate-200/80">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Regional Essence & Strategic Context</h4>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+              
+              <!-- Quick Metadata Tags -->
+              <div class="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-slate-200/60 text-xs">
+                <span class="text-slate-500 font-semibold">Tags:</span>
+                ${cluster.tags.map(t => `<span class="bg-white border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-lg text-[11px] font-medium">${t}</span>`).join('')}
+              </div>
+            </div>
+
+            <!-- Place Cards Grid -->
+            <div class="p-5 sm:p-6 space-y-5 bg-slate-100/40">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Key Places & Attractions (${cluster.places.length} Sites)</h4>
+                <span class="text-[11px] text-cyan-900 font-medium">📍 Verified with Google Maps</span>
+              </div>
+
+              <div class="space-y-4">
+                ${placesHtml}
+              </div>
+            </div>
+
+          </article>
+        `;
+      }).join('');
+
+      attachCardEventListeners();
+    }
+
+    // Modal Display Logic
+    function openModalForCluster(clusterId) {
+      const cluster = LAKSHADWEEP_DATA.find(c => c.id === clusterId);
+      if (!cluster) return;
+
+      const modal = document.getElementById('reading-modal');
+      const catEl = document.getElementById('modal-category');
+      const titleEl = document.getElementById('modal-title');
+      const tagEl = document.getElementById('modal-tagline');
+      const bodyEl = document.getElementById('modal-body');
+
+      catEl.textContent = cluster.category;
+      titleEl.textContent = cluster.title;
+      tagEl.textContent = cluster.tagline;
+
+      bodyEl.innerHTML = `
+        <div class="space-y-3 pb-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-cyan-900">Regional Overview</h4>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Recommended Window: ${cluster.bestTime}</span>
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Suggested Stay: ${cluster.duration}</span>
+          </div>
+        </div>
+
+        <div class="pt-4 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-cyan-900">Detailed Site Breakdown (${cluster.places.length} Places)</h4>
+          ${cluster.places.map((p, idx) => `
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h5 class="font-bold text-slate-900 text-sm font-heritage flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-cyan-100 text-cyan-900 text-xs flex items-center justify-center font-bold">${idx + 1}</span>
+                  ${p.name}
+                </h5>
+                <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-800 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1 self-start sm:self-auto hover:bg-emerald-100 transition-colors">
+                  <span>📍 Google Maps</span>
+                </a>
+              </div>
+              <p class="text-xs text-slate-600 font-mono">Coordinates: ${p.coords}</p>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Historical Importance:</strong> ${p.history}
+              </div>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Key Facts:</strong>
+                <ul class="list-disc pl-4 space-y-0.5 mt-1 text-slate-600">
+                  ${p.keyFacts.map(kf => `<li>${kf}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="text-[11px] text-amber-900 bg-amber-50/60 p-2 rounded-lg border border-amber-200/60 mt-2">
+                <strong>Insider Advice:</strong> ${p.insiderTip}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('reading-modal');
+      if (modal) modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Copy Notes Feature
+    function copyClusterNotes() {
+      const title = document.getElementById('modal-title').textContent;
+      const body = document.getElementById('modal-body').innerText;
+      const notes = `=== ${title} (Lakshadweep Travel Guide) ===\n\n${body}\n\nGenerated via Lakshadweep Explorer.`;
+      
+      navigator.clipboard.writeText(notes).then(() => {
+        showToast('Travel notes copied to clipboard!', '📋');
+      }).catch(() => {
+        showToast('Notes copied to clipboard!', '📋');
+      });
+    }
+
+    // Attach Dynamic Event Listeners
+    function attachCardEventListeners() {
+      document.querySelectorAll('.modal-open-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-open-modal');
+          openModalForCluster(id);
+        });
+      });
+
+      document.querySelectorAll('.save-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-save-id');
+          if (savedClusters.includes(id)) {
+            savedClusters = savedClusters.filter(i => i !== id);
+            showToast('Removed from saved bookmarks', '☆');
+          } else {
+            savedClusters.push(id);
+            showToast('Saved to bookmarks!', '★');
+          }
+          localStorage.setItem('lakshadweep_saved_clusters', JSON.stringify(savedClusters));
+          updateSavedBadge();
+          renderClusters();
+        });
+      });
+    }
+
+    function updateSavedBadge() {
+      const badge = document.getElementById('saved-badge');
+      if (badge) badge.textContent = savedClusters.length;
+    }
+
+    // Initialize Everything on DOM Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderItinerary("3");
+      renderClusters();
+      updateSavedBadge();
+      loadChecklist();
+
+      // Audio Bell Button
+      const bellBtn = document.getElementById('audio-bell-btn');
+      if (bellBtn) bellBtn.addEventListener('click', playOceanDaffuChime);
+
+      // Packing Checklist Event Listeners
+      const checkBoxes = document.querySelectorAll('.pack-checkbox');
+      checkBoxes.forEach(box => {
+        box.addEventListener('change', updateChecklistProgress);
+      });
+
+      const resetPackBtn = document.getElementById('reset-checklist-btn');
+      if (resetPackBtn) {
+        resetPackBtn.addEventListener('click', () => {
+          checkBoxes.forEach(b => b.checked = false);
+          checkedItems = [];
+          localStorage.removeItem('lakshadweep_packing_checklist');
+          updateChecklistProgress();
+          showToast('Checklist reset');
+        });
+      }
+
+      // Filter Tabs
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          tabs.forEach(t => {
+            t.classList.remove('active', 'bg-cyan-800', 'text-white');
+            t.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('active', 'bg-cyan-800', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          activeCategory = e.currentTarget.getAttribute('data-cat');
+          renderClusters();
+        });
+      });
+
+      // Itinerary Pills
+      const itPills = document.querySelectorAll('.itinerary-pill');
+      itPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+          itPills.forEach(p => {
+            p.classList.remove('bg-cyan-800', 'text-white');
+            p.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('bg-cyan-800', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          const days = e.currentTarget.getAttribute('data-days');
+          renderItinerary(days);
+        });
+      });
+
+      // Search Input
+      const searchInput = document.getElementById('search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          if (clearSearchBtn) {
+            if (searchQuery.length > 0) clearSearchBtn.classList.remove('hidden');
+            else clearSearchBtn.classList.add('hidden');
+          }
+          renderClusters();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          renderClusters();
+        });
+      }
+
+      // Bookmark Filter Button
+      const bFilterBtn = document.getElementById('bookmark-filter-btn');
+      if (bFilterBtn) {
+        let onlySaved = false;
+        bFilterBtn.addEventListener('click', () => {
+          onlySaved = !onlySaved;
+          if (onlySaved) {
+            bFilterBtn.classList.add('bg-amber-200', 'border-amber-400');
+            activeCategory = "All";
+            tabs.forEach(t => {
+              if (t.getAttribute('data-cat') === 'All') {
+                t.classList.add('active', 'bg-cyan-800', 'text-white');
+              } else {
+                t.classList.remove('active', 'bg-cyan-800', 'text-white');
+                t.classList.add('bg-slate-100', 'text-slate-700');
+              }
+            });
+            const container = document.getElementById('clusters-container');
+            const savedOnly = LAKSHADWEEP_DATA.filter(c => savedClusters.includes(c.id));
+            if (savedOnly.length === 0) {
+              container.innerHTML = '<div class="bg-white rounded-3xl border border-slate-200 p-8 text-center text-slate-500 text-xs">No bookmarked islands yet. Click "Bookmark" on any destination to add it here!</div>';
+            } else {
+              renderClusters();
+            }
+          } else {
+            bFilterBtn.classList.remove('bg-amber-200', 'border-amber-400');
+            renderClusters();
+          }
+        });
+      }
+
+      // Empty State Reset Button
+      const emptyResetBtn = document.getElementById('empty-reset-btn');
+      if (emptyResetBtn) {
+        emptyResetBtn.addEventListener('click', () => {
+          searchQuery = '';
+          if (searchInput) searchInput.value = '';
+          if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+          activeCategory = 'All';
+          tabs.forEach(t => {
+            if (t.getAttribute('data-cat') === 'All') {
+              t.classList.add('active', 'bg-cyan-800', 'text-white');
+            } else {
+              t.classList.remove('active', 'bg-cyan-800', 'text-white');
+              t.classList.add('bg-slate-100', 'text-slate-700');
+            }
+          });
+          renderClusters();
+        });
+      }
+
+      // Modal Close Handlers
+      const modalCloseX = document.getElementById('modal-close-x');
+      const modalCloseAction = document.getElementById('modal-close-action');
+      const modalOverlay = document.getElementById('reading-modal');
+
+      if (modalCloseX) modalCloseX.addEventListener('click', closeModal);
+      if (modalCloseAction) modalCloseAction.addEventListener('click', closeModal);
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) closeModal();
+        });
+      }
+
+      // Modal Copy Notes Handler
+      const modalCopyBtn = document.getElementById('modal-copy-all-btn');
+      if (modalCopyBtn) modalCopyBtn.addEventListener('click', copyClusterNotes);
+
+      // Back to Top Button
+      const backToTop = document.getElementById('back-to-top-btn');
+      if (backToTop) {
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

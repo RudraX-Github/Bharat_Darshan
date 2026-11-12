@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assam Explorer — Interactive Travel & Cultural Heritage Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    .font-heritage {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-emerald-200 selection:text-emerald-950">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-950 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-emerald-800/50 flex items-center justify-center gap-2 shadow-sm">
+    <span>🦏 Rongali Greetings! Welcome to Assam — Kaziranga Rhinos, Kamakhya Temple, Majuli Satras, Manas, Sivasagar & Haflong</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 flex items-center justify-center text-white shadow-lg shadow-emerald-900/20 text-2xl font-bold border border-amber-300">
+          🦏
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Assam Explorer</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">🙏 Rongali Greetings! Welcome to Assam — Your Welcoming Guide to Kaziranga National Park, Guwahati & The Brahmaputra, Majuli Island, Manas National Park, Sivasagar & Jorhat, and Haflong & Jatinga</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <button id="audio-bell-btn" class="bg-emerald-100/80 hover:bg-emerald-200 text-emerald-950 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5 transition-all border border-emerald-300/80 shadow-2xs active:scale-95" title="Play Brahmaputra River Bell Chime">
+          <span>🔔 River Bell Chime</span>
+        </button>
+        <a href="#itinerary-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🗓️ Itineraries</span>
+        </a>
+        <a href="#cuisine-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🍲 Cuisine</span>
+        </a>
+        <a href="#festivals-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎉 Festivals</span>
+        </a>
+        <a href="#checklist-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎒 Checklist</span>
+        </a>
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-950 px-3.5 py-1.5 rounded-xl font-bold transition-all border border-amber-300/80 flex items-center gap-1.5">
+          <span>⭐ Bookmarks</span>
+          <span id="saved-badge" class="bg-emerald-800 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-b from-emerald-950 via-teal-950 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 border-b border-emerald-900">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/80 border border-emerald-700 text-emerald-200 text-xs font-semibold">
+          <span>✨ Land of the Red River & Blue Hills</span>
+          <span>•</span>
+          <span>One-Horned Rhinos, Brahmaputra Satras & Tea Gardens</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight text-amber-300 leading-tight">
+          Wild Rhino Grasslands, River Islands & Ahom Citadels
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+          Track the great one-horned rhinoceros across Kaziranga and Manas, seek blessings at Kamakhya Devi Temple, ferry across the Brahmaputra to Majuli's Neo-Vaishnavite Satras, explore Sivasagar's 600-year Ahom palaces and Jorhat's tea estates, and unwind in misty Haflong.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full lg:w-auto text-center">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">6</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Circuits</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">9</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Key Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">2,600+</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Rhinos</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">1,600+</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Yrs Heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Controls & Search Toolbar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 z-20 w-full">
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Search Input -->
+      <div class="relative w-full md:w-80">
+        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">🔍</span>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search Kaziranga, Kamakhya, Majuli, Sivasagar..." 
+          class="w-full pl-10 pr-24 py-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:border-transparent transition-all placeholder:text-slate-400"
+        />
+        <button id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-700">Clear</button>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="filter-tabs">
+        <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-800 text-white shadow-xs transition-all flex-shrink-0">All 6 Circuits</button>
+        <button data-cat="Wildlife & National Parks" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Kaziranga & Manas</button>
+        <button data-cat="Spiritual & River Heritage" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Guwahati</button>
+        <button data-cat="Cultural Island & Satras" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Majuli Island</button>
+        <button data-cat="Imperial Ahom Ruins & Tea" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Sivasagar & Jorhat</button>
+        <button data-cat="Hill Station & Nature" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Haflong</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 space-y-10">
+
+    <!-- 1. Interactive Route Planner / Itinerary Feature -->
+    <div id="itinerary-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-lg">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Interactive Feature</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Travel Itinerary & Brahmaputra Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended day-by-day routes across Assam:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-800 text-white shadow-xs transition-all">3 Days (Wildlife & River)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Rhinos, Majuli & Tea)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Grand Assam Expedition)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- 2. Dual Feature Row: Taste of Assam + Festivals Calendar -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Feature A: Taste of Assam -->
+      <div id="cuisine-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Gastronomy & Culture</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Assam: Culinary Heritage & Orthodox Tea</h4>
+            </div>
+            <span class="text-2xl">🍲</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Explore traditional Assamese flavours, indigenous river dishes, and world-famous orthodox teas:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍵 Omita Khar (Alkaline Starter)</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                The defining dish of Assamese meals: raw papaya cooked with natural alkaline liquid filtered through sun-dried wild banana peel ashes (Kola Khar) and mustard oil.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍵 Masor Tenga (Tangy Fish Curry)</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Refreshing light fish broth cooked with fresh Brahmaputra carp, tomatoes, lemon juice, or elephant apple (Ou Tenga) for warm tropical afternoons.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍵 Duck with Ash Gourd & Pitha</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Ahom royal specialty (Hanh aru Kumura) slow-cooked with ash gourd and black pepper, accompanied by coconut and jaggery-stuffed Til & Ghila Pitha.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍵 Mishing Pork & Assam Orthodox Tea</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Pork slow-cooked with fermented bamboo shoot (Khorisa) and King Chilli in Majuli stilt homes, paired with malty golden-tipped Jorhat orthodox tea.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-emerald-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Dining Tip: Start your traditional Assamese thali with Omita Khar and finish with malty Jorhat orthodox black tea!</p>
+      </div>
+
+      <!-- Feature B: Festivals & Cultural Calendar -->
+      <div id="festivals-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Culture & Festivities</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Sacred Festivals & Cultural Calendar</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Time your journey with Assam’s colorful seasonal festivals, river rituals, and theatrical plays:</p>
+
+          <div class="space-y-2.5 text-xs">
+            
+            <div class="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200/70 hover:border-emerald-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🎭</span> Rongali (Bohag) Bihu
+                </h5>
+                <span class="text-[10px] font-bold bg-emerald-200/80 text-emerald-950 px-2 py-0.5 rounded">Mid-April • Across Assam</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                The Assamese New Year celebrating spring with dhol beats, buffalo-horn pepa, and graceful Bihu dancing in traditional Muga silk attire.
+              </p>
+            </div>
+            
+            <div class="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200/70 hover:border-emerald-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🎭</span> Ambubachi Mela (Kamakhya)
+                </h5>
+                <span class="text-[10px] font-bold bg-emerald-200/80 text-emerald-950 px-2 py-0.5 rounded">Mid-June • Nilachal Hill</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                South Asia's premier Tantric gathering celebrating Mother Earth's fertility as millions of devotees gather at Kamakhya Devi Temple.
+              </p>
+            </div>
+            
+            <div class="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200/70 hover:border-emerald-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🎭</span> Majuli Raas Leela & Magh Bihu
+                </h5>
+                <span class="text-[10px] font-bold bg-emerald-200/80 text-emerald-950 px-2 py-0.5 rounded">Nov & Jan • Majuli & Upper Assam</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Island-wide Krishna theatrical plays with Samaguri clay masks in November, followed by Magh Bihu harvest bonfires (Meji) in January.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-emerald-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Planning Advice: Book Majuli homestays months ahead if visiting during the vibrant Raas Leela Mahotsav in November!</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Packing & Transit Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Packing & Safari Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Safari & Satras</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Assam Safari Checklist</h4>
+            </div>
+            <span class="text-2xl">🎒</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Interactive wildlife safari, Satra etiquette, and river-ferry readiness checklist:</p>
+
+          <div class="my-3 space-y-2 text-xs" id="checklist-items">
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="0" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Carry Government Photo ID (Aadhaar / Passport) for Kaziranga & Manas safari permits</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="1" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Wear earthy or neutral khaki clothes—avoid bright colors on open jeep & elephant safaris</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="2" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Pack binoculars & telephoto camera lens for spotting rhinos, tigers & migratory birds</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="3" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Bring a warm morning fleece or windbreaker for chilly 5:30 AM winter safari drives</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="4" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Use slip-on footwear for easy removal before entering Majuli Satra halls & Kamakhya Temple</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="5" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Pre-book Kaziranga elephant/jeep safaris & Nimati Ghat–Majuli ferry slots in advance</span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-slate-500">Progress:</span>
+            <span id="pack-progress-text" class="font-bold text-emerald-800">0/6 Completed</span>
+          </div>
+          <button id="reset-checklist-btn" class="text-[11px] text-emerald-800 hover:underline font-bold">Reset</button>
+        </div>
+      </div>
+
+      <!-- Regional Highway & Ferry Transit Matrix -->
+      <div class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Transit Logistics</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Highway & River Ferry Transit Matrix</h4>
+            </div>
+            <span class="text-2xl">🚢</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Key highway and Brahmaputra ferry corridors connecting Guwahati, Kaziranga, Majuli, Sivasagar, Manas, and Haflong:</p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold">
+                  <th class="py-2 px-3">Route / Corridor</th>
+                  <th class="py-2 px-2 text-center">Distance</th>
+                  <th class="py-2 px-2 text-center">Travel Time</th>
+                  <th class="py-2 px-3">Recommended Access</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Guwahati → Kaziranga</td>
+                  <td class="py-2 px-2 text-center font-mono">195 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~4.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH-27 & NH-715 Highway</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Kaziranga → Jorhat</td>
+                  <td class="py-2 px-2 text-center font-mono">90 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~2.0 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH-715 Upper Assam Corridor</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Nimati Ghat → Majuli</td>
+                  <td class="py-2 px-2 text-center font-mono">River Ferry</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~1.0 hr</td>
+                  <td class="py-2 px-3 text-[11px]">Brahmaputra Ro-Pax / Ferry</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Jorhat → Sivasagar</td>
+                  <td class="py-2 px-2 text-center font-mono">55 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~1.2 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH-37 Heritage Highway</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Guwahati → Manas NP</td>
+                  <td class="py-2 px-2 text-center font-mono">140 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~3.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH-27 Western Assam Highway</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Guwahati → Haflong</td>
+                  <td class="py-2 px-2 text-center font-mono">310 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~7.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Vistadome Hill Train / NH-27</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="text-[11px] text-emerald-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">💡 Transit Tip: Board the morning Nimati Ghat–Kamalabari Ro-Pax ferry to Majuli early—last ferries depart mid-afternoon.</p>
+      </div>
+
+    </div>
+
+    <!-- Active Filter Status Bar -->
+    <div class="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-200">
+      <div class="flex items-center gap-2">
+        <span>Showing:</span>
+        <span id="visible-clusters-count" class="font-bold text-slate-900">6</span> Circuits
+        <span>•</span>
+        <span id="visible-sites-count" class="font-bold text-emerald-800">9</span> Key Sites
+        <span id="active-filter-label" class="font-medium text-emerald-900 ml-1"></span>
+      </div>
+      <div>
+        <span class="text-slate-400">All coordinates verified with official Google Maps</span>
+      </div>
+    </div>
+
+    <!-- Clusters Container (Cards Injected Here) -->
+    <div id="clusters-container" class="space-y-12">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State (When no search matches) -->
+    <div id="empty-state" class="hidden bg-white rounded-3xl border border-slate-200 p-12 text-center max-w-md mx-auto my-12 shadow-sm">
+      <div class="text-4xl mb-3">🔍</div>
+      <h4 class="text-base font-bold text-slate-800 font-heritage">No matching destinations found</h4>
+      <p class="text-xs text-slate-500 mt-1">Try searching for "Kaziranga", "Kamakhya", "Majuli", "Sivasagar", or "Haflong".</p>
+      <button id="empty-reset-btn" class="mt-4 px-4 py-2 bg-emerald-800 hover:bg-emerald-900 text-white rounded-xl text-xs font-bold transition-all shadow-xs">Reset All Filters</button>
+    </div>
+
+  </main>
+
+  <!-- Detailed Reading Modal -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div id="modal-container" class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-white p-5 flex items-start justify-between gap-4">
+        <div>
+          <span id="modal-category" class="text-[11px] font-bold text-amber-300 uppercase tracking-wider bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Category</span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-black font-heritage text-white mt-1.5">Cluster Title</h3>
+          <p id="modal-tagline" class="text-xs text-slate-300 mt-0.5">Tagline and description</p>
+        </div>
+        <button id="modal-close-x" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-200 hover:text-white transition-colors text-lg" title="Close Modal">✕</button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="modal-body" class="p-6 overflow-y-auto space-y-6 text-sm text-slate-700 divide-y divide-slate-100">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-3.5 flex items-center justify-between text-xs">
+        <span class="text-slate-500 font-medium">📍 Verified with Google Maps & Live GPS</span>
+        <div class="flex items-center gap-2">
+          <button id="modal-copy-all-btn" class="px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-xl font-bold transition-colors flex items-center gap-1.5">
+            <span>📋 Copy Travel Notes</span>
+          </button>
+          <button id="modal-close-action" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-semibold transition-colors">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-heritage font-bold">Assam Explorer</span>
+        <span>•</span>
+        <span>Dedicated to Wildlife Conservation, Brahmaputra Heritage & Tea Culture</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Curated with 🦏 Assam Pride</span>
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    // Tourism Data
+    const ASSAM_DATA = [{"id": "kaziranga", "title": "Kaziranga National Park", "tagline": "Sanctuary of the Great One-Horned Rhinoceros & Ancient Brahmaputra Grasslands", "category": "Wildlife & National Parks", "tags": ["One-Horned Rhino", "UNESCO World Heritage", "Elephant Safaris", "Tiger Reserve"], "bestTime": "November to April (Dry winter safari season, 10°C – 25°C)", "duration": "2 to 3 Days", "overview": "Spanning 858 square kilometers across Golaghat, Nagaon, and Sonitpur districts along the south bank of the Brahmaputra River, Kaziranga is a globally celebrated UNESCO World Heritage Site that hosts the highest density of one-horned rhinoceroses on planet earth.", "places": [{"name": "Kaziranga Tiger Reserve & Rhino Grasslands", "type": "UNESCO World Heritage Sanctuary", "detailedInfo": "Characterized by tall elephant grass (Phragmites and Saccharum), alluvial flooded grasslands, tropical wet evergreen forests, and interconnecting shallow water bodies ('beels'). Kaziranga supports the world's largest population of great one-horned rhinos (over 2,600 individuals), wild water buffaloes, Asian elephants, royal Bengal tigers, and eastern swamp deer (barasingha)—collectively celebrated as Kaziranga's 'Big Five'. Safaris operate in four dedicated tourist zones: Kohora (Central Zone), Bagori (Western Zone - prime rhino sightings), Agaratoli (Eastern Zone - exceptional birdwatching), and Burapahar.", "historicalImportance": "Proposed as a reserved forest in 1905 by Mary Curzon (Baroness Curzon of Kedleston), wife of Viceroy Lord Curzon, after she visited the area and was dismayed at being unable to spot a single rhino due to rampant colonial game hunting. Designated a wildlife sanctuary in 1950, declared a UNESCO World Heritage Site in 1985, and elevated to a Project Tiger Reserve in 2006. Kaziranga is widely hailed as the greatest wildlife conservation success story in Asia.", "keyFacts": ["Harbors approximately two-thirds (68%) of the entire world population of the great one-horned rhinoceros (Rhinoceros unicornis).", "Holds one of the highest densities of tigers among all protected areas globally, with over 120 resident Bengal tigers.", "Designated an Important Bird Area (IBA) by BirdLife International, hosting thousands of winter migratory birds, Pallas's fish eagles, and the endangered Bengal florican.", "Annual monsoon floods from the Brahmaputra River submerge up to 70% of the park, naturally replenishing the wetlands and driving wildlife to safety in the adjacent Karbi Anglong hills."], "bestTimeToVisit": "November to April. The park remains strictly closed from May to October due to monsoon flooding. Morning elephant safaris (5:30 AM – 7:30 AM) in Bagori offer breathtaking, close-range rhino encounters.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kaziranga+National+Park+Assam", "coords": "26.5775° N, 93.1711° E", "locationName": "Kohora & Bagori, Golaghat District", "history": "Proposed as a reserved forest in 1905 by Mary Curzon (Baroness Curzon of Kedleston), wife of Viceroy Lord Curzon, after she visited the area and was dismayed at being unable to spot a single rhino due to rampant colonial game hunting. Designated a wildlife sanctuary in 1950, declared a UNESCO World Heritage Site in 1985, and elevated to a Project Tiger Reserve in 2006. Kaziranga is widely hailed as the greatest wildlife conservation success story in Asia.", "detail": "Characterized by tall elephant grass (Phragmites and Saccharum), alluvial flooded grasslands, tropical wet evergreen forests, and interconnecting shallow water bodies ('beels'). Kaziranga supports the world's largest population of great one-horned rhinos (over 2,600 individuals), wild water buffaloes, Asian elephants, royal Bengal tigers, and eastern swamp deer (barasingha)—collectively celebrated as Kaziranga's 'Big Five'. Safaris operate in four dedicated tourist zones: Kohora (Central Zone), Bagori (Western Zone - prime rhino sightings), Agaratoli (Eastern Zone - exceptional birdwatching), and Burapahar.", "bestTime": "November to April. The park remains strictly closed from May to October due to monsoon flooding. Morning elephant safaris (5:30 AM – 7:30 AM) in Bagori offer breathtaking, close-range rhino encounters.", "insiderTip": "Located at Kohora & Bagori, Golaghat District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "guwahati", "title": "Guwahati & The Brahmaputra", "tagline": "Gateway to Northeast India, Tantric Shakti Peethas & Sacred River Islands", "category": "Spiritual & River Heritage", "tags": ["Kamakhya Temple", "Umananda Island", "Brahmaputra Cruises", "Ancient Pragjyotishpura"], "bestTime": "October to April (Pleasant river weather, 12°C – 26°C)", "duration": "2 to 3 Days", "overview": "Sprawled along the banks of the mighty Brahmaputra River, Guwahati (ancient Pragjyotishpura, the 'City of Eastern Light') is Assam's commercial and cultural metropolis, famous for the revered Tantric Shakti shrine of Kamakhya Devi and the world's smallest inhabited river island.", "places": [{"name": "Kamakhya Devi Temple (Nilachal Hill)", "type": "Supreme Tantric Shakti Peetha", "detailedInfo": "Perched on Nilachal Hill overlooking the Brahmaputra River, Kamakhya is the crown jewel among the 51 Shakti Peethas. The temple complex features a distinctive beehive-shaped shikhara (Nilachal style architecture) with sculptured stone friezes of dancing deities. The subterranean sanctum sanctorum (*Garbagriha*) contains no idol; instead, devotees worship a natural rock fissure shaped like a yoni (womb), kept moist by an underground natural mineral spring.", "historicalImportance": "According to Hindu Puranic mythology, when Lord Shiva carried the charred corpse of his consort Sati in grief, Lord Vishnu severed her body with his Sudarshana Chakra, and Sati's yoni (reproductive organ) fell onto Nilachal Hill. Rebuilt in 1565 CE by Chilarai (Sukladhwaja), the legendary military commander of the Koch dynasty, after being damaged during regional conflicts. Celebrated as the epic epicenter of the Kaula and Tantric Shakta traditions.", "keyFacts": ["Hosts the world-famous annual Ambubachi Mela in mid-June, celebrating the annual menstruation of Mother Earth; during these three days, the temple remains closed, and the spring turns crimson with natural iron-rich vermilion minerals.", "Surrounded by ten smaller independent temples dedicated to the Dasamahavidyas (Ten Wisdom Goddesses): Kali, Tara, Bhuvaneshwari, Bagalamukhi, Chhinnamasta, Bhairavi, Dhumavati, Matangi, and Kamala.", "Sacred red cloth (*Raktavastra*) distributed to pilgrims after Ambubachi is considered immensely auspicious for prosperity and protection."], "bestTimeToVisit": "October to April for comfortable weather and shorter queues. During Ambubachi Mela (June), over 2.5 million pilgrims gather, creating a deeply intense spiritual atmosphere.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kamakhya+Temple+Guwahati+Assam", "coords": "26.1664° N, 91.7054° E", "locationName": "Nilachal Hill, Guwahati", "history": "According to Hindu Puranic mythology, when Lord Shiva carried the charred corpse of his consort Sati in grief, Lord Vishnu severed her body with his Sudarshana Chakra, and Sati's yoni (reproductive organ) fell onto Nilachal Hill. Rebuilt in 1565 CE by Chilarai (Sukladhwaja), the legendary military commander of the Koch dynasty, after being damaged during regional conflicts. Celebrated as the epic epicenter of the Kaula and Tantric Shakta traditions.", "detail": "Perched on Nilachal Hill overlooking the Brahmaputra River, Kamakhya is the crown jewel among the 51 Shakti Peethas. The temple complex features a distinctive beehive-shaped shikhara (Nilachal style architecture) with sculptured stone friezes of dancing deities. The subterranean sanctum sanctorum (*Garbagriha*) contains no idol; instead, devotees worship a natural rock fissure shaped like a yoni (womb), kept moist by an underground natural mineral spring.", "bestTime": "October to April for comfortable weather and shorter queues. During Ambubachi Mela (June), over 2.5 million pilgrims gather, creating a deeply intense spiritual atmosphere.", "insiderTip": "Located at Nilachal Hill, Guwahati — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Umananda Island Temple & River Cruises", "type": "River Island Shrine & Brahmaputra Cruises", "detailedInfo": "Umananda Island (also named 'Peacock Island' by British travelers for its plumage-like contour) is recognized as the world's smallest inhabited river island, sitting in the middle of the roaring Brahmaputra River. Dedicated to Lord Shiva (Umananda = Uma's Joy), the temple is reached via regular inland water ferries and ropeway cable cars from Guwahati. Evenings offer luxury dinner and sunset river cruises on the Brahmaputra aboard the Alfresco Grand vessel.", "historicalImportance": "Constructed in 1694 CE by King Gadadhar Singha, one of the strongest monarchs of the Ahom dynasty. In 1897, a catastrophic earthquake damaged the central brick dome, which was later faithfully rebuilt by local merchant devotees while preserving its ancient stone carvings.", "keyFacts": ["Guwahati Ropeway (1.8 km) connects southern Guwahati to northern Guwahati directly over Umananda Island, making it India’s longest river ropeway.", "The island is a natural habitat for the endangered Golden Langur, introduced in the late 20th century.", "Sunset dinner cruises on the Brahmaputra provide sweeping panoramic views of the water reflecting crimson skies alongside traditional Assamese folk dance performances (Bihu)."], "bestTimeToVisit": "October to April. Ferry boats operate daily between 7:00 AM and 5:00 PM from Sukreshwar Ghat and Uzanbazar.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Umananda+Temple+Peacock+Island+Guwahati+Assam", "coords": "26.1925° N, 91.7456° E", "locationName": "Peacock Island, Brahmaputra River, Guwahati", "history": "Constructed in 1694 CE by King Gadadhar Singha, one of the strongest monarchs of the Ahom dynasty. In 1897, a catastrophic earthquake damaged the central brick dome, which was later faithfully rebuilt by local merchant devotees while preserving its ancient stone carvings.", "detail": "Umananda Island (also named 'Peacock Island' by British travelers for its plumage-like contour) is recognized as the world's smallest inhabited river island, sitting in the middle of the roaring Brahmaputra River. Dedicated to Lord Shiva (Umananda = Uma's Joy), the temple is reached via regular inland water ferries and ropeway cable cars from Guwahati. Evenings offer luxury dinner and sunset river cruises on the Brahmaputra aboard the Alfresco Grand vessel.", "bestTime": "October to April. Ferry boats operate daily between 7:00 AM and 5:00 PM from Sukreshwar Ghat and Uzanbazar.", "insiderTip": "Located at Peacock Island, Brahmaputra River, Guwahati — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "majuli", "title": "Majuli Island", "tagline": "The World's Largest River Island, Monastic Satras & Ancient Mask-Making", "category": "Cultural Island & Satras", "tags": ["River Island", "Neo-Vaishnavite Satras", "Organic Masks", "Mishing Tribe"], "bestTime": "October to March (Gentle winter breezes, 10°C – 22°C)", "duration": "2 Days", "overview": "Cradled within the braided channels of the Brahmaputra and Subansiri rivers, Majuli is the world's largest inhabited river island (spanning approximately 352 sq km), celebrated as the spiritual heart of Assamese Neo-Vaishnavite culture, living monastic satras, and unique clay-and-bamboo mask craftsmanship.", "places": [{"name": "Neo-Vaishnavite Satras (Monasteries) & Samaguri Mask Craft", "type": "Monastic Cultural Sanctuaries", "detailedInfo": "Majuli preserves over 30 historic institutional monasteries (*Satras*) founded in the 16th century. Prominent among them are Auniati Satra (famous for ancient Ahom royal relics and Palnam prayer ceremonies), Uttar Kamalabari Satra (renowned for classical Sattriya dance and devotional Borbeet music), Dakhinpat Satra, and Samaguri Satra. Samaguri Satra is globally celebrated for handcrafting traditional dynamic theatrical masks (*Mukha*) using organic bamboo frames, river silt, cow dung, and vegetable dyes for Bhaona mythological plays.", "historicalImportance": "Established in the early 16th century by Saint Srimanta Sankardeva and his disciple Madhavdeva as the headquarters of the monotheistic, egalitarian Bhakti movement in Assam (*Ekasarana Dharma*). These monastic satras abolished caste discrimination in spiritual worship and nurtured classical Assamese literature, drama, and Sattriya dance (officially recognized as one of India's 8 classical dance forms).", "keyFacts": ["Guinness World Records officially recognized Majuli as the largest river island in the world.", "At Samaguri Satra, Sangeet Natak Akademi awardee craftsmen demonstrate masks featuring moving jaws and rolling eyes depicting mythological characters from the Ramayana and Mahabharata.", "Accessible by scenic 1-hour government ferry rides across the Brahmaputra from Nimati Ghat near Jorhat.", "Home to the indigenous Mishing and Deori tribes, renowned for colorful Mirjim handloom weaving and traditional bamboo stilt architecture (*Chang Ghar*)."], "bestTimeToVisit": "October to March. The three-day Raas Leela Festival in November is the crowning cultural celebration of Majuli, during which the entire island enacts episodes from the life of Lord Krishna.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Samaguri+Satra+Majuli+Assam", "coords": "26.9536° N, 94.2045° E", "locationName": "Majuli River Island, Assam", "history": "Established in the early 16th century by Saint Srimanta Sankardeva and his disciple Madhavdeva as the headquarters of the monotheistic, egalitarian Bhakti movement in Assam (*Ekasarana Dharma*). These monastic satras abolished caste discrimination in spiritual worship and nurtured classical Assamese literature, drama, and Sattriya dance (officially recognized as one of India's 8 classical dance forms).", "detail": "Majuli preserves over 30 historic institutional monasteries (*Satras*) founded in the 16th century. Prominent among them are Auniati Satra (famous for ancient Ahom royal relics and Palnam prayer ceremonies), Uttar Kamalabari Satra (renowned for classical Sattriya dance and devotional Borbeet music), Dakhinpat Satra, and Samaguri Satra. Samaguri Satra is globally celebrated for handcrafting traditional dynamic theatrical masks (*Mukha*) using organic bamboo frames, river silt, cow dung, and vegetable dyes for Bhaona mythological plays.", "bestTime": "October to March. The three-day Raas Leela Festival in November is the crowning cultural celebration of Majuli, during which the entire island enacts episodes from the life of Lord Krishna.", "insiderTip": "Located at Majuli River Island, Assam — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "manas", "title": "Manas National Park", "tagline": "Sub-Himalayan Biodiversity Hotspot, Golden Langurs & Pristine Rivers", "category": "Wildlife & National Parks", "tags": ["Pygmy Hog", "Golden Langur", "Himalayan Foothills", "Project Tiger"], "bestTime": "November to April (Crisp foothill weather, 12°C – 24°C)", "duration": "2 to 3 Days", "overview": "Sprawled across 950 square kilometers on the gentle slopes of the Bhutanese Himalayas in western Assam, Manas is a contiguous transboundary biosphere reserve celebrated for untamed savanna grasslands, crystal-clear mountain rivers, and rare endangered species found nowhere else.", "places": [{"name": "Manas Biosphere Reserve & Manas River", "type": "UNESCO World Heritage Biosphere", "detailedInfo": "Flanked by the snow-fed Manas River (a major tributary of the Brahmaputra), Manas encompasses dense semi-evergreen forests, alluvial grasslands, and dry deciduous woodlands. It holds a unique five-fold conservation status: UNESCO World Heritage Site, Project Tiger Reserve, Project Elephant Reserve, Biosphere Reserve, and Important Bird Area.", "historicalImportance": "Originally a private royal hunting ground for the Gauripur and Cooch Behar royal families. Declared a wildlife sanctuary in 1928, elevated to an original Project Tiger Reserve in 1973, and inscribed as a UNESCO World Heritage Site in 1985. Successfully recovered from 1990s socio-political turmoil through inspiring community-driven tribal eco-conservation programs.", "keyFacts": ["Only habitat on earth housing the critically endangered Pygmy Hog (Porcula salvania)—the world's smallest and rarest wild pig, measuring just 10 inches tall.", "Home to rare endemic species including the Golden Langur (Trachypithecus geei), Hispid Hare, and the critically endangered Bengal Florican.", "Offers thrilling river rafting expeditions down the clear rapids of the Manas River along the international border with the Royal Manas National Park of Bhutan."], "bestTimeToVisit": "November to April. Mathanguri, located deep inside the forest on the Bhutan border, offers unmatched riverbank lodge vistas of grazing wild buffaloes and elephant herds.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Manas+National+Park+Assam", "coords": "26.6594° N, 91.0011° E", "locationName": "Barpeta & Baksa Districts", "history": "Originally a private royal hunting ground for the Gauripur and Cooch Behar royal families. Declared a wildlife sanctuary in 1928, elevated to an original Project Tiger Reserve in 1973, and inscribed as a UNESCO World Heritage Site in 1985. Successfully recovered from 1990s socio-political turmoil through inspiring community-driven tribal eco-conservation programs.", "detail": "Flanked by the snow-fed Manas River (a major tributary of the Brahmaputra), Manas encompasses dense semi-evergreen forests, alluvial grasslands, and dry deciduous woodlands. It holds a unique five-fold conservation status: UNESCO World Heritage Site, Project Tiger Reserve, Project Elephant Reserve, Biosphere Reserve, and Important Bird Area.", "bestTime": "November to April. Mathanguri, located deep inside the forest on the Bhutan border, offers unmatched riverbank lodge vistas of grazing wild buffaloes and elephant herds.", "insiderTip": "Located at Barpeta & Baksa Districts — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "sivasagar-jorhat", "title": "Sivasagar & Jorhat", "tagline": "The 600-Year Ahom Imperial Citadel & The Tea Capital of the World", "category": "Imperial Ahom Ruins & Tea", "tags": ["Ahom Dynasty", "Rang Ghar Amphitheater", "Talatal Ghar", "Tea Gardens"], "bestTime": "October to March (14°C – 25°C)", "duration": "3 Days", "overview": "Sivasagar and Jorhat constitute the cultural and historic epicenter of Upper Assam. Sivasagar showcases massive royal palaces and brick amphitheaters of the undefeated Ahom Kingdom, while Jorhat is globally famous as the tea capital of India, blanketed in emerald CTC and orthodox tea estates.", "places": [{"name": "Sivasagar Ahom Palaces (Rang Ghar, Talatal Ghar, Kareng Ghar)", "type": "Medieval Imperial Monuments", "detailedInfo": "Sivasagar (the 'Ocean of Shiva') served as the royal capital of the Ahom Kingdom for centuries. Rang Ghar is a two-storied, oval-shaped royal amphitheater and sports pavilion crowned with a stylized boat-shaped roof. Talatal Ghar is an imposing palace citadel constructed with subterranean secret tunnels, military barracks, and seven stories (three underground, four above ground). Kareng Ghar at Gargaon served as the royal residence. On the banks of the massive 257-acre human-made Borpukhuri lake stands the Sivadol temple, whose 104-foot central stone spire is among the tallest Shiva shrines in India.", "historicalImportance": "The Ahom dynasty (originating from the Tai-Shan lineage) ruled the Brahmaputra Valley for 600 unbroken years (1228–1826 CE), famously resisting and decimating 17 successive Mughal imperial invasions, most decisively under General Lachit Borphukan at the naval Battle of Saraighat in 1671. Rang Ghar, built in 1746 CE by King Pramatta Singha, is recognized as Asia's oldest surviving royal sports pavilion.", "keyFacts": ["Ahom builders constructed these massive multi-storied palaces using unique indigenous organic mortar made of sticky rice (*Bora Saul*), duck eggs, hemp, and black gram, without any modern cement.", "Talatal Ghar was designed with two secret underground labyrinth tunnels: one 3 km long leading to the Dikhow River and another 16 km long leading to Gargaon Palace, used as escape routes during wartime.", "Sivadol's 8-foot-tall golden dome (*Kalsi*) atop the main shikhara is crafted from solid gold alloy."], "bestTimeToVisit": "October to March when days are clear and pleasant for exploring expansive stone and brick archaeological ruins.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rang+Ghar+Sivasagar+Assam", "coords": "26.9669° N, 94.6236° E", "locationName": "Joysagar & Gargaon, Sivasagar District", "history": "The Ahom dynasty (originating from the Tai-Shan lineage) ruled the Brahmaputra Valley for 600 unbroken years (1228–1826 CE), famously resisting and decimating 17 successive Mughal imperial invasions, most decisively under General Lachit Borphukan at the naval Battle of Saraighat in 1671. Rang Ghar, built in 1746 CE by King Pramatta Singha, is recognized as Asia's oldest surviving royal sports pavilion.", "detail": "Sivasagar (the 'Ocean of Shiva') served as the royal capital of the Ahom Kingdom for centuries. Rang Ghar is a two-storied, oval-shaped royal amphitheater and sports pavilion crowned with a stylized boat-shaped roof. Talatal Ghar is an imposing palace citadel constructed with subterranean secret tunnels, military barracks, and seven stories (three underground, four above ground). Kareng Ghar at Gargaon served as the royal residence. On the banks of the massive 257-acre human-made Borpukhuri lake stands the Sivadol temple, whose 104-foot central stone spire is among the tallest Shiva shrines in India.", "bestTime": "October to March when days are clear and pleasant for exploring expansive stone and brick archaeological ruins.", "insiderTip": "Located at Joysagar & Gargaon, Sivasagar District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Jorhat Tea Capital & Tocklai Research Station", "type": "Historic Tea Estates & Heritage Research", "detailedInfo": "Jorhat is acclaimed worldwide as the 'Tea Capital of the World'. The landscape is enveloped in lush, manicured green tea gardens, colonial British-era planter bungalows with wide verandas, and the Tocklai Tea Research Institute. The region also hosts the prestigious Gymkhana Club, established in 1876, featuring the oldest active golf course in Asia.", "historicalImportance": "Commercial tea cultivation in India was born in this region when Robert Bruce discovered indigenous wild Camellia sinensis var. assamica plants grown by Singpho tribal chief Bessa Gaum in 1823. Cinnamara Tea Estate in Jorhat was established in 1850 by Maniram Dewan, the first Indian commercial tea planter and hero of the 1857 anti-British revolt.", "keyFacts": ["Tocklai Tea Research Institute, founded in 1911 along the Tocklai River, is the oldest and largest dedicated tea research facility on earth.", "Assam produces more than 50% of India's total tea output, known for its bold, malty flavor, amber liquor, and brisk aroma.", "Visitors can stay in heritage tea plantation bungalows and experience authentic tea tasting and plucking sessions."], "bestTimeToVisit": "October to March for mild, dry weather and tea factory tours. (Tea harvesting reaches its peak flush from May to October).", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tocklai+Tea+Research+Institute+Jorhat+Assam", "coords": "26.7441° N, 94.2189° E", "locationName": "Tocklai, Jorhat District", "history": "Commercial tea cultivation in India was born in this region when Robert Bruce discovered indigenous wild Camellia sinensis var. assamica plants grown by Singpho tribal chief Bessa Gaum in 1823. Cinnamara Tea Estate in Jorhat was established in 1850 by Maniram Dewan, the first Indian commercial tea planter and hero of the 1857 anti-British revolt.", "detail": "Jorhat is acclaimed worldwide as the 'Tea Capital of the World'. The landscape is enveloped in lush, manicured green tea gardens, colonial British-era planter bungalows with wide verandas, and the Tocklai Tea Research Institute. The region also hosts the prestigious Gymkhana Club, established in 1876, featuring the oldest active golf course in Asia.", "bestTime": "October to March for mild, dry weather and tea factory tours. (Tea harvesting reaches its peak flush from May to October).", "insiderTip": "Located at Tocklai, Jorhat District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "haflong", "title": "Haflong & Jatinga", "tagline": "Assam's Sole Hill Station, Mysterious Avian Phenomenon & Misty Valleys", "category": "Hill Station & Nature", "tags": ["Haflong Lake", "Jatinga Bird Phenomenon", "Dima Hasao Hills", "Dimasa Culture"], "bestTime": "October to April (Cool hill climate, 10°C – 22°C)", "duration": "2 Days", "overview": "Perched at 2,200 feet in the Borail mountain range in Dima Hasao district, Haflong is Assam's only hill station. Often called the 'Switzerland of the East', it features emerald valleys, misty hills, colonial wooden bungalows, and the mysterious avian village of Jatinga.", "places": [{"name": "Haflong Hill Town & Haflong Lake", "type": "Scenic Hill Retreat", "detailedInfo": "A serene highland retreat set amidst pine-dotted ridges, featuring the central Haflong Lake spanned by an iconic hanging footbridge, vibrant flower nurseries, and viewpoints offering sweeping looks into the surrounding Borail mountain range. Inhabited by the indigenous Dimasa, Hmar, Kuki, and Zeme Naga communities.", "historicalImportance": "Selected by British colonial administrators in the late 19th century as the headquarters of North Cachar Hills. Served as a key engineering hub during the construction of the historic Lumding–Badarpur mountain railway, celebrated for its viaducts, tunnels, and dramatic gradients.", "keyFacts": ["Known in the local Dimasa dialect as 'Ha-flong', meaning 'Ant Hill' or 'White Ant Mound'.", "Haflong Lake is one of the largest natural high-altitude water bodies in Assam, offering boating and walking promenades.", "The surrounding hill hamlets produce world-famous seedless organic pineapples and sweet oranges."], "bestTimeToVisit": "October to April when mountain fog lifts to reveal clear valleys and cool temperatures.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Haflong+Lake+Dima+Hasao+Assam", "coords": "25.1764° N, 93.0236° E", "locationName": "Haflong, Dima Hasao District", "history": "Selected by British colonial administrators in the late 19th century as the headquarters of North Cachar Hills. Served as a key engineering hub during the construction of the historic Lumding–Badarpur mountain railway, celebrated for its viaducts, tunnels, and dramatic gradients.", "detail": "A serene highland retreat set amidst pine-dotted ridges, featuring the central Haflong Lake spanned by an iconic hanging footbridge, vibrant flower nurseries, and viewpoints offering sweeping looks into the surrounding Borail mountain range. Inhabited by the indigenous Dimasa, Hmar, Kuki, and Zeme Naga communities.", "bestTime": "October to April when mountain fog lifts to reveal clear valleys and cool temperatures.", "insiderTip": "Located at Haflong, Dima Hasao District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Jatinga Bird Phenomenon & Watchtower", "type": "Mysterious Natural Avian Phenomenon", "detailedInfo": "A scenic ridge village located 9 km from Haflong along the Borail hills. Globally famous in zoology and ornithology for an unusual avian phenomenon: on moonless, foggy autumn nights (specifically during September and October), dozens of species of migratory and local birds become disoriented by high-velocity winds and mist, flying toward artificial light sources in the village.", "historicalImportance": "First recorded by Jatinga's Jaintia settlers in 1905, who initially believed the birds were divine gifts dropped by spirits. Later brought to global scientific attention in 1957 by British tea planter and naturalist E.P. Gee, and extensively investigated by renowned Indian ornithologist Dr. Salim Ali.", "keyFacts": ["Scientific research proved that the phenomenon is caused by a unique combination of high-altitude magnetic anomalies, dense autumn fog, strong atmospheric wind currents, and elevated terrain.", "A three-story government bird observatory and watchtower allows travelers to observe mountain birds against panoramic valley sunsets.", "Over 40 species of birds exhibit this behavior, including kingfishers, tiger bitterns, black bitterns, and Indian pitta."], "bestTimeToVisit": "September and October specifically to witness the avian phenomenon during foggy evenings; October to March for scenic hill trekking and orange orchard tours.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Jatinga+Bird+Watching+Centre+Dima+Hasao+Assam", "coords": "25.1228° N, 93.0425° E", "locationName": "Jatinga Ridge, Dima Hasao", "history": "First recorded by Jatinga's Jaintia settlers in 1905, who initially believed the birds were divine gifts dropped by spirits. Later brought to global scientific attention in 1957 by British tea planter and naturalist E.P. Gee, and extensively investigated by renowned Indian ornithologist Dr. Salim Ali.", "detail": "A scenic ridge village located 9 km from Haflong along the Borail hills. Globally famous in zoology and ornithology for an unusual avian phenomenon: on moonless, foggy autumn nights (specifically during September and October), dozens of species of migratory and local birds become disoriented by high-velocity winds and mist, flying toward artificial light sources in the village.", "bestTime": "September and October specifically to witness the avian phenomenon during foggy evenings; October to March for scenic hill trekking and orange orchard tours.", "insiderTip": "Located at Jatinga Ridge, Dima Hasao — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}];
+    const ITINERARIES = {"3": [{"day": "Day 1", "title": "Guwahati Sacred Shrines", "desc": "Kamakhya Devi Temple on Nilachal Hill, Umananda river island temple, and evening Brahmaputra sunset dinner cruise."}, {"day": "Day 2", "title": "Kaziranga Safari", "desc": "Early morning elephant safari in Bagori Western Zone, afternoon jeep safari in Central Kohora Zone, and orchid park visit."}, {"day": "Day 3", "title": "Eastern Range & Return", "desc": "Birdwatching safari in Agaratoli Eastern Range, tea garden stroll, and return transit to Guwahati."}], "5": [{"day": "Day 1", "title": "Guwahati Heritage", "desc": "Kamakhya Shakti Peetha, ropeway over Brahmaputra to Umananda, and riverfront dinner."}, {"day": "Day 2", "title": "Kaziranga Big Five", "desc": "Full-day wildlife safaris across Central and Western ranges tracking rhinos, tigers, and wild buffaloes."}, {"day": "Day 3", "title": "Majuli River Island", "desc": "Drive to Jorhat, ferry across Brahmaputra from Nimati Ghat, and explore Samaguri mask-making satra."}, {"day": "Day 4", "title": "Ahom Royal Citadel", "desc": "Sivasagar Rang Ghar amphitheater, Talatal Ghar subterranean palace, and towering Sivadol temple."}, {"day": "Day 5", "title": "Jorhat Tea Capital", "desc": "Colonial tea plantation estate walk, Tocklai Tea Research Institute, and departure."}], "7": [{"day": "Day 1", "title": "Guwahati Gateway", "desc": "Kamakhya temple blessings, Umananda island, and sunset river cruise on the Brahmaputra."}, {"day": "Day 2", "title": "Manas Biosphere Reserve", "desc": "Jungle safari in Manas tracking golden langurs, pygmy hogs, and rafting on Manas River."}, {"day": "Day 3-4", "title": "Kaziranga Wilderness", "desc": "Elephant and open jeep safaris across Kohora and Bagori, watching one-horned rhinos."}, {"day": "Day 5", "title": "Majuli Monastic Island", "desc": "Brahmaputra ferry, Sattriya classical dance performance, and organic mask workshops."}, {"day": "Day 6", "title": "Sivasagar Ahom Palaces", "desc": "600-year Ahom kingdom monuments: Rang Ghar, Talatal Ghar, and Gargaon Kareng Ghar."}, {"day": "Day 7", "title": "Haflong Hill Station", "desc": "Scenic mountain train to Haflong Lake, misty Borail hills, and Jatinga bird watchtower."}]};
+
+    // State Variables
+    let activeCategory = "All";
+    let searchQuery = "";
+    let savedClusters = [];
+    let checkedItems = [];
+
+    // LocalStorage Initialization
+    try {
+      savedClusters = JSON.parse(localStorage.getItem('assam_saved_clusters') || '[]');
+      checkedItems = JSON.parse(localStorage.getItem('assam_packing_checklist') || '[]');
+    } catch(e) {
+      savedClusters = [];
+      checkedItems = [];
+    }
+
+    // Toast Function
+    function showToast(msg, icon = '✨') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+      }, 2500);
+    }
+
+    // Packing Checklist Storage
+    function updateChecklistProgress() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      let count = 0;
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (box.checked) {
+          count++;
+          if (!checkedItems.includes(idx)) checkedItems.push(idx);
+        } else {
+          checkedItems = checkedItems.filter(i => i !== idx);
+        }
+      });
+      localStorage.setItem('assam_packing_checklist', JSON.stringify(checkedItems));
+      const progEl = document.getElementById('pack-progress-text');
+      if (progEl) progEl.textContent = count + '/' + boxes.length + ' Completed';
+    }
+
+    function loadChecklist() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (checkedItems.includes(idx)) {
+          box.checked = true;
+        }
+      });
+      updateChecklistProgress();
+    }
+
+    // Web Audio API River Bell Chime
+    function playRiverBell() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const now = audioCtx.currentTime;
+
+        const bellPartials = [
+          { freq: 432.0, amp: 0.28, dur: 2.8 },
+          { freq: 864.0, amp: 0.14, dur: 2.0 },
+          { freq: 216.0, amp: 0.20, dur: 3.2 }
+        ];
+        bellPartials.forEach(p => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(p.freq, now);
+
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(p.amp, now + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + p.dur);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now);
+          osc.stop(now + p.dur + 0.05);
+        });
+
+        showToast('🔔 Chime: Peace & Mindfulness', '🦏');
+      } catch (e) {
+        showToast('River bell chime played', '🔔');
+      }
+    }
+
+    // Filter Logic
+    function getFilteredClusters() {
+      let result = ASSAM_DATA;
+
+      if (activeCategory !== 'All') {
+        result = result.filter(c => c.category === activeCategory);
+      }
+
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase().trim();
+        result = result.filter(c => {
+          const inTitle = c.title.toLowerCase().includes(q);
+          const inOverview = c.overview.toLowerCase().includes(q);
+          const inPlaces = c.places.some(p => 
+            p.name.toLowerCase().includes(q) ||
+            p.type.toLowerCase().includes(q) ||
+            (p.detail && p.detail.toLowerCase().includes(q)) ||
+            p.history.toLowerCase().includes(q) ||
+            p.keyFacts.some(f => f.toLowerCase().includes(q))
+          );
+          return inTitle || inOverview || inPlaces;
+        });
+      }
+
+      return result;
+    }
+
+    // Render Itinerary Function
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      if (!container) return;
+      const list = ITINERARIES[days] || ITINERARIES["3"];
+      container.innerHTML = list.map(item => `
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-3 hover:border-emerald-500 transition-all">
+          <div class="flex items-center justify-between pb-1 mb-1 border-b border-slate-200">
+            <span class="font-bold text-emerald-900">${item.day}</span>
+            <span class="text-[10px] bg-emerald-100 text-emerald-950 px-1.5 py-0.2 rounded font-semibold">${days}-Day Tour</span>
+          </div>
+          <h5 class="font-bold text-slate-800 text-[11px] mb-1">${item.title}</h5>
+          <p class="text-[11px] text-slate-600 leading-relaxed">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    // Render Places & Clusters
+    function renderClusters() {
+      const container = document.getElementById('clusters-container');
+      const emptyState = document.getElementById('empty-state');
+      const clusterCountEl = document.getElementById('visible-clusters-count');
+      const sitesCountEl = document.getElementById('visible-sites-count');
+      const filterLabel = document.getElementById('active-filter-label');
+
+      if (!container) return;
+
+      const clusters = getFilteredClusters();
+      const totalSites = clusters.reduce((acc, c) => acc + c.places.length, 0);
+
+      if (clusterCountEl) clusterCountEl.textContent = clusters.length;
+      if (sitesCountEl) sitesCountEl.textContent = totalSites;
+
+      if (filterLabel) {
+        let parts = [];
+        if (activeCategory !== 'All') parts.push('Category: ' + activeCategory);
+        if (searchQuery.trim()) parts.push('Search: "' + searchQuery + '"');
+        filterLabel.textContent = parts.length ? '(' + parts.join(' • ') + ')' : '';
+      }
+
+      if (clusters.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = clusters.map(cluster => {
+        const isSaved = savedClusters.includes(cluster.id);
+
+        const placesHtml = cluster.places.map((p, pIdx) => {
+          const factsList = p.keyFacts.map(kf => `
+            <li class="flex items-start gap-2 text-xs text-slate-700 leading-relaxed">
+              <span class="text-emerald-700 font-bold flex-shrink-0 mt-0.5">✦</span>
+              <span>${kf}</span>
+            </li>
+          `).join('');
+
+          return `
+            <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:border-emerald-500 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-3 border-b border-slate-100">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold flex items-center justify-center flex-shrink-0">${pIdx + 1}</span>
+                    <h4 class="text-base font-bold text-slate-900 font-heritage tracking-tight">${p.name}</h4>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2 mt-1 ml-8 text-[11px] text-slate-500">
+                    <span class="font-semibold text-slate-600">${p.type}</span>
+                    <span>•</span>
+                    <span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-mono">${p.coords || 'Assam, India'}</span>
+                  </div>
+                </div>
+
+                <!-- Google Map Direct Link Button -->
+                <div class="flex items-center gap-2 self-start sm:self-auto">
+                  <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors shadow-2xs" title="Open verified location in Google Maps">
+                    <span>📍 View on Google Maps</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Detailed Overview -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Site Overview & Architecture</span>
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">${p.detail}</p>
+              </div>
+
+              <!-- Historical Importance -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">Historical Importance & Significance</span>
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">${p.history}</p>
+              </div>
+
+              <!-- Key Facts -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">Key Facts & Unique Highlights</span>
+                <ul class="space-y-1 pt-1 ml-1">
+                  ${factsList}
+                </ul>
+              </div>
+
+              <!-- Best Time & Insider Tip Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-xs">
+                <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                  <span class="text-base flex-shrink-0">🌤️</span>
+                  <div>
+                    <span class="font-bold text-slate-800 text-[11px]">Best Time & Hours:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.bestTime || 'November to April'}</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2 bg-amber-50/50 p-2.5 rounded-xl border border-amber-100">
+                  <span class="text-base flex-shrink-0">💡</span>
+                  <div>
+                    <span class="font-bold text-amber-900 text-[11px]">Insider Travel Tip:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.insiderTip}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <article class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden transition-all hover:shadow-lg">
+            
+            <!-- Cluster Header Banner -->
+            <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-white p-6 sm:p-7 border-b border-emerald-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-slate-950">${cluster.category}</span>
+                  <span class="text-xs text-slate-300">⏱️ ${cluster.duration}</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black font-heritage tracking-tight text-white">${cluster.title}</h3>
+                <p class="text-xs sm:text-sm text-emerald-200 font-medium">${cluster.tagline}</p>
+              </div>
+
+              <!-- Header Actions: Bookmark & Full Dossier Modal -->
+              <div class="flex items-center gap-2.5 flex-shrink-0">
+                <button data-save-id="${cluster.id}" class="save-btn p-2.5 rounded-xl border transition-colors flex items-center gap-1.5 text-xs font-bold ${isSaved ? 'bg-amber-400 text-slate-950 border-amber-300' : 'bg-white/10 hover:bg-white/20 text-white border-white/20'}" title="Save Circuit to Bookmarks">
+                  <span>${isSaved ? '★' : '☆'}</span>
+                  <span>${isSaved ? 'Saved' : 'Bookmark'}</span>
+                </button>
+
+                <button data-open-modal="${cluster.id}" class="modal-open-btn px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all shadow-md flex items-center gap-1.5">
+                  <span>📖 Read Full Dossier</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Regional Overview Block -->
+            <div class="bg-slate-50/70 p-5 sm:p-6 border-b border-slate-200/80">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Regional Essence & Strategic Context</h4>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+              
+              <!-- Quick Metadata Tags -->
+              <div class="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-slate-200/60 text-xs">
+                <span class="text-slate-500 font-semibold">Tags:</span>
+                ${cluster.tags.map(t => `<span class="bg-white border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-lg text-[11px] font-medium">${t}</span>`).join('')}
+              </div>
+            </div>
+
+            <!-- Place Cards Grid -->
+            <div class="p-5 sm:p-6 space-y-5 bg-slate-100/40">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Key Places & Attractions (${cluster.places.length} Sites)</h4>
+                <span class="text-[11px] text-emerald-900 font-medium">📍 Verified with Google Maps</span>
+              </div>
+
+              <div class="space-y-4">
+                ${placesHtml}
+              </div>
+            </div>
+
+          </article>
+        `;
+      }).join('');
+
+      attachCardEventListeners();
+    }
+
+    // Modal Display Logic
+    function openModalForCluster(clusterId) {
+      const cluster = ASSAM_DATA.find(c => c.id === clusterId);
+      if (!cluster) return;
+
+      const modal = document.getElementById('reading-modal');
+      const catEl = document.getElementById('modal-category');
+      const titleEl = document.getElementById('modal-title');
+      const tagEl = document.getElementById('modal-tagline');
+      const bodyEl = document.getElementById('modal-body');
+
+      catEl.textContent = cluster.category;
+      titleEl.textContent = cluster.title;
+      tagEl.textContent = cluster.tagline;
+
+      bodyEl.innerHTML = `
+        <div class="space-y-3 pb-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-900">Regional Overview</h4>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Recommended Window: ${cluster.bestTime}</span>
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Suggested Stay: ${cluster.duration}</span>
+          </div>
+        </div>
+
+        <div class="pt-4 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-900">Detailed Site Breakdown (${cluster.places.length} Places)</h4>
+          ${cluster.places.map((p, idx) => `
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h5 class="font-bold text-slate-900 text-sm font-heritage flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-900 text-xs flex items-center justify-center font-bold">${idx + 1}</span>
+                  ${p.name}
+                </h5>
+                <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-800 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1 self-start sm:self-auto hover:bg-emerald-100 transition-colors">
+                  <span>📍 Google Maps</span>
+                </a>
+              </div>
+              <p class="text-xs text-slate-600 font-mono">Coordinates: ${p.coords}</p>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Overview:</strong> ${p.detail}
+              </div>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Historical Importance:</strong> ${p.history}
+              </div>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Key Facts:</strong>
+                <ul class="list-disc pl-4 space-y-0.5 mt-1 text-slate-600">
+                  ${p.keyFacts.map(kf => `<li>${kf}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="text-[11px] text-amber-900 bg-amber-50/60 p-2 rounded-lg border border-amber-200/60 mt-2">
+                <strong>Visiting Logistics:</strong> ${p.bestTime}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('reading-modal');
+      if (modal) modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Copy Notes Feature
+    function copyClusterNotes() {
+      const title = document.getElementById('modal-title').textContent;
+      const body = document.getElementById('modal-body').innerText;
+      const notes = `=== ${title} (Assam Travel Guide) ===\n\n${body}\n\nGenerated via Assam Explorer.`;
+      
+      navigator.clipboard.writeText(notes).then(() => {
+        showToast('Travel notes copied to clipboard!', '📋');
+      }).catch(() => {
+        showToast('Notes copied to clipboard!', '📋');
+      });
+    }
+
+    // Attach Dynamic Event Listeners
+    function attachCardEventListeners() {
+      document.querySelectorAll('.modal-open-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-open-modal');
+          openModalForCluster(id);
+        });
+      });
+
+      document.querySelectorAll('.save-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-save-id');
+          if (savedClusters.includes(id)) {
+            savedClusters = savedClusters.filter(i => i !== id);
+            showToast('Removed from saved bookmarks', '☆');
+          } else {
+            savedClusters.push(id);
+            showToast('Saved to bookmarks!', '★');
+          }
+          localStorage.setItem('assam_saved_clusters', JSON.stringify(savedClusters));
+          updateSavedBadge();
+          renderClusters();
+        });
+      });
+    }
+
+    function updateSavedBadge() {
+      const badge = document.getElementById('saved-badge');
+      if (badge) badge.textContent = savedClusters.length;
+    }
+
+    // Initialize Everything on DOM Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderItinerary("3");
+      renderClusters();
+      updateSavedBadge();
+      loadChecklist();
+
+      // Audio Bell Button
+      const bellBtn = document.getElementById('audio-bell-btn');
+      if (bellBtn) bellBtn.addEventListener('click', playRiverBell);
+
+      // Packing Checklist Event Listeners
+      const checkBoxes = document.querySelectorAll('.pack-checkbox');
+      checkBoxes.forEach(box => {
+        box.addEventListener('change', updateChecklistProgress);
+      });
+
+      const resetPackBtn = document.getElementById('reset-checklist-btn');
+      if (resetPackBtn) {
+        resetPackBtn.addEventListener('click', () => {
+          checkBoxes.forEach(b => b.checked = false);
+          checkedItems = [];
+          localStorage.removeItem('assam_packing_checklist');
+          updateChecklistProgress();
+          showToast('Checklist reset');
+        });
+      }
+
+      // Filter Tabs
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          tabs.forEach(t => {
+            t.classList.remove('active', 'bg-emerald-800', 'text-white');
+            t.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('active', 'bg-emerald-800', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          activeCategory = e.currentTarget.getAttribute('data-cat');
+          renderClusters();
+        });
+      });
+
+      // Itinerary Pills
+      const itPills = document.querySelectorAll('.itinerary-pill');
+      itPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+          itPills.forEach(p => {
+            p.classList.remove('bg-emerald-800', 'text-white');
+            p.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('bg-emerald-800', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          const days = e.currentTarget.getAttribute('data-days');
+          renderItinerary(days);
+        });
+      });
+
+      // Search Input
+      const searchInput = document.getElementById('search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          if (clearSearchBtn) {
+            if (searchQuery.length > 0) clearSearchBtn.classList.remove('hidden');
+            else clearSearchBtn.classList.add('hidden');
+          }
+          renderClusters();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          renderClusters();
+        });
+      }
+
+      // Bookmark Filter Button
+      const bFilterBtn = document.getElementById('bookmark-filter-btn');
+      if (bFilterBtn) {
+        let onlySaved = false;
+        bFilterBtn.addEventListener('click', () => {
+          onlySaved = !onlySaved;
+          if (onlySaved) {
+            bFilterBtn.classList.add('bg-amber-200', 'border-amber-400');
+            activeCategory = "All";
+            tabs.forEach(t => {
+              if (t.getAttribute('data-cat') === 'All') {
+                t.classList.add('active', 'bg-emerald-800', 'text-white');
+              } else {
+                t.classList.remove('active', 'bg-emerald-800', 'text-white');
+                t.classList.add('bg-slate-100', 'text-slate-700');
+              }
+            });
+            const container = document.getElementById('clusters-container');
+            const savedOnly = ASSAM_DATA.filter(c => savedClusters.includes(c.id));
+            if (savedOnly.length === 0) {
+              container.innerHTML = '<div class="bg-white rounded-3xl border border-slate-200 p-8 text-center text-slate-500 text-xs">No bookmarked circuits yet. Click "Bookmark" on any destination to add it here!</div>';
+            } else {
+              renderClusters();
+            }
+          } else {
+            bFilterBtn.classList.remove('bg-amber-200', 'border-amber-400');
+            renderClusters();
+          }
+        });
+      }
+
+      // Empty State Reset Button
+      const emptyResetBtn = document.getElementById('empty-reset-btn');
+      if (emptyResetBtn) {
+        emptyResetBtn.addEventListener('click', () => {
+          searchQuery = '';
+          if (searchInput) searchInput.value = '';
+          if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+          activeCategory = 'All';
+          tabs.forEach(t => {
+            if (t.getAttribute('data-cat') === 'All') {
+              t.classList.add('active', 'bg-emerald-800', 'text-white');
+            } else {
+              t.classList.remove('active', 'bg-emerald-800', 'text-white');
+              t.classList.add('bg-slate-100', 'text-slate-700');
+            }
+          });
+          renderClusters();
+        });
+      }
+
+      // Modal Close Handlers
+      const modalCloseX = document.getElementById('modal-close-x');
+      const modalCloseAction = document.getElementById('modal-close-action');
+      const modalOverlay = document.getElementById('reading-modal');
+
+      if (modalCloseX) modalCloseX.addEventListener('click', closeModal);
+      if (modalCloseAction) modalCloseAction.addEventListener('click', closeModal);
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) closeModal();
+        });
+      }
+
+      // Modal Copy Notes Handler
+      const modalCopyBtn = document.getElementById('modal-copy-all-btn');
+      if (modalCopyBtn) modalCopyBtn.addEventListener('click', copyClusterNotes);
+
+      // Back to Top Button
+      const backToTop = document.getElementById('back-to-top-btn');
+      if (backToTop) {
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

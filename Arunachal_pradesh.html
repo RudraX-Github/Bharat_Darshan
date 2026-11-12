@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arunachal Pradesh Explorer — Interactive Travel & Cultural Heritage Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    .font-heritage {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-emerald-200 selection:text-emerald-950">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-950 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-emerald-800/50 flex items-center justify-center gap-2 shadow-sm">
+    <span>🏔️ Tashi Delek! Welcome to Arunachal Pradesh — Tawang Monastery, Sela Pass, Ziro Valley, Dirang, Namdapha & Mechuka</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-700 via-teal-800 to-slate-900 flex items-center justify-center text-white shadow-lg shadow-emerald-900/20 text-2xl font-bold border border-amber-300">
+          ☸️
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Arunachal Pradesh Explorer</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">🙏 Tashi Delek! Welcome to Arunachal Pradesh — Your Welcoming Guide to Tawang & Mountain Passes, Ziro Valley, Bomdila & Dirang, Namdapha National Park, and Mechuka & Roing</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <button id="audio-bell-btn" class="bg-emerald-100/80 hover:bg-emerald-200 text-emerald-950 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5 transition-all border border-emerald-300/80 shadow-2xs active:scale-95" title="Play Himalayan Singing Bowl Chime">
+          <span>🔔 Singing Bowl Chime</span>
+        </button>
+        <a href="#itinerary-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🗓️ Itineraries</span>
+        </a>
+        <a href="#cuisine-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🍲 Cuisine</span>
+        </a>
+        <a href="#festivals-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎉 Festivals</span>
+        </a>
+        <a href="#checklist-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎒 Checklist</span>
+        </a>
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-950 px-3.5 py-1.5 rounded-xl font-bold transition-all border border-amber-300/80 flex items-center gap-1.5">
+          <span>⭐ Bookmarks</span>
+          <span id="saved-badge" class="bg-emerald-800 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-b from-emerald-950 via-teal-950 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 border-b border-emerald-900">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/80 border border-emerald-700 text-emerald-200 text-xs font-semibold">
+          <span>✨ Land of the Dawn-Lit Mountains</span>
+          <span>•</span>
+          <span>Himalayan Monasteries, Apatani Heritage & Virgin Rainforests</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight text-amber-300 leading-tight">
+          Sacred Gompas, High Snow Passes & Emerald Valleys
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+          Cross the 13,700-foot Sela Pass to Tawang Monastery, walk Ziro's UNESCO-tentative Apatani paddy-and-fish terraces, savor Bomdila and Dirang's orchards, track four big cat species in Namdapha National Park, and explore the hidden Himalayan frontier of Mechuka and Mayodia Pass.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full lg:w-auto text-center">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">5</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Circuits</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">11</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Key Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">13,700 ft</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Sela Pass</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">1,000+</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Yrs Heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Controls & Search Toolbar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 z-20 w-full">
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Search Input -->
+      <div class="relative w-full md:w-80">
+        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">🔍</span>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search Tawang, Sela Pass, Ziro, Namdapha, Mechuka..." 
+          class="w-full pl-10 pr-24 py-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-700 focus:border-transparent transition-all placeholder:text-slate-400"
+        />
+        <button id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-700">Clear</button>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="filter-tabs">
+        <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-emerald-800 text-white shadow-xs transition-all flex-shrink-0">All 5 Circuits</button>
+        <button data-cat="Highland Monasteries & Passes" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Tawang</button>
+        <button data-cat="Indigenous Tribal Culture & Ecology" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Ziro Valley</button>
+        <button data-cat="Orchards, Dzongs & Monasteries" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Bomdila & Dirang</button>
+        <button data-cat="Pristine Wilderness & Rainforests" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Namdapha</button>
+        <button data-cat="Hidden Valleys & Alpine Frontiers" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Mechuka & Roing</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 space-y-10">
+
+    <!-- 1. Interactive Route Planner / Itinerary Feature -->
+    <div id="itinerary-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-lg">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Interactive Feature</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Travel Itinerary & Himalayan Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended day-by-day routes across Arunachal Pradesh:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-800 text-white shadow-xs transition-all">3 Days (Tawang Express)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Western Monastic Trail)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Grand Himalayan Expedition)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- 2. Dual Feature Row: Taste of Arunachal + Festivals Calendar -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Feature A: Taste of Arunachal -->
+      <div id="cuisine-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Gastronomy & Culture</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Arunachal: Indigenous Mountain Flavors</h4>
+            </div>
+            <span class="text-2xl">🍲</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Explore traditional organic tribal dishes, yak cheese curries, and warm mountain comfort foods:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍜 Monpa Thukpa & Steamed Momos</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Hearty homemade noodle soup boiled in ginger, garlic, and wild mountain herbs; paired with thin-skinned steamed momos and fiery red chilli chutney.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍜 Chura Sabji (Yak Cheese Curry)</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                A rich traditional soup cooked with organic fermented yak cheese (Chhurpi) and local green chillies, generating warmth at sub-zero Himalayan altitudes.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍜 Apatani Pika Pila & Bamboo Shoots</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Prized traditional pickle made by fermenting tender mountain bamboo shoots with smoked pork fat and bird's eye chillies for a savory, pungent flavor.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍜 Monpa Zan & Fermented Apong</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Wholesome porridge from slow-roasted millet or buckwheat flour eaten with forest greens, accompanied by organic fermented rice/millet Apong.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-emerald-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Dining Tip: Warm up with steamed Monpa momos and yak-butter tea at Tawang and Dirang homestays!</p>
+      </div>
+
+      <!-- Feature B: Festivals & Cultural Calendar -->
+      <div id="festivals-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Culture & Festivities</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Sacred Festivals & Cultural Calendar</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Time your journey with Arunachal’s sacred monastic festivals and vibrant tribal music carnivals:</p>
+
+          <div class="space-y-2.5 text-xs">
+            
+            <div class="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200/70 hover:border-emerald-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🎭</span> Torgya & Dungyur Festival
+                </h5>
+                <span class="text-[10px] font-bold bg-emerald-200/80 text-emerald-950 px-2 py-0.5 rounded">January • Tawang Monastery</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                A 3-day monastic festival in Tawang Monastery's courtyard where monks in silk robes and masks perform sacred Cham dances accompanied by Dungchen horns.
+              </p>
+            </div>
+            
+            <div class="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200/70 hover:border-emerald-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🎭</span> Losar (Tibetan & Monpa New Year)
+                </h5>
+                <span class="text-[10px] font-bold bg-emerald-200/80 text-emerald-950 px-2 py-0.5 rounded">Feb / Mar • Tawang & Mechuka</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Celebrated for 15 days with hoisting of colorful prayer flags (Lungta), butter-lamp illuminations, folk dances, and shared butter tea.
+              </p>
+            </div>
+            
+            <div class="bg-emerald-50/60 p-3 rounded-xl border border-emerald-200/70 hover:border-emerald-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🎭</span> Ziro Music Festival, Dree & Myoko
+                </h5>
+                <span class="text-[10px] font-bold bg-emerald-200/80 text-emerald-950 px-2 py-0.5 rounded">Mar, Jul & Sep • Ziro Valley</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                India's premier eco-friendly indie music festival amidst golden Apatani paddy fields alongside ancient Dree and Myoko tribal celebrations.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-emerald-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Planning Advice: Apply for your Inner Line Permit (ILP) online well ahead if attending Ziro Music Festival or Torgya!</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Packing & Transit Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Packing & ILP Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Permits & Essentials</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Arunachal & ILP Checklist</h4>
+            </div>
+            <span class="text-2xl">🎒</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Interactive permit, cold-weather gear, and mountain pass readiness checklist:</p>
+
+          <div class="my-3 space-y-2 text-xs" id="checklist-items">
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="0" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Obtain mandatory Inner Line Permit (ILP) / PAP online via arunachalilp.com before travel</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="1" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Pack heavy windproof jacket & thermals for sub-zero conditions at Sela Pass (13,700 ft)</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="2" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Wear high-ankle waterproof walking shoes for monastery stairs & Mechuka suspension bridges</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="3" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Carry AMS altitude medication & thermos when ascending rapidly through Sela Pass</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="4" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Keep sufficient cash in Indian Rupees (₹)—ATMs are scarce beyond Bomdila/Tawang</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="5" class="pack-checkbox rounded border-slate-300 text-emerald-700 focus:ring-emerald-600 w-4 h-4">
+              <span class="text-slate-700">Download offline maps & carry a power bank as extreme cold drains phone batteries quickly</span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-slate-500">Progress:</span>
+            <span id="pack-progress-text" class="font-bold text-emerald-800">0/6 Completed</span>
+          </div>
+          <button id="reset-checklist-btn" class="text-[11px] text-emerald-800 hover:underline font-bold">Reset</button>
+        </div>
+      </div>
+
+      <!-- Regional Mountain Highway Matrix -->
+      <div class="bg-white rounded-2xl border border-emerald-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full">Transit Logistics</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Mountain Highway Transit Matrix</h4>
+            </div>
+            <span class="text-2xl">🚗</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Key mountain corridors connecting Bhalukpong, Bomdila, Dirang, Sela Pass, Tawang, Ziro, and Roing:</p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold">
+                  <th class="py-2 px-3">Route / Corridor</th>
+                  <th class="py-2 px-2 text-center">Distance</th>
+                  <th class="py-2 px-2 text-center">Travel Time</th>
+                  <th class="py-2 px-3">Recommended Access</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Bhalukpong → Bomdila</td>
+                  <td class="py-2 px-2 text-center font-mono">100 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~4.0 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Trans-Arunachal Highway (NH-13)</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Bomdila → Dirang</td>
+                  <td class="py-2 px-2 text-center font-mono">42 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~1.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Kameng Valley Mountain Road</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Dirang → Sela Pass</td>
+                  <td class="py-2 px-2 text-center font-mono">62 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~2.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">All-Weather Sela Tunnel / Pass</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Sela Pass → Tawang</td>
+                  <td class="py-2 px-2 text-center font-mono">72 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~2.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">High-Altitude Himalayan Highway</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Guwahati → Ziro Valley</td>
+                  <td class="py-2 px-2 text-center font-mono">450 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~9.0 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH-15 & Trans-Arunachal Corridor</td>
+                </tr>
+                
+                <tr class="hover:bg-emerald-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Dibrugarh → Roing</td>
+                  <td class="py-2 px-2 text-center font-mono">145 km</td>
+                  <td class="py-2 px-2 text-center text-emerald-900 font-medium">~3.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Dhola-Sadiya Bridge Highway</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="text-[11px] text-emerald-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">💡 Transit Tip: Start mountain drives before 7:00 AM to cross Sela Pass in clear morning light before afternoon fog settles.</p>
+      </div>
+
+    </div>
+
+    <!-- Active Filter Status Bar -->
+    <div class="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-200">
+      <div class="flex items-center gap-2">
+        <span>Showing:</span>
+        <span id="visible-clusters-count" class="font-bold text-slate-900">5</span> Circuits
+        <span>•</span>
+        <span id="visible-sites-count" class="font-bold text-emerald-800">11</span> Key Sites
+        <span id="active-filter-label" class="font-medium text-emerald-900 ml-1"></span>
+      </div>
+      <div>
+        <span class="text-slate-400">All coordinates verified with official Google Maps</span>
+      </div>
+    </div>
+
+    <!-- Clusters Container (Cards Injected Here) -->
+    <div id="clusters-container" class="space-y-12">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State (When no search matches) -->
+    <div id="empty-state" class="hidden bg-white rounded-3xl border border-slate-200 p-12 text-center max-w-md mx-auto my-12 shadow-sm">
+      <div class="text-4xl mb-3">🔍</div>
+      <h4 class="text-base font-bold text-slate-800 font-heritage">No matching destinations found</h4>
+      <p class="text-xs text-slate-500 mt-1">Try searching for "Tawang", "Sela Pass", "Apatani", "Namdapha", or "Mechuka".</p>
+      <button id="empty-reset-btn" class="mt-4 px-4 py-2 bg-emerald-800 hover:bg-emerald-900 text-white rounded-xl text-xs font-bold transition-all shadow-xs">Reset All Filters</button>
+    </div>
+
+  </main>
+
+  <!-- Detailed Reading Modal -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div id="modal-container" class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-white p-5 flex items-start justify-between gap-4">
+        <div>
+          <span id="modal-category" class="text-[11px] font-bold text-amber-300 uppercase tracking-wider bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Category</span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-black font-heritage text-white mt-1.5">Cluster Title</h3>
+          <p id="modal-tagline" class="text-xs text-slate-300 mt-0.5">Tagline and description</p>
+        </div>
+        <button id="modal-close-x" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-200 hover:text-white transition-colors text-lg" title="Close Modal">✕</button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="modal-body" class="p-6 overflow-y-auto space-y-6 text-sm text-slate-700 divide-y divide-slate-100">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-3.5 flex items-center justify-between text-xs">
+        <span class="text-slate-500 font-medium">📍 Verified with Google Maps & Live GPS</span>
+        <div class="flex items-center gap-2">
+          <button id="modal-copy-all-btn" class="px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-xl font-bold transition-colors flex items-center gap-1.5">
+            <span>📋 Copy Travel Notes</span>
+          </button>
+          <button id="modal-close-action" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-semibold transition-colors">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-heritage font-bold">Arunachal Pradesh Explorer</span>
+        <span>•</span>
+        <span>Dedicated to Himalayan Ecotourism, Tribal Heritage & Biodiversity Conservation</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Curated with ☸️ Arunachal Pride</span>
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    // Tourism Data
+    const ARUNACHAL_DATA = [{"id": "tawang", "title": "Tawang & Mountain Passes", "tagline": "Sacred Buddhist Monasteries, High Alpine Passes & Glacial Lakes", "category": "Highland Monasteries & Passes", "tags": ["Tawang Monastery", "Sela Pass", "Glacial Lakes", "War Memorials"], "bestTime": "March to May & September to November (Clear skies, 5°C – 18°C)", "duration": "4 to 5 Days", "overview": "Perched at 3,048 meters in the northwestern corner of Arunachal Pradesh, Tawang is a spiritual and mountainous wonderland revered for housing the second-largest Buddhist monastery on earth, soaring 13,700-foot snow passes, and serene glacial lakes.", "places": [{"name": "Tawang Monastery (Galden Namgey Lhatse)", "type": "Mahayana Buddhist Monastic Citadel", "detailedInfo": "Standing at 10,000 feet atop a commanding mountain ridge overlooking the Tawang Chu Valley, Tawang Monastery is the largest monastery in India and the second-largest in the world after the Potala Palace in Lhasa. Known in Tibetan as 'Galden Namgey Lhatse' (Celestial Paradise in a Divine Site), the monastery resembles a medieval fortress with an imposing three-story assembly hall (Dukhang), a 28-foot gilded statue of Lord Buddha, a library containing priceless centuries-old gold-lettered Buddhist scriptures (Kangyur and Tengyur), and quarters housing over 450 residential Gelugpa monks.", "historicalImportance": "Founded in 1680–81 CE by Merak Lama Lodre Gyatso in accordance with the wishes of the 5th Dalai Lama, Ngawang Lobsang Gyatso. Historically revered as the birthplace of Tsangyang Gyatso, the 6th Dalai Lama (born in Urgelling Gompa, Tawang, in 1683). In 1959, the current 14th Dalai Lama entered India via Tawang after his perilous flight from Tibet, resting at Tawang Monastery before traveling onward to Tezpur.", "keyFacts": ["Houses an invaluable 28-foot tall golden statue of Buddha seated inside the sanctum hall.", "Preserves 400-year-old ancient block-printed Mahayana sutras stamped on bark with gold and silver ink.", "Hosts the vibrant Torgya Festival every January, featuring sacred monastic masked dances (Cham) performed to drive away negative spirits.", "Enclosed by an outer stone wall measuring 925 feet in perimeter with historic defensive entry gates (Kakaling)."], "bestTimeToVisit": "March to May (pleasant spring with blooming rhododendrons) and September to November (crystal-clear blue skies). Winters (December to February) bring sub-zero temperatures and thick snow cover.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tawang+Monastery+Tawang+Arunachal+Pradesh", "coords": "27.5861° N, 91.8594° E", "locationName": "Tawang Town, Tawang District", "history": "Founded in 1680–81 CE by Merak Lama Lodre Gyatso in accordance with the wishes of the 5th Dalai Lama, Ngawang Lobsang Gyatso. Historically revered as the birthplace of Tsangyang Gyatso, the 6th Dalai Lama (born in Urgelling Gompa, Tawang, in 1683). In 1959, the current 14th Dalai Lama entered India via Tawang after his perilous flight from Tibet, resting at Tawang Monastery before traveling onward to Tezpur.", "detail": "Standing at 10,000 feet atop a commanding mountain ridge overlooking the Tawang Chu Valley, Tawang Monastery is the largest monastery in India and the second-largest in the world after the Potala Palace in Lhasa. Known in Tibetan as 'Galden Namgey Lhatse' (Celestial Paradise in a Divine Site), the monastery resembles a medieval fortress with an imposing three-story assembly hall (Dukhang), a 28-foot gilded statue of Lord Buddha, a library containing priceless centuries-old gold-lettered Buddhist scriptures (Kangyur and Tengyur), and quarters housing over 450 residential Gelugpa monks.", "bestTime": "March to May (pleasant spring with blooming rhododendrons) and September to November (crystal-clear blue skies). Winters (December to February) bring sub-zero temperatures and thick snow cover.", "insiderTip": "Located at Tawang Town, Tawang District — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}, {"name": "Sela Pass & Paradise Lake", "type": "High-Altitude Himalayan Mountain Pass", "detailedInfo": "A breathtaking high-altitude mountain pass located at 13,700 feet (4,170 meters) along the highway connecting Tawang to Bomdila and Guwahati. The pass features the shimmering Sela Lake (also known as Paradise Lake), a sacred high-altitude glacial lake surrounded by prayer flags that remains partially or completely frozen for nearly half the year, set against snow-draped Himalayan peaks.", "historicalImportance": "A critical strategic corridor during the 1962 Sino-Indian War. Nearby Jaswant Garh War Memorial honors Rifleman Jaswant Singh Rawat of 4 Garhwal Rifles, who was posthumously awarded the Maha Vir Chakra for heroically holding off invading forces for 72 continuous hours with the assistance of two local Monpa tribal women, Sela and Nura.", "keyFacts": ["Sits on the boundary between West Kameng and Tawang districts, serving as the sole overland lifeline to Tawang.", "The newly constructed all-weather twin-tube Sela Tunnel (world's longest bi-lane tunnel at an elevation above 13,000 ft) ensures year-round connectivity through heavy winter snowfall.", "Tibetan Buddhists consider Sela Lake sacred, with folklore believing that 101 sacred lakes surround the Sela mountain range."], "bestTimeToVisit": "April to October for clear mountain roads and sparkling blue water; December to February for surreal, snowbound winter wonderland vistas.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sela+Pass+Tawang+Arunachal+Pradesh", "coords": "27.5056° N, 92.1039° E", "locationName": "Sela Range, West Kameng / Tawang", "history": "A critical strategic corridor during the 1962 Sino-Indian War. Nearby Jaswant Garh War Memorial honors Rifleman Jaswant Singh Rawat of 4 Garhwal Rifles, who was posthumously awarded the Maha Vir Chakra for heroically holding off invading forces for 72 continuous hours with the assistance of two local Monpa tribal women, Sela and Nura.", "detail": "A breathtaking high-altitude mountain pass located at 13,700 feet (4,170 meters) along the highway connecting Tawang to Bomdila and Guwahati. The pass features the shimmering Sela Lake (also known as Paradise Lake), a sacred high-altitude glacial lake surrounded by prayer flags that remains partially or completely frozen for nearly half the year, set against snow-draped Himalayan peaks.", "bestTime": "April to October for clear mountain roads and sparkling blue water; December to February for surreal, snowbound winter wonderland vistas.", "insiderTip": "Located at Sela Range, West Kameng / Tawang — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}, {"name": "Madhuri Lake (Sangetsar Tso)", "type": "High-Altitude Glacial Lake", "detailedInfo": "Nestled at an elevation of 12,000 feet near the Indo-China border, approximately 35 km from Tawang. This picturesque, pristine alpine lake is famous for the eerie, weathered tree trunks protruding eerily from its turquoise waters, surrounded by snow-capped peaks, alpine meadows, and fluttering Buddhist prayer flags.", "historicalImportance": "Formed in 1950 when a massive 8.6-magnitude earthquake caused a catastrophic landslide that dammed a mountain stream, submerging a local pine forest whose preserved trunks still stand inside the lake today. Originally called Sangetsar Tso, it became popularly known as 'Madhuri Lake' across India after Bollywood actress Madhuri Dixit filmed a dance sequence here for the 1997 film 'Koyla'.", "keyFacts": ["Military army canteens on the lake shore serve hot momos, Maggie, and tea to travelers amidst chilly mountain winds.", "Requires a special civilian inner line permit and Army permission from the Deputy Commissioner's office in Tawang to visit due to border proximity.", "Surrounded by rare alpine plants and grazing yaks during the summer months."], "bestTimeToVisit": "April to October. Winter visits (December–February) are frequently inaccessible due to heavy snow blocking the Bum La Pass road.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sangetsar+Lake+Madhuri+Lake+Tawang+Arunachal+Pradesh", "coords": "27.7183° N, 91.7828° E", "locationName": "Near Bum La Pass, Tawang", "history": "Formed in 1950 when a massive 8.6-magnitude earthquake caused a catastrophic landslide that dammed a mountain stream, submerging a local pine forest whose preserved trunks still stand inside the lake today. Originally called Sangetsar Tso, it became popularly known as 'Madhuri Lake' across India after Bollywood actress Madhuri Dixit filmed a dance sequence here for the 1997 film 'Koyla'.", "detail": "Nestled at an elevation of 12,000 feet near the Indo-China border, approximately 35 km from Tawang. This picturesque, pristine alpine lake is famous for the eerie, weathered tree trunks protruding eerily from its turquoise waters, surrounded by snow-capped peaks, alpine meadows, and fluttering Buddhist prayer flags.", "bestTime": "April to October. Winter visits (December–February) are frequently inaccessible due to heavy snow blocking the Bum La Pass road.", "insiderTip": "Located at Near Bum La Pass, Tawang — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}, {"name": "Nuranang Falls (Jang Falls)", "type": "Spectacular Forest Waterfall", "detailedInfo": "A roaring 100-meter (328 ft) natural waterfall located near Jang town, about 40 km before Tawang. Originating in the high slopes of the Sela Pass range, the Nuranang River plunges down sheer granite rock faces into a misty emerald pool before merging into the Tawang Chu River.", "historicalImportance": "Named after Nura, a courageous local Monpa tribal girl who assisted Indian soldier Rifleman Jaswant Singh Rawat during the 1962 Sino-Indian War by supplying ammunition, food, and local intelligence before she was captured by enemy forces.", "keyFacts": ["Features a small hydel power station at its base that supplies electricity to surrounding rural villages.", "Ranked among the most photogenic waterfalls in Northeast India, famous for constant rainbow formations in the afternoon mist.", "Visitors can hike down stone stairs to reach the base pool and feel the thunderous spray."], "bestTimeToVisit": "June to November when the waterfall is swollen with torrential mountain water and roaring at full power.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nuranang+Falls+Jang+Falls+Tawang+Arunachal+Pradesh", "coords": "27.5667° N, 91.9833° E", "locationName": "Jang, Tawang District", "history": "Named after Nura, a courageous local Monpa tribal girl who assisted Indian soldier Rifleman Jaswant Singh Rawat during the 1962 Sino-Indian War by supplying ammunition, food, and local intelligence before she was captured by enemy forces.", "detail": "A roaring 100-meter (328 ft) natural waterfall located near Jang town, about 40 km before Tawang. Originating in the high slopes of the Sela Pass range, the Nuranang River plunges down sheer granite rock faces into a misty emerald pool before merging into the Tawang Chu River.", "bestTime": "June to November when the waterfall is swollen with torrential mountain water and roaring at full power.", "insiderTip": "Located at Jang, Tawang District — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}]}, {"id": "ziro-valley", "title": "Ziro Valley", "tagline": "Ancient Apatani Wisdom, Terraced Green Fields & UNESCO Living Heritage", "category": "Indigenous Tribal Culture & Ecology", "tags": ["Apatani Tribe", "Terrace Farming", "Pine Groves", "Music Festival"], "bestTime": "March to October (Summer green 15°C – 24°C; Music Fest in late Sept)", "duration": "2 to 3 Days", "overview": "Cradled in the Lower Subansiri district at 5,000 feet, Ziro Valley is a tranquil plateau celebrated worldwide for the ancient, sustainable agricultural lifestyle of the Apatani tribe, who practice unique fish-cum-paddy farming without animal draft power or modern machines.", "places": [{"name": "Apatani Cultural Landscape & Villages (Hong, Hari, Hija)", "type": "UNESCO Tentative World Heritage Site", "detailedInfo": "A picturesque, flat plateau surrounded by gentle pine-clad mountains, home to traditional Apatani villages such as Hong (one of the largest traditional villages in Asia), Hari, Hija, and Bamin. Characterized by traditional timber-and-bamboo stilt houses, sacred bamboo totems (Babo), and community gathering platforms (Lapang). Elder Apatani women are celebrated for their distinctive facial nose plugs (*yaping hullo*) and dark facial line tattoos (*tiipe*).", "historicalImportance": "The Apatani tribe migrated from the northern Tibetan plateau centuries ago and developed an unparalleled system of community forestry, eco-conservation, and wet-rice agriculture. Historically, the facial tattooing and nose plugs were worn by Apatani women to prevent abduction by neighboring rival tribes due to their renowned beauty—a tradition that ceased in the 1970s.", "keyFacts": ["Apatani farming is 100% organic and sustainable: irrigation channels direct mountain stream water through terraced rice fields while concurrently raising fish (carp) in the flooded paddies.", "Nominated on UNESCO's Tentative List of World Heritage Sites for exceptional eco-cultural harmony.", "Celebrates two major harvest festivals: the Dree Festival (July) featuring traditional prayers for bumper crops, and the Myoko Festival (March) honoring friendship and prosperity."], "bestTimeToVisit": "March to May for spring planting; September and October for shimmering golden harvest fields and the world-famous Ziro Music Festival (held annually in late September).", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hong+Village+Ziro+Valley+Arunachal+Pradesh", "coords": "27.5583° N, 93.8389° E", "locationName": "Ziro Valley, Lower Subansiri District", "history": "The Apatani tribe migrated from the northern Tibetan plateau centuries ago and developed an unparalleled system of community forestry, eco-conservation, and wet-rice agriculture. Historically, the facial tattooing and nose plugs were worn by Apatani women to prevent abduction by neighboring rival tribes due to their renowned beauty—a tradition that ceased in the 1970s.", "detail": "A picturesque, flat plateau surrounded by gentle pine-clad mountains, home to traditional Apatani villages such as Hong (one of the largest traditional villages in Asia), Hari, Hija, and Bamin. Characterized by traditional timber-and-bamboo stilt houses, sacred bamboo totems (Babo), and community gathering platforms (Lapang). Elder Apatani women are celebrated for their distinctive facial nose plugs (*yaping hullo*) and dark facial line tattoos (*tiipe*).", "bestTime": "March to May for spring planting; September and October for shimmering golden harvest fields and the world-famous Ziro Music Festival (held annually in late September).", "insiderTip": "Located at Ziro Valley, Lower Subansiri District — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}, {"name": "Pine Grove & Bamboo Groves", "type": "Protected Agro-Forestry Reserves", "detailedInfo": "Sprawling, densely clustered groves of blue pine (*Pinus wallichiana*) and single-stemmed bamboo (*Phyllostachys bambusoides*) that flank the hillsides of Ziro. Known locally as 'Bije', these private and clan-owned groves are maintained with meticulous spacing and rotational cutting systems.", "historicalImportance": "Represents an ancient agro-forestry management system documented by international ecologists. The Apatanis are the only tribal community in the region to have successfully domesticated and cultivated this specific species of high-yield mountain bamboo for over five centuries.", "keyFacts": ["Blue pine groves act as natural windbreakers and soil retainers, protecting the valley from erosion.", "Bamboo harvested from these groves is used for building earthquake-resistant homes, water pipes, hunting bows, baskets, and cooking utensils."], "bestTimeToVisit": "September to November for crisp walking weather and clear golden light filtering through the pine canopies.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Pine+Grove+Ziro+Arunachal+Pradesh", "coords": "27.5350° N, 93.8150° E", "locationName": "Ziro Plateau, Lower Subansiri", "history": "Represents an ancient agro-forestry management system documented by international ecologists. The Apatanis are the only tribal community in the region to have successfully domesticated and cultivated this specific species of high-yield mountain bamboo for over five centuries.", "detail": "Sprawling, densely clustered groves of blue pine (*Pinus wallichiana*) and single-stemmed bamboo (*Phyllostachys bambusoides*) that flank the hillsides of Ziro. Known locally as 'Bije', these private and clan-owned groves are maintained with meticulous spacing and rotational cutting systems.", "bestTime": "September to November for crisp walking weather and clear golden light filtering through the pine canopies.", "insiderTip": "Located at Ziro Plateau, Lower Subansiri — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}]}, {"id": "bomdila-dirang", "title": "Bomdila & Dirang", "tagline": "Monpa Heritage, Apple Orchards & Soaring Himalayan Panoramas", "category": "Orchards, Dzongs & Monasteries", "tags": ["Apple Orchards", "Dirang Dzong", "Buddhist Monasteries", "Gorichen Peak"], "bestTime": "October to April (Crisp mountain air, 8°C – 20°C)", "duration": "2 to 3 Days", "overview": "Set along the Kameng River valley in West Kameng, Bomdila and Dirang offer fragrant apple and kiwi orchards, ancient stone dzongs, thermal sulphur springs, and commanding panoramic views of snow-crested Gorichen and Kangto peaks.", "places": [{"name": "Bomdila Buddhist Monasteries & Viewpoints", "type": "Tibetan Mahayana Monasteries & Scenic Hills", "detailedInfo": "Bomdila serves as the headquarters of West Kameng district at 8,500 feet. Encompasses the Upper Gompa (Gentse Gaden Rabgyel Lling Monastery), Middle Gompa, and Lower Gompa. The Upper Gompa is an ornate architectural complex featuring a massive prayer hall, prayer wheels, and a school for young monks, offering breathtaking views of the snow-capped Himalayan horizon.", "historicalImportance": "Established in 1965 by the 12th reincarnate of the Tsona Gontse Rinpoche of Tibet as a primary seat of the Gelugpa Mahayana school in Arunachal Pradesh. Rebuilt with traditional Tibetan woodcarving and Buddhist mural frescoes.", "keyFacts": ["The monastery houses a massive prayer hall with intricate thangkas, silver lamps, and a dedicated library of Buddhist scriptures.", "Bomdila viewpoint provides panoramic 360-degree vistas of Gorichen Peak (6,488 meters), the highest mountain peak in Arunachal Pradesh.", "Renowned for the government craft center showcasing handmade Tibetan wool carpets, dragon motifs, and carved wooden masks."], "bestTimeToVisit": "October to April. April brings blooming apple blossoms, while autumn (October–November) offers unclouded mountain visibility.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bomdila+Monastery+Gentse+Gaden+Rabgyel+Lling+Arunachal+Pradesh", "coords": "27.2644° N, 92.4231° E", "locationName": "Bomdila, West Kameng District", "history": "Established in 1965 by the 12th reincarnate of the Tsona Gontse Rinpoche of Tibet as a primary seat of the Gelugpa Mahayana school in Arunachal Pradesh. Rebuilt with traditional Tibetan woodcarving and Buddhist mural frescoes.", "detail": "Bomdila serves as the headquarters of West Kameng district at 8,500 feet. Encompasses the Upper Gompa (Gentse Gaden Rabgyel Lling Monastery), Middle Gompa, and Lower Gompa. The Upper Gompa is an ornate architectural complex featuring a massive prayer hall, prayer wheels, and a school for young monks, offering breathtaking views of the snow-capped Himalayan horizon.", "bestTime": "October to April. April brings blooming apple blossoms, while autumn (October–November) offers unclouded mountain visibility.", "insiderTip": "Located at Bomdila, West Kameng District — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}, {"name": "Dirang Dzong & Hot Water Springs", "type": "17th-Century Fortified Stone Citadel", "detailedInfo": "Located in the picturesque Dirang Valley along the Kameng River (5,000 feet). Dirang Dzong is a 17th-century fortified stone settlement composed of multi-storied stone houses, carved wooden balconies, and defensive watchtowers. Nearby are natural hot sulphur springs renowned for therapeutic minerals, and the grand Thupsung Dhargye Ling Monastery.", "historicalImportance": "Constructed in 1831 CE (with roots dating to the 17th century) by Monpa chieftains to protect against regional invasions from neighboring clans. During border disputes and British territorial expeditions, the stone fort functioned as a high-security prison and defense citadel.", "keyFacts": ["Houses are built using river stones, mud, and timber without modern cement, inhabited continuously by Monpa families for over 300 years.", "Dirang is renowned as the fruit basket of Arunachal Pradesh, carpeted with organic apple, kiwi, pomegranate, and persimmon orchards.", "The Dirang hot spring maintains a constant natural warm temperature of 40°C rich in sulphur minerals, located near the riverbank."], "bestTimeToVisit": "October to April. Ideal for an overnight acclimatization stopover en route to Sela Pass and Tawang.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dirang+Dzong+Dirang+Arunachal+Pradesh", "coords": "27.3583° N, 92.2417° E", "locationName": "Dirang Valley, West Kameng", "history": "Constructed in 1831 CE (with roots dating to the 17th century) by Monpa chieftains to protect against regional invasions from neighboring clans. During border disputes and British territorial expeditions, the stone fort functioned as a high-security prison and defense citadel.", "detail": "Located in the picturesque Dirang Valley along the Kameng River (5,000 feet). Dirang Dzong is a 17th-century fortified stone settlement composed of multi-storied stone houses, carved wooden balconies, and defensive watchtowers. Nearby are natural hot sulphur springs renowned for therapeutic minerals, and the grand Thupsung Dhargye Ling Monastery.", "bestTime": "October to April. Ideal for an overnight acclimatization stopover en route to Sela Pass and Tawang.", "insiderTip": "Located at Dirang Valley, West Kameng — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}]}, {"id": "namdapha", "title": "Namdapha National Park", "tagline": "Four Big Cats, Wild Primates & Asia's Wildest Rainforest Frontier", "category": "Pristine Wilderness & Rainforests", "tags": ["Four Big Cats", "Hoolock Gibbon", "Dipterocarp Rainforest", "Stilwell Road"], "bestTime": "November to March (Dry winter season, 12°C – 22°C)", "duration": "3 to 4 Days", "overview": "Located in Changlang district near the Myanmar border, Namdapha is India’s fourth-largest national park (1,985 sq km) and one of the richest biodiversity hotspots in the world, spanning altitudes from 200 meters to 4,571 meters across the Patkai mountain range.", "places": [{"name": "Namdapha Tiger Reserve & Rainforest Ecology", "type": "UNESCO Tentative Biosphere Hotspot", "detailedInfo": "An untamed, virgin tropical and subtropical rainforest flanking the Noa-Dihing River. Spanning an extreme altitudinal gradient from tropical wet evergreen dipterocarp forests to sub-alpine dwarf rhododendrons and permanent snow peaks at Dapha Bum (4,571 meters). Famous for harboring dense populations of wild elephants, Hoolock Gibbons, hornbills, and over 1,400 floral species.", "historicalImportance": "Originally declared a wildlife sanctuary in 1972 and elevated to a National Park and Project Tiger reserve in 1983. Encompasses historic sections of the World War II Stilwell Road (Ledo Road) engineered by General Joseph Stilwell in 1942–44 to supply Allied forces in China across the treacherous 'Hump' jungle route.", "keyFacts": ["The only national park on earth that naturally harbors all four big cat species: Bengal Tiger, Common Leopard, Clouded Leopard, and Snow Leopard.", "Home to India’s only ape species, the endangered Western Hoolock Gibbon, celebrated for its haunting morning territorial calls echoing across the canopy.", "Harbors the critically endangered Namdapha Flying Squirrel, a species found nowhere else on planet Earth.", "Over 425 species of birds reside here, including the Great Indian Hornbill, Rufous-necked Hornbill, and White-winged Wood Duck."], "bestTimeToVisit": "November to March when jungle trails are dry, river waters are clear, and leeches are dormant. (Monsoons from May to September bring impassable floods).", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Namdapha+National+Park+Miao+Changlang+Arunachal+Pradesh", "coords": "27.4917° N, 96.3822° E", "locationName": "Miao, Changlang District", "history": "Originally declared a wildlife sanctuary in 1972 and elevated to a National Park and Project Tiger reserve in 1983. Encompasses historic sections of the World War II Stilwell Road (Ledo Road) engineered by General Joseph Stilwell in 1942–44 to supply Allied forces in China across the treacherous 'Hump' jungle route.", "detail": "An untamed, virgin tropical and subtropical rainforest flanking the Noa-Dihing River. Spanning an extreme altitudinal gradient from tropical wet evergreen dipterocarp forests to sub-alpine dwarf rhododendrons and permanent snow peaks at Dapha Bum (4,571 meters). Famous for harboring dense populations of wild elephants, Hoolock Gibbons, hornbills, and over 1,400 floral species.", "bestTime": "November to March when jungle trails are dry, river waters are clear, and leeches are dormant. (Monsoons from May to September bring impassable floods).", "insiderTip": "Located at Miao, Changlang District — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}]}, {"id": "mechuka-roing", "title": "Mechuka & Roing", "tagline": "The Forbidden Valley of Ice, Ancient Monasteries & Snow Passes", "category": "Hidden Valleys & Alpine Frontiers", "tags": ["Mechuka Valley", "400-Year Gompa", "Mayodia Snow Pass", "Mehao Sanctuary"], "bestTime": "October to April (Crisp mountain air, winter snowfall)", "duration": "4 to 6 Days", "overview": "A pristine eastern frontier combining the fairytale landscape of Mechuka Valley (often termed the 'Switzerland of the East') near the Tibetan border, with the snow-covered viewpoints of Mayodia Pass and the virgin rainforests of Roing.", "places": [{"name": "Mechuka Valley (Menchukha)", "type": "High-Altitude Himalayan Valley (6,000 ft)", "detailedInfo": "A breathtaking valley carved by the crystal-clear Yargyap Chu (Siyom) River, situated just 29 km from the McMahon Line (Indo-Tibet border) in Shi-Yomi district. The valley features lush pine meadows, horse-grazing pastures, wooden cottages with bright red-tin roofs, traditional wooden suspension bridges swaying over turquoise rivers, and the 400-year-old Samten Yongcha Monastery.", "historicalImportance": "The name 'Men-chu-kha' translates in Tibetan to 'Medicinal Water of Ice' (Men = medicine, Chu = water, Kha = snow/ice). Inhabited predominantly by the Buddhist Memba, Ramo, Bokar, and Libo tribes. The 400-year-old Samten Yongcha Monastery sits on a hilltop predating Tawang Monastery, belonging to the Mahayana Nyingmapa sect.", "keyFacts": ["Guru Nanak is believed to have meditated here in the 16th century while traveling to Tibet, and a sacred cave shrine (Gurudwara Taposthan) is maintained by the Indian Army on the riverbank.", "Surrounded by towering snow-capped peaks rising above 16,000 feet, offering trails for trekking, rafting, and paragliding.", "Wooden suspension bridges built with bamboo and cane span the rushing Yargyap Chu river without modern steel cables."], "bestTimeToVisit": "October to April for sunny mountain days and crisp evenings; December and January bring magical winter snowfall across the wooden rooftops.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mechuka+Valley+Menchukha+Shi+Yomi+Arunachal+Pradesh", "coords": "28.6017° N, 94.1350° E", "locationName": "Yargyap Chu Valley, Shi-Yomi District", "history": "The name 'Men-chu-kha' translates in Tibetan to 'Medicinal Water of Ice' (Men = medicine, Chu = water, Kha = snow/ice). Inhabited predominantly by the Buddhist Memba, Ramo, Bokar, and Libo tribes. The 400-year-old Samten Yongcha Monastery sits on a hilltop predating Tawang Monastery, belonging to the Mahayana Nyingmapa sect.", "detail": "A breathtaking valley carved by the crystal-clear Yargyap Chu (Siyom) River, situated just 29 km from the McMahon Line (Indo-Tibet border) in Shi-Yomi district. The valley features lush pine meadows, horse-grazing pastures, wooden cottages with bright red-tin roofs, traditional wooden suspension bridges swaying over turquoise rivers, and the 400-year-old Samten Yongcha Monastery.", "bestTime": "October to April for sunny mountain days and crisp evenings; December and January bring magical winter snowfall across the wooden rooftops.", "insiderTip": "Located at Yargyap Chu Valley, Shi-Yomi District — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}, {"name": "Roing, Mayodia Pass & Mehao Sanctuary", "type": "High Snow Pass & Pristine Nature Sanctuary", "detailedInfo": "Located in Lower Dibang Valley, Roing is the gateway to the mist-laden Mayodia Pass (8,711 ft), known for heavy winter snowfall, panoramic views of the eastern Himalayas, and the Mehao Wildlife Sanctuary containing the crystalline Mehao Lake (3,000 ft) surrounded by virgin evergreen forest.", "historicalImportance": "Roing is the ancestral homeland of the Idu Mishmi tribe. Houses the 8th-century archaeological ruins of Bhismaknagar Fort, built with burnt bricks by King Bhismaka (the father of Lord Krishna’s consort, Queen Rukmini), chronicled in the Mahabharata and Kalika Purana.", "keyFacts": ["Mayodia Pass is the nearest snow viewpoint from eastern Assam, attracting thousands of winter travelers for snowfall between December and February.", "Mehao Lake is a completely transparent, oligotrophic high-altitude mountain lake where no fish naturally occur, surrounded by wild orchids.", "Mehao Sanctuary harbors rare mammals including the Red Panda, Mishmi Takin, Leopard Cat, and over 200 species of Himalayan butterflies."], "bestTimeToVisit": "October to April for clear mountain drives. Visit December to February specifically to experience fresh snowfall at Mayodia Pass.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mayodia+Pass+Roing+Lower+Dibang+Valley+Arunachal+Pradesh", "coords": "28.2333° N, 93.8833° E", "locationName": "Lower Dibang Valley District", "history": "Roing is the ancestral homeland of the Idu Mishmi tribe. Houses the 8th-century archaeological ruins of Bhismaknagar Fort, built with burnt bricks by King Bhismaka (the father of Lord Krishna’s consort, Queen Rukmini), chronicled in the Mahabharata and Kalika Purana.", "detail": "Located in Lower Dibang Valley, Roing is the gateway to the mist-laden Mayodia Pass (8,711 ft), known for heavy winter snowfall, panoramic views of the eastern Himalayas, and the Mehao Wildlife Sanctuary containing the crystalline Mehao Lake (3,000 ft) surrounded by virgin evergreen forest.", "bestTime": "October to April for clear mountain drives. Visit December to February specifically to experience fresh snowfall at Mayodia Pass.", "insiderTip": "Located at Lower Dibang Valley District — carry a valid Inner Line Permit (ILP) and tap 'View on Google Maps' above for navigation."}]}];
+    const ITINERARIES = {"3": [{"day": "Day 1", "title": "Bhalukpong to Dirang Valley", "desc": "Ascent through Kameng River gorge, kiwi orchards, and 17th-century Dirang Dzong."}, {"day": "Day 2", "title": "Sela Pass to Tawang", "desc": "Cross the 13,700-ft Sela Pass & frozen Paradise Lake, Jaswant Garh, Nuranang Falls, and arrive in Tawang."}, {"day": "Day 3", "title": "Tawang Sacred Monastery", "desc": "Morning prayers at Tawang Monastery (Dukhang), Urgelling birthplace of 6th Dalai Lama, and War Memorial."}], "5": [{"day": "Day 1", "title": "Tezpur to Bomdila", "desc": "Scenic mountain drive, Upper Gompa (Gentse Gaden Rabgyel Lling), and apple orchard walks."}, {"day": "Day 2", "title": "Dirang Valley & Hot Springs", "desc": "Dirang Dzong stone village, Thupsung Dhargye Ling Monastery, and natural sulphur hot springs."}, {"day": "Day 3", "title": "Sela Pass & Nuranang", "desc": "Ascend Sela Pass (13,700 ft), Sela Lake, Jaswant Garh Memorial, and thunderous Nuranang Falls."}, {"day": "Day 4", "title": "Tawang Monastic Citadel", "desc": "Tawang Monastery 28-ft golden Buddha, ancient library, craft center, and Ani Gompa nunnery."}, {"day": "Day 5", "title": "Madhuri Lake & Bum La", "desc": "Alpine drive to Sangetsar (Madhuri) Lake and Indo-China border at Bum La Pass."}], "7": [{"day": "Day 1-2", "title": "Western Gateway: Bomdila & Dirang", "desc": "Gentse Gaden Rabgyel Lling monastery, fruit orchards, and stone architecture of Dirang Dzong."}, {"day": "Day 3-4", "title": "Tawang & Alpine Lakes", "desc": "Sela Pass (13,700 ft), Tawang Monastery, Jaswant Garh, Madhuri Lake, and Nuranang Falls."}, {"day": "Day 5", "title": "Descent to Ziro Valley", "desc": "Transit across lush sub-Himalayan valleys into Lower Subansiri district."}, {"day": "Day 6", "title": "Apatani UNESCO Landscape", "desc": "Explore Hong & Hari stilt villages, Apatani wet-rice fish terraces, and sacred pine groves."}, {"day": "Day 7", "title": "Cultural Wrap-up in Ziro", "desc": "Traditional craft weaving, bamboo souvenir shopping, and departure via Naharlagun."}]};
+
+    // State Variables
+    let activeCategory = "All";
+    let searchQuery = "";
+    let savedClusters = [];
+    let checkedItems = [];
+
+    // LocalStorage Initialization
+    try {
+      savedClusters = JSON.parse(localStorage.getItem('arunachal_saved_clusters') || '[]');
+      checkedItems = JSON.parse(localStorage.getItem('arunachal_packing_checklist') || '[]');
+    } catch(e) {
+      savedClusters = [];
+      checkedItems = [];
+    }
+
+    // Toast Function
+    function showToast(msg, icon = '✨') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+      }, 2500);
+    }
+
+    // Packing Checklist Storage
+    function updateChecklistProgress() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      let count = 0;
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (box.checked) {
+          count++;
+          if (!checkedItems.includes(idx)) checkedItems.push(idx);
+        } else {
+          checkedItems = checkedItems.filter(i => i !== idx);
+        }
+      });
+      localStorage.setItem('arunachal_packing_checklist', JSON.stringify(checkedItems));
+      const progEl = document.getElementById('pack-progress-text');
+      if (progEl) progEl.textContent = count + '/' + boxes.length + ' Completed';
+    }
+
+    function loadChecklist() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (checkedItems.includes(idx)) {
+          box.checked = true;
+        }
+      });
+      updateChecklistProgress();
+    }
+
+    // Web Audio API Himalayan Singing Bowl Chime
+    function playHimalayanBell() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const now = audioCtx.currentTime;
+
+        const bowlPartials = [
+          { freq: 432.0, amp: 0.28, dur: 2.8 },
+          { freq: 864.0, amp: 0.14, dur: 2.0 },
+          { freq: 216.0, amp: 0.20, dur: 3.2 }
+        ];
+        bowlPartials.forEach(p => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(p.freq, now);
+
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(p.amp, now + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + p.dur);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now);
+          osc.stop(now + p.dur + 0.05);
+        });
+
+        showToast('🔔 Singing Bowl: Peace & Mindfulness', '☸️');
+      } catch (e) {
+        showToast('Singing bowl chime played', '🔔');
+      }
+    }
+
+    // Filter Logic
+    function getFilteredClusters() {
+      let result = ARUNACHAL_DATA;
+
+      if (activeCategory !== 'All') {
+        result = result.filter(c => c.category === activeCategory);
+      }
+
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase().trim();
+        result = result.filter(c => {
+          const inTitle = c.title.toLowerCase().includes(q);
+          const inOverview = c.overview.toLowerCase().includes(q);
+          const inPlaces = c.places.some(p => 
+            p.name.toLowerCase().includes(q) ||
+            p.type.toLowerCase().includes(q) ||
+            (p.detail && p.detail.toLowerCase().includes(q)) ||
+            p.history.toLowerCase().includes(q) ||
+            p.keyFacts.some(f => f.toLowerCase().includes(q))
+          );
+          return inTitle || inOverview || inPlaces;
+        });
+      }
+
+      return result;
+    }
+
+    // Render Itinerary Function
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      if (!container) return;
+      const list = ITINERARIES[days] || ITINERARIES["3"];
+      container.innerHTML = list.map(item => `
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-3 hover:border-emerald-500 transition-all">
+          <div class="flex items-center justify-between pb-1 mb-1 border-b border-slate-200">
+            <span class="font-bold text-emerald-900">${item.day}</span>
+            <span class="text-[10px] bg-emerald-100 text-emerald-950 px-1.5 py-0.2 rounded font-semibold">${days}-Day Tour</span>
+          </div>
+          <h5 class="font-bold text-slate-800 text-[11px] mb-1">${item.title}</h5>
+          <p class="text-[11px] text-slate-600 leading-relaxed">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    // Render Places & Clusters
+    function renderClusters() {
+      const container = document.getElementById('clusters-container');
+      const emptyState = document.getElementById('empty-state');
+      const clusterCountEl = document.getElementById('visible-clusters-count');
+      const sitesCountEl = document.getElementById('visible-sites-count');
+      const filterLabel = document.getElementById('active-filter-label');
+
+      if (!container) return;
+
+      const clusters = getFilteredClusters();
+      const totalSites = clusters.reduce((acc, c) => acc + c.places.length, 0);
+
+      if (clusterCountEl) clusterCountEl.textContent = clusters.length;
+      if (sitesCountEl) sitesCountEl.textContent = totalSites;
+
+      if (filterLabel) {
+        let parts = [];
+        if (activeCategory !== 'All') parts.push('Category: ' + activeCategory);
+        if (searchQuery.trim()) parts.push('Search: "' + searchQuery + '"');
+        filterLabel.textContent = parts.length ? '(' + parts.join(' • ') + ')' : '';
+      }
+
+      if (clusters.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = clusters.map(cluster => {
+        const isSaved = savedClusters.includes(cluster.id);
+
+        const placesHtml = cluster.places.map((p, pIdx) => {
+          const factsList = p.keyFacts.map(kf => `
+            <li class="flex items-start gap-2 text-xs text-slate-700 leading-relaxed">
+              <span class="text-emerald-700 font-bold flex-shrink-0 mt-0.5">✦</span>
+              <span>${kf}</span>
+            </li>
+          `).join('');
+
+          return `
+            <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:border-emerald-500 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-3 border-b border-slate-100">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-900 text-xs font-bold flex items-center justify-center flex-shrink-0">${pIdx + 1}</span>
+                    <h4 class="text-base font-bold text-slate-900 font-heritage tracking-tight">${p.name}</h4>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2 mt-1 ml-8 text-[11px] text-slate-500">
+                    <span class="font-semibold text-slate-600">${p.type}</span>
+                    <span>•</span>
+                    <span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-mono">${p.coords || 'Arunachal Pradesh, India'}</span>
+                  </div>
+                </div>
+
+                <!-- Google Map Direct Link Button -->
+                <div class="flex items-center gap-2 self-start sm:self-auto">
+                  <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors shadow-2xs" title="Open verified location in Google Maps">
+                    <span>📍 View on Google Maps</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Detailed Overview -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Site Overview & Architecture</span>
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">${p.detail}</p>
+              </div>
+
+              <!-- Historical Importance -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">Historical Importance & Significance</span>
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">${p.history}</p>
+              </div>
+
+              <!-- Key Facts -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">Key Facts & Unique Highlights</span>
+                <ul class="space-y-1 pt-1 ml-1">
+                  ${factsList}
+                </ul>
+              </div>
+
+              <!-- Best Time & Insider Tip Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-xs">
+                <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                  <span class="text-base flex-shrink-0">🌤️</span>
+                  <div>
+                    <span class="font-bold text-slate-800 text-[11px]">Best Time & Hours:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.bestTime || 'October to April'}</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2 bg-amber-50/50 p-2.5 rounded-xl border border-amber-100">
+                  <span class="text-base flex-shrink-0">💡</span>
+                  <div>
+                    <span class="font-bold text-amber-900 text-[11px]">Insider Travel Tip:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.insiderTip}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <article class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden transition-all hover:shadow-lg">
+            
+            <!-- Cluster Header Banner -->
+            <div class="bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-900 text-white p-6 sm:p-7 border-b border-emerald-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-slate-950">${cluster.category}</span>
+                  <span class="text-xs text-slate-300">⏱️ ${cluster.duration}</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black font-heritage tracking-tight text-white">${cluster.title}</h3>
+                <p class="text-xs sm:text-sm text-emerald-200 font-medium">${cluster.tagline}</p>
+              </div>
+
+              <!-- Header Actions: Bookmark & Full Dossier Modal -->
+              <div class="flex items-center gap-2.5 flex-shrink-0">
+                <button data-save-id="${cluster.id}" class="save-btn p-2.5 rounded-xl border transition-colors flex items-center gap-1.5 text-xs font-bold ${isSaved ? 'bg-amber-400 text-slate-950 border-amber-300' : 'bg-white/10 hover:bg-white/20 text-white border-white/20'}" title="Save Circuit to Bookmarks">
+                  <span>${isSaved ? '★' : '☆'}</span>
+                  <span>${isSaved ? 'Saved' : 'Bookmark'}</span>
+                </button>
+
+                <button data-open-modal="${cluster.id}" class="modal-open-btn px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all shadow-md flex items-center gap-1.5">
+                  <span>📖 Read Full Dossier</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Regional Overview Block -->
+            <div class="bg-slate-50/70 p-5 sm:p-6 border-b border-slate-200/80">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Regional Essence & Strategic Context</h4>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+              
+              <!-- Quick Metadata Tags -->
+              <div class="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-slate-200/60 text-xs">
+                <span class="text-slate-500 font-semibold">Tags:</span>
+                ${cluster.tags.map(t => `<span class="bg-white border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-lg text-[11px] font-medium">${t}</span>`).join('')}
+              </div>
+            </div>
+
+            <!-- Place Cards Grid -->
+            <div class="p-5 sm:p-6 space-y-5 bg-slate-100/40">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Key Places & Attractions (${cluster.places.length} Sites)</h4>
+                <span class="text-[11px] text-emerald-900 font-medium">📍 Verified with Google Maps</span>
+              </div>
+
+              <div class="space-y-4">
+                ${placesHtml}
+              </div>
+            </div>
+
+          </article>
+        `;
+      }).join('');
+
+      attachCardEventListeners();
+    }
+
+    // Modal Display Logic
+    function openModalForCluster(clusterId) {
+      const cluster = ARUNACHAL_DATA.find(c => c.id === clusterId);
+      if (!cluster) return;
+
+      const modal = document.getElementById('reading-modal');
+      const catEl = document.getElementById('modal-category');
+      const titleEl = document.getElementById('modal-title');
+      const tagEl = document.getElementById('modal-tagline');
+      const bodyEl = document.getElementById('modal-body');
+
+      catEl.textContent = cluster.category;
+      titleEl.textContent = cluster.title;
+      tagEl.textContent = cluster.tagline;
+
+      bodyEl.innerHTML = `
+        <div class="space-y-3 pb-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-900">Regional Overview</h4>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Recommended Window: ${cluster.bestTime}</span>
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Suggested Stay: ${cluster.duration}</span>
+          </div>
+        </div>
+
+        <div class="pt-4 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-900">Detailed Site Breakdown (${cluster.places.length} Places)</h4>
+          ${cluster.places.map((p, idx) => `
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h5 class="font-bold text-slate-900 text-sm font-heritage flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-900 text-xs flex items-center justify-center font-bold">${idx + 1}</span>
+                  ${p.name}
+                </h5>
+                <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-800 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1 self-start sm:self-auto hover:bg-emerald-100 transition-colors">
+                  <span>📍 Google Maps</span>
+                </a>
+              </div>
+              <p class="text-xs text-slate-600 font-mono">Coordinates: ${p.coords}</p>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Overview:</strong> ${p.detail}
+              </div>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Historical Importance:</strong> ${p.history}
+              </div>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Key Facts:</strong>
+                <ul class="list-disc pl-4 space-y-0.5 mt-1 text-slate-600">
+                  ${p.keyFacts.map(kf => `<li>${kf}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="text-[11px] text-amber-900 bg-amber-50/60 p-2 rounded-lg border border-amber-200/60 mt-2">
+                <strong>Visiting Logistics:</strong> ${p.bestTime}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('reading-modal');
+      if (modal) modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Copy Notes Feature
+    function copyClusterNotes() {
+      const title = document.getElementById('modal-title').textContent;
+      const body = document.getElementById('modal-body').innerText;
+      const notes = `=== ${title} (Arunachal Pradesh Travel Guide) ===\n\n${body}\n\nGenerated via Arunachal Pradesh Explorer.`;
+      
+      navigator.clipboard.writeText(notes).then(() => {
+        showToast('Travel notes copied to clipboard!', '📋');
+      }).catch(() => {
+        showToast('Notes copied to clipboard!', '📋');
+      });
+    }
+
+    // Attach Dynamic Event Listeners
+    function attachCardEventListeners() {
+      document.querySelectorAll('.modal-open-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-open-modal');
+          openModalForCluster(id);
+        });
+      });
+
+      document.querySelectorAll('.save-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-save-id');
+          if (savedClusters.includes(id)) {
+            savedClusters = savedClusters.filter(i => i !== id);
+            showToast('Removed from saved bookmarks', '☆');
+          } else {
+            savedClusters.push(id);
+            showToast('Saved to bookmarks!', '★');
+          }
+          localStorage.setItem('arunachal_saved_clusters', JSON.stringify(savedClusters));
+          updateSavedBadge();
+          renderClusters();
+        });
+      });
+    }
+
+    function updateSavedBadge() {
+      const badge = document.getElementById('saved-badge');
+      if (badge) badge.textContent = savedClusters.length;
+    }
+
+    // Initialize Everything on DOM Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderItinerary("3");
+      renderClusters();
+      updateSavedBadge();
+      loadChecklist();
+
+      // Audio Bell Button
+      const bellBtn = document.getElementById('audio-bell-btn');
+      if (bellBtn) bellBtn.addEventListener('click', playHimalayanBell);
+
+      // Packing Checklist Event Listeners
+      const checkBoxes = document.querySelectorAll('.pack-checkbox');
+      checkBoxes.forEach(box => {
+        box.addEventListener('change', updateChecklistProgress);
+      });
+
+      const resetPackBtn = document.getElementById('reset-checklist-btn');
+      if (resetPackBtn) {
+        resetPackBtn.addEventListener('click', () => {
+          checkBoxes.forEach(b => b.checked = false);
+          checkedItems = [];
+          localStorage.removeItem('arunachal_packing_checklist');
+          updateChecklistProgress();
+          showToast('Checklist reset');
+        });
+      }
+
+      // Filter Tabs
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          tabs.forEach(t => {
+            t.classList.remove('active', 'bg-emerald-800', 'text-white');
+            t.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('active', 'bg-emerald-800', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          activeCategory = e.currentTarget.getAttribute('data-cat');
+          renderClusters();
+        });
+      });
+
+      // Itinerary Pills
+      const itPills = document.querySelectorAll('.itinerary-pill');
+      itPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+          itPills.forEach(p => {
+            p.classList.remove('bg-emerald-800', 'text-white');
+            p.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('bg-emerald-800', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          const days = e.currentTarget.getAttribute('data-days');
+          renderItinerary(days);
+        });
+      });
+
+      // Search Input
+      const searchInput = document.getElementById('search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          if (clearSearchBtn) {
+            if (searchQuery.length > 0) clearSearchBtn.classList.remove('hidden');
+            else clearSearchBtn.classList.add('hidden');
+          }
+          renderClusters();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          renderClusters();
+        });
+      }
+
+      // Bookmark Filter Button
+      const bFilterBtn = document.getElementById('bookmark-filter-btn');
+      if (bFilterBtn) {
+        let onlySaved = false;
+        bFilterBtn.addEventListener('click', () => {
+          onlySaved = !onlySaved;
+          if (onlySaved) {
+            bFilterBtn.classList.add('bg-amber-200', 'border-amber-400');
+            activeCategory = "All";
+            tabs.forEach(t => {
+              if (t.getAttribute('data-cat') === 'All') {
+                t.classList.add('active', 'bg-emerald-800', 'text-white');
+              } else {
+                t.classList.remove('active', 'bg-emerald-800', 'text-white');
+                t.classList.add('bg-slate-100', 'text-slate-700');
+              }
+            });
+            const container = document.getElementById('clusters-container');
+            const savedOnly = ARUNACHAL_DATA.filter(c => savedClusters.includes(c.id));
+            if (savedOnly.length === 0) {
+              container.innerHTML = '<div class="bg-white rounded-3xl border border-slate-200 p-8 text-center text-slate-500 text-xs">No bookmarked circuits yet. Click "Bookmark" on any destination to add it here!</div>';
+            } else {
+              renderClusters();
+            }
+          } else {
+            bFilterBtn.classList.remove('bg-amber-200', 'border-amber-400');
+            renderClusters();
+          }
+        });
+      }
+
+      // Empty State Reset Button
+      const emptyResetBtn = document.getElementById('empty-reset-btn');
+      if (emptyResetBtn) {
+        emptyResetBtn.addEventListener('click', () => {
+          searchQuery = '';
+          if (searchInput) searchInput.value = '';
+          if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+          activeCategory = 'All';
+          tabs.forEach(t => {
+            if (t.getAttribute('data-cat') === 'All') {
+              t.classList.add('active', 'bg-emerald-800', 'text-white');
+            } else {
+              t.classList.remove('active', 'bg-emerald-800', 'text-white');
+              t.classList.add('bg-slate-100', 'text-slate-700');
+            }
+          });
+          renderClusters();
+        });
+      }
+
+      // Modal Close Handlers
+      const modalCloseX = document.getElementById('modal-close-x');
+      const modalCloseAction = document.getElementById('modal-close-action');
+      const modalOverlay = document.getElementById('reading-modal');
+
+      if (modalCloseX) modalCloseX.addEventListener('click', closeModal);
+      if (modalCloseAction) modalCloseAction.addEventListener('click', closeModal);
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) closeModal();
+        });
+      }
+
+      // Modal Copy Notes Handler
+      const modalCopyBtn = document.getElementById('modal-copy-all-btn');
+      if (modalCopyBtn) modalCopyBtn.addEventListener('click', copyClusterNotes);
+
+      // Back to Top Button
+      const backToTop = document.getElementById('back-to-top-btn');
+      if (backToTop) {
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

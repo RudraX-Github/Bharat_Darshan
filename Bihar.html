@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bihar - Cradle of Ancient Wisdom & Enlightenment</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-heritage {
+      font-family: 'Cinzel', serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #fdf6ec;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e2b988;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c59b66;
+    }
+  </style>
+</head>
+<body class="bg-amber-50/30 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-amber-200 selection:text-amber-900">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-stone-900 to-amber-950 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-amber-800/40 flex items-center justify-center gap-2 shadow-sm">
+    <span>🙏 Pranam! Welcome to Bihar — The Cradle of Ancient Wisdom, World Empires & Sacred Enlightenment</span>
+  </div>
+
+  <!-- Header (Cleaned: No "With Google Maps") -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-amber-200/60 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 via-orange-700 to-amber-900 flex items-center justify-center text-white shadow-lg shadow-amber-700/20 text-2xl font-bold border border-amber-300">
+          ☸️
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Bihar Explorer</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">Your Welcoming Guide to Bodh Gaya, Nalanda, Rajgir, Patna, Vaishali & Valmiki</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Controls -->
+      <div class="flex items-center gap-2 sm:gap-2.5 overflow-x-auto pb-1 md:pb-0">
+        <!-- Chime Bell Button -->
+        <button id="audio-bell-btn" class="bg-amber-100/70 hover:bg-amber-200/80 text-amber-900 px-3 py-1.5 rounded-xl border border-amber-300 text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs flex-shrink-0" title="Play peaceful meditation bell sound">
+          <span>🔔</span>
+          <span class="hidden sm:inline">Chime</span>
+        </button>
+
+        <!-- Quick Jump to Tools -->
+        <a href="#itinerary-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🗓️ Itineraries</span>
+        </a>
+
+        <a href="#cuisine-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🍲 Cuisine</span>
+        </a>
+
+        <a href="#festivals-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🎉 Festivals</span>
+        </a>
+
+        <a href="#checklist-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl border border-slate-300 text-xs font-bold flex items-center gap-1 transition-all shadow-2xs flex-shrink-0">
+          <span>🎒 Packing</span>
+        </a>
+
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-900 px-3 py-1.5 rounded-xl border border-amber-300 text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs flex-shrink-0">
+          <span class="text-amber-600">★</span>
+          <span>Saved (<span id="saved-count">0</span>)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Welcoming Section -->
+  <section class="bg-gradient-to-b from-stone-950 via-amber-950 to-stone-900 text-white py-12 px-4 sm:px-6 lg:px-8 shadow-inner relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-900/60 border border-amber-500/30 px-3.5 py-1 rounded-full mb-3">
+        ✨ Pranam • The Land of Enlightenment & Ancient Empires
+      </span>
+      <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight leading-tight max-w-4xl mx-auto text-amber-50">
+        Welcome to Bihar
+      </h2>
+      <p class="mt-2 text-base sm:text-xl font-medium text-amber-300 font-heritage tracking-wide">
+        Where Buddha Attained Enlightenment, Mahavira Walked & Nalanda Enlightened the World
+      </p>
+      <p class="mt-3 text-xs sm:text-base text-amber-100/90 max-w-3xl mx-auto leading-relaxed">
+        Step into the cradle of human philosophy and imperial glory — every monument equipped with verified Google Maps navigation, culinary heritage, festival calendars, transit timelines, and packing checklists.
+      </p>
+
+      <!-- Search and Filter Card -->
+      <div class="mt-8 max-w-4xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-2xl border border-white/20 text-slate-900">
+        <!-- Live Search Input -->
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search any site, monument, king, or scholar (e.g. 'Bodhi Tree', 'Nalanda', 'Xuanzang', 'Ashoka', 'Kesaria', 'Valmiki')..."
+            class="w-full pl-10 pr-24 py-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-sm sm:text-base border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all placeholder-slate-400"
+          >
+          <button id="clear-search-btn" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-600 hidden">
+            Clear ✕
+          </button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="mt-4 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2.5">
+          <div class="flex flex-wrap items-center gap-1.5" id="category-filters">
+            <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-amber-600 text-white shadow-sm transition-all">All 6 Circuits</button>
+            <button data-cat="Enlightenment & Spiritual Heritage" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Bodh Gaya</button>
+            <button data-cat="Ancient Universities & Learning" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Nalanda University</button>
+            <button data-cat="Imperial Capitals & Holy Hills" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Rajgir Hills</button>
+            <button data-cat="Imperial Capitals & River Metropolises" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Patna Pataliputra</button>
+            <button data-cat="Ancient Republics & Colossal Stupas" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Vaishali & Kesaria</button>
+            <button data-cat="Wildlife & Himalayan Foothills" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">Valmiki Tigers</button>
+          </div>
+          <button id="reset-all-btn" class="text-xs text-amber-700 hover:text-amber-900 font-bold underline px-2 py-1">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Features Section (Multi-Tool Row) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20 space-y-6">
+
+    <!-- 1. Itinerary Planner Feature -->
+    <div id="itinerary-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-lg">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">Interactive Feature</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Travel Itinerary & Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended day-by-day routes and transit windows:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-600 text-white shadow-xs transition-all">3 Days (Enlightenment)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Buddhist & Imperial)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Grand Bihar)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- 2. Dual Feature Row: Taste of Bihar & Festivals & Cultural Calendar (Clean: No Quiz) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Feature A: Taste of Bihar - Iconic Culinary & GI-Tagged Delicacies Guide -->
+      <div id="cuisine-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">Gastronomy & Culture</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Bihar: Iconic Culinary Heritage</h4>
+            </div>
+            <span class="text-2xl">🍲</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Explore traditional culinary treasures and GI-tagged delicacies rooted in Bihar’s heritage:</p>
+
+          <div class="space-y-2.5 text-xs">
+            <!-- Litti Chokha -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🥖</span> Litti Chokha with Pure Desi Ghee
+                </strong>
+                <span class="text-[10px] font-bold bg-amber-200/80 text-amber-900 px-2 py-0.5 rounded-full">State Signature</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Wood-fired whole wheat balls stuffed with spiced sattu (roasted gram flour, ajwain, kalonji, mustard oil), submerged in pure ghee and served with charred baingan (eggplant) & tomato chokha. Best in Patna & Gaya.
+              </p>
+            </div>
+
+            <!-- Silao Khaja -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🥐</span> Silao Khaja (GI Tagged)
+                </strong>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">GI Tagged • Nalanda</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Legendary multi-layered crisp sweet pastry made with 52 delicate layers of wheat flour and light sugar syrup, originating in Silao (between Nalanda and Rajgir). Lord Buddha is said to have tasted Khaja here.
+              </p>
+            </div>
+
+            <!-- Gaya Tilkut & Anarsa -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🍪</span> Gaya Tilkut & Anarsa
+                </strong>
+                <span class="text-[10px] font-bold bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">Winter Delicacy • Gaya</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Pounded white sesame seeds and jaggery (*Gur Tilkut*) or sugar, hand-beaten to wafer-thin crisp perfection in the historic bazaars of Ramna, Gaya; alongside khoya-stuffed rice flour Anarsa.
+              </p>
+            </div>
+
+            <!-- Thekua & Mithila Makhana -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🥮</span> Thekua & Mithila Makhana (GI)
+                </strong>
+                <span class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Sacred Prasad & Superfood</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Thekua: The sacred ghee-fried whole wheat, cardamom and jaggery prasad of Chhath Puja; paired with GI-tagged Mithila Makhana (Fox nuts) harvested from lotus ponds across northern Bihar.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-amber-900/70 mt-3 pt-2 border-t border-slate-100 font-medium">✨ All delicacies are 100% vegetarian, deeply rooted in centuries of culinary tradition.</p>
+      </div>
+
+      <!-- Feature B: Sacred Festivals & Cultural Calendar (Replaced Quiz) -->
+      <div id="festivals-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-rose-800 bg-rose-100 px-2.5 py-0.5 rounded-full">Living Traditions</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Sacred Festivals & Cultural Calendar</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Time your journey with Bihar’s grandest spiritual festivals and cultural gatherings:</p>
+
+          <div class="space-y-2.5 text-xs">
+            <!-- Chhath Puja -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>☀️</span> Chhath Puja (Maha Parv)
+                </strong>
+                <span class="text-[10px] font-bold bg-amber-200 text-amber-950 px-2 py-0.5 rounded-full">Oct / Nov • Across Bihar</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                The most sacred 4-day Vedic festival honoring the Sun God (Surya) and Chhathi Maiya. Millions of devotees offer arghya at sunset and sunrise along the sacred Ganga ghats with brass lamps and devotional geet.
+              </p>
+            </div>
+
+            <!-- Buddha Jayanti -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🪷</span> Buddha Jayanti & Monlam Chenmo
+                </strong>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">May / Dec • Bodh Gaya</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Global celebration marking the birth, enlightenment, and Mahaparinirvana of Lord Buddha. Monks from 50+ nations conduct world peace prayers around the gilded Mahabodhi Temple and Bodhi Tree.
+              </p>
+            </div>
+
+            <!-- Rajgir Mahotsav & Nalanda Dance Festival -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🎭</span> Rajgir Mahotsav & Nalanda Festival
+                </strong>
+                <span class="text-[10px] font-bold bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">Nov / Dec • Rajgir & Nalanda</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Spectacular open-air cultural celebrations showcasing classical Indian dance, classical vocals, folk theater, and traditional handicraft fairs against the backdrop of ancient hill stupas and ruins.
+              </p>
+            </div>
+
+            <!-- Prakash Parv & Sonepur Mela -->
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-colors">
+              <div class="flex items-center justify-between">
+                <strong class="text-amber-950 font-bold text-xs flex items-center gap-1.5">
+                  <span>🕯️</span> Prakash Parv & Sonepur Mela
+                </strong>
+                <span class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Dec / Jan & Nov (Kartik Purnima)</span>
+              </div>
+              <p class="text-slate-600 mt-1 leading-relaxed">
+                Prakash Parv: Birth anniversary of Guru Gobind Singh Ji with grand nagar kirtans at Takht Sri Patna Sahib; paired with the legendary Sonepur Mela on the confluence of the Ganga and Gandak rivers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-amber-900/70 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Experiencing these festivals offers deep insight into Bihar's living devotional soul.</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Packing & Highway Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Packing & Preparation Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-purple-800 bg-purple-100 px-2 py-0.5 rounded-full">Travel Planner</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Bihar Travel Checklist</h4>
+            </div>
+            <div class="text-right">
+              <span id="pack-progress" class="text-xs font-bold text-amber-700">0 / 6 Ready</span>
+            </div>
+          </div>
+
+          <div class="my-3 space-y-2 text-xs" id="checklist-items">
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Government Photo ID</strong> (Aadhaar / Passport for hotels & monuments)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Temple Attire</strong> (Modest clothing covering shoulders & knees for Bodh Gaya)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Slip-on Footwear</strong> (Easy removal before entering stupas and shrines)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Layered Winter Shawl / Jacket</strong> (Essential for chilly Oct–Feb mornings)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Insect Repellent & Sunscreen</strong> (Crucial for Valmiki safari & Nalanda walks)</span>
+            </label>
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-amber-50/50 cursor-pointer transition-colors">
+              <input type="checkbox" class="pack-box rounded text-amber-600 focus:ring-amber-500 w-4 h-4">
+              <span><strong>Pre-booked Glass Skywalk Ticket</strong> (Official online portal for Rajgir Nature Safari)</span>
+            </label>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+          <span class="text-[11px] text-slate-400">Items saved automatically in your browser.</span>
+          <button id="reset-checklist-btn" class="text-[11px] text-amber-700 hover:underline font-bold">Reset</button>
+        </div>
+      </div>
+
+      <!-- Regional Transit & Distance Quick-Matrix -->
+      <div class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-teal-800 bg-teal-100 px-2 py-0.5 rounded-full">Road Corridors</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Inter-City Highway Transit Matrix</h4>
+            </div>
+            <span class="text-2xl">🚗</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs text-center my-3">
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Patna ➔ Nalanda</span>
+              <strong class="text-slate-800 text-sm">85 km</strong> • <span class="text-amber-700 font-semibold">~2.5 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Nalanda ➔ Rajgir</span>
+              <strong class="text-slate-800 text-sm">15 km</strong> • <span class="text-amber-700 font-semibold">~30 Mins</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Rajgir ➔ Bodh Gaya</span>
+              <strong class="text-slate-800 text-sm">70 km</strong> • <span class="text-amber-700 font-semibold">~2.0 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Patna ➔ Vaishali</span>
+              <strong class="text-slate-800 text-sm">55 km</strong> • <span class="text-amber-700 font-semibold">~1.5 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Vaishali ➔ Kesaria</span>
+              <strong class="text-slate-800 text-sm">65 km</strong> • <span class="text-amber-700 font-semibold">~1.5 Hrs</span>
+            </div>
+            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
+              <span class="text-[11px] text-slate-500 block font-medium">Patna ➔ Valmiki NP</span>
+              <strong class="text-slate-800 text-sm">240 km</strong> • <span class="text-amber-700 font-semibold">~6.0 Hrs</span>
+            </div>
+          </div>
+        </div>
+        <p class="text-[11px] text-slate-400 mt-2 pt-2 border-t border-slate-100">
+          Connected via NH-22, NH-31 & Buddha Marg. Regular Vande Bharat & Express trains connect Patna to Gaya.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+    <!-- Active Status Bar -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6 pb-3 border-b border-amber-200/80">
+      <div class="text-sm text-slate-700">
+        Displaying <strong id="visible-clusters-count" class="text-amber-800 font-bold">6</strong> major circuits containing <strong id="visible-sites-count" class="text-slate-900 font-bold">13</strong> destinations across Bihar
+        <span id="active-filter-label" class="text-xs text-slate-500 font-medium ml-1"></span>
+      </div>
+      <div class="text-xs text-slate-500">
+        Click "📍 Open in Google Maps" on any monument to start direct turn-by-turn navigation.
+      </div>
+    </div>
+
+    <!-- Cluster Cards Container -->
+    <div id="clusters-container" class="space-y-10">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden text-center py-16 px-4 bg-white rounded-2xl border border-amber-200 my-8 shadow-sm">
+      <div class="w-16 h-16 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mx-auto text-2xl mb-4 font-bold">
+        🔍
+      </div>
+      <h3 class="text-lg font-bold text-slate-800 font-heritage">No matching destinations found</h3>
+      <p class="text-sm text-slate-500 mt-1 max-w-md mx-auto">
+        We could not find any monument, dynasty, or historical detail matching your search query. Try searching for "Bodhi Tree", "Nalanda", "Rajgir", or "Ashoka".
+      </p>
+      <button id="empty-reset-btn" class="mt-4 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-semibold shadow transition-all">
+        Reset Search & Filters
+      </button>
+    </div>
+  </main>
+
+  <!-- Deep Dive Reading Modal with Google Maps Details -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-stone-950/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 hidden opacity-0 transition-opacity duration-200">
+    <div id="modal-container" class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200 transform scale-95 transition-transform duration-200">
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-amber-950 via-stone-900 to-amber-950 text-white px-6 py-4 flex items-center justify-between border-b border-amber-800">
+        <div>
+          <span id="modal-cluster-cat" class="text-[11px] font-bold uppercase tracking-wider text-amber-300 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-500/30">Category</span>
+          <h3 id="modal-cluster-title" class="text-xl sm:text-2xl font-black font-heritage tracking-tight mt-1 text-amber-50">Cluster Title</h3>
+          <p id="modal-cluster-tagline" class="text-xs text-amber-200 mt-0.5">Tagline description</p>
+        </div>
+        <button id="modal-close-x" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-xl transition-colors">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div id="modal-scroll-body" class="p-6 overflow-y-auto space-y-6 text-sm text-slate-700 flex-grow">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-slate-50 px-6 py-3.5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <span class="text-slate-500 font-medium">Bihar Tourism • Pranam & Happy Travels!</span>
+        <div class="flex items-center gap-2">
+          <button id="modal-copy-all-btn" class="px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-lg font-bold transition-colors flex items-center gap-1.5 shadow-2xs">
+            <span>📋</span> Copy Itinerary Notes
+          </button>
+          <button id="modal-close-action" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-semibold transition-colors">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-Page Toast Notification (Safe alternative to alert) -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2.5 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 border border-slate-700">
+    <span class="text-amber-400 font-bold">✓</span>
+    <span id="toast-text">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-stone-950 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-slate-200 font-heritage text-sm font-bold">
+        <span>☸️</span> Bihar Heritage Archive
+      </div>
+      <p class="text-center md:text-left">
+        Covering Mahabodhi Temple, Nalanda Mahavihara, Rajgir Vishwa Shanti Stupa, Patna Pataliputra, Vaishali Ashokan Pillar, Kesaria Stupa, and Valmiki National Park.
+      </p>
+      <div class="flex items-center gap-4">
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    const data = [{"id": "bodh-gaya", "title": "Bodh Gaya", "tagline": "The Birthplace of Buddhism & Center of Universal Enlightenment", "category": "Enlightenment & Spiritual Heritage", "tags": ["Mahabodhi Temple", "Sacred Bodhi Tree", "Vajrasana", "International Monasteries", "UNESCO World Heritage"], "bestTime": "October to March (Crisp winter days, 10\u00b0C \u2013 25\u00b0C)", "duration": "2 to 3 Days", "overview": "Situated along the bank of the sacred Phalgu (Neranjara) River, Bodh Gaya is the most revered Buddhist pilgrimage destination on earth, where Prince Siddhartha Gautama meditated beneath the holy Bodhi Tree and attained supreme enlightenment (Buddhahood) in 528 BCE.", "places": [{"name": "Mahabodhi Temple Complex & Sacred Bodhi Tree", "type": "UNESCO World Heritage Sacred Complex", "detailedInfo": "The grand Mahabodhi Temple rises 55 meters (180 feet) into the sky as a pyramidal sandstone and brick shikhara, embellished with classical Gupta motifs, niches housing gilded Buddha statues, and an ornate pinnacle. Standing immediately to the west of the temple is the sacred Bodhi Tree (Ficus religiosa), beneath whose leafy canopy sits the ancient Vajrasana (Diamond Throne), an uncarved polished grey sandstone slab placed by Emperor Ashoka to mark the exact spot where Lord Buddha sat during enlightenment. The surrounding sacred garden encloses the seven sacred stations where the Buddha spent seven weeks in meditation, including the Animesh Lochan Chaitya, Cankamana (jeweled cloister walk), and Mucalinda Lake where the serpent king shielded the Buddha from storms.", "historicalImportance": "First consecrated around 260 BCE by Mauryan Emperor Ashoka, who made pilgrimage here and erected the original shrine and Vajrasana slab. The present grand architectural temple was reconstructed during the late Gupta Empire (5th\u20136th centuries CE) and restored under the Pala Empire and British archaeologist Alexander Cunningham in 1882. Inscribed as a UNESCO World Heritage Site in 2002 as one of the earliest brick structures surviving in eastern India.", "keyFacts": ["The current sacred Bodhi Tree is a direct descendant of the original tree; a sapling was carried to Sri Lanka in 288 BCE by Ashoka's daughter Sanghamitta (Anuradhapura), from which a sapling was brought back to replant in Bodh Gaya.", "The Vajrasana slab contains polished Mauryan stonework with engraved geese and palmette friezes dating to the 3rd century BCE.", "The upper spire of the Mahabodhi Temple was gilded in 2013 with 290 kilograms of pure gold donated by the King of Thailand and international Buddhist devotees.", "Devotees from around the world perform 100,000 full-body prostrations on dedicated wooden planks surrounding the sanctum courtyard."], "bestTimeToVisit": "October to March. Buddha Jayanti (Vaisakha Purnima in May) is celebrated with worldwide devotion, while December\u2013January hosts international prayer festivals (Monlam Chenmo) presided over by Buddhist spiritual leaders.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Mahabodhi+Temple+Bodh+Gaya+Bihar", "coords": "24.6959\u00b0 N, 84.9914\u00b0 E", "locationName": "Bodh Gaya, Gaya District"}, {"name": "International Buddhist Monasteries & The Great Buddha Statue", "type": "Global Buddhist Heritage Monasteries", "detailedInfo": "Bodh Gaya serves as an international spiritual metropolis housing over 50 foreign Buddhist monasteries and guest temples built by respective Buddhist nations in their authentic native architectural styles. Highlights include the ornate Thai Monastery with sweeping golden tiered curved roofs, the Bhutanese Monastery adorned with traditional woodcarvings and thangka frescoes, the Tibetan Karma Temple and Namgyal Monastery, the Burmese Vihara, the Sri Lankan Mahabodhi Society, and the Japanese Daijokyo Temple, which oversees the colossal 80-foot Great Buddha Statue (Daibutsu) seated in dhyana mudra upon an eight-petaled lotus.", "historicalImportance": "Reflects ancient traditions dating to King Meghavarna of Sri Lanka, who sent emissaries and jewels to Gupta Emperor Samudragupta in the 4th century CE requesting permission to construct a monastery for Sinhalese pilgrims, establishing Bodh Gaya's historic role as an international refuge of learning and peace.", "keyFacts": ["The 80-foot Great Buddha statue was carved from red granite and sandstone blocks by 12,000 stonemasons over seven years, unveiled in 1989 by the 14th Dalai Lama.", "Each international monastery offers distinct cultural rituals, meditation halls, and libraries containing multi-lingual translations of the Tripitaka.", "The Thai Monastery houses an exceptional bronze Buddha image cast in Bangkok, radiating serene meditative luminescence."], "bestTimeToVisit": "November to February. Ideal for leisurely cultural walking tours across monastery gardens and meditation centers.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Great+Buddha+Statue+Bodh+Gaya+Bihar", "coords": "24.6983\u00b0 N, 84.9868\u00b0 E", "locationName": "Daijokyo Monastic Zone, Bodh Gaya"}]}, {"id": "nalanda", "title": "Nalanda", "tagline": "The World's Greatest Ancient Residential Monastic University", "category": "Ancient Universities & Learning", "tags": ["Ancient University", "UNESCO World Heritage", "Gupta Empire", "Hiuen Tsang Memorial"], "bestTime": "October to March (12\u00b0C \u2013 24\u00b0C)", "duration": "1 to 2 Days", "overview": "Situated 85 km southeast of Patna, Nalanda was the ancient world\u2019s premier center of higher learning and residential monastic education, functioning continuously for over 800 years from the 5th to the 12th century CE.", "places": [{"name": "Nalanda Mahavihara Ruins", "type": "UNESCO World Heritage Archaeological Site", "detailedInfo": "Spread across 30 acres of manicured excavated lawns (representing just 10% of the original ancient campus), Nalanda Mahavihara is an architectural marvel of baked red-brick masonry. Encompasses eleven monumental monasteries (*Viharas*) arranged in a strict north-south axis opposite a row of six grand temples (*Chaityas*). The most iconic structure is Temple No. 3, a monumental multi-layered votive stupa towering over the campus, surrounded by smaller carved stupas and stone Buddha reliefs. Excavated viharas reveal student dormitory cells with stone beds, meditation niches, lecture courtyards, communal kitchens, and well systems.", "historicalImportance": "Founded in the early 5th century CE under the patronage of Gupta Emperor Kumaragupta I and generously expanded by King Harshavardhana and Pala emperors. At its zenith, Nalanda accommodated over 10,000 scholars and 2,000 revered teachers hailing from China, Korea, Japan, Tibet, Mongolia, Turkey, and Sri Lanka. Famous alumni and teachers include Nagarjuna, Aryabhata, Dharmapala, and Shantarakshita. Tragically burned and sacked in 1197\u20131203 CE by the invading army of Bakhtiyar Khalji, whose forces set fire to its colossal library (*Dharmaganja*), which burned continuously for months.", "keyFacts": ["The world's first true residential university, offering free education, boarding, clothing, and medicines funded by revenues from 200 endowed royal villages.", "Admission was notoriously difficult: gatekeeper professors (*Dwarapalas*) quizzed applicants at the campus entrance, rejecting eight out of ten aspirants.", "The famed library complex was nine stories high, divided into three grand buildings named Ratnasagara (Sea of Jewels), Ratnodadhi (Ocean of Jewels), and Ratnaranjaka (Jewel Adorned).", "Excavated brick drainage systems and natural cooling air shafts demonstrate advanced urban sanitation engineering."], "bestTimeToVisit": "October to March. Open daily 9:00 AM \u2013 5:00 PM. Morning sunlight illuminates the intricate terracotta stucco work of Temple No. 3.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nalanda+University+Ruins+Archaeological+Site+Bihar", "coords": "25.1357\u00b0 N, 85.4452\u00b0 E", "locationName": "Bargaon, Nalanda District"}, {"name": "Hiuen Tsang (Xuanzang) Memorial Hall", "type": "Indo-Chinese Cultural Peace Memorial", "detailedInfo": "A grand Sino-Indian memorial hall constructed in classical Chinese pagoda architecture, surrounded by serene landscaped gardens and reflection pools, dedicated to the celebrated 7th-century Chinese traveler, monk, and translator Xuanzang (Hiuen Tsang). Houses a bronze statue of Xuanzang, murals depicting his 17-year overland journey across the Silk Route to India, and scholarly exhibits detailing his 5 years studying and teaching at Nalanda.", "historicalImportance": "Xuanzang studied logic, grammar, and Yogacara philosophy at Nalanda under Chancellor Silabhadra between 637 and 642 CE. His travelogue, 'Great Tang Records on the Western Regions' (*Datang Xiyu Ji*), provided the precise geographical measurements and historical descriptions that allowed British archaeologists Alexander Cunningham and A.M. Broadley to rediscover Nalanda, Bodh Gaya, and Sarnath in the 19th century.", "keyFacts": ["Jointly commissioned by Prime Minister Jawaharlal Nehru and Chinese Premier Zhou Enlai in 1957 as a symbol of historical Asian cultural brotherhood.", "Preserves a sacred relic of Xuanzang's skull bone gifted by the Chinese government, housed inside an artistic crystal urn.", "Features a massive brass peace bell and stone tablets engraved with ancient Sanskrit and classical Mandarin inscriptions."], "bestTimeToVisit": "October to March. Open daily 9:00 AM \u2013 5:00 PM, located just 2 km from the Nalanda archaeological ruins.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hiuen+Tsang+Memorial+Hall+Nalanda+Bihar", "coords": "25.1322\u00b0 N, 85.4526\u00b0 E", "locationName": "Kundalpur Road, Nalanda"}]}, {"id": "rajgir", "title": "Rajgir", "tagline": "The First Imperial Capital of Magadha & Sacred Mountain Valley of Peace", "category": "Imperial Capitals & Holy Hills", "tags": ["Vishwa Shanti Stupa", "Gridhakuta Vulture Peak", "Glass Skywalk", "Hot Springs", "Cyclopean Wall"], "bestTime": "October to March (10\u00b0C \u2013 22\u00b0C)", "duration": "2 Days", "overview": "Cradled in a green valley encircled by seven picturesque rocky hills (Vibhargiri, Vipulgiri, Ratnagiri, Chaithagiri, Songiri, Udaygiri, and Vaibhargiri), Rajgir (ancient Girivraja / Rajagriha) was the first capital of the Magadha Empire, deeply sanctified by both Gautama Buddha and Lord Mahavira.", "places": [{"name": "Vishwa Shanti Stupa & Ratnagiri Hill Ropeway", "type": "High-Altitude World Peace Pagoda", "detailedInfo": "Perched at an altitude of 1,000 feet atop Ratnagiri Hill, the Vishwa Shanti Stupa (World Peace Pagoda) is a colossal, gleaming white marble stupa rising 125 feet high. Four polished golden statues depicting Lord Buddha's birth, enlightenment, first sermon, and Mahaparinirvana are enshrined in four cardinal niches. Accessible either via a scenic single-chair aerial ropeway gliding over forested valleys or a scenic paved hill stairway.", "historicalImportance": "Conceived and built in 1969 by Japanese Buddhist master Nichidatsu Fujii (founder of the Nipponzan Myohoji order) in collaboration with Indian leadership to commemorate the 2,500th anniversary of the Buddha\u2019s enlightenment and promote global disarmament following the atomic tragedy of Hiroshima and Nagasaki.", "keyFacts": ["One of 80 Peace Pagodas constructed worldwide, ranking among the highest and largest in Asia.", "The aerial ropeway chairlift is one of the oldest and most scenic passenger ropeways in India, offering 360-degree views of the Rajgir valley hills.", "An adjacent Japanese Buddhist temple echoes with the continuous rhythmic chanting of 'Na Mu Myo Ho Ren Ge Kyo' accompanied by hand drum beats."], "bestTimeToVisit": "October to March. Chairlift operates 9:00 AM \u2013 5:00 PM (lunch break 1:00 PM \u2013 2:00 PM). Sunset views from the stupa terrace are breathtaking.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vishwa+Shanti+Stupa+Rajgir+Bihar", "coords": "25.0076\u00b0 N, 85.4264\u00b0 E", "locationName": "Ratnagiri Hill, Rajgir, Nalanda District"}, {"name": "Gridhakuta (Vulture's Peak) & Saptaparni Cave", "type": "Sacred Discursive Peaks & Historic Caves", "detailedInfo": "Gridhakuta (Vulture\u2019s Peak) is an iconic rocky natural outcrop on Ratnagiri Hill that resembles a vulture with folded wings. A stone stairway built by King Bimbisara leads to the rocky platform where the Buddha resided during several monsoon retreats. On neighboring Vaibhara Hill lies the ancient Saptaparni Cave, an assembly of natural stone chambers with an open-air stone platform.", "historicalImportance": "Gridhakuta is the sacred site where the Buddha delivered landmark Mahayana sutras, including the renowned Heart Sutra (Prajnaparamita), the Lotus Sutra (Saddharma Pundarika), and the Surangama Samadhi Sutra. Saptaparni Cave was the venue of the First Buddhist Council in 483 BCE, held under the patronage of King Ajatashatru three months after the Buddha\u2019s Mahaparinirvana, where 500 arhats led by Mahakasyapa recited and codified the Buddhist scriptures (Vinaya and Sutta Pitakas).", "keyFacts": ["King Bimbisara of Magadha famously dismounted his royal chariot and walked barefoot up the mountain path to meet the Buddha on Gridhakuta.", "Surrounded by the ancient 40-km-long Cyclopean Wall, a massive pre-Mauryan defensive rampart constructed of raw unhewn granite boulders pre-dating 600 BCE.", "Nearby Bimbisara's Jail is the stone enclosure where King Bimbisara was imprisoned by his ambitious son Ajatashatru, positioned so the captive king could gaze upon the Buddha on Vulture's Peak."], "bestTimeToVisit": "October to March. Early morning hikes (6:30 AM \u2013 9:00 AM) offer quiet meditation and pleasant mountain temperatures.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Vultures+Peak+Gridhakuta+Rajgir+Bihar", "coords": "25.0069\u00b0 N, 85.4331\u00b0 E", "locationName": "Chhatha Hill, Rajgir"}, {"name": "Rajgir Hot Springs, Glass Skywalk & Nature Safari", "type": "Thermal Springs & Modern Eco-Adventure", "detailedInfo": "At the foot of Vaibhargiri Hill lie natural hot sulphur springs (*Brahmakund*), where hot mineral waters flow through 22 stone spouts (*Dhara*), regarded as sacred and therapeutic. Complementing this ancient site is the newly built Rajgir Nature Safari, featuring India\u2019s premier Glass Skywalk Bridge suspended 200 feet above a deep forested canyon, suspension suspension bridges, ziplines, and an open jungle safari.", "historicalImportance": "The hot springs are celebrated in the Mahabharata and Buddhist texts, where the Buddha and King Bimbisara bathed for wellness. The modern Glass Skywalk and Nature Safari represent Bihar's dynamic eco-tourism expansion, modeled on the Zhangjiajie glass bridge in China.", "keyFacts": ["The hot springs maintain a constant natural temperature of 45\u00b0C (113\u00b0F) originating from deep underground fissures rich in sulphur and healing minerals.", "The Glass Skywalk spans 85 feet in length and 6 feet in width with an ultra-transparent structural floor that gives visitors the sensation of walking in thin air.", "The Nature Safari complex includes a botanical butterfly park, an aviary, and a wall climbing arena."], "bestTimeToVisit": "November to February. Glass Skywalk tickets must be booked online via the official Bihar State Tourism portal due to high demand.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rajgir+Glass+Bridge+Nature+Safari+Bihar", "coords": "24.9942\u00b0 N, 85.3856\u00b0 E", "locationName": "Jethian Road, Nature Safari, Rajgir"}]}, {"id": "patna", "title": "Patna (Ancient Pataliputra)", "tagline": "The Imperial Throne of Emperors, Ashokan Monoliths & Sacred Takhts", "category": "Imperial Capitals & River Metropolises", "tags": ["Ancient Pataliputra", "Golghar", "Takht Sri Patna Sahib", "Bihar Museum", "Kumhrar", "Ganga Aarti"], "bestTime": "October to March (12\u00b0C \u2013 25\u00b0C)", "duration": "2 Days", "overview": "Stretching for 35 km along the southern bank of the holy River Ganga, Patna (ancient Pataliputra) was the imperial capital of the greatest empires of ancient India\u2014the Nanda, Mauryan, and Gupta dynasties\u2014and is the revered birthplace of Guru Gobind Singh.", "places": [{"name": "Golghar & Ganga Aarti at NIT Ghat", "type": "Colonial Granary Monument & Sacred Riverfront", "detailedInfo": "Golghar is an iconic 1786 colonial beehive-shaped dome building standing 29 meters tall, built without internal pillars. Two external spiral staircases with 145 steps wind around the dome, leading to a panoramic viewpoint overlooking Patna city and the sweeping curves of the River Ganga. Every evening at sunset, NIT Ghat on the Ganga riverfront hosts the magnificent Ganga Aarti, performed with multi-tiered brass oil lamps, conch shells, and Vedic chants on illuminated wooden river decks.", "historicalImportance": "Golghar was commissioned by Governor-General Warren Hastings and engineered by Captain John Garstin following the catastrophic Great Bengal Famine of 1770 to serve as a permanent famine-relief state granary with a capacity of 137,000 tons. The Ganga riverfront has been the lifeline of Pataliputra for over 2,500 years, described by Greek ambassador Megasthenes in his book 'Indica'.", "keyFacts": ["Golghar's dome has a wall thickness of 3.6 meters at the base and was designed with a unique top trapdoor for filling grain, though its doors were mistakenly designed to open inward.", "The top viewing terrace provides uninterrupted views of the river Ganga and Mahatma Gandhi Setu, one of India's longest river bridges.", "Ganga Aarti at NIT Ghat features priests dressed in traditional saffron dhotis conducting synchronized flame aarti every Saturday and Sunday evening."], "bestTimeToVisit": "October to March. Climb Golghar during late afternoon, then head directly to NIT Ghat by 5:30 PM for the sunset Ganga Aarti.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Golghar+Patna+Bihar", "coords": "25.6178\u00b0 N, 85.1438\u00b0 E", "locationName": "Ashok Rajpath, Patna"}, {"name": "Takht Sri Patna Sahib (Gurudwara Harimandir)", "type": "Supreme Sikh Takht Shrine", "detailedInfo": "Located in the historic lanes of old Patna (Harmandir Gali), Takht Sri Patna Sahib is one of the five sacred Takhts (Seats of Temporal Authority) in Sikhism. The magnificent white marble gurudwara features a gilded central dome, intricate marble inlay work, a sacred sanctum displaying personal holy relics of the Sikh Gurus, and an ongoing community kitchen (*Guru ka Langar*) feeding thousands of visitors daily.", "historicalImportance": "Built by Maharaja Ranjit Singh, the Lion of Punjab, in the 1830s to commemorate the exact birthplace of Guru Gobind Singh Ji (born here on 22 December 1666), the tenth and final human Sikh Guru who founded the martial Khalsa panth in 1699. The site was also sanctified by visits from Guru Nanak Dev Ji and Guru Tegh Bahadur Ji.", "keyFacts": ["Houses priceless historical relics including Guru Gobind Singh\u2019s childhood cradle (*Panghura*) finished with gold leaf, four golden arrows, a holy khanda sword, and his childhood sandals.", "The Prakash Parv (birth anniversary of Guru Gobind Singh) in December/January attracts hundreds of thousands of Sikh pilgrims from across the globe.", "Operates 24-hour free community langar providing warm meals to all visitors regardless of religion, caste, or background."], "bestTimeToVisit": "October to March. Open 24 hours daily. The atmosphere during early morning Amrit Vela prayers (4:00 AM \u2013 6:00 AM) is deeply peaceful.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Takht+Sri+Patna+Sahib+Gurudwara+Patna+Bihar", "coords": "25.5941\u00b0 N, 85.2285\u00b0 E", "locationName": "Harmandir Gali, Patna City"}, {"name": "Bihar Museum & Kumhrar Mauryan Ruins", "type": "World-Class Museum & Archaeological Mauryan Citadel", "detailedInfo": "The world-class Bihar Museum, designed by Japan's Maki and Associates, spans over 13 acres with state-of-the-art galleries showcasing Bihar's 3,000-year historical trajectory. Its centerpiece is the 2,300-year-old polished sandstone statue of the Didarganj Yakshi (Chauri Bearer). Nearby Kumhrar preserves the excavated archaeological ruins of ancient Pataliputra, including the monumental 80-Pillared Hall (*Assembly Hall*) dating to the Mauryan Empire under Emperor Ashoka.", "historicalImportance": "Kumhrar was the central political nerve center where Emperor Ashoka governed an empire spanning from Afghanistan to Bengal, and where Chandragupta Maurya met Greek envoy Megasthenes. The Didarganj Yakshi, discovered on the banks of the Ganges in 1917, is universally acclaimed by art historians as the crowning masterpiece of ancient Indian Mauryan sculptural polish.", "keyFacts": ["The Didarganj Yakshi statue possesses an extraordinary glass-like high polish (*Mauryan polish*) that has remained mirror-smooth for over 2,300 years.", "Kumhrar excavations revealed a deep canal network connecting the imperial palace to the ancient Son River for royal boat entry.", "Bihar Museum houses comprehensive galleries dedicated to Buddhist, Jain, and Sikh art, regional tribal art (Madhubani / Mithila paintings), and ancient numismatics."], "bestTimeToVisit": "October to March. Bihar Museum is open Tuesday to Sunday 10:00 AM \u2013 5:00 PM (closed Mondays).", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bihar+Museum+Patna+Bihar", "coords": "25.6111\u00b0 N, 85.1206\u00b0 E", "locationName": "Bailey Road, Patna"}]}, {"id": "vaishali-kesaria", "title": "Vaishali & Kesaria", "tagline": "The World's First Republic, Mahavira's Birthplace & Giant Stupas", "category": "Ancient Republics & Colossal Stupas", "tags": ["World's First Republic", "Ashokan Lion Pillar", "Lord Mahavira", "Kesaria Stupa"], "bestTime": "October to March (10\u00b0C \u2013 24\u00b0C)", "duration": "1 to 2 Days", "overview": "Located north of the River Ganga, Vaishali was the world's earliest documented democratic republic (the Licchavi republic), while nearby Kesaria boasts one of the tallest ancient Buddhist stupas in human history.", "places": [{"name": "Vaishali Archaeological Complex (Ashokan Pillar & Relic Stupa)", "type": "Cradle of World Democracy & Sacred Buddhist/Jain Site", "detailedInfo": "An expansive archaeological landscape featuring an intact monolithic polished sandstone Ashokan Pillar surmounted by a magnificent single seated lion capital facing north toward Kushinagar. Beside the pillar lies a brick-built stupa and the sacred monkey tank (*Ramkund*). Nearby is the Buddha Relic Stupa (Stupa 1), the ancient coronation tank (*Abhisheka Pushkarini*), and the Kundalpur shrine celebrating the birthplace of Lord Mahavira (the 24th Jain Tirthankara).", "historicalImportance": "Vaishali was established in the 6th century BCE as the capital of the Vajjian Confederacy governed by the Licchavi clan, documented as the world's first democratic republic where elected representatives debated and governed by consensus. The Buddha visited Vaishali multiple times, accepted an offering of honey from a monkey (one of the Eight Great Miracles), initiated the first order of Buddhist nuns (*Bhikkhunis*) through his foster mother Mahapajapati Gotami, and delivered his final discourse before passing away.", "keyFacts": ["The Ashokan Pillar in Kolhua is one of the very few surviving pillars that stands complete with its original life-sized lion capital undisturbed on its original shaft.", "The Buddha Relic Stupa excavated by archaeologist A.S. Altekar in 1958 yielded a soapstone casket containing authenticated bone relics, ashes, gold leaf, and beads of Lord Buddha.", "Vaishali was home to the courtesan Amrapali, who became an enlightened disciple of the Buddha and donated her expansive mango grove to the monastic sangha."], "bestTimeToVisit": "October to March. Open daily sunrise to sunset.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ashokan+Pillar+Kolhua+Vaishali+Bihar", "coords": "25.9928\u00b0 N, 85.1258\u00b0 E", "locationName": "Kolhua, Vaishali District"}, {"name": "Kesaria Stupa (The World's Tallest Ancient Stupa)", "type": "Colossal Ancient Buddhist Stupa", "detailedInfo": "Located in East Champaran district, 110 km northwest of Patna. The Kesaria Stupa is an architectural behemoth constructed in circular terraced brick tiers rising 104 feet (31.7 meters) into the sky, with an immense base circumference of nearly 1,400 feet. The multi-tiered polygonal terraces contain multiple brick niches that house clay and stone statues of Buddha in various postures (*Bhumisparsha, Dhyana*).", "historicalImportance": "Built by the Licchavi rulers and expanded during the Mauryan and Gupta periods (dating between 200 and 750 CE). Identifies the sacred spot where the Buddha rested for the night during his final journey to Kushinagar, bid a final farewell to his weeping Licchavi followers, and gifted them his sacred alms bowl as a memento. Chronicled by Chinese pilgrim Xuanzang in the 7th century.", "keyFacts": ["Originally stood over 123 feet tall before being damaged in the 1934 Bihar earthquake; even in its damaged state, it stands one foot taller than the famous Borobudur Stupa in Java, Indonesia.", "Only the upper terraces have been excavated by the Archaeological Survey of India (ASI); vast subterranean lower tiers remain preserved beneath the earthen mound.", "Surrounded by tranquil green rural agricultural fields in the peaceful Champaran countryside."], "bestTimeToVisit": "October to March. Morning visits allow peaceful exploration of the ancient terraced brick perimeters.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kesariya+Stupa+East+Champaran+Bihar", "coords": "26.3572\u00b0 N, 84.8722\u00b0 E", "locationName": "Kesariya, East Champaran District"}]}, {"id": "valmiki", "title": "Valmiki National Park", "tagline": "The Tiger Haven of the Terai & Sacred Himalayan Foothill Forests", "category": "Wildlife & Himalayan Foothills", "tags": ["Tiger Reserve", "Sal Rainforest", "Gandak River", "Valmiki Ashram", "Nepal Border"], "bestTime": "November to April (Crisp foothill weather, 12\u00b0C \u2013 24\u00b0C)", "duration": "2 to 3 Days", "overview": "Nestled in the West Champaran district along the international border with Nepal, Valmiki National Park is Bihar\u2019s sole National Park and Tiger Reserve, spanning 898 square kilometers where the Shivalik Himalayan foothills merge with lush alluvial terai grasslands.", "places": [{"name": "Valmiki Tiger Reserve & Gandak River", "type": "Sub-Himalayan Terai Tiger Reserve", "detailedInfo": "A pristine ecological sanctuary dominated by dense moist sal forests (*Shorea robusta*), riverine cane brakes, savannah grasslands, and the snow-fed Gandak River. Valmiki is contiguous with Nepal\u2019s renowned Chitwan National Park to the north, forming a vital transboundary wildlife migration corridor. Home to over 54 Bengal tigers, leopards, wild dogs (dhole), Indian bison (gaur), sloth bears, one-horned rhinoceroses (frequently crossing from Chitwan), and over 250 species of birds.", "historicalImportance": "Deeply linked to ancient epic history: the forest encloses the sacred Valmiki Ashram along the Gandak River, where sage Maharishi Valmiki composed the epic Ramayana, where Goddess Sita found shelter during her exile, and where the warrior twin princes Lava and Kusha were born and trained.", "keyFacts": ["Bihar's only National Park and Tiger Reserve, representing a remarkable tiger population revival from just 8 tigers in 2010 to over 54 tigers today.", "Offers exciting motorboat cruises along the Gandak River where travelers can observe critically endangered Gharials and mugger crocodiles basking on sandy shoals.", "Features eco-tourism forest huts, canopy tree walks, and bicycle nature trails at Valmikinagar, Manguraha, and Gobardhana zones."], "bestTimeToVisit": "November to April. Winter mornings offer crisp, fog-free safari drives through sal forest corridors and panoramic views of Nepal's snow-clad Annapurna range.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Valmiki+National+Park+Valmiki+Tiger+Reserve+West+Champaran+Bihar", "coords": "27.3197\u00b0 N, 84.1481\u00b0 E", "locationName": "Valmikinagar, West Champaran District"}]}];
+
+    let activeCategory = 'All';
+    let searchQuery = '';
+    let showSavedOnly = false;
+    let savedClusters = [];
+
+    // Pre-defined Itinerary Plans
+    const itineraries = {
+      "3": [
+        { day: "Day 1", title: "Bodh Gaya Enlightenment", desc: "Mahabodhi Temple, sacred Bodhi Tree, Vajrasana, and Thai & Japanese Monasteries." },
+        { day: "Day 2", title: "Nalanda & Rajgir", desc: "Nalanda University UNESCO ruins, Hiuen Tsang Memorial, and Rajgir Vishwa Shanti Stupa ropeway." },
+        { day: "Day 3", title: "Vulture's Peak & Hot Springs", desc: "Sunrise hike to Gridhakuta (Vulture's Peak), Saptaparni Cave, and sacred hot springs before departure." }
+      ],
+      "5": [
+        { day: "Day 1-2", title: "Bodh Gaya Deep Dive", desc: "Full spiritual immersion at Mahabodhi Temple, meditation gardens, and Great 80-ft Buddha." },
+        { day: "Day 3", title: "Nalanda & Rajgir", desc: "Ancient 5th-century university ruins, archaeological museum, and Rajgir Glass Skywalk adventure." },
+        { day: "Day 4", title: "Patna Imperial Capital", desc: "Bihar Museum (Didarganj Yakshi), Kumhrar Mauryan ruins, Golghar, and evening Ganga Aarti." },
+        { day: "Day 5", title: "Vaishali First Republic", desc: "Ashokan Lion Pillar, Buddha Relic Stupa, and coronation tank before onward travel." }
+      ],
+      "7": [
+        { day: "Day 1-2", title: "Bodh Gaya & Gaya", desc: "Mahabodhi Temple complex, Bodhi Tree, international monasteries, and Vishnupad Temple." },
+        { day: "Day 3", title: "Nalanda & Rajgir", desc: "Nalanda university campus, Hiuen Tsang Memorial, Ratnagiri ropeway, and Vulture's Peak." },
+        { day: "Day 4", title: "Patna Pataliputra", desc: "Bihar Museum, Takht Sri Patna Sahib, Kumhrar 80-pillared hall, and sunset NIT Ghat aarti." },
+        { day: "Day 5", title: "Vaishali & Kesaria", desc: "World's first republic, Ashokan Lion Pillar, and the colossal 104-ft Kesaria Stupa." },
+        { day: "Day 6-7", title: "Valmiki National Park", desc: "Tiger safari in sal forests, Gandak river boat cruise, and historic Valmiki Ashram on Nepal border." }
+      ]
+    };
+
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      if (!container) return;
+      const plan = itineraries[days] || itineraries["3"];
+      container.innerHTML = plan.map(function(item) {
+        return '<div class="p-3 bg-amber-50/70 border border-amber-200/80 rounded-xl">' +
+          '<span class="font-extrabold text-amber-900 block">' + item.day + ': ' + item.title + '</span>' +
+          '<p class="text-slate-600 mt-1 leading-relaxed">' + item.desc + '</p>' +
+        '</div>';
+      }).join('');
+    }
+
+    // Packing Checklist Storage
+    function updateChecklistProgress() {
+      const boxes = document.querySelectorAll('.pack-box');
+      let checked = 0;
+      const states = [];
+      boxes.forEach(function(b) {
+        if (b.checked) checked++;
+        states.push(b.checked);
+      });
+      document.getElementById('pack-progress').textContent = checked + ' / ' + boxes.length + ' Ready';
+      try {
+        localStorage.setItem('bihar_pack_states', JSON.stringify(states));
+      } catch(e) {}
+    }
+
+    function loadChecklist() {
+      try {
+        const stored = localStorage.getItem('bihar_pack_states');
+        if (stored) {
+          const states = JSON.parse(stored);
+          const boxes = document.querySelectorAll('.pack-box');
+          boxes.forEach(function(b, idx) {
+            if (states[idx]) b.checked = true;
+          });
+        }
+      } catch(e) {}
+      updateChecklistProgress();
+    }
+
+    // Audio Chime Bell (Web Audio API)
+    let audioCtx = null;
+    function playMeditationBell() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(432, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(216, audioCtx.currentTime + 2.5);
+
+        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 3.0);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + 3.0);
+        showToast('🔔 Chime: Peace & Mindfulness');
+      } catch (e) {
+        showToast('Meditation bell activated');
+      }
+    }
+
+    // Safely load saved from localStorage
+    try {
+      const stored = localStorage.getItem('bihar_saved_clusters');
+      if (stored) savedClusters = JSON.parse(stored);
+    } catch(e) {
+      savedClusters = [];
+    }
+
+    function saveToStorage() {
+      try {
+        localStorage.setItem('bihar_saved_clusters', JSON.stringify(savedClusters));
+      } catch(e) {}
+      updateSavedCount();
+    }
+
+    function toggleSaveCluster(id) {
+      const idx = savedClusters.indexOf(id);
+      if (idx > -1) {
+        savedClusters.splice(idx, 1);
+        showToast('Removed circuit from bookmarks');
+      } else {
+        savedClusters.push(id);
+        showToast('Saved circuit to bookmarks');
+      }
+      saveToStorage();
+      renderClusters();
+    }
+
+    function updateSavedCount() {
+      const countEl = document.getElementById('saved-count');
+      if (countEl) countEl.textContent = savedClusters.length;
+      const btn = document.getElementById('bookmark-filter-btn');
+      if (btn) {
+        if (showSavedOnly) {
+          btn.classList.add('bg-amber-600', 'text-white', 'border-amber-700');
+          btn.classList.remove('bg-amber-50', 'text-amber-900', 'border-amber-300');
+        } else {
+          btn.classList.remove('bg-amber-600', 'text-white', 'border-amber-700');
+          btn.classList.add('bg-amber-50', 'text-amber-900', 'border-amber-300');
+        }
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const textEl = document.getElementById('toast-text');
+      if (!toast || !textEl) return;
+      textEl.textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(function() {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2500);
+    }
+
+    function getFilteredClusters() {
+      return data.filter(function(cluster) {
+        if (activeCategory !== 'All' && cluster.category !== activeCategory) {
+          return false;
+        }
+        if (showSavedOnly && !savedClusters.includes(cluster.id)) {
+          return false;
+        }
+        if (searchQuery.trim() !== '') {
+          const q = searchQuery.toLowerCase();
+          const matchCluster = cluster.title.toLowerCase().includes(q) ||
+                               cluster.tagline.toLowerCase().includes(q) ||
+                               cluster.category.toLowerCase().includes(q) ||
+                               cluster.overview.toLowerCase().includes(q) ||
+                               cluster.tags.some(function(t) { return t.toLowerCase().includes(q); });
+          
+          const matchPlaces = cluster.places.some(function(p) {
+            return p.name.toLowerCase().includes(q) ||
+                   p.type.toLowerCase().includes(q) ||
+                   p.detailedInfo.toLowerCase().includes(q) ||
+                   p.historicalImportance.toLowerCase().includes(q) ||
+                   p.bestTimeToVisit.toLowerCase().includes(q) ||
+                   (p.locationName && p.locationName.toLowerCase().includes(q)) ||
+                   p.keyFacts.some(function(kf) { return kf.toLowerCase().includes(q); });
+          });
+
+          if (!matchCluster && !matchPlaces) {
+            return false;
+          }
+        }
+        return true;
+      });
+    }
+
+    function renderClusters() {
+      const container = document.getElementById('clusters-container');
+      const emptyState = document.getElementById('empty-state');
+      const clusterCountEl = document.getElementById('visible-clusters-count');
+      const sitesCountEl = document.getElementById('visible-sites-count');
+      const filterLabel = document.getElementById('active-filter-label');
+
+      if (!container) return;
+
+      const clusters = getFilteredClusters();
+      const totalSites = clusters.reduce(function(acc, c) { return acc + c.places.length; }, 0);
+
+      if (clusterCountEl) clusterCountEl.textContent = clusters.length;
+      if (sitesCountEl) sitesCountEl.textContent = totalSites;
+
+      if (filterLabel) {
+        let parts = [];
+        if (activeCategory !== 'All') parts.push('Category: ' + activeCategory);
+        if (showSavedOnly) parts.push('Bookmarks only');
+        if (searchQuery.trim()) parts.push('Search: "' + searchQuery + '"');
+        filterLabel.textContent = parts.length ? '(' + parts.join(' • ') + ')' : '';
+      }
+
+      if (clusters.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = clusters.map(function(cluster) {
+        const isSaved = savedClusters.includes(cluster.id);
+
+        const placesHtml = cluster.places.map(function(p, pIdx) {
+          const factsList = p.keyFacts.map(function(kf) {
+            return '<li class="flex items-start gap-2 text-xs text-slate-700 leading-relaxed">' +
+              '<span class="text-amber-600 font-bold flex-shrink-0 mt-0.5">✦</span>' +
+              '<span>' + kf + '</span>' +
+            '</li>';
+          }).join('');
+
+          return '<div class="bg-white rounded-2xl border border-amber-200/90 p-5 shadow-xs hover:border-amber-400 transition-all">' +
+            '<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-3 border-b border-amber-100">' +
+              '<div>' +
+                '<div class="flex items-center gap-2">' +
+                  '<span class="w-6 h-6 rounded-full bg-amber-100 text-amber-900 text-xs font-bold flex items-center justify-center flex-shrink-0">' + (pIdx + 1) + '</span>' +
+                  '<h4 class="text-base font-bold text-slate-900 font-heritage tracking-tight">' + p.name + '</h4>' +
+                '</div>' +
+                '<div class="flex flex-wrap items-center gap-2 mt-1 ml-8 text-[11px] text-slate-500">' +
+                  '<span class="font-semibold text-slate-600">' + p.type + '</span>' +
+                  '<span>•</span>' +
+                  '<span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-mono">' + (p.coords || 'Bihar') + '</span>' +
+                '</div>' +
+              '</div>' +
+
+              '<!-- Google Map Direct Link Button -->' +
+              '<div class="flex items-center gap-2 self-start sm:self-auto">' +
+                '<a href="' + p.mapUrl + '" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors shadow-2xs" title="Open verified location in Google Maps">' +
+                  '<span>📍 View on Google Maps</span>' +
+                  '<span class="text-[10px]">↗</span>' +
+                '</a>' +
+              '</div>' +
+            '</div>' +
+
+            '<div class="mt-4">' +
+              '<span class="text-xs font-bold text-slate-800 uppercase tracking-wider block mb-1">Detailed Information:</span>' +
+              '<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">' + p.detailedInfo + '</p>' +
+            '</div>' +
+
+            '<div class="mt-3.5 bg-amber-50/70 border border-amber-200/80 rounded-xl p-3.5 text-slate-800">' +
+              '<span class="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-1 flex items-center gap-1.5">' +
+                '<span>📜</span> Historical Importance & Sacred Lore:' +
+              '</span>' +
+              '<p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic">' + p.historicalImportance + '</p>' +
+            '</div>' +
+
+            '<div class="mt-3.5 bg-stone-50 rounded-xl p-3.5 border border-stone-200">' +
+              '<span class="text-xs font-bold text-slate-800 uppercase tracking-wider block mb-2">Key Facts & Archaeological Feats:</span>' +
+              '<ul class="space-y-1.5">' + factsList + '</ul>' +
+            '</div>' +
+
+            '<div class="mt-3.5 text-xs text-amber-950 bg-amber-100/70 px-3 py-2 rounded-lg font-medium border border-amber-200 flex items-start justify-between gap-2">' +
+              '<div class="flex items-start gap-1.5">' +
+                '<span class="font-bold flex-shrink-0">⏱️ Best Time & Visit Logistics:</span>' +
+                '<span>' + p.bestTimeToVisit + '</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+        }).join('');
+
+        const tagsHtml = cluster.tags.map(function(t) {
+          return '<span class="text-[11px] font-medium bg-white/10 text-amber-100 px-2.5 py-0.5 rounded-full border border-white/20">' + t + '</span>';
+        }).join('');
+
+        return '<article class="bg-white rounded-3xl border border-amber-200 shadow-md overflow-hidden transition-all">' +
+          '<div class="p-6 bg-gradient-to-r from-stone-950 via-amber-950 to-stone-900 text-white relative">' +
+            '<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">' +
+              '<div>' +
+                '<div class="flex flex-wrap items-center gap-2 mb-2">' +
+                  '<span class="text-xs font-bold uppercase tracking-wider bg-amber-500 text-stone-950 px-2.5 py-0.5 rounded-full">' + cluster.category + '</span>' +
+                  tagsHtml +
+                '</div>' +
+                '<h3 class="text-xl sm:text-2xl font-black font-heritage tracking-tight text-amber-100">' + cluster.title + '</h3>' +
+                '<p class="text-xs sm:text-sm text-amber-200 mt-1 font-medium">' + cluster.tagline + '</p>' +
+              '</div>' +
+
+              '<div class="flex items-center gap-2.5">' +
+                '<button data-save-id="' + cluster.id + '" class="save-btn p-2.5 rounded-xl border transition-colors ' + (isSaved ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold' : 'bg-white/10 hover:bg-white/20 text-white border-white/20') + '" title="' + (isSaved ? 'Remove bookmark' : 'Bookmark this circuit') + '">' +
+                  '<svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">' +
+                    '<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>' +
+                  '</svg>' +
+                '</button>' +
+                '<button data-open-modal="' + cluster.id + '" class="modal-open-btn px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition-colors shadow-sm flex items-center gap-1.5">' +
+                  '<span>Explore Journey</span> →' +
+                '</button>' +
+              '</div>' +
+            '</div>' +
+
+            '<div class="mt-4 pt-3 border-t border-white/15 flex flex-wrap items-center gap-3 text-xs text-amber-100">' +
+              '<span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-lg">🗓️ <strong>Best Time:</strong> ' + cluster.bestTime + '</span>' +
+              '<span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-lg">⏱️ <strong>Circuit:</strong> ' + cluster.duration + '</span>' +
+              '<span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-lg">📍 <strong>Locations:</strong> ' + cluster.places.length + ' Featured Sites</span>' +
+            '</div>' +
+
+            '<p class="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed">' + cluster.overview + '</p>' +
+          '</div>' +
+
+          '<div class="p-6 bg-amber-50/40 space-y-5">' +
+            placesHtml +
+          '</div>' +
+        '</article>';
+      }).join('');
+
+      document.querySelectorAll('.save-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const id = btn.getAttribute('data-save-id');
+          if (id) toggleSaveCluster(id);
+        });
+      });
+
+      document.querySelectorAll('.modal-open-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const id = btn.getAttribute('data-open-modal');
+          if (id) openReadingModal(id);
+        });
+      });
+    }
+
+    function openReadingModal(id) {
+      const cluster = data.find(function(c) { return c.id === id; });
+      if (!cluster) return;
+
+      const modal = document.getElementById('reading-modal');
+      const box = document.getElementById('modal-container');
+      const catEl = document.getElementById('modal-cluster-cat');
+      const titleEl = document.getElementById('modal-cluster-title');
+      const tagEl = document.getElementById('modal-cluster-tagline');
+      const bodyEl = document.getElementById('modal-scroll-body');
+
+      if (!modal || !bodyEl) return;
+
+      catEl.textContent = cluster.category;
+      titleEl.textContent = cluster.title;
+      tagEl.textContent = cluster.tagline + ' • Best Season: ' + cluster.bestTime + ' • Duration: ' + cluster.duration;
+
+      const placesDetailedHtml = cluster.places.map(function(p, idx) {
+        const facts = p.keyFacts.map(function(kf) {
+          return '<li class="text-xs text-slate-700 leading-relaxed flex items-start gap-2">' +
+            '<span class="text-amber-600 font-bold mt-0.5">✔</span>' +
+            '<span>' + kf + '</span>' +
+          '</li>';
+        }).join('');
+
+        return '<div class="border border-slate-200 rounded-2xl p-5 bg-white shadow-2xs space-y-3">' +
+          '<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 pb-2 border-b border-slate-100">' +
+            '<div>' +
+              '<h4 class="text-base font-bold text-slate-900 flex items-center gap-2">' +
+                '<span class="w-6 h-6 rounded-full bg-amber-600 text-white text-xs font-bold flex items-center justify-center">' + (idx + 1) + '</span>' +
+                p.name +
+              '</h4>' +
+              '<span class="text-xs font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 mt-1 inline-block">' + p.type + '</span>' +
+              '<span class="text-xs text-slate-400 font-mono ml-2">' + p.coords + '</span>' +
+            '</div>' +
+            '<a href="' + p.mapUrl + '" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-lg text-xs font-bold flex items-center gap-1 shadow-2xs self-start">' +
+              '<span>📍 Open Map</span> ↗' +
+            '</a>' +
+          '</div>' +
+          '<div>' +
+            '<strong class="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-1">Overview & Architecture:</strong>' +
+            '<p class="text-xs sm:text-sm text-slate-600 leading-relaxed">' + p.detailedInfo + '</p>' +
+          '</div>' +
+          '<div class="bg-amber-50/70 p-3.5 rounded-xl border border-amber-200/80">' +
+            '<strong class="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-1 flex items-center gap-1.5">' +
+              '<span>📜</span> Historical Importance & Sacred Lore:' +
+            '</strong>' +
+            '<p class="text-xs sm:text-sm text-slate-800 leading-relaxed italic">' + p.historicalImportance + '</p>' +
+          '</div>' +
+          '<div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">' +
+            '<strong class="text-xs font-bold text-slate-900 uppercase tracking-wider block mb-1.5">Key Facts & Records:</strong>' +
+            '<ul class="space-y-1">' + facts + '</ul>' +
+          '</div>' +
+          '<div class="text-xs text-amber-900 bg-amber-100/60 p-2.5 rounded-lg border border-amber-200 font-medium">' +
+            '<strong>🗓️ Visiting Logistics:</strong> ' + p.bestTimeToVisit +
+          '</div>' +
+        '</div>';
+      }).join('');
+
+      bodyEl.innerHTML = '<div class="bg-amber-50 p-4 rounded-xl border border-amber-200 mb-2">' +
+        '<strong class="text-xs font-bold text-amber-900 uppercase tracking-wider block mb-1">Circuit Synthesis:</strong>' +
+        '<p class="text-xs sm:text-sm text-slate-800 leading-relaxed">' + cluster.overview + '</p>' +
+      '</div>' +
+      '<div class="space-y-5">' + placesDetailedHtml + '</div>';
+
+      const copyBtn = document.getElementById('modal-copy-all-btn');
+      if (copyBtn) {
+        copyBtn.onclick = function() {
+          const parts = [
+            cluster.title + ' (' + cluster.category + ')',
+            'Tagline: ' + cluster.tagline,
+            'Best Season: ' + cluster.bestTime,
+            'Recommended Duration: ' + cluster.duration,
+            'Overview: ' + cluster.overview,
+            ''
+          ];
+
+          cluster.places.forEach(function(p, i) {
+            parts.push((i + 1) + '. ' + p.name + ' [' + p.type + ']');
+            parts.push('Location / GPS: ' + (p.locationName || '') + ' (' + (p.coords || '') + ')');
+            parts.push('Google Map: ' + p.mapUrl);
+            parts.push('Detailed Info: ' + p.detailedInfo);
+            parts.push('Historical Importance: ' + p.historicalImportance);
+            parts.push('Key Facts:');
+            p.keyFacts.forEach(function(kf) { parts.push(' - ' + kf); });
+            parts.push('Best Time & Notes: ' + p.bestTimeToVisit);
+            parts.push('');
+          });
+
+          const fullText = parts.join('\n');
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(fullText).then(function() {
+              showToast('Copied travel guide notes to clipboard!');
+            }).catch(function() {
+              fallbackCopy(fullText);
+            });
+          } else {
+            fallbackCopy(fullText);
+          }
+        };
+      }
+
+      modal.classList.remove('hidden');
+      setTimeout(function() {
+        modal.classList.remove('opacity-0');
+        if (box) box.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast('Copied travel guide notes to clipboard!');
+      } catch(e) {
+        showToast('Unable to copy automatically');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function closeReadingModal() {
+      const modal = document.getElementById('reading-modal');
+      const box = document.getElementById('modal-container');
+      if (!modal) return;
+      if (box) box.classList.add('scale-95');
+      modal.classList.add('opacity-0');
+      setTimeout(function() {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Initialization
+    window.addEventListener('DOMContentLoaded', function() {
+      updateSavedCount();
+      renderClusters();
+      renderItinerary("3");
+      loadChecklist();
+
+      // Audio Bell Button Listener
+      const audioBtn = document.getElementById('audio-bell-btn');
+      if (audioBtn) {
+        audioBtn.addEventListener('click', playMeditationBell);
+      }
+
+      // Packing Checklist Event Listeners
+      document.querySelectorAll('.pack-box').forEach(function(box) {
+        box.addEventListener('change', updateChecklistProgress);
+      });
+
+      const resetPackBtn = document.getElementById('reset-checklist-btn');
+      if (resetPackBtn) {
+        resetPackBtn.addEventListener('click', function() {
+          document.querySelectorAll('.pack-box').forEach(function(b) { b.checked = false; });
+          updateChecklistProgress();
+          showToast('Checklist reset');
+        });
+      }
+
+      // Itinerary Selector Pills
+      document.querySelectorAll('#itinerary-selector .itinerary-pill').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('#itinerary-selector .itinerary-pill').forEach(function(b) {
+            b.classList.remove('bg-amber-600', 'text-white');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.add('bg-amber-600', 'text-white');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+          const days = btn.getAttribute('data-days') || "3";
+          renderItinerary(days);
+        });
+      });
+
+      // Search input
+      const searchInput = document.getElementById('search-input');
+      const clearBtn = document.getElementById('clear-search-btn');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+          searchQuery = e.target.value;
+          if (clearBtn) {
+            if (searchQuery.trim()) {
+              clearBtn.classList.remove('hidden');
+            } else {
+              clearBtn.classList.add('hidden');
+            }
+          }
+          renderClusters();
+        });
+      }
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+          if (searchInput) searchInput.value = '';
+          searchQuery = '';
+          clearBtn.classList.add('hidden');
+          renderClusters();
+        });
+      }
+
+      // Category filters
+      document.querySelectorAll('#category-filters .filter-tab').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          document.querySelectorAll('#category-filters .filter-tab').forEach(function(b) {
+            b.classList.remove('bg-amber-600', 'text-white', 'active');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.add('bg-amber-600', 'text-white', 'active');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+          activeCategory = btn.getAttribute('data-cat') || 'All';
+          renderClusters();
+        });
+      });
+
+      // Reset filters button
+      const resetBtn = document.getElementById('reset-all-btn');
+      const emptyResetBtn = document.getElementById('empty-reset-btn');
+
+      function resetAll() {
+        activeCategory = 'All';
+        searchQuery = '';
+        showSavedOnly = false;
+        if (searchInput) searchInput.value = '';
+        if (clearBtn) clearBtn.classList.add('hidden');
+        document.querySelectorAll('#category-filters .filter-tab').forEach(function(b) {
+          if (b.getAttribute('data-cat') === 'All') {
+            b.classList.add('bg-amber-600', 'text-white', 'active');
+            b.classList.remove('bg-slate-100', 'text-slate-700');
+          } else {
+            b.classList.remove('bg-amber-600', 'text-white', 'active');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          }
+        });
+        updateSavedCount();
+        renderClusters();
+      }
+
+      if (resetBtn) resetBtn.addEventListener('click', resetAll);
+      if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
+
+      // Bookmarks toggle
+      const bookmarkFilterBtn = document.getElementById('bookmark-filter-btn');
+      if (bookmarkFilterBtn) {
+        bookmarkFilterBtn.addEventListener('click', function() {
+          showSavedOnly = !showSavedOnly;
+          updateSavedCount();
+          renderClusters();
+        });
+      }
+
+      // Modal close handlers
+      const modalCloseX = document.getElementById('modal-close-x');
+      const modalCloseAction = document.getElementById('modal-close-action');
+      const modalOverlay = document.getElementById('reading-modal');
+
+      if (modalCloseX) modalCloseX.addEventListener('click', closeReadingModal);
+      if (modalCloseAction) modalCloseAction.addEventListener('click', closeReadingModal);
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', function(e) {
+          if (e.target === modalOverlay) closeReadingModal();
+        });
+      }
+
+      // Back to top button
+      const topBtn = document.getElementById('back-to-top-btn');
+      if (topBtn) {
+        topBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

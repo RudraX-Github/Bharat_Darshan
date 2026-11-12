@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andhra Pradesh Explorer — Interactive Travel & Cultural Heritage Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    .font-heritage {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-amber-200 selection:text-amber-950">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-amber-950 via-orange-950 to-slate-950 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-amber-800/50 flex items-center justify-center gap-2 shadow-sm">
+    <span>🌺 Swagatham! Welcome to Andhra Pradesh — Tirupati Shrines, Vizag Shores, Araku Valleys, Gandikota Canyon, Amaravati & Lepakshi</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 via-orange-700 to-amber-900 flex items-center justify-center text-white shadow-lg shadow-amber-900/20 text-2xl font-bold border border-amber-300">
+          🔱
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Andhra Pradesh Explorer</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">🙏 Swagatham! Welcome to Andhra Pradesh — Your Welcoming Guide to Tirupati & Chandragiri, Visakhapatnam (Vizag), Araku Valley & Borra Caves, Gandikota & Belum Caves, Vijayawada & Amaravati, and Heritage & Spiritual Centers</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <button id="audio-bell-btn" class="bg-amber-100/80 hover:bg-amber-200 text-amber-950 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5 transition-all border border-amber-300/80 shadow-2xs active:scale-95" title="Play Sacred Temple Bell & Harmonic Chime">
+          <span>🔔 Temple Bell Chime</span>
+        </button>
+        <a href="#itinerary-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🗓️ Itineraries</span>
+        </a>
+        <a href="#cuisine-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🍛 Cuisine</span>
+        </a>
+        <a href="#festivals-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎉 Festivals</span>
+        </a>
+        <a href="#checklist-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎒 Checklist</span>
+        </a>
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-950 px-3.5 py-1.5 rounded-xl font-bold transition-all border border-amber-300/80 flex items-center gap-1.5">
+          <span>⭐ Bookmarks</span>
+          <span id="saved-badge" class="bg-amber-800 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-b from-amber-950 via-orange-950 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 border-b border-amber-900">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-900/80 border border-amber-700 text-amber-200 text-xs font-semibold">
+          <span>✨ The Sunrise State of India</span>
+          <span>•</span>
+          <span>Sacred Peaks, Golden Shores & Ancient Dynasties</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight text-amber-300 leading-tight">
+          Sacred Temples, Eastern Ghats & Subterranean Wonders
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+          Ascend the seven sacred hills of Tirumala, explore Vizag's submarine museum and Blue Flag beaches, ride Vistadome trains through Araku's coffee highlands and Borra Caves, camp atop Gandikota's Grand Canyon, descend into Belum Caves, and marvel at Amaravati and Lepakshi's hanging pillar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full lg:w-auto text-center">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">6</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Circuits</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">19</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Key Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">974 km</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Coastline</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">2,300+</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Yrs Heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Controls & Search Toolbar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 z-20 w-full">
+    <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Search Input -->
+      <div class="relative w-full md:w-80">
+        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">🔍</span>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search Tirupati, Vizag, Gandikota, Lepakshi..." 
+          class="w-full pl-10 pr-24 py-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:border-transparent transition-all placeholder:text-slate-400"
+        />
+        <button id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-xs font-semibold text-slate-400 hover:text-slate-700">Clear</button>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="filter-tabs">
+        <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-amber-700 text-white shadow-xs transition-all flex-shrink-0">All 6 Circuits</button>
+        <button data-cat="Spiritual & Heritage" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Tirupati</button>
+        <button data-cat="Coastal & Marine" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Vizag</button>
+        <button data-cat="Geological & Nature" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Araku & Borra</button>
+        <button data-cat="Geological Marvels & Forts" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Gandikota & Belum</button>
+        <button data-cat="Heritage & River Cities" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Vijayawada & Amaravati</button>
+        <button data-cat="Supreme Heritage & Temples" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Supreme Temples</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1 space-y-10">
+
+    <!-- 1. Interactive Route Planner / Itinerary Feature -->
+    <div id="itinerary-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-lg">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-4 border-b border-slate-100">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Interactive Feature</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Travel Itinerary & Circuit Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended day-by-day routes across Andhra Pradesh:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-700 text-white shadow-xs transition-all">3 Days (Spiritual & Coast)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Heritage & Canyons)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Grand Andhra)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- 2. Dual Feature Row: Taste of Andhra + Festivals Calendar -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Feature A: Taste of Andhra -->
+      <div id="cuisine-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Gastronomy & Culture</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Andhra: GI Sweets, Gongura & Araku Delicacies</h4>
+            </div>
+            <span class="text-2xl">🍛</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Explore traditional culinary treasures, GI-tagged temple sweets, and tribal Eastern Ghats specialties:</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍽️ Tirupati Laddu (GI Tagged)</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                World-renowned sacred sweet prasadam prepared inside the ancient temple kitchen (Potu) using pure cow ghee, gram flour, sugar crystals, cashews, and cardamom.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍽️ Atreyapuram Pootharekulu (GI Tagged)</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Unique paper-thin wafer sweet crafted from rice batter rolled over earthen pots, delicately layered with jaggery or dry fruits and soaked in pure desi ghee.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍽️ Andhra Gongura Pachadi & Meals</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Tangy sorrel leaves cooked with fiery red chillies and garlic, blended into a rich pickle and mixed with steaming rice, mudda pappu, and ghee.
+              </p>
+            </div>
+            
+            <div class="bg-amber-50/60 p-3 rounded-xl border border-amber-200/70 hover:border-amber-400 transition-all">
+              <div class="flex items-center justify-between font-bold text-slate-900">
+                <span>🍽️ Araku Bamboo Chicken (Bongu Koli)</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Tender country chicken marinated in mountain spices, stuffed into wild green bamboo stalks, and slow-roasted over wood charcoal embers without oil or water.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-amber-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Dining Tip: Pair piping hot Andhra meals with Gongura Pachadi and pick up GI-tagged Atreyapuram Pootharekulu along the Godavari corridor!</p>
+      </div>
+
+      <!-- Feature B: Festivals & Cultural Calendar -->
+      <div id="festivals-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Culture & Festivities</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Sacred Festivals & Cultural Calendar</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Plan your travels alongside Andhra’s grandest spiritual celebrations and oceanfront festivals:</p>
+
+          <div class="space-y-2.5 text-xs">
+            
+            <div class="bg-orange-50/60 p-3 rounded-xl border border-orange-200/70 hover:border-orange-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🪔</span> Srivari Brahmotsavam (Tirumala)
+                </h5>
+                <span class="text-[10px] font-bold bg-orange-200/80 text-orange-950 px-2 py-0.5 rounded">September – October</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                The 9-day grand celestial festival at Tirumala, highlighted by the majestic Garuda Vahanam, Rathotsavam chariot procession, and golden palanquins.
+              </p>
+            </div>
+            
+            <div class="bg-orange-50/60 p-3 rounded-xl border border-orange-200/70 hover:border-orange-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🪔</span> Dasara Sharad Navratri & Teppotsavam
+                </h5>
+                <span class="text-[10px] font-bold bg-orange-200/80 text-orange-950 px-2 py-0.5 rounded">October • Vijayawada</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Ten days of devotion at Kanaka Durga Temple culminating on Vijayadashami, when deities glide across the Krishna River on the illuminated Swan Boat.
+              </p>
+            </div>
+            
+            <div class="bg-orange-50/60 p-3 rounded-xl border border-orange-200/70 hover:border-orange-400 transition-all">
+              <div class="flex items-center justify-between">
+                <h5 class="font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🪔</span> Mahashivaratri, Visakha & Lepakshi Utsavam
+                </h5>
+                <span class="text-[10px] font-bold bg-orange-200/80 text-orange-950 px-2 py-0.5 rounded">Dec – Mar • Statewide</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                Midnight abhishekams at Srisailam & Srikalahasti, beach carnivals along Vizag RK Beach, and classical Vijayanagara dance at Lepakshi.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+
+        <p class="text-[11px] text-amber-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">✨ Planning Advice: Pre-book Tirumala Special Entry Darshan slots weeks in advance during Brahmotsavam and Navratri!</p>
+      </div>
+
+    </div>
+
+    <!-- 3. Packing & Transit Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Packing & Temple Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Travel Essentials</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Andhra Pilgrimage & Canyon Checklist</h4>
+            </div>
+            <span class="text-2xl">🎒</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Interactive attire, TTD darshan, and regional travel readiness checklist:</p>
+
+          <div class="my-3 space-y-2 text-xs" id="checklist-items">
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="0" class="pack-checkbox rounded border-slate-300 text-amber-700 focus:ring-amber-600 w-4 h-4">
+              <span class="text-slate-700">Carry Government Photo ID (Aadhaar / Passport) for TTD Tirumala verification & hotels</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="1" class="pack-checkbox rounded border-slate-300 text-amber-700 focus:ring-amber-600 w-4 h-4">
+              <span class="text-slate-700">Pack traditional temple attire (Dhoti/Kurta or Saree/Chudidar) for Tirumala darshan</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="2" class="pack-checkbox rounded border-slate-300 text-amber-700 focus:ring-amber-600 w-4 h-4">
+              <span class="text-slate-700">Bring slip-on footwear for easy removal before stepping onto stone temple prakarams</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="3" class="pack-checkbox rounded border-slate-300 text-amber-700 focus:ring-amber-600 w-4 h-4">
+              <span class="text-slate-700">Pack breathable cotton clothing for warm coastal Visakhapatnam & Vijayawada days</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="4" class="pack-checkbox rounded border-slate-300 text-amber-700 focus:ring-amber-600 w-4 h-4">
+              <span class="text-slate-700">Carry light warm layers for chilly Araku Valley & Srisailam winter nights</span>
+            </label>
+            
+            <label class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-50 border border-slate-100 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <input type="checkbox" data-index="5" class="pack-checkbox rounded border-slate-300 text-amber-700 focus:ring-amber-600 w-4 h-4">
+              <span class="text-slate-700">Pre-book Tirumala Darshan tickets online via ttdevasthanams.ap.gov.in</span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-slate-100 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-slate-500">Progress:</span>
+            <span id="pack-progress-text" class="font-bold text-amber-800">0/6 Completed</span>
+          </div>
+          <button id="reset-checklist-btn" class="text-[11px] text-amber-800 hover:underline font-bold">Reset</button>
+        </div>
+      </div>
+
+      <!-- Regional Highway Transit Matrix -->
+      <div class="bg-white rounded-2xl border border-amber-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Transit Logistics</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Regional Highway & Rail Transit Matrix</h4>
+            </div>
+            <span class="text-2xl">🚗</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2 mb-3">Key highway and Vistadome corridors connecting Tirupati, Vizag, Araku, Gandikota, and Amaravati:</p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold">
+                  <th class="py-2 px-3">Route / Corridor</th>
+                  <th class="py-2 px-2 text-center">Distance</th>
+                  <th class="py-2 px-2 text-center">Travel Time</th>
+                  <th class="py-2 px-3">Recommended Access</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                
+                <tr class="hover:bg-amber-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Tirupati → Srikalahasti</td>
+                  <td class="py-2 px-2 text-center font-mono">36 km</td>
+                  <td class="py-2 px-2 text-center text-amber-900 font-medium">~45 mins</td>
+                  <td class="py-2 px-3 text-[11px]">NH-71 Temple Corridor</td>
+                </tr>
+                
+                <tr class="hover:bg-amber-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Visakhapatnam → Araku Valley</td>
+                  <td class="py-2 px-2 text-center font-mono">115 km</td>
+                  <td class="py-2 px-2 text-center text-amber-900 font-medium">~3.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Eastern Ghats Ghat Road / Vistadome Train</td>
+                </tr>
+                
+                <tr class="hover:bg-amber-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Gandikota → Belum Caves</td>
+                  <td class="py-2 px-2 text-center font-mono">60 km</td>
+                  <td class="py-2 px-2 text-center text-amber-900 font-medium">~1.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Rayalaseema State Highway</td>
+                </tr>
+                
+                <tr class="hover:bg-amber-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Vijayawada → Amaravati</td>
+                  <td class="py-2 px-2 text-center font-mono">35 km</td>
+                  <td class="py-2 px-2 text-center text-amber-900 font-medium">~45 mins</td>
+                  <td class="py-2 px-3 text-[11px]">Krishna Riverbank Road</td>
+                </tr>
+                
+                <tr class="hover:bg-amber-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Bengaluru → Lepakshi</td>
+                  <td class="py-2 px-2 text-center font-mono">120 km</td>
+                  <td class="py-2 px-2 text-center text-amber-900 font-medium">~2.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH-44 Highway</td>
+                </tr>
+                
+                <tr class="hover:bg-amber-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Hyderabad → Srisailam</td>
+                  <td class="py-2 px-2 text-center font-mono">215 km</td>
+                  <td class="py-2 px-2 text-center text-amber-900 font-medium">~4.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Nallamala Forest Highway</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="text-[11px] text-amber-900/80 mt-3 pt-2 border-t border-slate-100 font-medium">💡 Transit Tip: Book the glass-roofed Vistadome coach from Visakhapatnam to Araku Valley early—it crosses 58 tunnels and 84 bridges.</p>
+      </div>
+
+    </div>
+
+    <!-- Active Filter Status Bar -->
+    <div class="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-200">
+      <div class="flex items-center gap-2">
+        <span>Showing:</span>
+        <span id="visible-clusters-count" class="font-bold text-slate-900">6</span> Circuits
+        <span>•</span>
+        <span id="visible-sites-count" class="font-bold text-amber-800">19</span> Key Sites
+        <span id="active-filter-label" class="font-medium text-amber-900 ml-1"></span>
+      </div>
+      <div>
+        <span class="text-slate-400">All coordinates verified with official Google Maps</span>
+      </div>
+    </div>
+
+    <!-- Clusters Container (Cards Injected Here) -->
+    <div id="clusters-container" class="space-y-12">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Empty State (When no search matches) -->
+    <div id="empty-state" class="hidden bg-white rounded-3xl border border-slate-200 p-12 text-center max-w-md mx-auto my-12 shadow-sm">
+      <div class="text-4xl mb-3">🔍</div>
+      <h4 class="text-base font-bold text-slate-800 font-heritage">No matching destinations found</h4>
+      <p class="text-xs text-slate-500 mt-1">Try searching for "Hanging Pillar", "Gandikota", "Borra", "Kursura", or "Tirupati".</p>
+      <button id="empty-reset-btn" class="mt-4 px-4 py-2 bg-amber-700 hover:bg-amber-800 text-white rounded-xl text-xs font-bold transition-all shadow-xs">Reset All Filters</button>
+    </div>
+
+  </main>
+
+  <!-- Detailed Reading Modal -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div id="modal-container" class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+      
+      <!-- Modal Header -->
+      <div class="bg-gradient-to-r from-amber-950 via-orange-950 to-slate-900 text-white p-5 flex items-start justify-between gap-4">
+        <div>
+          <span id="modal-category" class="text-[11px] font-bold text-amber-300 uppercase tracking-wider bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Category</span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-black font-heritage text-white mt-1.5">Cluster Title</h3>
+          <p id="modal-tagline" class="text-xs text-slate-300 mt-0.5">Tagline and description</p>
+        </div>
+        <button id="modal-close-x" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-200 hover:text-white transition-colors text-lg" title="Close Modal">✕</button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div id="modal-body" class="p-6 overflow-y-auto space-y-6 text-sm text-slate-700 divide-y divide-slate-100">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-slate-50 border-t border-slate-200 px-6 py-3.5 flex items-center justify-between text-xs">
+        <span class="text-slate-500 font-medium">📍 Verified with Google Maps & Live GPS</span>
+        <div class="flex items-center gap-2">
+          <button id="modal-copy-all-btn" class="px-3.5 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-xl font-bold transition-colors flex items-center gap-1.5">
+            <span>📋 Copy Travel Notes</span>
+          </button>
+          <button id="modal-close-action" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl font-semibold transition-colors">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white text-xs sm:text-sm px-4 py-3 rounded-2xl shadow-xl border border-slate-700 flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Notification message</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-heritage font-bold">Andhra Pradesh Explorer</span>
+        <span>•</span>
+        <span>Dedicated to Sacred Heritage, Coastal Conservation & Geological Wonders</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Curated with 🔱 Andhra Pradesh Pride</span>
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    // Tourism Data
+    const AP_DATA = [{"id": "tirupati", "title": "Tirupati & Chandragiri", "tagline": "Spiritual Capital of Andhra & Last Imperial Bastion of Vijayanagara", "category": "Spiritual & Heritage", "tags": ["Pilgrimage", "Forts", "Ancient Architecture", "Chola & Vijayanagara"], "bestTime": "September to February (18°C – 28°C)", "duration": "2 to 3 Days", "overview": "Tirupati is world-renowned as home to the sacred Venkateswara Swamy Temple atop the seven sacred peaks of Tirumala hills, complemented by the historical royal stronghold of Chandragiri Fort, the final imperial seat of the Vijayanagara Empire.", "places": [{"name": "Sri Venkateswara Swamy Temple (Tirumala)", "type": "Sacred Temple Complex", "detailedInfo": "Perched on Venkatadri, the seventh hill of the Seshachalam range (853 meters above sea level). The presiding deity is Lord Venkateswara (Balaji/Srinivasa), an avatar of Lord Vishnu who manifested to save mankind from the trials of Kali Yuga. The temple complex features a magnificent golden dome (Ananda Nilayam) over the inner sanctum, the sacred Swami Pushkarini holy water tank, massive stepped gopurams, and the Padmavati and Ranganatha shrines within the inner prakarams.", "historicalImportance": "Celebrated in ancient Sangam Tamil literature (as Vengadam) and sacred Puranas. Consecrated by successive dynasties over a millennium: Pallava Queen Samavai donated the silver deity Manavalaperumal in 966 CE; the Cholas, Pandyas, and Hoysalas added vast endowments. Vijayanagara Emperor Krishnadevaraya visited 7 times between 1513 and 1521 CE, gilding the Ananda Nilayam with pure gold and donating bejeweled crowns. The temple survived medieval northern invasions due to its fortified natural hill terrain.", "keyFacts": ["World's most visited religious pilgrimage site, welcoming 60,000 to 100,000 pilgrims daily (over 500,000 during Brahmotsavam).", "The swayambhu (self-manifested) granite deity stands over 8 feet tall and maintains an unexplained natural body temperature of 110°F.", "The world-famous 'Tirupati Laddu' prasadam holds a prestigious Geographical Indication (GI) tag.", "Annual revenue generated through voluntary pilgrim hundi offerings exceeds ₹1,400 crore ($170M+ USD)."], "bestTimeToVisit": "September to February when the mountain air is pleasantly cool. The 9-day annual Srivari Brahmotsavam (September/October) is the most grand and spiritually charged time to visit, though crowds are massive.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sri+Venkateswara+Swamy+Temple+Tirumala+Tirupati+Andhra+Pradesh", "coords": "13.6833° N, 79.3472° E", "locationName": "Tirumala Hills, Tirupati District", "history": "Celebrated in ancient Sangam Tamil literature (as Vengadam) and sacred Puranas. Consecrated by successive dynasties over a millennium: Pallava Queen Samavai donated the silver deity Manavalaperumal in 966 CE; the Cholas, Pandyas, and Hoysalas added vast endowments. Vijayanagara Emperor Krishnadevaraya visited 7 times between 1513 and 1521 CE, gilding the Ananda Nilayam with pure gold and donating bejeweled crowns. The temple survived medieval northern invasions due to its fortified natural hill terrain.", "detail": "Perched on Venkatadri, the seventh hill of the Seshachalam range (853 meters above sea level). The presiding deity is Lord Venkateswara (Balaji/Srinivasa), an avatar of Lord Vishnu who manifested to save mankind from the trials of Kali Yuga. The temple complex features a magnificent golden dome (Ananda Nilayam) over the inner sanctum, the sacred Swami Pushkarini holy water tank, massive stepped gopurams, and the Padmavati and Ranganatha shrines within the inner prakarams.", "bestTime": "September to February when the mountain air is pleasantly cool. The 9-day annual Srivari Brahmotsavam (September/October) is the most grand and spiritually charged time to visit, though crowds are massive.", "insiderTip": "Located at Tirumala Hills, Tirupati District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Chandragiri Fort & Palaces", "type": "Historical Hill Citadel", "detailedInfo": "A formidable 11th-century granite fort situated 14 km southwest of Tirupati. Encloses the three-storied Raja Mahal and two-storied Rani Mahal built in classical Indo-Saracenic style, surrounded by massive granite ramparts, a perimeter moat, and ancient pillared temples.", "historicalImportance": "Built by the Yadava Naidus in the 11th century and later fortified by the Vijayanagara rulers. After the catastrophic defeat and destruction of Hampi at the Battle of Talikota in 1565 CE, King Tirumala Deva Raya shifted the imperial capital to Chandragiri. In 1639 CE, King Damarla Venkatadri Nayaka signed the historic land deed here granting British officer Francis Day the coastal territory to construct Fort St. George (founding modern Chennai).", "keyFacts": ["The Raja Mahal palace was ingeniously constructed using stone, brick, and lime mortar, without using a single timber beam in its load-bearing vaults.", "Served as the headquarters where the legendary Vijayanagara royal lineage held power until captured by the Golconda Sultanate in 1646.", "Features an archaeological museum displaying Chola and Vijayanagara bronze sculptures, weapons, and coins."], "bestTimeToVisit": "October to March. Open daily 9:00 AM – 5:00 PM (except Fridays). Don't miss the evening Light and Sound show narrating the glory of the Vijayanagara Empire.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Chandragiri+Fort+Tirupati+Andhra+Pradesh", "coords": "13.5833° N, 79.3167° E", "locationName": "Chandragiri, Tirupati District", "history": "Built by the Yadava Naidus in the 11th century and later fortified by the Vijayanagara rulers. After the catastrophic defeat and destruction of Hampi at the Battle of Talikota in 1565 CE, King Tirumala Deva Raya shifted the imperial capital to Chandragiri. In 1639 CE, King Damarla Venkatadri Nayaka signed the historic land deed here granting British officer Francis Day the coastal territory to construct Fort St. George (founding modern Chennai).", "detail": "A formidable 11th-century granite fort situated 14 km southwest of Tirupati. Encloses the three-storied Raja Mahal and two-storied Rani Mahal built in classical Indo-Saracenic style, surrounded by massive granite ramparts, a perimeter moat, and ancient pillared temples.", "bestTime": "October to March. Open daily 9:00 AM – 5:00 PM (except Fridays). Don't miss the evening Light and Sound show narrating the glory of the Vijayanagara Empire.", "insiderTip": "Located at Chandragiri, Tirupati District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "vizag", "title": "Visakhapatnam (Vizag)", "tagline": "The City of Destiny — Coastal Beauty, Naval Heritage & Pristine Beaches", "category": "Coastal & Marine", "tags": ["Beaches", "Naval History", "Hilltops", "Maritime Trade"], "bestTime": "October to March (18°C – 30°C)", "duration": "3 to 4 Days", "overview": "Nestled between the Eastern Ghats and the Bay of Bengal, Vizag is Andhra Pradesh's premier port city, celebrated for golden sandy shores, South Asia's first submarine museum, and scenic coastal mountains.", "places": [{"name": "RK Beach (Ramakrishna Beach)", "type": "Urban Coastal Promenade", "detailedInfo": "The primary beachfront along Beach Road, featuring expansive pedestrian walking paths, war memorials (Victory at Sea), beach parks, seafood shacks, and direct access to maritime museums.", "historicalImportance": "Site of naval actions during the 1971 Indo-Pakistani War. The 'Victory at Sea' memorial opposite the beach honors the naval martyrs of the 1971 war where the Indian Navy destroyed the Pakistani submarine PNS Ghazi off this exact coast.", "keyFacts": ["Houses South Asia's only coastal naval aviation and submarine museum cluster along a single road.", "Famous for coastal sunsets, local Andhra street food (Muri Mixture), and cultural events at the open-air auditorium."], "bestTimeToVisit": "October to March during late afternoons and evenings when refreshing sea breezes temper the humidity.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ramakrishna+Beach+RK+Beach+Visakhapatnam+Andhra+Pradesh", "coords": "17.7126° N, 83.3197° E", "locationName": "Beach Road, Visakhapatnam", "history": "Site of naval actions during the 1971 Indo-Pakistani War. The 'Victory at Sea' memorial opposite the beach honors the naval martyrs of the 1971 war where the Indian Navy destroyed the Pakistani submarine PNS Ghazi off this exact coast.", "detail": "The primary beachfront along Beach Road, featuring expansive pedestrian walking paths, war memorials (Victory at Sea), beach parks, seafood shacks, and direct access to maritime museums.", "bestTime": "October to March during late afternoons and evenings when refreshing sea breezes temper the humidity.", "insiderTip": "Located at Beach Road, Visakhapatnam — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Rushikonda Beach", "type": "Blue Flag Certified Eco-Beach", "detailedInfo": "Located 8 km north of the city center, Rushikonda is a sweeping crescent-shaped bay known for golden sand, rocky promontories, and water sports (surfing, jet skiing, parasailing, and speed boating).", "historicalImportance": "A historical landing point for seafaring fishermen for centuries, developed into Andhra's premier eco-tourism destination under international Blue Flag sustainability standards.", "keyFacts": ["Awarded the prestigious international 'Blue Flag' certification for meeting stringent eco-environmental, safety, and cleanliness standards.", "Natural bay structure provides safe, gentle swimming waves compared to the steep continental shelf of RK Beach."], "bestTimeToVisit": "November to February. Early mornings are perfect for sea walks, surfing lessons, and uncrowded beach views.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rushikonda+Beach+Visakhapatnam+Andhra+Pradesh", "coords": "17.7820° N, 83.3853° E", "locationName": "Rushikonda, Visakhapatnam", "history": "A historical landing point for seafaring fishermen for centuries, developed into Andhra's premier eco-tourism destination under international Blue Flag sustainability standards.", "detail": "Located 8 km north of the city center, Rushikonda is a sweeping crescent-shaped bay known for golden sand, rocky promontories, and water sports (surfing, jet skiing, parasailing, and speed boating).", "bestTime": "November to February. Early mornings are perfect for sea walks, surfing lessons, and uncrowded beach views.", "insiderTip": "Located at Rushikonda, Visakhapatnam — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "INS Kursura Submarine Museum", "type": "Maritime Combat Museum", "detailedInfo": "A decommissioned Soviet-built Kalvari-class diesel-electric submarine (S20) hauled out of the sea and mounted on concrete pedestals on RK Beach sands, allowing visitors to walk through torpedo rooms, control cabins, and crew bunks.", "historicalImportance": "Commissioned on 18 December 1969 into the Indian Navy, Kursura played a crucial reconnaissance and maritime patrol role during the 1971 Indo-Pak War. After 31 years of frontline service and 73,500 nautical miles, it was preserved as a public monument in 2001.", "keyFacts": ["South Asia's first submarine museum and the fifth of its kind in the entire world.", "Guided tours are conducted by retired naval submariners, detailing the claustrophobic underwater lives of 75 crew members."], "bestTimeToVisit": "October to March. Open Tuesday to Sunday 2:00 PM – 8:30 PM (Sundays open from 10:00 AM; closed Mondays).", "mapUrl": "https://www.google.com/maps/search/?api=1&query=INS+Kursura+Submarine+Museum+Visakhapatnam+Andhra+Pradesh", "coords": "17.7169° N, 83.3323° E", "locationName": "RK Beach Road, Visakhapatnam", "history": "Commissioned on 18 December 1969 into the Indian Navy, Kursura played a crucial reconnaissance and maritime patrol role during the 1971 Indo-Pak War. After 31 years of frontline service and 73,500 nautical miles, it was preserved as a public monument in 2001.", "detail": "A decommissioned Soviet-built Kalvari-class diesel-electric submarine (S20) hauled out of the sea and mounted on concrete pedestals on RK Beach sands, allowing visitors to walk through torpedo rooms, control cabins, and crew bunks.", "bestTime": "October to March. Open Tuesday to Sunday 2:00 PM – 8:30 PM (Sundays open from 10:00 AM; closed Mondays).", "insiderTip": "Located at RK Beach Road, Visakhapatnam — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Kailasagiri", "type": "Hilltop Scenic Park", "detailedInfo": "Perched 360 feet above sea level on a scenic hill plateau, Kailasagiri offers panoramic 360-degree views of the Bay of Bengal and Vizag city. Features massive 40-foot tall white marble statues of Lord Shiva and Parvati, a circular toy train, floral clock, and a passenger ropeway cable car.", "historicalImportance": "Developed by the Visakhapatnam Urban Development Authority (VUDA) as an eco-scenic monument, winning the 'Best Tourist Spot' award from the Andhra Pradesh government.", "keyFacts": ["The illuminated Shiva-Parvati statue is visible from distant ships approaching the port at night.", "A 375-meter cable car ropeway provides aerial views over the forested slopes directly into the azure coastline."], "bestTimeToVisit": "October to March, specifically during late afternoons (4:00 PM – 7:00 PM) for sunset viewpoints and night city illuminations.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kailasagiri+Visakhapatnam+Andhra+Pradesh", "coords": "17.7492° N, 83.3422° E", "locationName": "Hill Crest, Visakhapatnam", "history": "Developed by the Visakhapatnam Urban Development Authority (VUDA) as an eco-scenic monument, winning the 'Best Tourist Spot' award from the Andhra Pradesh government.", "detail": "Perched 360 feet above sea level on a scenic hill plateau, Kailasagiri offers panoramic 360-degree views of the Bay of Bengal and Vizag city. Features massive 40-foot tall white marble statues of Lord Shiva and Parvati, a circular toy train, floral clock, and a passenger ropeway cable car.", "bestTime": "October to March, specifically during late afternoons (4:00 PM – 7:00 PM) for sunset viewpoints and night city illuminations.", "insiderTip": "Located at Hill Crest, Visakhapatnam — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Yarada Beach & Dolphin's Nose", "detailedInfo": "A secluded paradise tucked behind Dolphin’s Nose lighthouse hill, bordered on three sides by lush green cliffs and on the fourth by deep blue waters. Dolphin’s Nose is an imposing 358-meter rock promontory resembling a dolphin.", "historicalImportance": "Site of the Battle of Vizagapatam in 1804 between French and British naval fleets during the Napoleonic Wars. The British constructed the commanding Dolphin's Nose lighthouse to guide commercial spice and mineral ships into the natural harbour.", "keyFacts": ["The lighthouse beam at Dolphin’s Nose projects an intense flashing light visible up to 65 km into the Bay of Bengal.", "Yarada Beach features soft golden sands and emerald banana and coconut plantations framing the ocean cove."], "type": "Secluded Coastal Cove", "bestTimeToVisit": "November to February. Visit during the morning to climb the lighthouse hill and enjoy calm, private beach relaxation.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Yarada+Beach+Visakhapatnam+Andhra+Pradesh", "coords": "17.6534° N, 83.2703° E", "locationName": "Yarada, Visakhapatnam", "history": "Site of the Battle of Vizagapatam in 1804 between French and British naval fleets during the Napoleonic Wars. The British constructed the commanding Dolphin's Nose lighthouse to guide commercial spice and mineral ships into the natural harbour.", "detail": "A secluded paradise tucked behind Dolphin’s Nose lighthouse hill, bordered on three sides by lush green cliffs and on the fourth by deep blue waters. Dolphin’s Nose is an imposing 358-meter rock promontory resembling a dolphin.", "bestTime": "November to February. Visit during the morning to climb the lighthouse hill and enjoy calm, private beach relaxation.", "insiderTip": "Located at Yarada, Visakhapatnam — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "araku-borra", "title": "Araku Valley & Borra Caves", "tagline": "Prehistoric Speleothems, Mist-Covered Eastern Ghats & Tribal Culture", "category": "Geological & Nature", "tags": ["Prehistoric Caves", "Hill Station", "Waterfalls", "Coffee Estates"], "bestTime": "October to March (Winter chills 8°C – 18°C)", "duration": "2 to 3 Days", "overview": "Set high in the Ananthagiri hill ranges of the Eastern Ghats at 900–1,400 meters, this highland paradise combines one of the deepest cave networks in India with organic coffee plantations, thunderous waterfalls, and indigenous tribal heritage.", "places": [{"name": "Borra Caves", "type": "Million-Year-Old Karstic Cave System", "detailedInfo": "Located in the Ananthagiri hills, Borra Caves are naturally sculpted karstic limestone caves reaching depths of 80 meters. Formed by the subterranean Gosthani River flowing through limestone deposits, they feature extraordinary stalactites and stalagmites shaped into Shiva Lingams, cows (Kamadhenu), rishis, and human figures, illuminated by multi-colored eco-friendly lighting.", "historicalImportance": "Discovered scientifically in 1807 by British geologist William King. Anthropological excavations by Andhra University uncovered Middle Paleolithic stone tools dating between 30,000 and 50,000 years old, confirming prehistoric human habitation during the Ice Age. Revered as sacred by local Jatapu, Porja, and Kondh tribes.", "keyFacts": ["Among the largest and deepest caves in India, extending over a 1-square-kilometer cavernous network.", "A naturally formed limestone Shiva Lingam deep inside the cavern is worshipped during Mahashivaratri by thousands of forest tribes.", "The Gosthani River originates inside the cave complex before plunging into the plains towards the Bay of Bengal."], "bestTimeToVisit": "November to February when interior humidity is lowest and temperatures outside are crisp and cool.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Borra+Caves+Ananthagiri+Andhra+Pradesh", "coords": "18.2808° N, 83.0394° E", "locationName": "Ananthagiri Hills, Alluri Sitharama Raju District", "history": "Discovered scientifically in 1807 by British geologist William King. Anthropological excavations by Andhra University uncovered Middle Paleolithic stone tools dating between 30,000 and 50,000 years old, confirming prehistoric human habitation during the Ice Age. Revered as sacred by local Jatapu, Porja, and Kondh tribes.", "detail": "Located in the Ananthagiri hills, Borra Caves are naturally sculpted karstic limestone caves reaching depths of 80 meters. Formed by the subterranean Gosthani River flowing through limestone deposits, they feature extraordinary stalactites and stalagmites shaped into Shiva Lingams, cows (Kamadhenu), rishis, and human figures, illuminated by multi-colored eco-friendly lighting.", "bestTime": "November to February when interior humidity is lowest and temperatures outside are crisp and cool.", "insiderTip": "Located at Ananthagiri Hills, Alluri Sitharama Raju District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Araku Valley Coffee Plantations", "type": "Organic Coffee Highlands", "detailedInfo": "Undulating green plateaus carpeted with shade-grown Arabica coffee trees, pepper vines, and silver oaks. Includes the Araku Tribal Museum, Coffee Museum, Padmapuram Botanical Gardens with tree-top cottages, and Chaparai water cascades.", "historicalImportance": "Coffee was first planted in 1898 by British civil servant N.S. Brodie in the Pamuleru Valley. In the 2000s, the Naandi Foundation empowered over 100,000 indigenous Adivasi farmers to cultivate 100% organic, biodynamic specialty coffee, which won the prestigious gold medal for best coffee pod at the 2018 Prix Epicures in Paris.", "keyFacts": ["Known for the unique GI-tagged 'Araku Valley Arabica' coffee, renowned globally for floral aroma and chocolate-caramel tasting notes.", "Home to 19 distinct indigenous tribes celebrated for the vibrant Dhimsa folk dance, performed to traditional moru and thadappi drums.", "The journey from Vizag to Araku on the Vistadome train crosses 58 mountain tunnels, 84 bridges, and deep river ravines."], "bestTimeToVisit": "October to March. In December and January, temperatures can drop to 8°C, and morning mist envelops the plantations during the coffee harvesting season.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Araku+Valley+Visakhapatnam+Andhra+Pradesh", "coords": "18.3273° N, 82.8775° E", "locationName": "Araku Valley, Eastern Ghats", "history": "Coffee was first planted in 1898 by British civil servant N.S. Brodie in the Pamuleru Valley. In the 2000s, the Naandi Foundation empowered over 100,000 indigenous Adivasi farmers to cultivate 100% organic, biodynamic specialty coffee, which won the prestigious gold medal for best coffee pod at the 2018 Prix Epicures in Paris.", "detail": "Undulating green plateaus carpeted with shade-grown Arabica coffee trees, pepper vines, and silver oaks. Includes the Araku Tribal Museum, Coffee Museum, Padmapuram Botanical Gardens with tree-top cottages, and Chaparai water cascades.", "bestTime": "October to March. In December and January, temperatures can drop to 8°C, and morning mist envelops the plantations during the coffee harvesting season.", "insiderTip": "Located at Araku Valley, Eastern Ghats — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Katiki Waterfalls", "type": "Natural Forest Cascade", "detailedInfo": "A dramatic 50-foot natural waterfall originating from the Gosthani River, located 4 km from Borra Caves. Accessible via rugged 4x4 open-top jeep safaris through mountain streams, followed by an exhilarating 20-minute hike through dense bamboo groves.", "historicalImportance": "A pristine ecological water source sacred to the local tribal settlements who have preserved the watershed for generations without commercial deforestation.", "keyFacts": ["Named after the mythological character Kaitiki, the falls cascade down steep rock faces into a crystal-clear plunge pool suitable for wading.", "Local tribal vendors along the trail cook famous bamboo chicken (*Bongu Koli*), cooked without oil inside green bamboo shoots over open charcoal."], "bestTimeToVisit": "August to December when the water cascade is at its thunderous post-monsoon peak.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Katiki+Waterfalls+Borra+Caves+Andhra+Pradesh", "coords": "18.2934° N, 83.0117° E", "locationName": "Near Borra Caves, Ananthagiri", "history": "A pristine ecological water source sacred to the local tribal settlements who have preserved the watershed for generations without commercial deforestation.", "detail": "A dramatic 50-foot natural waterfall originating from the Gosthani River, located 4 km from Borra Caves. Accessible via rugged 4x4 open-top jeep safaris through mountain streams, followed by an exhilarating 20-minute hike through dense bamboo groves.", "bestTime": "August to December when the water cascade is at its thunderous post-monsoon peak.", "insiderTip": "Located at Near Borra Caves, Ananthagiri — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "gandikota-belum", "title": "Gandikota & Belum Caves", "tagline": "The Grand Canyon of India & Subterranean Limestone Labyrinths", "category": "Geological Marvels & Forts", "tags": ["Grand Canyon", "Subterranean Caves", "Red Sandstone", "Nayaka Dynasty"], "bestTime": "November to February (Mild winter avoids 42°C+ summer heat)", "duration": "2 Days", "overview": "Located in the rugged Rayalaseema heartland, this circuit showcases Gandikota’s breathtaking 300-foot red sandstone canyon carved by the Penna River alongside Belum Caves, India's second-largest subterranean cave system.", "places": [{"name": "Gandikota (The Grand Canyon of India)", "type": "Gorge Canyon & Medieval Citadel", "detailedInfo": "A spectacular natural gorge carved through the Erramala hills by the Penna River, forming layered red granite and sandstone cliffs rising over 300 feet above the turquoise riverbed. Crowning the gorge is the massive Gandikota Fort, enclosing the 100-pillared Madhavaraya Swamy Temple, Raghunatha Swamy Temple, the 17th-century Jamia Masjid with two towering minarets, a large granary, and royal pigeon tower.", "historicalImportance": "Fort founded in 1123 CE by Kapa Raja of the Western Chalukya sphere. Rebuilt and vastly expanded under the Kakatiyas and the Pemmasani Nayaks (who ruled for 282 years as valiant commanders under Emperor Krishnadevaraya). In the 1650s, French diamond merchant Jean-Baptiste Tavernier visited Gandikota, describing it as an impregnable fortress rivaling European citadels. Captured in 1652 by Mir Jumla for the Qutb Shahi Sultanate of Golconda.", "keyFacts": ["The name originates from the Telugu words 'Gandi' (gorge/canyon) and 'Kota' (fort).", "The Madhavaraya Temple features an imposing 4-story gopuram adorned with intricate carvings of dancing apsaras and Dashavatara avatars.", "Considered India's top cliffside camping destination, offering starry night skies and dramatic sunrise views over the Penna gorge."], "bestTimeToVisit": "November to February. Sunrise (6:00 AM) and sunset (5:30 PM) at the canyon viewpoint provide ethereal golden light reflections on the red canyon walls.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gandikota+Fort+Grand+Canyon+Andhra+Pradesh", "coords": "14.8142° N, 78.2861° E", "locationName": "Gandikota, YSR Kadapa District", "history": "Fort founded in 1123 CE by Kapa Raja of the Western Chalukya sphere. Rebuilt and vastly expanded under the Kakatiyas and the Pemmasani Nayaks (who ruled for 282 years as valiant commanders under Emperor Krishnadevaraya). In the 1650s, French diamond merchant Jean-Baptiste Tavernier visited Gandikota, describing it as an impregnable fortress rivaling European citadels. Captured in 1652 by Mir Jumla for the Qutb Shahi Sultanate of Golconda.", "detail": "A spectacular natural gorge carved through the Erramala hills by the Penna River, forming layered red granite and sandstone cliffs rising over 300 feet above the turquoise riverbed. Crowning the gorge is the massive Gandikota Fort, enclosing the 100-pillared Madhavaraya Swamy Temple, Raghunatha Swamy Temple, the 17th-century Jamia Masjid with two towering minarets, a large granary, and royal pigeon tower.", "bestTime": "November to February. Sunrise (6:00 AM) and sunset (5:30 PM) at the canyon viewpoint provide ethereal golden light reflections on the red canyon walls.", "insiderTip": "Located at Gandikota, YSR Kadapa District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Belum Caves", "type": "Subterranean Underground Caverns", "detailedInfo": "The second-largest and longest cave network open to tourists in the Indian subcontinent. Extending for 3,229 meters (with 1.5 km open to the public), the caves feature vast caverns, narrow sinkhole shafts, stalactite/stalagmite formations, and musical limestone columns reaching depths of 150 feet below ground level.", "historicalImportance": "Artifacts dating back to 4500 BCE confirm prehistoric settlements. Buddhist and Jain monks meditated in these subterranean chambers from the 3rd century BCE to the 5th century CE. Scientifically documented in 1884 by British archaeologist Robert Bruce Foote, and comprehensively mapped between 1982 and 1984 by German speleologist Herbert Daniel Gebauer.", "keyFacts": ["Deepest point is 'Pataalaganga' (151 feet / 46 meters below the surface), where a mysterious perennial underground stream flows silently across smooth black limestone.", "Features unique formations including the 'Banyan Tree' stalactite hall, 'Meditation Den', and 'Musical Saptaswarala Guha' where stone pillars emit acoustic musical notes when tapped.", "A massive 40-foot white Buddha statue welcomes visitors outside on the hillock, commemorating the cave's Buddhist monastic heritage."], "bestTimeToVisit": "October to March. Open daily 10:00 AM – 5:00 PM. AP Tourism provides high-volume oxygen ventilation blowers and illuminated pathways throughout the tourist sections.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Belum+Caves+Kolimigundla+Kurnool+Andhra+Pradesh", "coords": "15.1025° N, 78.1114° E", "locationName": "Kolimigundla, Nandyal District", "history": "Artifacts dating back to 4500 BCE confirm prehistoric settlements. Buddhist and Jain monks meditated in these subterranean chambers from the 3rd century BCE to the 5th century CE. Scientifically documented in 1884 by British archaeologist Robert Bruce Foote, and comprehensively mapped between 1982 and 1984 by German speleologist Herbert Daniel Gebauer.", "detail": "The second-largest and longest cave network open to tourists in the Indian subcontinent. Extending for 3,229 meters (with 1.5 km open to the public), the caves feature vast caverns, narrow sinkhole shafts, stalactite/stalagmite formations, and musical limestone columns reaching depths of 150 feet below ground level.", "bestTime": "October to March. Open daily 10:00 AM – 5:00 PM. AP Tourism provides high-volume oxygen ventilation blowers and illuminated pathways throughout the tourist sections.", "insiderTip": "Located at Kolimigundla, Nandyal District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "vijayawada-amaravati", "title": "Vijayawada & Amaravati", "tagline": "Ancient Satavahana Imperial Capital, Sacred Indrakeeladri & Buddhist Stupas", "category": "Heritage & River Cities", "tags": ["Buddhist Art", "Rock-cut Caves", "River Krishna", "Satavahana Empire"], "bestTime": "October to March (18°C – 28°C)", "duration": "2 to 3 Days", "overview": "Flanking the sacred Krishna River, Vijayawada and Amaravati blend living Hindu Shakta traditions at Kanaka Durga Temple, 7th-century rock-cut monolithic caves at Undavalli, and the ancient Buddhist capital of the Satavahana Empire.", "places": [{"name": "Kanaka Durga Temple (Indrakeeladri)", "type": "Sacred Shakta Peetham", "detailedInfo": "Perched dramatically on the crest of Indrakeeladri Hill overlooking the rushing waters of the Krishna River and Prakasam Barrage. The presiding goddess is Kanaka Durga (Swayambhu), depicted as the eight-armed Mahishasuramardini piercing the demon Mahishasura with her golden trident.", "historicalImportance": "According to the Mahabharata, Arjuna performed severe penance on Indrakeeladri Hill to please Lord Shiva, who appeared as a hunter (Kirata) and granted him the celestial Pasupatastra weapon. Inscriptions from the 9th to 12th centuries record royal visits and renovations by Western Chalukya King Tribhuvanamalla Vikramaditya VI and the Kakatiya monarchs.", "keyFacts": ["One of the most powerful and visited Shakti temples in South India, drawing over 1.5 million pilgrims during the 10-day Dasara Sharad Navratri festival.", "On Vijayadashami, the divine murtis of Durga and Malleswara are carried on the illuminated Hamsa Vahanam (Swan Boat) across the Krishna River for the spectacular Teppotsavam."], "bestTimeToVisit": "October to March. Visit early morning (5:00 AM – 8:00 AM) or sunset to enjoy the temple ghats and panoramic river views.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kanaka+Durga+Temple+Indrakeeladri+Vijayawada+Andhra+Pradesh", "coords": "16.5160° N, 80.6094° E", "locationName": "Indrakeeladri Hill, Vijayawada", "history": "According to the Mahabharata, Arjuna performed severe penance on Indrakeeladri Hill to please Lord Shiva, who appeared as a hunter (Kirata) and granted him the celestial Pasupatastra weapon. Inscriptions from the 9th to 12th centuries record royal visits and renovations by Western Chalukya King Tribhuvanamalla Vikramaditya VI and the Kakatiya monarchs.", "detail": "Perched dramatically on the crest of Indrakeeladri Hill overlooking the rushing waters of the Krishna River and Prakasam Barrage. The presiding goddess is Kanaka Durga (Swayambhu), depicted as the eight-armed Mahishasuramardini piercing the demon Mahishasura with her golden trident.", "bestTime": "October to March. Visit early morning (5:00 AM – 8:00 AM) or sunset to enjoy the temple ghats and panoramic river views.", "insiderTip": "Located at Indrakeeladri Hill, Vijayawada — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Undavalli Caves", "type": "Monolithic Rock-Cut Cave Temple", "detailedInfo": "A stunning 4-story rock-cut cave temple carved into solid sandstone hillside overlooking the lush green Krishna river delta. The second floor houses a massive 5-meter-long monolithic reclining statue of Lord Vishnu (*Anantasayana Padmanabha*) resting upon the serpent Adisesha, sculpted out of a single block of granite.", "historicalImportance": "Excavated originally in the 4th–5th centuries CE as Jain and Buddhist hermitages, and later converted into a grand Hindu temple complex under the Vishnukundina kings (420–555 CE). Bears architectural resemblances to the Udayagiri rock art of Odisha and early Chalukyan cave temples.", "keyFacts": ["Features four distinct storeys with pillared verandahs, lion capitals, and bas-relief carvings of Narasimha, Ganesha, and dancing Vidyadharas.", "Engineered with subterranean rock drainage channels that keep the upper sanctums dry through heavy monsoon rains."], "bestTimeToVisit": "October to March. Open daily 9:00 AM – 6:00 PM. The soft morning sunlight illuminates the eastern cave facade for photography.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Undavalli+Caves+Vijayawada+Andhra+Pradesh", "coords": "16.4975° N, 80.5819° E", "locationName": "Undavalli, Guntur / Vijayawada", "history": "Excavated originally in the 4th–5th centuries CE as Jain and Buddhist hermitages, and later converted into a grand Hindu temple complex under the Vishnukundina kings (420–555 CE). Bears architectural resemblances to the Udayagiri rock art of Odisha and early Chalukyan cave temples.", "detail": "A stunning 4-story rock-cut cave temple carved into solid sandstone hillside overlooking the lush green Krishna river delta. The second floor houses a massive 5-meter-long monolithic reclining statue of Lord Vishnu (*Anantasayana Padmanabha*) resting upon the serpent Adisesha, sculpted out of a single block of granite.", "bestTime": "October to March. Open daily 9:00 AM – 6:00 PM. The soft morning sunlight illuminates the eastern cave facade for photography.", "insiderTip": "Located at Undavalli, Guntur / Vijayawada — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Prakasam Barrage & Bhavani Island", "type": "Riverfront Engineering & Island Park", "detailedInfo": "A 1,223-meter-long road bridge and irrigation barrage spanning the Krishna River, creating a vast water reservoir dotted with Bhavani Island (133 acres). The island offers water sports, wooden cottages, tree houses, and river boating.", "historicalImportance": "First conceived and built as a masonry weir between 1852 and 1855 by British Royal Engineer Captain Charles Orr to alleviate devastating droughts in the Krishna delta. Reconstructed in 1957 and named in honor of Andhra state’s first Chief Minister, Tanguturi Prakasam Pantulu.", "keyFacts": ["Transforms the Krishna River into a vast lake irrigating over 1.3 million acres of fertile agricultural paddy lands across coastal Andhra.", "Illuminated with thousands of LED lights at night, creating dazzling reflections across the river water."], "bestTimeToVisit": "October to February. Evening boat rides from Berm Park to Bhavani Island offer refreshing river breezes and sunset vistas.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Prakasam+Barrage+Vijayawada+Andhra+Pradesh", "coords": "16.5074° N, 80.6072° E", "locationName": "Krishna River, Vijayawada", "history": "First conceived and built as a masonry weir between 1852 and 1855 by British Royal Engineer Captain Charles Orr to alleviate devastating droughts in the Krishna delta. Reconstructed in 1957 and named in honor of Andhra state’s first Chief Minister, Tanguturi Prakasam Pantulu.", "detail": "A 1,223-meter-long road bridge and irrigation barrage spanning the Krishna River, creating a vast water reservoir dotted with Bhavani Island (133 acres). The island offers water sports, wooden cottages, tree houses, and river boating.", "bestTime": "October to February. Evening boat rides from Berm Park to Bhavani Island offer refreshing river breezes and sunset vistas.", "insiderTip": "Located at Krishna River, Vijayawada — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Amaravati Heritage & Dhyana Buddha", "type": "Ancient Buddhist Metropolis", "detailedInfo": "Located 32 km from Vijayawada on the southern bank of the Krishna River. Home to the archaeological ruins of the Great Mahastupa (dating to the 3rd century BCE) and the monumental 125-foot tall Dhyana Buddha statue seated in meditative posture upon a grand lotus pedestal.", "historicalImportance": "Flourished as Dhanyakataka, the imperial capital of the Satavahana dynasty from the 2nd century BCE to 3rd century CE. Served as a premier international Buddhist monastic university where legendary philosopher Acharya Nagarjuna composed foundational treatises of Madhyamaka Mahayana Buddhism. Emissaries from Sri Lanka, China, and Southeast Asia traveled here to study.", "keyFacts": ["The Amaravati School of Art is one of the three seminal styles of ancient Indian sculpture (alongside Gandhara and Mathura), famed for its graceful green-tinged Palnadu limestone narrative reliefs.", "The 125-foot Dhyana Buddha statue is built over a 3-story museum hall housing sculptures and Buddhist paintings illustrating the life of Gautama Buddha."], "bestTimeToVisit": "October to March. Open daily 9:00 AM – 6:00 PM. The Archaeological Museum in Amaravati houses priceless 2,000-year-old carved limestone railing pillars.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dhyana+Buddha+Statue+Amaravati+Andhra+Pradesh", "coords": "16.5746° N, 80.3582° E", "locationName": "Amaravati, Palnadu District", "history": "Flourished as Dhanyakataka, the imperial capital of the Satavahana dynasty from the 2nd century BCE to 3rd century CE. Served as a premier international Buddhist monastic university where legendary philosopher Acharya Nagarjuna composed foundational treatises of Madhyamaka Mahayana Buddhism. Emissaries from Sri Lanka, China, and Southeast Asia traveled here to study.", "detail": "Located 32 km from Vijayawada on the southern bank of the Krishna River. Home to the archaeological ruins of the Great Mahastupa (dating to the 3rd century BCE) and the monumental 125-foot tall Dhyana Buddha statue seated in meditative posture upon a grand lotus pedestal.", "bestTime": "October to March. Open daily 9:00 AM – 6:00 PM. The Archaeological Museum in Amaravati houses priceless 2,000-year-old carved limestone railing pillars.", "insiderTip": "Located at Amaravati, Palnadu District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}, {"id": "heritage-spiritual", "title": "Heritage & Spiritual Centers", "tagline": "Architectural Feats, Jyotirlingas, Hanging Pillars & Cosmic Elements", "category": "Supreme Heritage & Temples", "tags": ["Hanging Pillar", "Jyotirlinga", "Pancha Bhoota", "Vijayanagara Art"], "bestTime": "October to March (Ideal for temple parikramas and forest drives)", "duration": "3 to 4 Days", "overview": "This supreme triad of world-famous sacred shrines features the mysterious Vijayanagara architectural genius of Lepakshi's hanging pillar, the sacred confluence of a Jyotirlinga and Shakti Peetham at Srisailam, and the cosmic Vayu Lingam of Srikalahasti.", "places": [{"name": "Lepakshi Veerabhadra Temple", "type": "Vijayanagara Architectural Wonder", "detailedInfo": "Located in Anantapur district, built in 1530 CE on a low granite hillock known as Kurmasaila (tortoise hill). The temple is dedicated to Veerabhadra (a fiery manifestation of Shiva) and is internationally famous for three wonders: the monolithic Nandi bull, the seven-hooded Nagalinga, and the legendary Hanging Pillar.", "historicalImportance": "Built by royal treasurer Virupanna Nayaka and his brother Veeranna during the reign of Vijayanagara Emperor Achyuta Deva Raya. According to the Ramayana, when the bird king Jatayu fell wounded here after trying to rescue Sita from Ravana, Lord Rama compassionate commanded 'Le Pakshi' (Telugu for 'Rise, bird'). Contains India's finest surviving Vijayanagara ceiling frescoes depicting epic scenes from the Mahabharata, Ramayana, and the 14 avatars of Shiva.", "keyFacts": ["The famous 'Hanging Pillar' in the Natya Mandapa (Dance Hall) does not touch the ground; visitors can slide a thin cloth, sheet of paper, or stick entirely underneath its base without obstruction.", "The Monolithic Nandi bull is carved from a single granite boulder measuring 15 feet high and 27 feet long, making it one of the largest monolithic statues in India, sitting precisely 200 meters away facing the temple's Nagalinga.", "The Natya Mandapa contains 70 carved stone pillars depicting celestial dancers, musicians playing musical instruments, and gods with anatomical precision."], "bestTimeToVisit": "October to March. Open daily 6:00 AM – 6:00 PM. Morning light highlights the brilliant mineral-pigment fresco ceilings.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Veerabhadra+Temple+Lepakshi+Andhra+Pradesh", "coords": "13.8044° N, 77.6083° E", "locationName": "Lepakshi, Sri Sathya Sai District", "history": "Built by royal treasurer Virupanna Nayaka and his brother Veeranna during the reign of Vijayanagara Emperor Achyuta Deva Raya. According to the Ramayana, when the bird king Jatayu fell wounded here after trying to rescue Sita from Ravana, Lord Rama compassionate commanded 'Le Pakshi' (Telugu for 'Rise, bird'). Contains India's finest surviving Vijayanagara ceiling frescoes depicting epic scenes from the Mahabharata, Ramayana, and the 14 avatars of Shiva.", "detail": "Located in Anantapur district, built in 1530 CE on a low granite hillock known as Kurmasaila (tortoise hill). The temple is dedicated to Veerabhadra (a fiery manifestation of Shiva) and is internationally famous for three wonders: the monolithic Nandi bull, the seven-hooded Nagalinga, and the legendary Hanging Pillar.", "bestTime": "October to March. Open daily 6:00 AM – 6:00 PM. Morning light highlights the brilliant mineral-pigment fresco ceilings.", "insiderTip": "Located at Lepakshi, Sri Sathya Sai District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Srisailam Mallikarjuna Swamy Temple", "type": "Jyotirlinga & Maha Shakti Peetham", "detailedInfo": "Perched on a forested plateau in the dense Nallamala hills along the deep gorge of the Krishna River (Patalaganga). Srisailam is uniquely revered as both the 2nd of the 12 sacred Jyotirlingas of Lord Shiva (Sri Mallikarjuna Swamy) and one of the 18 Maha Shakti Peethas of Goddess Parvati (Sri Bhramaramba Devi).", "historicalImportance": "Recorded in Satavahana inscriptions from the 2nd century CE and celebrated in the Skanda Purana. Adi Shankaracharya visited Srisailam in the 8th century and composed his famed hymn 'Sivanandalahari' in devotion to Mallikarjuna. Extensively patronized by the Kakatiya rulers (Queen Rudrama Devi laid paved roads through the forest), the Reddi kings of Kondaveedu, and Maratha Emperor Chhatrapati Shivaji Maharaj, who built the northern gopuram in 1677 CE.", "keyFacts": ["The only temple in India that holds the dual distinction of being both an authentic Jyotirlinga and a Maha Shakti Peetham within the same complex.", "Devotees of all castes, genders, and communities are uniquely permitted to directly perform 'Sparsha Darshan' (touching the sacred Shiva Lingam with their own hands) inside the inner sanctum.", "Surrounded by the Nagarjunsagar-Srisailam Tiger Reserve, the largest tiger reserve by area in India (3,728 sq km)."], "bestTimeToVisit": "October to March when the dense forest roads are pleasant. Mahashivaratri (February/March) features the grand 11-day Brahmotsavam festival.", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Srisailam+Mallikarjuna+Swamy+Temple+Andhra+Pradesh", "coords": "16.0741° N, 78.8683° E", "locationName": "Srisailam, Nandyal District", "history": "Recorded in Satavahana inscriptions from the 2nd century CE and celebrated in the Skanda Purana. Adi Shankaracharya visited Srisailam in the 8th century and composed his famed hymn 'Sivanandalahari' in devotion to Mallikarjuna. Extensively patronized by the Kakatiya rulers (Queen Rudrama Devi laid paved roads through the forest), the Reddi kings of Kondaveedu, and Maratha Emperor Chhatrapati Shivaji Maharaj, who built the northern gopuram in 1677 CE.", "detail": "Perched on a forested plateau in the dense Nallamala hills along the deep gorge of the Krishna River (Patalaganga). Srisailam is uniquely revered as both the 2nd of the 12 sacred Jyotirlingas of Lord Shiva (Sri Mallikarjuna Swamy) and one of the 18 Maha Shakti Peethas of Goddess Parvati (Sri Bhramaramba Devi).", "bestTime": "October to March when the dense forest roads are pleasant. Mahashivaratri (February/March) features the grand 11-day Brahmotsavam festival.", "insiderTip": "Located at Srisailam, Nandyal District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}, {"name": "Srikalahasti Temple", "type": "Pancha Bhoota Vayu Lingam & Rahu-Ketu Kshetram", "detailedInfo": "Situated 36 km from Tirupati on the banks of the Swarnamukhi River, nestled between two steep hills (Sripada and Durgam). The temple represents the Vayu Lingam (Air/Wind element) among the five sacred Pancha Bhoota Sthalams. Famous globally as the foremost shrine for Rahu-Ketu Sarpa Dosha Nivarana pujas.", "historicalImportance": "Derived its name from three legendary creatures who worshipped Lord Shiva: the Spider (Sri), the Serpent (Kala), and the Elephant (Hasti). Also sanctified by the unconditional devotion of hunter-saint Kannappa Nayanar, who offered his own eyes to the bleeding deity. Built and endowed in the 11th century by Chola kings Rajendra Chola I and Kulottunga Chola I; vastly expanded in 1516 CE by Vijayanagara Emperor Krishnadevaraya, who erected the 100-pillared hall and the monumental 120-foot Rajagopuram.", "keyFacts": ["Inside the completely airless, sealed inner sanctum sanctorum, the flame of two ghee lamps placed beside the main Shiva Lingam flickers constantly, demonstrating the eternal presence of the wind element (Vayu).", "The Shiva Lingam is untouched by human hands; even priests perform abhishekam only to the pedestal, leaving the swayambhu lingam untouched.", "World-renowned for Rahu-Ketu Sarpa Dosha Nivarana pujas, performed daily by thousands to alleviate astrological doshas."], "bestTimeToVisit": "October to March. Open daily 6:00 AM – 9:00 PM. Ideal to combine with a Tirupati pilgrimage (only 45 minutes by car).", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Srikalahasteeswara+Temple+Srikalahasti+Andhra+Pradesh", "coords": "13.7498° N, 79.6984° E", "locationName": "Srikalahasti, Tirupati District", "history": "Derived its name from three legendary creatures who worshipped Lord Shiva: the Spider (Sri), the Serpent (Kala), and the Elephant (Hasti). Also sanctified by the unconditional devotion of hunter-saint Kannappa Nayanar, who offered his own eyes to the bleeding deity. Built and endowed in the 11th century by Chola kings Rajendra Chola I and Kulottunga Chola I; vastly expanded in 1516 CE by Vijayanagara Emperor Krishnadevaraya, who erected the 100-pillared hall and the monumental 120-foot Rajagopuram.", "detail": "Situated 36 km from Tirupati on the banks of the Swarnamukhi River, nestled between two steep hills (Sripada and Durgam). The temple represents the Vayu Lingam (Air/Wind element) among the five sacred Pancha Bhoota Sthalams. Famous globally as the foremost shrine for Rahu-Ketu Sarpa Dosha Nivarana pujas.", "bestTime": "October to March. Open daily 6:00 AM – 9:00 PM. Ideal to combine with a Tirupati pilgrimage (only 45 minutes by car).", "insiderTip": "Located at Srikalahasti, Tirupati District — tap 'View on Google Maps' above for direct turn-by-turn navigation."}]}];
+    const ITINERARIES = {"3": [{"day": "Day 1", "title": "Tirumala & Chandragiri", "desc": "Tirumala Venkateswara Temple darshan, Pushkarini bath, and historic Chandragiri Fort palaces."}, {"day": "Day 2", "title": "Srikalahasti & Coast", "desc": "Srikalahasti Vayu Lingam darshan, Rahu-Ketu puja, and evening coastal transfer."}, {"day": "Day 3", "title": "Vizag City by the Sea", "desc": "Ramakrishna Beach promenade, INS Kursura Submarine Museum, and Kailasagiri sunset ropeway."}], "5": [{"day": "Day 1", "title": "Tirupati Pilgrimage", "desc": "Tirumala Venkateswara Temple, Chandragiri Fort, and Govindaraja Swamy Temple."}, {"day": "Day 2", "title": "Lepakshi Marvel", "desc": "Veerabhadra Temple hanging pillar, monolithic Nandi bull, and seven-hooded Nagalinga."}, {"day": "Day 3", "title": "Gandikota Grand Canyon", "desc": "Majestic Penna River red sandstone gorge, Madhavaraya temple ruins, and canyon camping."}, {"day": "Day 4", "title": "Belum Subterranean Caves", "desc": "Underground Pataalaganga stream, musical limestone chambers, and 40-ft white Buddha."}, {"day": "Day 5", "title": "Srisailam Jyotirlinga", "desc": "Mallikarjuna Swamy Jyotirlinga, Bhramaramba Shakti Peetham, and Nallamala tiger forest."}], "7": [{"day": "Day 1", "title": "Tirupati & Srikalahasti", "desc": "Tirumala sacred darshan and Srikalahasti Vayu Lingam pilgrimage."}, {"day": "Day 2", "title": "Lepakshi Vijayanagara Wonder", "desc": "Veerabhadra Temple architectural exploration, hanging pillar, and ceiling frescoes."}, {"day": "Day 3", "title": "Gandikota & Belum Caves", "desc": "The Grand Canyon of India over Penna gorge and underground Belum caverns."}, {"day": "Day 4", "title": "Srisailam Forest Sanctuary", "desc": "Mallikarjuna Jyotirlinga Sparsha Darshan and Nallamala tiger reserve safari."}, {"day": "Day 5", "title": "Vijayawada & Amaravati", "desc": "Kanaka Durga Indrakeeladri shrine, Undavalli 4-story rock caves, and Dhyana Buddha."}, {"day": "Day 6", "title": "Vizag Coastal Promenade", "desc": "RK Beach, INS Kursura Submarine Museum, Rushikonda Blue Flag beach, and Kailasagiri."}, {"day": "Day 7", "title": "Araku Valley & Borra Caves", "desc": "Scenic Vistadome train ride, million-year-old Borra limestone caves, and coffee estates."}]};
+
+    // State Variables
+    let activeCategory = "All";
+    let searchQuery = "";
+    let savedClusters = [];
+    let checkedItems = [];
+
+    // LocalStorage Initialization
+    try {
+      savedClusters = JSON.parse(localStorage.getItem('ap_saved_clusters') || '[]');
+      checkedItems = JSON.parse(localStorage.getItem('ap_packing_checklist') || '[]');
+    } catch(e) {
+      savedClusters = [];
+      checkedItems = [];
+    }
+
+    // Toast Function
+    function showToast(msg, icon = '✨') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-msg');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast) return;
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+      }, 2500);
+    }
+
+    // Packing Checklist Storage
+    function updateChecklistProgress() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      let count = 0;
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (box.checked) {
+          count++;
+          if (!checkedItems.includes(idx)) checkedItems.push(idx);
+        } else {
+          checkedItems = checkedItems.filter(i => i !== idx);
+        }
+      });
+      localStorage.setItem('ap_packing_checklist', JSON.stringify(checkedItems));
+      const progEl = document.getElementById('pack-progress-text');
+      if (progEl) progEl.textContent = count + '/' + boxes.length + ' Completed';
+    }
+
+    function loadChecklist() {
+      const boxes = document.querySelectorAll('.pack-checkbox');
+      boxes.forEach(box => {
+        const idx = box.getAttribute('data-index');
+        if (checkedItems.includes(idx)) {
+          box.checked = true;
+        }
+      });
+      updateChecklistProgress();
+    }
+
+    // Web Audio API Sacred Temple Bell & Harmonic Chime
+    function playTempleBell() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const now = audioCtx.currentTime;
+
+        const bellPartials = [
+          { freq: 528.0, amp: 0.28, dur: 2.8 },
+          { freq: 1056.0, amp: 0.14, dur: 2.0 },
+          { freq: 264.0, amp: 0.20, dur: 3.0 }
+        ];
+        bellPartials.forEach(p => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(p.freq, now);
+
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(p.amp, now + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + p.dur);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now);
+          osc.stop(now + p.dur + 0.05);
+        });
+
+        showToast('🔔 Temple Bell: Sacred Blessings', '🔱');
+      } catch (e) {
+        showToast('Temple bell chime played', '🔔');
+      }
+    }
+
+    // Filter Logic
+    function getFilteredClusters() {
+      let result = AP_DATA;
+
+      if (activeCategory !== 'All') {
+        result = result.filter(c => c.category === activeCategory);
+      }
+
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase().trim();
+        result = result.filter(c => {
+          const inTitle = c.title.toLowerCase().includes(q);
+          const inOverview = c.overview.toLowerCase().includes(q);
+          const inPlaces = c.places.some(p => 
+            p.name.toLowerCase().includes(q) ||
+            p.type.toLowerCase().includes(q) ||
+            (p.detail && p.detail.toLowerCase().includes(q)) ||
+            p.history.toLowerCase().includes(q) ||
+            p.keyFacts.some(f => f.toLowerCase().includes(q))
+          );
+          return inTitle || inOverview || inPlaces;
+        });
+      }
+
+      return result;
+    }
+
+    // Render Itinerary Function
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      if (!container) return;
+      const list = ITINERARIES[days] || ITINERARIES["3"];
+      container.innerHTML = list.map(item => `
+        <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-3 hover:border-amber-500 transition-all">
+          <div class="flex items-center justify-between pb-1 mb-1 border-b border-slate-200">
+            <span class="font-bold text-amber-900">${item.day}</span>
+            <span class="text-[10px] bg-amber-100 text-amber-950 px-1.5 py-0.2 rounded font-semibold">${days}-Day Tour</span>
+          </div>
+          <h5 class="font-bold text-slate-800 text-[11px] mb-1">${item.title}</h5>
+          <p class="text-[11px] text-slate-600 leading-relaxed">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    // Render Places & Clusters
+    function renderClusters() {
+      const container = document.getElementById('clusters-container');
+      const emptyState = document.getElementById('empty-state');
+      const clusterCountEl = document.getElementById('visible-clusters-count');
+      const sitesCountEl = document.getElementById('visible-sites-count');
+      const filterLabel = document.getElementById('active-filter-label');
+
+      if (!container) return;
+
+      const clusters = getFilteredClusters();
+      const totalSites = clusters.reduce((acc, c) => acc + c.places.length, 0);
+
+      if (clusterCountEl) clusterCountEl.textContent = clusters.length;
+      if (sitesCountEl) sitesCountEl.textContent = totalSites;
+
+      if (filterLabel) {
+        let parts = [];
+        if (activeCategory !== 'All') parts.push('Category: ' + activeCategory);
+        if (searchQuery.trim()) parts.push('Search: "' + searchQuery + '"');
+        filterLabel.textContent = parts.length ? '(' + parts.join(' • ') + ')' : '';
+      }
+
+      if (clusters.length === 0) {
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = clusters.map(cluster => {
+        const isSaved = savedClusters.includes(cluster.id);
+
+        const placesHtml = cluster.places.map((p, pIdx) => {
+          const factsList = p.keyFacts.map(kf => `
+            <li class="flex items-start gap-2 text-xs text-slate-700 leading-relaxed">
+              <span class="text-amber-700 font-bold flex-shrink-0 mt-0.5">✦</span>
+              <span>${kf}</span>
+            </li>
+          `).join('');
+
+          return `
+            <div class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:border-amber-500 transition-all">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 pb-3 border-b border-slate-100">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-full bg-amber-100 text-amber-900 text-xs font-bold flex items-center justify-center flex-shrink-0">${pIdx + 1}</span>
+                    <h4 class="text-base font-bold text-slate-900 font-heritage tracking-tight">${p.name}</h4>
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2 mt-1 ml-8 text-[11px] text-slate-500">
+                    <span class="font-semibold text-slate-600">${p.type}</span>
+                    <span>•</span>
+                    <span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700 font-mono">${p.coords || 'Andhra Pradesh, India'}</span>
+                  </div>
+                </div>
+
+                <!-- Google Map Direct Link Button -->
+                <div class="flex items-center gap-2 self-start sm:self-auto">
+                  <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-colors shadow-2xs" title="Open verified location in Google Maps">
+                    <span>📍 View on Google Maps</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Detailed Overview -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Site Overview & Architecture</span>
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">${p.detail}</p>
+              </div>
+
+              <!-- Historical Importance -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">Historical Importance & Significance</span>
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">${p.history}</p>
+              </div>
+
+              <!-- Key Facts -->
+              <div class="mt-3.5 space-y-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-orange-900 bg-orange-50 border border-orange-200 px-2 py-0.5 rounded">Key Facts & Unique Highlights</span>
+                <ul class="space-y-1 pt-1 ml-1">
+                  ${factsList}
+                </ul>
+              </div>
+
+              <!-- Best Time & Insider Tip Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-100 text-xs">
+                <div class="flex items-start gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                  <span class="text-base flex-shrink-0">🌤️</span>
+                  <div>
+                    <span class="font-bold text-slate-800 text-[11px]">Best Time & Hours:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.bestTime || 'October to March'}</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2 bg-amber-50/50 p-2.5 rounded-xl border border-amber-100">
+                  <span class="text-base flex-shrink-0">💡</span>
+                  <div>
+                    <span class="font-bold text-amber-900 text-[11px]">Insider Travel Tip:</span>
+                    <p class="text-[11px] text-slate-600 leading-normal">${p.insiderTip}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <article class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden transition-all hover:shadow-lg">
+            
+            <!-- Cluster Header Banner -->
+            <div class="bg-gradient-to-r from-amber-950 via-orange-950 to-slate-900 text-white p-6 sm:p-7 border-b border-amber-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-400 text-slate-950">${cluster.category}</span>
+                  <span class="text-xs text-slate-300">⏱️ ${cluster.duration}</span>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-black font-heritage tracking-tight text-white">${cluster.title}</h3>
+                <p class="text-xs sm:text-sm text-amber-200 font-medium">${cluster.tagline}</p>
+              </div>
+
+              <!-- Header Actions: Bookmark & Full Dossier Modal -->
+              <div class="flex items-center gap-2.5 flex-shrink-0">
+                <button data-save-id="${cluster.id}" class="save-btn p-2.5 rounded-xl border transition-colors flex items-center gap-1.5 text-xs font-bold ${isSaved ? 'bg-amber-400 text-slate-950 border-amber-300' : 'bg-white/10 hover:bg-white/20 text-white border-white/20'}" title="Save Circuit to Bookmarks">
+                  <span>${isSaved ? '★' : '☆'}</span>
+                  <span>${isSaved ? 'Saved' : 'Bookmark'}</span>
+                </button>
+
+                <button data-open-modal="${cluster.id}" class="modal-open-btn px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-black transition-all shadow-md flex items-center gap-1.5">
+                  <span>📖 Read Full Dossier</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Regional Overview Block -->
+            <div class="bg-slate-50/70 p-5 sm:p-6 border-b border-slate-200/80">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Regional Essence & Strategic Context</h4>
+              <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+              
+              <!-- Quick Metadata Tags -->
+              <div class="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-slate-200/60 text-xs">
+                <span class="text-slate-500 font-semibold">Tags:</span>
+                ${cluster.tags.map(t => `<span class="bg-white border border-slate-200 text-slate-600 px-2.5 py-0.5 rounded-lg text-[11px] font-medium">${t}</span>`).join('')}
+              </div>
+            </div>
+
+            <!-- Place Cards Grid -->
+            <div class="p-5 sm:p-6 space-y-5 bg-slate-100/40">
+              <div class="flex items-center justify-between">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500">Key Places & Attractions (${cluster.places.length} Sites)</h4>
+                <span class="text-[11px] text-amber-900 font-medium">📍 Verified with Google Maps</span>
+              </div>
+
+              <div class="space-y-4">
+                ${placesHtml}
+              </div>
+            </div>
+
+          </article>
+        `;
+      }).join('');
+
+      attachCardEventListeners();
+    }
+
+    // Modal Display Logic
+    function openModalForCluster(clusterId) {
+      const cluster = AP_DATA.find(c => c.id === clusterId);
+      if (!cluster) return;
+
+      const modal = document.getElementById('reading-modal');
+      const catEl = document.getElementById('modal-category');
+      const titleEl = document.getElementById('modal-title');
+      const tagEl = document.getElementById('modal-tagline');
+      const bodyEl = document.getElementById('modal-body');
+
+      catEl.textContent = cluster.category;
+      titleEl.textContent = cluster.title;
+      tagEl.textContent = cluster.tagline;
+
+      bodyEl.innerHTML = `
+        <div class="space-y-3 pb-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-900">Regional Overview</h4>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${cluster.overview}</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Recommended Window: ${cluster.bestTime}</span>
+            <span class="bg-slate-100 text-slate-700 text-xs px-2.5 py-1 rounded-md font-semibold">Suggested Stay: ${cluster.duration}</span>
+          </div>
+        </div>
+
+        <div class="pt-4 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-900">Detailed Site Breakdown (${cluster.places.length} Places)</h4>
+          ${cluster.places.map((p, idx) => `
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h5 class="font-bold text-slate-900 text-sm font-heritage flex items-center gap-2">
+                  <span class="w-5 h-5 rounded-full bg-amber-100 text-amber-900 text-xs flex items-center justify-center font-bold">${idx + 1}</span>
+                  ${p.name}
+                </h5>
+                <a href="${p.mapUrl}" target="_blank" rel="noopener noreferrer" class="text-xs text-emerald-800 bg-emerald-50 border border-emerald-300 px-2.5 py-1 rounded-lg font-bold flex items-center gap-1 self-start sm:self-auto hover:bg-emerald-100 transition-colors">
+                  <span>📍 Google Maps</span>
+                </a>
+              </div>
+              <p class="text-xs text-slate-600 font-mono">Coordinates: ${p.coords}</p>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Overview:</strong> ${p.detail}
+              </div>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Historical Importance:</strong> ${p.history}
+              </div>
+              <div class="text-xs text-slate-700 pt-1">
+                <strong class="text-slate-900">Key Facts:</strong>
+                <ul class="list-disc pl-4 space-y-0.5 mt-1 text-slate-600">
+                  ${p.keyFacts.map(kf => `<li>${kf}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="text-[11px] text-amber-900 bg-amber-50/60 p-2 rounded-lg border border-amber-200/60 mt-2">
+                <strong>Visiting Logistics:</strong> ${p.bestTime}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('reading-modal');
+      if (modal) modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Copy Notes Feature
+    function copyClusterNotes() {
+      const title = document.getElementById('modal-title').textContent;
+      const body = document.getElementById('modal-body').innerText;
+      const notes = `=== ${title} (Andhra Pradesh Travel Guide) ===\n\n${body}\n\nGenerated via Andhra Pradesh Explorer.`;
+      
+      navigator.clipboard.writeText(notes).then(() => {
+        showToast('Travel notes copied to clipboard!', '📋');
+      }).catch(() => {
+        showToast('Notes copied to clipboard!', '📋');
+      });
+    }
+
+    // Attach Dynamic Event Listeners
+    function attachCardEventListeners() {
+      document.querySelectorAll('.modal-open-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-open-modal');
+          openModalForCluster(id);
+        });
+      });
+
+      document.querySelectorAll('.save-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const id = e.currentTarget.getAttribute('data-save-id');
+          if (savedClusters.includes(id)) {
+            savedClusters = savedClusters.filter(i => i !== id);
+            showToast('Removed from saved bookmarks', '☆');
+          } else {
+            savedClusters.push(id);
+            showToast('Saved to bookmarks!', '★');
+          }
+          localStorage.setItem('ap_saved_clusters', JSON.stringify(savedClusters));
+          updateSavedBadge();
+          renderClusters();
+        });
+      });
+    }
+
+    function updateSavedBadge() {
+      const badge = document.getElementById('saved-badge');
+      if (badge) badge.textContent = savedClusters.length;
+    }
+
+    // Initialize Everything on DOM Load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderItinerary("3");
+      renderClusters();
+      updateSavedBadge();
+      loadChecklist();
+
+      // Audio Bell Button
+      const bellBtn = document.getElementById('audio-bell-btn');
+      if (bellBtn) bellBtn.addEventListener('click', playTempleBell);
+
+      // Packing Checklist Event Listeners
+      const checkBoxes = document.querySelectorAll('.pack-checkbox');
+      checkBoxes.forEach(box => {
+        box.addEventListener('change', updateChecklistProgress);
+      });
+
+      const resetPackBtn = document.getElementById('reset-checklist-btn');
+      if (resetPackBtn) {
+        resetPackBtn.addEventListener('click', () => {
+          checkBoxes.forEach(b => b.checked = false);
+          checkedItems = [];
+          localStorage.removeItem('ap_packing_checklist');
+          updateChecklistProgress();
+          showToast('Checklist reset');
+        });
+      }
+
+      // Filter Tabs
+      const tabs = document.querySelectorAll('.filter-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          tabs.forEach(t => {
+            t.classList.remove('active', 'bg-amber-700', 'text-white');
+            t.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('active', 'bg-amber-700', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          activeCategory = e.currentTarget.getAttribute('data-cat');
+          renderClusters();
+        });
+      });
+
+      // Itinerary Pills
+      const itPills = document.querySelectorAll('.itinerary-pill');
+      itPills.forEach(pill => {
+        pill.addEventListener('click', (e) => {
+          itPills.forEach(p => {
+            p.classList.remove('bg-amber-700', 'text-white');
+            p.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          e.currentTarget.classList.add('bg-amber-700', 'text-white');
+          e.currentTarget.classList.remove('bg-slate-100', 'text-slate-700');
+          const days = e.currentTarget.getAttribute('data-days');
+          renderItinerary(days);
+        });
+      });
+
+      // Search Input
+      const searchInput = document.getElementById('search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value;
+          if (clearSearchBtn) {
+            if (searchQuery.length > 0) clearSearchBtn.classList.remove('hidden');
+            else clearSearchBtn.classList.add('hidden');
+          }
+          renderClusters();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          renderClusters();
+        });
+      }
+
+      // Bookmark Filter Button
+      const bFilterBtn = document.getElementById('bookmark-filter-btn');
+      if (bFilterBtn) {
+        let onlySaved = false;
+        bFilterBtn.addEventListener('click', () => {
+          onlySaved = !onlySaved;
+          if (onlySaved) {
+            bFilterBtn.classList.add('bg-amber-200', 'border-amber-400');
+            activeCategory = "All";
+            tabs.forEach(t => {
+              if (t.getAttribute('data-cat') === 'All') {
+                t.classList.add('active', 'bg-amber-700', 'text-white');
+              } else {
+                t.classList.remove('active', 'bg-amber-700', 'text-white');
+                t.classList.add('bg-slate-100', 'text-slate-700');
+              }
+            });
+            const container = document.getElementById('clusters-container');
+            const savedOnly = AP_DATA.filter(c => savedClusters.includes(c.id));
+            if (savedOnly.length === 0) {
+              container.innerHTML = '<div class="bg-white rounded-3xl border border-slate-200 p-8 text-center text-slate-500 text-xs">No bookmarked circuits yet. Click "Bookmark" on any destination to add it here!</div>';
+            } else {
+              renderClusters();
+            }
+          } else {
+            bFilterBtn.classList.remove('bg-amber-200', 'border-amber-400');
+            renderClusters();
+          }
+        });
+      }
+
+      // Empty State Reset Button
+      const emptyResetBtn = document.getElementById('empty-reset-btn');
+      if (emptyResetBtn) {
+        emptyResetBtn.addEventListener('click', () => {
+          searchQuery = '';
+          if (searchInput) searchInput.value = '';
+          if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+          activeCategory = 'All';
+          tabs.forEach(t => {
+            if (t.getAttribute('data-cat') === 'All') {
+              t.classList.add('active', 'bg-amber-700', 'text-white');
+            } else {
+              t.classList.remove('active', 'bg-amber-700', 'text-white');
+              t.classList.add('bg-slate-100', 'text-slate-700');
+            }
+          });
+          renderClusters();
+        });
+      }
+
+      // Modal Close Handlers
+      const modalCloseX = document.getElementById('modal-close-x');
+      const modalCloseAction = document.getElementById('modal-close-action');
+      const modalOverlay = document.getElementById('reading-modal');
+
+      if (modalCloseX) modalCloseX.addEventListener('click', closeModal);
+      if (modalCloseAction) modalCloseAction.addEventListener('click', closeModal);
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) closeModal();
+        });
+      }
+
+      // Modal Copy Notes Handler
+      const modalCopyBtn = document.getElementById('modal-copy-all-btn');
+      if (modalCopyBtn) modalCopyBtn.addEventListener('click', copyClusterNotes);
+
+      // Back to Top Button
+      const backToTop = document.getElementById('back-to-top-btn');
+      if (backToTop) {
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

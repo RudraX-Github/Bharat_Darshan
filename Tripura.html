@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripura Explorer — Cultural Heritage & Travel Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: {
+              50: '#fdf2f4',
+              100: '#fce7ea',
+              200: '#f8d2d9',
+              600: '#e11d48',
+              700: '#be123c',
+              800: '#9f1239',
+              900: '#881337',
+              950: '#4c0519',
+            },
+            manikya: {
+              gold: '#d97706',
+              amber: '#f59e0b',
+              crimson: '#991b1b',
+              moss: '#065f46',
+              lake: '#0284c7',
+              orange: '#ea580c'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            heritage: ['"Cinzel"', 'serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+    }
+    .scrollbar-thin::-webkit-scrollbar {
+      height: 6px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    .hero-glow {
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-rose-700 selection:text-white min-h-screen flex flex-col">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-rose-950 via-red-950 to-amber-950 text-amber-200 text-xs py-2 px-4 text-center font-medium tracking-wide border-b border-amber-600/40 flex items-center justify-center gap-2">
+    <span>👑</span>
+    <span>Khulumkha & Nomoshkar! Discover Tripura: Neoclassical Palaces, Eastern India's Floating Water Palace, Ancient Rock Bas-Reliefs, Sacred Peethas & Orange Hills</span>
+    <span>🌸</span>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-700 via-red-800 to-amber-600 text-white flex items-center justify-center text-2xl shadow-md shadow-rose-900/20 flex-shrink-0">
+          👑
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black font-heritage tracking-tight text-slate-900 flex items-center gap-2">
+            Tripura Explorer
+            <span class="text-[10px] font-sans font-bold uppercase tracking-wider bg-rose-100 text-rose-900 px-2.5 py-0.5 rounded-full border border-rose-200">Manikya & Risa Heritage</span>
+          </h1>
+          <p class="text-xs text-slate-500 font-medium truncate max-w-xs sm:max-w-md lg:max-w-xl">
+            🙏 Khulumkha! Welcome to Tripura — Your Welcoming Guide to Agartala, Neermahal, Unakoti, Udaipur & Jampui Hills
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <button id="chime-btn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 text-xs font-bold transition-all shadow-2xs hover:scale-105 active:scale-95" title="Play Traditional Kham Drum & Sumui Flute Chime">
+          <span>🎵</span>
+          <span class="hidden md:inline">Kham & Sumui Chime</span>
+        </button>
+
+        <a href="#itinerary-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-900 border border-rose-200 text-xs font-semibold transition-all">
+          <span>🗺️</span>
+          <span class="hidden lg:inline">Itineraries</span>
+        </a>
+
+        <a href="#cuisine-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 text-xs font-semibold transition-all">
+          <span>🍲</span>
+          <span class="hidden lg:inline">Cuisine</span>
+        </a>
+
+        <a href="#festivals-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-200 text-xs font-semibold transition-all">
+          <span>🎉</span>
+          <span class="hidden lg:inline">Festivals</span>
+        </a>
+
+        <a href="#checklist-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-cyan-50 hover:bg-cyan-100 text-cyan-900 border border-cyan-200 text-xs font-semibold transition-all">
+          <span>🎒</span>
+          <span class="hidden lg:inline">Checklist</span>
+        </a>
+
+        <button id="bookmark-filter-btn" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200 text-xs font-semibold transition-all">
+          <span>🔖</span>
+          <span id="bookmark-badge">Bookmarks (0)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-b from-rose-950 via-slate-950 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 border-b border-rose-900/60 relative overflow-hidden">
+    <!-- Decorative Risa Geometric Glow Overlay -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-950/80 border border-rose-700 text-rose-200 text-xs font-semibold">
+          <span>✨ Land of the Manikya Kings & Sacred Rock Bas-Reliefs</span>
+          <span>•</span>
+          <span>Water Palaces, Shaivite Wonders & Hill Sanctuaries</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight text-amber-300 leading-tight">
+          Royal Palaces, Ancient Rock Sculptures & Orange-Crested Ridges
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+          From the neoclassical domes of Ujjayanta Palace and the patriotic flag-lowering at Akhaura border to the floating Hindu-Islamic arches of Neermahal on Rudrasagar Lake, the colossal 7th-century rock-cut Shiva sculptures of Unakoti, the sacred Shakti Peetha of Matabari in Udaipur, and the misty heights of Jampui Hills — experience the enchanting royal, tribal, and spiritual tapestry of Tripura.
+        </p>
+      </div>
+
+      <!-- Hero Stat Cards -->
+      <div class="grid grid-cols-2 gap-3 w-full lg:w-auto text-center flex-shrink-0">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-rose-300 font-heritage">5</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Diverse Regions</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-emerald-400 font-heritage">7</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Key Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-cyan-300 font-heritage">1</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Water Palace</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">1,300+</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Yrs Heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overlapping Floating Search & Filter Toolbar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 z-20 relative w-full">
+    <div class="bg-white rounded-2xl shadow-xl border border-rose-200/80 p-3 sm:p-4 flex flex-col md:flex-row items-center justify-between gap-3">
+      <!-- Search Input -->
+      <div class="relative w-full md:w-96">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">🔍</span>
+        <input type="text" id="search-input" placeholder="Search palaces, rock carvings, temples, lakes..." class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-hidden focus:ring-2 focus:ring-rose-600 focus:bg-white transition-all text-slate-800 placeholder-slate-400 font-medium">
+      </div>
+
+      <!-- Category Filter Tabs with Specific Cultural Hues -->
+      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="filter-tabs">
+        <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-rose-900 text-white shadow-xs transition-all flex-shrink-0">All Regions</button>
+        <button data-cat="Neoclassical Royal Palaces, State Museums & Border Retreats" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Agartala City</button>
+        <button data-cat="Aquatic Summer Palaces, Wetland Sanctuaries & Boat Safaris" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Neermahal Melaghar</button>
+        <button data-cat="Ancient Rock-Cut Bas-Reliefs, Shaivite Pilgrimages & Jungle Gorges" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Unakoti Shaivite</button>
+        <button data-cat="Sacred Shakti Peethas, Royal Excavated Lakes & Kurma Shrines" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Udaipur Lakes</button>
+        <button data-cat="High-Altitude Ridges, Orange Orchards & Tribal Homestays" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Jampui Hills</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10 flex-grow">
+
+    <!-- 1. Suggested Route Planner -->
+    <section id="itinerary-section" class="bg-white rounded-2xl border border-rose-100 p-5 shadow-sm space-y-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-rose-900 bg-rose-100 px-2.5 py-0.5 rounded-full">Curated Circuits</span>
+          <h3 class="text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended day-by-day routes and transit windows:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-rose-800 text-white shadow-xs transition-all">3 Days (Agartala, Neermahal & Udaipur Lakes)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Palaces, Matabari & Unakoti)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Grand Tripura Heritage & Jampui Hills)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- 2. Dual Feature Row: Taste of Tripura & Sacred Festivals -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Feature A: Taste of Tripura -->
+      <section id="cuisine-section" class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-5 shadow-xs flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-amber-200/70">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Gastronomic Heritage</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Tripura: Indigenous Flavors & Forest Gastronomy</h4>
+            </div>
+            <span class="text-2xl">🍲</span>
+          </div>
+
+          <p class="text-xs text-slate-600 mt-2">
+            Tripuri cuisine is famed for its health-giving, oil-free traditions centered around indigenous herbs, tender bamboo shoots, and fragrant Berma (fermented fish):
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-xs">
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Mui Borok (Berma Traditional Staple)</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">The quintessential culinary heritage of the indigenous Tripuri people, centered around Berma—fermented, sundried freshwater fish cooked without oil alongside green vegetables, bamboo shoots, and green chillies.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Wahan Mosdeng (Fire-Roasted Pork Salad)</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">A beloved tribal delicacy of charred tender pork tossed with roasted green chillies, finely chopped red onions, fresh coriander, ginger juliennes, and a dash of zesty hill lemon juice.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Kosoi Bwtwi (Tender Bean & Berma Stew)</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">A light, nourishing broth prepared by simmering fresh French beans, green peas, garlic, and wild herbs with a savory seasoning of aromatic Berma fish, cooked entirely oil-free.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Chakhwi (Bamboo Shoot & Alkaline Stew)</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">A traditional dish featuring tender bamboo shoots, pork, and colocasia stems cooked with an indigenous natural alkaline extract ('Khar' or baking soda), creating a delightfully fragrant, soothing texture.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Bangui Rice (Aromatic Leaf-Steamed Rice)</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">A celebrated festive specialty of sticky binni rice mixed with shredded onions, ginger, and ghee, wrapped tightly in conically rolled wild Lairu leaves and gently steamed to perfection.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Panch Phoron Tarkari & Awandru</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">A harmonious blend of Bengali five-spice vegetable medley paired with Awandru—a traditional rice-flour thickened chicken or pork stew with crushed ginger and indigenous green leaves.</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-amber-200/60 text-[11px] text-amber-900 flex items-center gap-1.5 font-medium">
+          <span>💡</span>
+          <span>Foodie Tip: Try authentic Bangui rice and Wahan Mosdeng at traditional tribal restaurants around Agartala's Motor Stand or near Melaghar.</span>
+        </div>
+      </section>
+
+      <!-- Feature B: Sacred Festivals -->
+      <section id="festivals-section" class="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl border border-rose-200 p-5 shadow-xs flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-rose-200/70">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-rose-900 bg-rose-100 px-2.5 py-0.5 rounded-full">Living Traditions</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Sacred Festivals of Tripura: Royal Rites & Tribal Celebrations</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-600 mt-2">
+            Tripura honors centuries-old royal Manikya rituals and indigenous agrarian festivities with vibrant dances, sacred waters, and community feasts:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-xs">
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Kharchi Puja (Worship of Fourteen Gods)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">July (Shukla Ashtami)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">Tripura's most celebrated 7-day royal festival held at the Chaturdasha Devata Temple in Old Agartala. Worshipping the 14 ancestral royal deities, it honors mother earth's cleansing with grand processions and cultural fairs.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Garia Puja (Spring Harvest Celebration)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">April (Seventh day of Baisakh)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">The vibrant spring harvest festival of the Tripuri and Reang tribes. A sacred bamboo pole representing Lord Garia is worshipped with livestock offerings, continuous drumming, and the mesmerizing Hojagiri balance dance.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Ker Puja (Sacred Boundary Ritual)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">August (Two weeks after Kharchi Puja)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">An ancient, highly revered royal protective ritual performed within a strictly defined boundary in Agartala. During Ker, total silence and quarantine are observed to ward off natural disasters and protect the realm.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Orange & Tourism Festival (Jampui Hills)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">November (Peak Orange Harvest)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">A delightful eco-cultural carnival hosted across the scenic heights of Jampui Hills. Celebrates the abundant golden orange harvest with traditional Mizo Cheraw bamboo dances, musical performances, and village homestays.</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-rose-200/60 text-[11px] text-rose-900 flex items-center gap-1.5 font-medium">
+          <span>💡</span>
+          <span>Cultural Tip: Witness the mesmerizing Hojagiri dance during Garia Puja, where Reang maiden dancers balance brass pitchers and lamps atop their heads.</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 3. Travel Essentials & Regional Transit Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Smart Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-rose-100 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-rose-900 bg-rose-100 px-2.5 py-0.5 rounded-full">Travel Essentials</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Heritage, Lake & Border Checklist</h4>
+            </div>
+            <span class="text-2xl">🎒</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Interactive gear list for neoclassical palaces, water lake safaris, and rock-hewn jungle ravines:</p>
+
+          <!-- Interactive Checklist -->
+          <div class="mt-4 space-y-2 text-xs" id="checklist-container">
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-rose-50/50 cursor-pointer transition-colors border border-transparent hover:border-rose-100">
+              <input type="checkbox" data-index="0" class="checklist-item mt-0.5 h-4 w-4 text-rose-600 rounded-sm border-slate-300 focus:ring-rose-500">
+              <span class="text-slate-700 leading-snug">Valid Physical Photo ID (Aadhaar or Passport) for the Akhaura Border Checkpost civilian viewing gallery</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-rose-50/50 cursor-pointer transition-colors border border-transparent hover:border-rose-100">
+              <input type="checkbox" data-index="1" class="checklist-item mt-0.5 h-4 w-4 text-rose-600 rounded-sm border-slate-300 focus:ring-rose-500">
+              <span class="text-slate-700 leading-snug">Slip-resistant hiking shoes with strong tread for navigating the moist rock-carved stairs of Unakoti</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-rose-50/50 cursor-pointer transition-colors border border-transparent hover:border-rose-100">
+              <input type="checkbox" data-index="2" class="checklist-item mt-0.5 h-4 w-4 text-rose-600 rounded-sm border-slate-300 focus:ring-rose-500">
+              <span class="text-slate-700 leading-snug">Modest shoulder-and-knee covering attire for temple sanctum visits at Tripura Sundari Temple (Matabari)</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-rose-50/50 cursor-pointer transition-colors border border-transparent hover:border-rose-100">
+              <input type="checkbox" data-index="3" class="checklist-item mt-0.5 h-4 w-4 text-rose-600 rounded-sm border-slate-300 focus:ring-rose-500">
+              <span class="text-slate-700 leading-snug">INR cash currency for country boat tickets at Rudrasagar Lake (Neermahal) and rural handicraft stalls</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-rose-50/50 cursor-pointer transition-colors border border-transparent hover:border-rose-100">
+              <input type="checkbox" data-index="4" class="checklist-item mt-0.5 h-4 w-4 text-rose-600 rounded-sm border-slate-300 focus:ring-rose-500">
+              <span class="text-slate-700 leading-snug">Light jacket or sweater for cool misty mornings and evenings across Jampui Hills (altitude 3,200 ft)</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-rose-50/50 cursor-pointer transition-colors border border-transparent hover:border-rose-100">
+              <input type="checkbox" data-index="5" class="checklist-item mt-0.5 h-4 w-4 text-rose-600 rounded-sm border-slate-300 focus:ring-rose-500">
+              <span class="text-slate-700 leading-snug">Eco-friendly reusable water bottle and binoculars for wetland birdwatching around Rudrasagar Lake</span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+          <span id="checklist-status">0 of 6 completed</span>
+          <button id="reset-checklist-btn" class="text-rose-700 hover:text-rose-900 font-bold hover:underline">Reset Checklist</button>
+        </div>
+      </div>
+
+      <!-- Regional Highway Transit Matrix -->
+      <div class="bg-white rounded-2xl border border-cyan-100 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-900 bg-cyan-100 px-2.5 py-0.5 rounded-full">Transit Logistics</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Regional Highway Transit Matrix</h4>
+            </div>
+            <span class="text-2xl">🚗</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Verified driving distances and transit corridors connecting Agartala to key heritage hubs:</p>
+
+          <div class="mt-3 overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-200 bg-cyan-50/60 text-slate-700 font-semibold">
+                  <th class="py-2 px-3">Route Segment</th>
+                  <th class="py-2 px-2 text-center">Distance</th>
+                  <th class="py-2 px-2 text-center">Est. Time</th>
+                  <th class="py-2 px-3">Primary Highway & Terrain</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-600">
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Agartala ➔ Neermahal (Melaghar)</td>
+                  <td class="py-2 px-2 text-center font-mono">53 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-800 font-medium">1.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Agartala-Bishramganj-Melaghar Road via NH 8</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Agartala ➔ Udaipur (Tripura Sundari)</td>
+                  <td class="py-2 px-2 text-center font-mono">52 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-800 font-medium">1.2 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Smooth 4-lane NH 8 (Agartala-Sabroom Highway)</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Udaipur ➔ Neermahal (Melaghar)</td>
+                  <td class="py-2 px-2 text-center font-mono">25 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-800 font-medium">45 min</td>
+                  <td class="py-2 px-3 text-[11px]">State Highway SH 4 connecting lake districts</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Agartala ➔ Unakoti (Kailashahar)</td>
+                  <td class="py-2 px-2 text-center font-mono">178 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-800 font-medium">4.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH 8 north to Teliamura, then NH 208 to Kailashahar</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Agartala ➔ Jampui Hills (Vanghmun)</td>
+                  <td class="py-2 px-2 text-center font-mono">205 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-800 font-medium">6.0 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH 8 & NH 208 via Dharmanagar & Kanchanpur</td>
+                </tr>
+                
+                <tr class="hover:bg-cyan-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Kailashahar ➔ Jampui Hills (Vanghmun)</td>
+                  <td class="py-2 px-2 text-center font-mono">85 km</td>
+                  <td class="py-2 px-2 text-center text-cyan-800 font-medium">2.8 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Scenic hill road via Kanchanpur & Machmara</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 flex items-center gap-1.5 font-medium">
+          <span>💡</span>
+          <span>Transit Tip: The National Highway NH 8 is well-paved; for Jampui Hills, hire an SUV with experienced hill drivers for comfortable hairpin navigation.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4. Active Filter Status Bar -->
+    <div class="flex items-center justify-between text-xs text-slate-500 px-1 border-b border-slate-200 pb-2">
+      <div id="filter-status-text" class="font-medium">
+        Showing: <span class="font-bold text-slate-900">5 Regions</span> • <span class="font-bold text-slate-900">7 Key Sites</span>
+      </div>
+      <div class="text-[11px] text-slate-400">
+        Click any place card to view full dossier notes
+      </div>
+    </div>
+
+    <!-- 5. Clusters Container -->
+    <div id="clusters-container" class="space-y-10">
+      <!-- Clusters Injected via JavaScript with authentic place and heritage color schemes -->
+    </div>
+
+    <!-- 6. Empty State -->
+    <div id="empty-state" class="hidden py-16 text-center space-y-3 bg-white rounded-2xl border border-dashed border-slate-300">
+      <div class="text-4xl">🔍</div>
+      <h3 class="text-base font-bold text-slate-800">No destinations match your search</h3>
+      <p class="text-xs text-slate-500 max-w-sm mx-auto">Try clearing your search terms or selecting 'All Regions' to view all destinations across Tripura.</p>
+      <button id="clear-search-btn" class="px-4 py-1.5 rounded-lg bg-rose-800 text-white text-xs font-bold shadow-xs hover:bg-rose-900 transition-all">Clear Search Filter</button>
+    </div>
+
+  </main>
+
+  <!-- 7. Detailed Reading Modal -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-rose-200 p-6 space-y-5 transform scale-95 transition-transform duration-200" id="modal-content">
+      <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4">
+        <div>
+          <span id="modal-category" class="text-[11px] font-bold uppercase tracking-wider text-rose-900 bg-rose-100 px-2.5 py-0.5 rounded-full">Region Dossier</span>
+          <h3 id="modal-title" class="text-xl font-black text-slate-900 font-heritage mt-1.5">Destination Title</h3>
+          <p id="modal-coords" class="text-xs text-slate-500 font-mono mt-0.5">GPS Coordinates</p>
+        </div>
+        <button id="close-modal-btn" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center text-sm font-bold transition-colors">✕</button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-700 leading-relaxed" id="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+        <a id="modal-map-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-rose-800 hover:bg-rose-900 text-white text-xs font-bold transition-all shadow-xs">
+          <span>📍</span>
+          <span>View on Google Maps</span>
+        </a>
+        <button id="modal-copy-btn" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all">
+          📋 Copy Travel Notes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-xl text-xs font-medium flex items-center gap-2 transform translate-y-16 opacity-0 transition-all duration-300">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Notification Message</span>
+  </div>
+
+  <!-- 9. Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-heritage font-bold">Tripura Explorer</span>
+        <span>•</span>
+        <span>Dedicated to Sustainable Cultural Tourism, Manikya Architecture & Indigenous Heritage</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Curated with 👑 Tripura Pride</span>
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Data & Logic -->
+  <script>
+    const clustersData = [{"id": "agartala-capital", "title": "Agartala: Royal Capital & International Border Gateway", "tagline": "Ujjayanta Palace (neoclassical royal palace housing the state museum) and Akhaura integrated international border checkpost", "category": "Neoclassical Royal Palaces, State Museums & Border Retreats", "theme": {"border": "border-rose-200/90", "headerGradient": "from-rose-950 via-red-900 to-amber-950", "headerBorder": "border-rose-800", "badgeBg": "bg-rose-950/80 text-rose-300 border border-rose-700", "placeNumBg": "bg-rose-700", "typeColor": "text-rose-900", "mapBtnColor": "text-rose-700 hover:text-rose-900", "historyBg": "bg-rose-50/60 border border-rose-100", "historyHeading": "text-rose-950", "bulletColor": "text-rose-600", "modalBtn": "bg-amber-400 hover:bg-amber-300 text-rose-950", "tagColor": "bg-rose-50 text-rose-700 hover:bg-rose-100", "heritageBadge": "👑 Royal Manikya Crimson & Marble"}, "tags": ["Ujjayanta Palace (neoclassical royal palace housing the state museum)", "Akhaura integrated international border checkpost", "Agartala", "Manikya Dynasty", "Rabindranath Tagore", "State Museum", "BSF Retreat"], "bestTime": "October to March (Crisp sunny days and cool pleasant evenings perfect for garden walks and border parades)", "duration": "1 to 2 Days", "overview": "Set along the serene Haora River near the western frontier of India, Agartala has served as the royal seat of the Manikya dynasty since Maharaja Krishna Kishore Manikya shifted the capital here in 1838. Combining the regal neoclassical grandeur of Ujjayanta Palace—christened by Nobel laureate Rabindranath Tagore—with lively indigenous handicraft bazaars, botanical gardens, and the patriotic ceremonial grandeur of the Akhaura border retreat ceremony, Agartala offers an exquisite introduction to the intertwined royal, cultural, and political heritage of Tripura.", "places": [{"name": "Ujjayanta Palace (neoclassical royal palace housing the state museum)", "type": "1901 CE Neoclassical Royal Palace & Premier State Museum", "coords": "23.8344° N, 91.2828° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ujjayanta+Palace+Agartala+Tripura", "history": "Constructed between 1899 and 1901 by Maharaja Radha Kishore Manikya of the Manikya dynasty, replacing an earlier palace devastated by the catastrophic 1897 Assam earthquake. Named 'Ujjayanta Palace' by legendary Nobel laureate Rabindranath Tagore, who shared a profound lifelong friendship and patronage with the royal family of Tripura.", "keyFacts": ["A two-storied neoclassical palace compound crowned by an 86-foot-high central dome, spanning over 800 acres of manicured Mughal-inspired gardens, twin fountains, and reflective lakes.", "Now houses the Tripura State Museum across 22 expansive galleries showcasing over 1,500 historic artefacts, terracotta sculptures, bronze icons, and tribal ethnography.", "Features magnificent tiled floors, intricately carved teakwood ceilings, and monumental Corinthian columns reflecting European and Indian synthesis.", "Illuminated every evening with radiant floodlights that dance across the twin palace ponds and garden promenade."], "bestTime": "10:00 AM to 5:00 PM (Closed on Mondays; late afternoon is ideal for museum viewing followed by twilight garden illumination)", "insiderTip": "Spend time in the royal ethnography gallery to examine authentic traditional handlooms and musical instruments of Tripura's 19 indigenous tribes before walking the garden promenade at dusk."}, {"name": "Akhaura integrated international border checkpost", "type": "Indo-Bangladesh International Border & Joint Military Retreat Ceremony", "coords": "23.8447° N, 91.2486° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Akhaura+Integrated+Check+Post+Agartala", "history": "Located just 4 km west of central Agartala along the historic transit corridor connecting Tripura with Bangladesh. Established as the premier integrated international checkpoint (ICP) handling international passenger transit and bilateral trade between northeastern India and Dhaka.", "keyFacts": ["Akhaura integrated international border checkpost hosts a spectacular daily joint retreat ceremony conducted by the Border Security Force (BSF) of India and Border Guards Bangladesh (BGB).", "Modeled closely on the famous Wagah-Attari border ceremony, featuring synchronized drill marches, ceremonial flag lowering, and mutual military salutes.", "Features a commemorative 1971 Bangladesh Liberation War memorial honoring soldiers and freedom fighters (Mukti Bahini) who operated across this frontier.", "Equipped with modern passenger viewing galleries accommodating hundreds of spectators from both sides of the international border."], "bestTime": "4:30 PM to 5:30 PM daily (Arrive by 4:00 PM with government photo identification to secure seating in the visitor stand)", "insiderTip": "Carry a physical government photo ID (such as an Aadhaar card or passport) for security clearance at the civilian checkpoint; visitor seating is complimentary."}]}, {"id": "neermahal-melaghar", "title": "Neermahal & Melaghar: The Floating Palace of Rudrasagar", "tagline": "Neermahal (Melaghar): 'Water Palace' of eastern India built in the center of Rudrasagar Lake, fusing Hindu and Islamic architectural forms", "category": "Aquatic Summer Palaces, Wetland Sanctuaries & Boat Safaris", "theme": {"border": "border-cyan-200/90", "headerGradient": "from-slate-900 via-cyan-950 to-sky-900", "headerBorder": "border-cyan-800", "badgeBg": "bg-cyan-950/80 text-cyan-300 border border-cyan-700", "placeNumBg": "bg-cyan-700", "typeColor": "text-cyan-900", "mapBtnColor": "text-cyan-700 hover:text-cyan-900", "historyBg": "bg-cyan-50/60 border border-cyan-100", "historyHeading": "text-cyan-950", "bulletColor": "text-cyan-600", "modalBtn": "bg-cyan-400 hover:bg-cyan-300 text-slate-950", "tagColor": "bg-cyan-50 text-cyan-700 hover:bg-cyan-100", "heritageBadge": "🌊 Water Palace & Rudrasagar Lake Azure"}, "tags": ["Neermahal (Melaghar)", "Water Palace", "Rudrasagar Lake", "Melaghar", "Hindu-Islamic Architecture", "Ramsar Site", "Boat Safari"], "bestTime": "October to March (Pleasant breeze over the water; thousands of migratory birds populate the lake throughout the winter months)", "duration": "1 Day (53 km south of Agartala)", "overview": "Rising like an aquatic mirage from the shimmering waters of Rudrasagar Lake in Melaghar, Neermahal (literally 'Water Palace') is one of the crowning architectural marvels of northeastern India. Commissioned in the 1930s by Maharaja Bir Bikram Kishore Manikya as his royal summer retreat, Neermahal is the only water palace in eastern India and one of only two in the entire country (alongside Jaipur's Jal Mahal). Its brilliant white and red brick domes, arched gateways, and defensive bastions reflect a harmonious fusion of Hindu and Mughal Islamic aesthetics, surrounded by a designated Ramsar wetland teeming with migratory waterfowl.", "places": [{"name": "Neermahal (Melaghar)", "type": "'Water Palace' of eastern India built in the center of Rudrasagar Lake, fusing Hindu and Islamic architectural forms", "coords": "23.4994° N, 91.3328° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Neermahal+Water+Palace+Melaghar+Tripura", "history": "Commissioned in 1930 by the visionary Maharaja Bir Bikram Kishore Manikya Bahadur and constructed by the prestigious British engineering firm Martin & Burn Co., taking nine years to complete until its formal opening in 1938. Built entirely within the water reservoir of Rudrasagar Lake.", "keyFacts": ["Neermahal (Melaghar) is celebrated as the 'Water Palace' of eastern India built in the center of Rudrasagar Lake, fusing Hindu and Islamic architectural forms.", "Features 24 palatial rooms divided into two principal wings: the western 'Andar Mahal' reserved for the royal family and an eastern open-air theatrical terrace pavilion for musical soirees and royal water sports.", "Constructed with red brick and mortar, adorned with Hindu chhatris (canopies), domes, kiosks, and Islamic arched portals, balconies, and defensive minarets.", "Accessible exclusively by country motorboats or paddle boats from the Rajghat jetty, crossing the peaceful lotus-covered expanse of Rudrasagar Lake (a Ramsar Wetland of International Importance).", "Hosts the vibrant annual Neermahal Water Festival every autumn, featuring competitive boat races, swimming tournaments, and traditional cultural pageants."], "bestTime": "9:00 AM to 5:00 PM (Late afternoon boat ride at 3:30 PM captures the palace glowing against the golden sunset reflections on the lake)", "insiderTip": "Hire a shared or private boat from the Rajghat ferry counter; take your camera along to capture migratory whistling ducks, herons, and jacanas feeding in the surrounding water lilies."}]}, {"id": "unakoti-shaivite", "title": "Unakoti: Primeval Shaivite Rock-Carved Sanctuary", "tagline": "Unakoti: Ancient rock-carved giant bas-relief sculptures and stone images of Lord Shiva dating back to the 7th–9th centuries", "category": "Ancient Rock-Cut Bas-Reliefs, Shaivite Pilgrimages & Jungle Gorges", "theme": {"border": "border-emerald-200/90", "headerGradient": "from-slate-950 via-teal-950 to-emerald-950", "headerBorder": "border-emerald-800", "badgeBg": "bg-emerald-950/80 text-emerald-300 border border-emerald-700", "placeNumBg": "bg-emerald-800", "typeColor": "text-emerald-900", "mapBtnColor": "text-emerald-700 hover:text-emerald-900", "historyBg": "bg-emerald-50/60 border border-emerald-100", "historyHeading": "text-emerald-950", "bulletColor": "text-emerald-600", "modalBtn": "bg-emerald-400 hover:bg-emerald-300 text-slate-950", "tagColor": "bg-emerald-50 text-emerald-700 hover:bg-emerald-100", "heritageBadge": "🗿 7th-Century Basalt & Forest Moss Emerald"}, "tags": ["Unakoti", "Lord Shiva", "Rock Carvings", "Bas-Relief", "Kailashahar", "Kal Bhairava", "Ashokastami"], "bestTime": "October to March (Cool, dry conditions ideal for hiking the stone-cut terraces and jungle ravines)", "duration": "1 to 2 Days (178 km northeast of Agartala)", "overview": "Hidden amidst the emerald forest gorges of the Raghunandan Hills near Kailashahar, Unakoti is one of the most enigmatic archaeological treasures of India. Translating to 'one less than a crore' (99,99,999) in Bengali, this open-air gallery of colossal rock-cut bas-reliefs and freestanding stone sculptures dates back to between the 7th and 9th centuries CE. Towering stone portraits of Lord Shiva, Goddess Ganga, and multi-armed Ganeshas gaze out from vertical cliff faces while natural mountain streams cascade through the gorge, creating an awe-inspiring union of spirituality, master craftsmanship, and wild nature.", "places": [{"name": "Unakoti", "type": "Ancient rock-carved giant bas-relief sculptures and stone images of Lord Shiva dating back to the 7th–9th centuries", "coords": "24.3175° N, 92.0722° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Unakoti+Rock+Carvings+Kailashahar+Tripura", "history": "According to Hindu lore, Lord Shiva and one crore (10 million) deities were traveling to Kashi when Shiva ordered them to wake before dawn; when only Shiva woke, he cursed the sleeping gods to turn to stone, leaving 'one less than a crore' figures. Archaeologically, the monumental rock reliefs date from the 7th to 9th centuries CE, sculpted under royal Shaivite patronage during the regional kingdom era.", "keyFacts": ["Unakoti preserves ancient rock-carved giant bas-relief sculptures and stone images of Lord Shiva dating back to the 7th–9th centuries on tentative UNESCO World Heritage status.", "The central masterpiece is the colossal 30-foot-high rock-carved head of Lord Shiva, known as Unakotiswara Kal Bhairava, featuring an elaborate 10-foot-tall embroidered headdress.", "Flanked on the rocky cliff by two monumental female figures—one representing Goddess Ganga standing atop a celestial crocodile (Makara), with natural mountain springs flowing through her stone tresses.", "Features three colossal rock-cut carvings of Lord Ganesha, including an extraordinary four-tusked, eight-armed Astha-Ganesha relief.", "Focal point of the sacred annual Ashokastami Mela every April, where tens of thousands of pilgrims bathe in the sacred natural pool below the falls."], "bestTime": "8:00 AM to 4:00 PM (Morning sunlight illuminates the vertical cliff faces, highlighting subtle stone relief details)", "insiderTip": "Wear sturdy trekking shoes with excellent grip, as the ancient stone stairways leading down into the canyon gorge can be slippery from moisture and natural moss."}]}, {"id": "udaipur-lakes-temples", "title": "Udaipur: City of Lakes & Sacred Shakti Peetha", "tagline": "Udaipur (Tripura): Tripura Sundari Temple (one of the 51 holy Shakti Peethas) and surrounding artificial lakes", "category": "Sacred Shakti Peethas, Royal Excavated Lakes & Kurma Shrines", "theme": {"border": "border-red-200/90", "headerGradient": "from-red-950 via-rose-950 to-amber-950", "headerBorder": "border-red-800", "badgeBg": "bg-red-950/80 text-red-300 border border-red-700", "placeNumBg": "bg-red-700", "typeColor": "text-red-900", "mapBtnColor": "text-red-700 hover:text-red-900", "historyBg": "bg-red-50/60 border border-red-100", "historyHeading": "text-red-950", "bulletColor": "text-red-600", "modalBtn": "bg-red-500 hover:bg-red-400 text-white", "tagColor": "bg-red-50 text-red-700 hover:bg-red-100", "heritageBadge": "🛕 51 Shakti Peetha Vermilion & Sacred Lake"}, "tags": ["Udaipur (Tripura)", "Tripura Sundari Temple (one of the 51 holy Shakti Peethas)", "surrounding artificial lakes", "Matabari", "Kalyan Sagar", "Amar Sagar", "Jagannath Dighi"], "bestTime": "October to March (Pleasant festive season, especially during Diwali and Navaratri)", "duration": "1 Day (52 km south of Agartala)", "overview": "Udaipur, historically known as Rangamati, was the glorious ancient capital of the Manikya kings before the seat of power relocated to Agartala. Nestled along the banks of the Gomati River, Udaipur is famously hailed as the 'City of Lakes' of northeastern India for its network of expansive royal reservoirs excavated by medieval kings. The spiritual soul of the city is the revered 525-year-old Tripura Sundari Temple—one of the supreme 51 Shakti Peethas—where devotees worship the Mother Goddess beside the sacred, turtle-inhabited waters of Kalyan Sagar.", "places": [{"name": "Tripura Sundari Temple (one of the 51 holy Shakti Peethas)", "type": "1501 CE Sacred Shakti Peetha & Royal Kurma Pitha Sanctuary", "coords": "23.5350° N, 91.4997° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Tripura+Sundari+Temple+Udaipur+Tripura", "history": "Consecrated in 1501 CE (Saka era 1423) by Maharaja Dhanya Manikya following a divine revelation. Reconstructed in traditional Bengal-Tripura 'Char-Chala' architectural style after sustaining lightning damage during the 17th century.", "keyFacts": ["Tripura Sundari Temple (one of the 51 holy Shakti Peethas), affectionately known as 'Matabari', marks the sacred ground where Sati's right foot (padapitha) fell.", "The temple sanctum is shaped like the shell of a tortoise ('Kurma'), designating it as an exceptionally auspicious Kurma Pitha in sacred Tantric traditions.", "Houses two sacred black chlorite stone deities: the majestic 5-foot idol of Goddess Tripura Sundari (Shoroshi) and a smaller 2-foot idol known as Chhotoma, carried by Manikya kings into historical battles.", "Features the sacred 5-acre Kalyan Sagar lake on its eastern flank, home to revered giant black softshell freshwater turtles (Bostami turtles) that surface to receive food offerings from pilgrims.", "Hosts one of eastern India's grandest Diwali Melas, drawing over two hundred thousand pilgrims for sacred night-long lamps and worship."], "bestTime": "5:30 AM to 9:00 PM (Early morning Mangala Aarti and evening Sandhya Aarti are deeply resonant spiritual experiences)", "insiderTip": "After darshan, walk to the stone ghats of Kalyan Sagar behind the sanctum with a packet of puffed rice (muri) to feed the friendly ancient sacred giant turtles."}, {"name": "Surrounding artificial lakes (Kalyan Sagar, Amar Sagar, Jagannath Dighi & Dhani Sagar)", "type": "15th–17th Century Medieval Royal Reservoirs & Wetland Habitats", "coords": "23.5330° N, 91.4980° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Amar+Sagar+Udaipur+Tripura", "history": "Excavated between the late 15th and 17th centuries by visionary Manikya monarchs such as Maharaja Amar Manikya and Maharaja Jagannath Manikya to provide a sustainable civic water supply, royal recreation, and aesthetic majesty to their capital.", "keyFacts": ["Gave Udaipur its enduring moniker as the 'City of Lakes' of Tripura, featuring over two dozen historic man-made water bodies.", "Amar Sagar was excavated in the late 16th century by Maharaja Amar Manikya; its tranquil banks feature ancient brick temple ruins and lush groves.", "Jagannath Dighi, excavated in the 17th century, is one of the largest reservoirs in town, measuring hundreds of metres across with paved walking embankments.", "Dhani Sagar and Suk Sagar provide vital wetland habitats for migrating aquatic birds, lotus blossoms, and traditional fresh-water angling.", "Surrounded by ancient 16th-century ruins of the Bhubaneshwari Temple, immortalized in Rabindranath Tagore's celebrated dramas 'Rajarshi' and 'Bisharjan'."], "bestTime": "Sunrise to 6:00 PM (Late afternoon is wonderful for scenic walks along the tree-shaded promenades)", "insiderTip": "Combine your lake visit with a short stop at the nearby 17th-century Bhubaneshwari Temple ruins on the banks of Gomati River, where Rabindranath Tagore drew literary inspiration."}]}, {"id": "jampui-hills-range", "title": "Jampui Hills: The Orange Crests & Cloud-Kissed Ridges", "tagline": "Jampui Hills: Highest hill range in Tripura, famous for orange plantations, orchids, and views overlooking Bangladesh", "category": "High-Altitude Ridges, Orange Orchards & Tribal Homestays", "theme": {"border": "border-orange-200/90", "headerGradient": "from-stone-900 via-amber-950 to-orange-950", "headerBorder": "border-orange-800", "badgeBg": "bg-orange-950/80 text-orange-300 border border-orange-700", "placeNumBg": "bg-orange-600", "typeColor": "text-orange-900", "mapBtnColor": "text-orange-700 hover:text-orange-900", "historyBg": "bg-orange-50/60 border border-orange-100", "historyHeading": "text-orange-950", "bulletColor": "text-orange-600", "modalBtn": "bg-amber-400 hover:bg-amber-300 text-slate-950", "tagColor": "bg-orange-50 text-orange-700 hover:bg-orange-100", "heritageBadge": "🍊 Jampui Ripe Orange & Misty Ridge Azure"}, "tags": ["Jampui Hills", "Highest hill range in Tripura, famous for orange plantations, orchids, and views overlooking Bangladesh", "Betlingshib", "Vanghmun", "Orange Festival", "Mizo Tribe", "Cloudscapes"], "bestTime": "October to March (Autumn and winter bring clear sunny skies, blooming orchids, ripe golden oranges, and rolling morning mists)", "duration": "2 Days (205 km northeast of Agartala)", "overview": "Stretching along the northeastern border of Tripura adjoining Mizoram, the Jampui Hills form the highest mountain range in the state, rising to an altitude of 3,200 feet at the panoramic peak of Betlingshib. Celebrated as the 'Eternal Seat of Spring' due to its soothing year-round microclimate, Jampui Hills is renowned for rolling slopes covered in aromatic orange plantations, exotic wild orchids, pristine Mizo tribal villages with immaculate wooden cottages, and breathtaking sunset panoramas stretching west across the plains of Bangladesh.", "places": [{"name": "Jampui Hills", "type": "Highest hill range in Tripura, famous for orange plantations, orchids, and views overlooking Bangladesh", "coords": "23.9167° N, 92.2667° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Jampui+Hills+Tripura", "history": "Inhabited predominantly by the indigenous Lushai (Mizo) and Reang communities since the late 19th century, renowned for their spotless village sanitation, warm hospitality, timber craft, and musical traditions.", "keyFacts": ["Jampui Hills: Highest hill range in Tripura, famous for orange plantations, orchids, and views overlooking Bangladesh, peaking at Betlingshib (3,200 ft).", "Famous for sprawling terraced orange orchards that ripen into brilliant golden-orange hues between October and December.", "Home to vibrant indigenous villages like Vanghmun, Phuldungsei, and Sabual, celebrated for community-led eco-tourism, flower gardens, and bamboo handicrafts.", "Hosts the celebrated annual Orange & Tourism Festival every November, showcasing traditional tribal Cheraw (bamboo) dances, folk songs, and ethnic fruit wine tastings.", "Offers spellbinding vantage points overlooking the misty valleys of the Chittagong Hill Tracts of Bangladesh on the west and the blue ridges of Mizoram on the east."], "bestTime": "October to March (November and December are peak orange harvesting months with vivid festivals)", "insiderTip": "Stay at the scenic Eden Tourist Lodge or a local Mizo homestay in Vanghmun; wake up at 5:30 AM to witness a majestic sea of clouds floating through the valley below your balcony."}]}];
+    const itinerariesData = {"3": [{"day": "Day 1", "title": "Agartala Royal Citadels & Border Retreat", "desc": "Explore the neoclassical grandeur of Ujjayanta Palace and State Museum, browse bamboo handicrafts in city markets, and attend the thrilling Akhaura border flag-lowering ceremony."}, {"day": "Day 2", "title": "Neermahal Water Palace & Lake Safari", "desc": "Drive to Melaghar (53 km); take an open-top boat across Rudrasagar Lake to explore the iconic water palace Neermahal; savor traditional Mui Borok lunch at a lakeside lodge."}, {"day": "Day 3", "title": "Sacred Shakti Peetha & Udaipur Lakes", "desc": "Visit Udaipur (52 km south of Agartala); seek blessings at the historic 525-year-old Tripura Sundari Temple (Matabari), feed the sacred turtles of Kalyan Sagar, stroll along Amar Sagar, and depart."}], "5": [{"day": "Day 1", "title": "Arrival in Agartala: Palaces & Borders", "desc": "Tour Ujjayanta Palace museum galleries, explore royal gardens, and experience the synchronized BSF-BGB retreat drill at Akhaura border checkpost."}, {"day": "Day 2", "title": "Neermahal Water Wonder & Sepahijala Wildlife", "desc": "Morning safari at Sepahijala Wildlife Sanctuary to spot the rare spectacled Phayre's leaf monkey; afternoon boat ride across Rudrasagar Lake to tour Neermahal palace chambers."}, {"day": "Day 3", "title": "Udaipur Temple Trail & Royal Lakes", "desc": "Travel to Udaipur; attend morning prayers at Tripura Sundari Temple, explore the ancient 17th-century Bhubaneshwari Temple ruins by the Gomati River, and relax beside Jagannath Dighi."}, {"day": "Day 4", "title": "Unakoti Ancient Rock-Carved Sanctuary", "desc": "Scenic morning drive north to Kailashahar; hike down into the forested gorge of Unakoti to marvel at the 30-foot Kal Bhairava bas-relief and cascading waterfalls."}, {"day": "Day 5", "title": "Heritage Return & Agartala Departures", "desc": "Morning photography around Unakoti; return transit through lush tea estates toward Agartala airport for onward journeys."}], "7": [{"day": "Day 1", "title": "Agartala: The Royal Manikya Heritage", "desc": "Arrive in Agartala; check into hotel, visit Ujjayanta Palace State Museum, stroll through Rabindra Kanan gardens, and savor evening Bangui rice and Wahan Mosdeng."}, {"day": "Day 2", "title": "Akhaura Border & Cultural Handlooms", "desc": "Morning visit to Purbasha handicraft emporium for cane and bamboo craft; afternoon excursion to the Akhaura border checkpost for the ceremonial retreat parade."}, {"day": "Day 3", "title": "Neermahal & Aquatic Splendours of Melaghar", "desc": "Full-day excursion to Melaghar; embark on a motorboat tour across Rudrasagar Lake to explore the Hindu-Islamic pavilions of Neermahal and photograph waterfowl."}, {"day": "Day 4", "title": "Udaipur City of Lakes & Matabari Blessing", "desc": "Drive to ancient Udaipur; seek blessings at Tripura Sundari Shakti Peetha, feed sacred giant softshell turtles at Kalyan Sagar, and explore the historic Amar Sagar embankments."}, {"day": "Day 5", "title": "Ascent to Jampui Hills: The Orange Ridge", "desc": "Drive through changing landscapes up into the cool Jampui Hills (3,200 ft); check into a hill homestay in Vanghmun; wander through fragrant orange orchards."}, {"day": "Day 6", "title": "Betlingshib Sunrise & Unakoti Wonders", "desc": "Witness sunrise overlooking Bangladesh from Betlingshib peak; descend toward Kailashahar to explore the colossal rock-carved Shiva reliefs of Unakoti."}, {"day": "Day 7", "title": "Baramura Eco-Park & Departure from Agartala", "desc": "Return drive across the green Baramura hills; stop for freshly brewed local tea; transfer to Maharaja Bir Bikram Airport in Agartala for departure."}]};
+
+    // Cultural Category Filter Styles
+    const categoryTabStyles = {
+      'All': 'bg-rose-900 text-white',
+      'Neoclassical Royal Palaces, State Museums & Border Retreats': 'bg-rose-800 text-white',
+      'Aquatic Summer Palaces, Wetland Sanctuaries & Boat Safaris': 'bg-cyan-800 text-white',
+      'Ancient Rock-Cut Bas-Reliefs, Shaivite Pilgrimages & Jungle Gorges': 'bg-emerald-800 text-white',
+      'Sacred Shakti Peethas, Royal Excavated Lakes & Kurma Shrines': 'bg-red-800 text-white',
+      'High-Altitude Ridges, Orange Orchards & Tribal Homestays': 'bg-orange-700 text-white',
+      'Bookmarks': 'bg-purple-800 text-white'
+    };
+
+    // State Variables
+    let currentCategory = 'All';
+    let searchQuery = '';
+    let bookmarkedPlaces = JSON.parse(localStorage.getItem('tripura_bookmarks') || '[]');
+    let checklistState = JSON.parse(localStorage.getItem('tripura_checklist') || '{}');
+
+    // DOM Elements
+    const clustersContainer = document.getElementById('clusters-container');
+    const emptyState = document.getElementById('empty-state');
+    const searchInput = document.getElementById('search-input');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const filterStatusText = document.getElementById('filter-status-text');
+    const bookmarkBadge = document.getElementById('bookmark-badge');
+    const bookmarkFilterBtn = document.getElementById('bookmark-filter-btn');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const chimeBtn = document.getElementById('chime-btn');
+    const readingModal = document.getElementById('reading-modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalTitle = document.getElementById('modal-title');
+    const modalCategory = document.getElementById('modal-category');
+    const modalCoords = document.getElementById('modal-coords');
+    const modalBody = document.getElementById('modal-body');
+    const modalMapLink = document.getElementById('modal-map-link');
+    const modalCopyBtn = document.getElementById('modal-copy-btn');
+    const toast = document.getElementById('toast');
+    const toastIcon = document.getElementById('toast-icon');
+    const toastMsg = document.getElementById('toast-msg');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+
+    // Show Toast Notification
+    function showToast(msg, icon = '✨') {
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 3000);
+    }
+
+    // Synthesize Kham Drum & Sumui Flute via Web Audio API
+    function playTripuraChime() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) {
+          showToast('Audio API not supported in this browser', '⚠️');
+          return;
+        }
+        const ctx = new AudioContext();
+
+        // 1. Traditional Kham Drum (Resonant Dual-Beat)
+        function triggerKhamBeat(time, freq, decay) {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, time);
+          osc.frequency.exponentialRampToValueAtTime(35, time + decay);
+
+          gain.gain.setValueAtTime(0.5, time);
+          gain.gain.exponentialRampToValueAtTime(0.001, time + decay);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(time);
+          osc.stop(time + decay);
+        }
+
+        const now = ctx.currentTime;
+        triggerKhamBeat(now + 0.05, 140, 0.45);
+        triggerKhamBeat(now + 0.35, 110, 0.55);
+        triggerKhamBeat(now + 0.95, 150, 0.6);
+
+        // 2. Sumui Bamboo Flute Melody (Sweet Pentatonic Raga Flourish)
+        const notes = [440, 493.88, 554.37, 659.25, 739.99, 880]; // A4, B4, C#5, E5, F#5, A5
+        const melodyTimes = [0.15, 0.35, 0.55, 0.75, 1.05, 1.35];
+
+        melodyTimes.forEach((t, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(notes[i % notes.length], now + t);
+
+          // Gentle vibrato on longer notes
+          if (i >= 4) {
+            const vibrato = ctx.createOscillator();
+            const vGain = ctx.createGain();
+            vibrato.frequency.value = 5.5;
+            vGain.gain.value = 8;
+            vibrato.connect(osc.frequency);
+            vibrato.start(now + t);
+            vibrato.stop(now + t + 0.6);
+          }
+
+          gain.gain.setValueAtTime(0.001, now + t);
+          gain.gain.linearRampToValueAtTime(0.18, now + t + 0.06);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + t + 0.45);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(now + t);
+          osc.stop(now + t + 0.5);
+        });
+
+        showToast('Playing Kham Drum & Sumui Bamboo Flute Chime 🎵', '👑');
+      } catch (err) {
+        console.warn('Web Audio playback error:', err);
+      }
+    }
+
+    // Render Itinerary Cards
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      const items = itinerariesData[days] || [];
+      container.innerHTML = items.map(item => `
+        <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl hover:border-rose-300 transition-colors">
+          <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+            <span class="font-bold text-rose-900 font-heritage">${item.day}</span>
+            <span class="text-[10px] bg-rose-100 text-rose-800 px-1.5 py-0.5 rounded-full font-bold">Recommended</span>
+          </div>
+          <div class="font-bold text-slate-900 mt-2 text-xs">${item.title}</div>
+          <p class="text-slate-600 text-[11px] mt-1 leading-snug">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    // Update Checklist UI
+    function updateChecklistUI() {
+      const checkboxes = document.querySelectorAll('.checklist-item');
+      let checkedCount = 0;
+      checkboxes.forEach((cb, idx) => {
+        if (checklistState[idx]) {
+          cb.checked = true;
+          checkedCount++;
+        } else {
+          cb.checked = false;
+        }
+      });
+      document.getElementById('checklist-status').textContent = `${checkedCount} of ${checkboxes.length} completed`;
+      localStorage.setItem('tripura_checklist', JSON.stringify(checklistState));
+    }
+
+    // Bookmark Toggle
+    function toggleBookmark(placeName) {
+      const idx = bookmarkedPlaces.indexOf(placeName);
+      if (idx > -1) {
+        bookmarkedPlaces.splice(idx, 1);
+        showToast(`Removed ${placeName} from bookmarks`, '🔖');
+      } else {
+        bookmarkedPlaces.push(placeName);
+        showToast(`Saved ${placeName} to bookmarks!`, '⭐');
+      }
+      localStorage.setItem('tripura_bookmarks', JSON.stringify(bookmarkedPlaces));
+      updateBookmarkBadge();
+      renderClusters();
+    }
+
+    function updateBookmarkBadge() {
+      bookmarkBadge.textContent = `Bookmarks (${bookmarkedPlaces.length})`;
+    }
+
+    // Open Reading Modal
+    function openModal(clusterId, placeIdx) {
+      const cluster = clustersData.find(c => c.id === clusterId);
+      if (!cluster) return;
+      const place = cluster.places[placeIdx];
+      if (!place) return;
+
+      modalTitle.textContent = place.name;
+      modalCategory.textContent = cluster.category;
+      modalCoords.textContent = `GPS: ${place.coords} • Region: ${cluster.title.split(':')[0]}`;
+      modalMapLink.href = place.mapUrl;
+
+      modalBody.innerHTML = `
+        <div class="bg-rose-50/70 border border-rose-200 p-3 rounded-2xl">
+          <div class="font-bold text-rose-950 font-heritage text-xs">Architectural & Historical Importance</div>
+          <p class="text-slate-700 text-xs mt-1 leading-relaxed">${place.history}</p>
+        </div>
+
+        <div>
+          <div class="font-bold text-slate-900 font-heritage text-xs uppercase tracking-wide text-rose-900 mb-2">Key Heritage & Cultural Facts</div>
+          <ul class="space-y-1.5 text-xs text-slate-700">
+            ${place.keyFacts.map(fact => `
+              <li class="flex items-start gap-2">
+                <span class="text-rose-600 font-bold">✦</span>
+                <span>${fact}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Best Visiting Window</span>
+            <span class="font-semibold text-slate-800 text-xs mt-0.5 block">🌤️ ${place.bestTime}</span>
+          </div>
+          <div class="bg-amber-50/80 p-3 rounded-xl border border-amber-200">
+            <span class="text-[10px] font-bold text-amber-800 uppercase tracking-wider block">Insider Guide Tip</span>
+            <span class="text-amber-950 text-xs mt-0.5 block">💡 ${place.insiderTip}</span>
+          </div>
+        </div>
+      `;
+
+      modalCopyBtn.onclick = () => {
+        const textToCopy = `${place.name}\nType: ${place.type}\nCoordinates: ${place.coords}\n\nHistorical Importance:\n${place.history}\n\nKey Facts:\n${place.keyFacts.map(f => '• ' + f).join('\n')}\n\nBest Time: ${place.bestTime}\nInsider Tip: ${place.insiderTip}\nGoogle Maps: ${place.mapUrl}`;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast('Copied travel dossier to clipboard!', '📋');
+        });
+      };
+
+      readingModal.classList.remove('hidden');
+      setTimeout(() => {
+        readingModal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeModal() {
+      readingModal.classList.add('opacity-0');
+      modalContent.classList.add('scale-95');
+      setTimeout(() => {
+        readingModal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Render Clusters & Places with Destination-Specific Cultural Color Theming
+    function renderClusters() {
+      const query = searchQuery.toLowerCase().trim();
+      let totalVisibleClusters = 0;
+      let totalVisiblePlaces = 0;
+
+      clustersContainer.innerHTML = '';
+
+      clustersData.forEach(cluster => {
+        // Filter by Category
+        const matchesCategory = (currentCategory === 'All' || cluster.category === currentCategory);
+
+        // Filter places
+        const filteredPlaces = cluster.places.filter(place => {
+          const isBookmarked = bookmarkedPlaces.includes(place.name);
+          if (currentCategory === 'Bookmarks' && !isBookmarked) return false;
+
+          if (!query) return true;
+
+          const matchText = (
+            place.name + ' ' +
+            place.type + ' ' +
+            place.history + ' ' +
+            place.keyFacts.join(' ') + ' ' +
+            place.insiderTip + ' ' +
+            cluster.title + ' ' +
+            cluster.overview + ' ' +
+            cluster.tags.join(' ')
+          ).toLowerCase();
+
+          return matchText.includes(query);
+        });
+
+        if ((matchesCategory || currentCategory === 'Bookmarks') && filteredPlaces.length > 0) {
+          totalVisibleClusters++;
+          totalVisiblePlaces += filteredPlaces.length;
+
+          const article = document.createElement('article');
+          article.className = `bg-white rounded-3xl border ${cluster.theme.border} shadow-md overflow-hidden transition-all hover:shadow-xl space-y-4`;
+
+          article.innerHTML = `
+            <!-- Cluster Header Banner with Heritage Palette -->
+            <div class="bg-gradient-to-r ${cluster.theme.headerGradient} text-white p-5 sm:p-6 border-b ${cluster.theme.headerBorder} flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div class="space-y-1.5 max-w-3xl">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-[11px] font-bold uppercase tracking-wider ${cluster.theme.badgeBg} px-2.5 py-0.5 rounded-full">${cluster.category}</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white px-2 py-0.5 rounded-full border border-white/20">${cluster.theme.heritageBadge}</span>
+                  <span class="text-xs text-slate-200 font-medium">⏳ Duration: ${cluster.duration}</span>
+                  <span class="text-xs text-slate-200 font-medium">• 🌤️ ${cluster.bestTime.split('(')[0]}</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-black font-heritage text-white tracking-tight">${cluster.title}</h3>
+                <p class="text-xs text-amber-200/90 font-medium">${cluster.tagline}</p>
+              </div>
+              <button onclick="openModal('${cluster.id}', 0)" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl ${cluster.theme.modalBtn} text-xs font-bold transition-all shadow-sm flex-shrink-0">
+                <span>📖</span>
+                <span>Read Full Dossier</span>
+              </button>
+            </div>
+
+            <!-- Overview & Tags -->
+            <div class="px-5 sm:px-6 pt-1">
+              <p class="text-xs text-slate-600 leading-relaxed font-normal">${cluster.overview}</p>
+              <div class="flex items-center gap-1.5 flex-wrap mt-3">
+                ${cluster.tags.map(tag => `
+                  <span class="text-[10px] ${cluster.theme.tagColor} px-2 py-0.5 rounded-md font-medium transition-colors">#${tag}</span>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Places Grid -->
+            <div class="p-5 sm:p-6 pt-2 grid grid-cols-1 ${filteredPlaces.length > 1 ? 'md:grid-cols-2' : 'md:grid-cols-1'} gap-5">
+              ${filteredPlaces.map((place, idx) => {
+                const isBookmarked = bookmarkedPlaces.includes(place.name);
+                return `
+                  <div class="bg-slate-50/80 border border-slate-200 rounded-2xl p-4 sm:p-5 flex flex-col justify-between hover:border-slate-300 hover:bg-white transition-all space-y-4">
+                    <div class="space-y-3">
+                      <!-- Place Header -->
+                      <div class="flex items-start justify-between gap-3">
+                        <div>
+                          <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full ${cluster.theme.placeNumBg} text-white text-xs font-bold flex items-center justify-center flex-shrink-0">${idx + 1}</span>
+                            <h4 class="text-base font-bold text-slate-900 font-heritage leading-snug">${place.name}</h4>
+                          </div>
+                          <p class="text-[11px] ${cluster.theme.typeColor} font-semibold mt-1 pl-8">${place.type}</p>
+                        </div>
+                        <button onclick="toggleBookmark('${place.name}')" class="w-8 h-8 rounded-full border border-slate-200 bg-white hover:bg-slate-100 flex items-center justify-center text-sm transition-all flex-shrink-0" title="Bookmark Destination">
+                          ${isBookmarked ? '⭐' : '☆'}
+                        </button>
+                      </div>
+
+                      <!-- Coords & Direct Map Link -->
+                      <div class="flex items-center justify-between text-[11px] bg-white p-2 rounded-xl border border-slate-200 font-mono text-slate-600">
+                        <span>📍 ${place.coords}</span>
+                        <a href="${place.mapUrl}" target="_blank" rel="noopener noreferrer" class="${cluster.theme.mapBtnColor} font-bold hover:underline flex items-center gap-1 font-sans">
+                          <span>View on Google Maps</span>
+                          <span>↗</span>
+                        </a>
+                      </div>
+
+                      <!-- Historical Importance -->
+                      <div class="text-xs text-slate-700 ${cluster.theme.historyBg} p-3 rounded-xl leading-relaxed">
+                        <strong class="${cluster.theme.historyHeading} font-heritage block text-[11px] uppercase tracking-wider mb-1">Historical Significance:</strong>
+                        ${place.history}
+                      </div>
+
+                      <!-- Key Facts -->
+                      <div>
+                        <strong class="text-slate-900 text-xs font-bold block mb-1.5">✦ Architectural & Cultural Highlights:</strong>
+                        <ul class="space-y-1 text-xs text-slate-600 pl-1">
+                          ${place.keyFacts.map(fact => `
+                            <li class="flex items-start gap-2">
+                              <span class="${cluster.theme.bulletColor} font-bold">✦</span>
+                              <span>${fact}</span>
+                            </li>
+                          `).join('')}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Footer Info -->
+                    <div class="pt-3 border-t border-slate-200/70 space-y-2 text-xs">
+                      <div class="flex items-start gap-1.5 text-slate-600">
+                        <span class="text-sm">🌤️</span>
+                        <span><strong>Best Time:</strong> ${place.bestTime}</span>
+                      </div>
+                      <div class="flex items-start gap-1.5 text-amber-950 bg-amber-50/80 p-2 rounded-lg border border-amber-200/70 text-[11px]">
+                        <span class="text-sm">💡</span>
+                        <span><strong>Tip:</strong> ${place.insiderTip}</span>
+                      </div>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          `;
+
+          clustersContainer.appendChild(article);
+        }
+      });
+
+      // Toggle Empty State
+      if (totalVisiblePlaces === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+
+      // Update Filter Status
+      filterStatusText.innerHTML = `Showing: <span class="font-bold text-slate-900">${totalVisibleClusters} Regions</span> • <span class="font-bold text-slate-900">${totalVisiblePlaces} Key Sites</span>`;
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderClusters();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchQuery = '';
+      searchInput.value = '';
+      currentCategory = 'All';
+      filterTabs.forEach(t => {
+        t.className = 'filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0';
+      });
+      const allTab = document.querySelector('.filter-tab[data-cat="All"]');
+      if (allTab) {
+        allTab.className = 'filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-rose-900 text-white shadow-xs transition-all flex-shrink-0';
+      }
+      renderClusters();
+    });
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.className = 'filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0';
+        });
+        const activeStyle = categoryTabStyles[tab.dataset.cat] || 'bg-rose-900 text-white';
+        tab.className = `filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold ${activeStyle} shadow-xs transition-all flex-shrink-0`;
+        currentCategory = tab.dataset.cat;
+        renderClusters();
+      });
+    });
+
+    bookmarkFilterBtn.addEventListener('click', () => {
+      currentCategory = 'Bookmarks';
+      filterTabs.forEach(t => {
+        t.className = 'filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0';
+      });
+      renderClusters();
+      showToast('Filtering bookmarked sites', '🔖');
+    });
+
+    // Checklist Event Listeners
+    document.querySelectorAll('.checklist-item').forEach(cb => {
+      cb.addEventListener('change', (e) => {
+        const idx = e.target.dataset.index;
+        checklistState[idx] = e.target.checked;
+        updateChecklistUI();
+      });
+    });
+
+    document.getElementById('reset-checklist-btn').addEventListener('click', () => {
+      checklistState = {};
+      updateChecklistUI();
+      showToast('Checklist reset', '🎒');
+    });
+
+    // Itinerary Pills
+    document.querySelectorAll('.itinerary-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.itinerary-pill').forEach(p => {
+          p.classList.remove('bg-rose-800', 'text-white');
+          p.classList.add('bg-slate-100', 'text-slate-700');
+        });
+        pill.classList.add('bg-rose-800', 'text-white');
+        pill.classList.remove('bg-slate-100', 'text-slate-700');
+        renderItinerary(pill.dataset.days);
+      });
+    });
+
+    // Chime & Modal Controls
+    chimeBtn.addEventListener('click', playTripuraChime);
+    closeModalBtn.addEventListener('click', closeModal);
+    readingModal.addEventListener('click', (e) => {
+      if (e.target === readingModal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !readingModal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Initialization
+    renderItinerary('3');
+    updateChecklistUI();
+    updateBookmarkBadge();
+    renderClusters();
+  </script>
+</body>
+</html>

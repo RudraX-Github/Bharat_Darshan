@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharashtra Explorer - Gateway to Empires, UNESCO Caves & Sahyadri Forts</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-heritage {
+      font-family: 'Cinzel', serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-orange-200 selection:text-orange-900">
+
+  <!-- Top Cultural Announcement Bar -->
+  <div class="bg-gradient-to-r from-orange-950 via-amber-900 to-slate-950 text-amber-200 text-xs sm:text-sm py-2 px-4 text-center font-medium border-b border-orange-800/50 flex items-center justify-center gap-2 shadow-xs">
+    <span>🚩 Jai Maharashtra! Welcome to Maharashtra — Gateway to Empires, Ancient Caves & Sahyadri Fortresses</span>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 via-amber-600 to-red-700 flex items-center justify-center text-white shadow-lg shadow-orange-600/20 text-2xl font-bold border border-orange-300">
+          🚩
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heritage">Maharashtra Explorer</h1>
+          <p class="text-xs text-slate-500 font-medium mt-0.5">Your Welcoming Guide to Mumbai, Pune, Lonavala, Mahabaleshwar, Chhatrapati Sambhajinagar, Shirdi, Nashik, Konkan & Tadoba</p>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex flex-wrap items-center gap-2 text-xs">
+        <button id="audio-bell-btn" class="bg-orange-100/90 hover:bg-orange-200 text-orange-950 px-3 py-1.5 rounded-xl font-bold flex items-center gap-1.5 transition-all border border-orange-300 shadow-2xs active:scale-95" title="Play Traditional Maratha Tutari Clarion Fanfare & Puneri Dhol">
+          <span>📯 Tutari & Puneri Dhol</span>
+        </button>
+        <a href="#itinerary-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🗓️ Itineraries</span>
+        </a>
+        <a href="#cuisine-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🍲 Cuisine</span>
+        </a>
+        <a href="#festivals-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎉 Festivals</span>
+        </a>
+        <a href="#checklist-section" class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-1.5 rounded-xl font-semibold transition-colors flex items-center gap-1">
+          <span>🎒 Checklist</span>
+        </a>
+        <button id="bookmark-filter-btn" class="bg-amber-50 hover:bg-amber-100 text-amber-900 px-3.5 py-1.5 rounded-xl font-bold transition-all border border-amber-300/80 flex items-center gap-1.5">
+          <span>⭐ Bookmarks</span>
+          <span id="bookmark-badge-count" class="bg-amber-600 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-b from-orange-950 via-slate-900 to-slate-950 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-orange-900/40 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30 text-xs font-semibold mb-4">
+          <span>🏰 The Heart of the Maratha Empire & Deccan Heritage</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight font-heritage leading-tight">
+          Where Ancient Caves Meet Ocean Skylines & Sacred Sahyadri Heights
+        </h2>
+        <p class="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+          From the roaring waves of Mumbai's Marine Drive and the rock-cut grandeur of Ajanta and Ellora, to the mist-shrouded Maratha hill fortresses of Pune, strawberry valleys of Mahabaleshwar, sacred abodes of Shirdi and Trimbakeshwar, and the wild tiger jungles of Tadoba.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              🔍
+            </span>
+            <input type="text" id="destination-search" placeholder="Search Gateway of India, Ajanta Caves, Sinhagad, Mahabaleshwar, Tadoba..." class="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-2xl text-white placeholder-slate-400 focus:outline-hidden focus:ring-2 focus:ring-orange-400 text-sm backdrop-blur-md">
+          </div>
+          <button id="clear-search-btn" class="px-5 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl text-xs font-semibold text-slate-300 transition-all">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-6 border-t border-slate-800">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-black text-orange-400 font-heritage">7</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Iconic Clusters</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-black text-amber-400 font-heritage">30</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Highlight Destinations</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-black text-orange-300 font-heritage">5</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">UNESCO World Heritage Sites</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-heritage">2,500+ Yrs</div>
+          <div class="text-xs text-slate-400 font-medium mt-1">Authentic Heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Cluster Category Filter Pills -->
+  <nav class="bg-white border-b border-slate-200 sticky top-[73px] z-30 shadow-2xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div id="cluster-pills" class="flex items-center gap-2 overflow-x-auto pb-1 text-xs no-scrollbar">
+        <button data-cluster="all" class="filter-pill active px-4 py-2 rounded-xl font-bold whitespace-nowrap transition-all bg-orange-600 text-white shadow-xs">
+          All Maharashtra
+        </button>
+        <button data-cluster="mumbai" class="filter-pill px-3.5 py-2 rounded-xl font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          🏙️ Mumbai
+        </button>
+        <button data-cluster="pune" class="filter-pill px-3.5 py-2 rounded-xl font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          🏰 Pune & Ghats
+        </button>
+        <button data-cluster="lonavala_khandala_matheran" class="filter-pill px-3.5 py-2 rounded-xl font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          ⛰️ Lonavala & Matheran
+        </button>
+        <button data-cluster="mahabaleshwar_panchgani" class="filter-pill px-3.5 py-2 rounded-xl font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          🍓 Mahabaleshwar
+        </button>
+        <button data-cluster="chhatrapati_sambhajinagar" class="filter-pill px-3.5 py-2 rounded-xl font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          🏛️ Sambhajinagar (Aurangabad)
+        </button>
+        <button data-cluster="shirdi_nashik" class="filter-pill px-3.5 py-2 rounded-xl font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          🍇 Shirdi & Nashik
+        </button>
+        <button data-cluster="konkan_wildlife" class="filter-pill px-3.5 py-2 rounded-xl font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+          🐅 Konkan & Tadoba
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full space-y-12">
+
+    <!-- Places Section -->
+    <section id="places-grid-section">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+        <div>
+          <h3 id="current-view-title" class="text-xl font-black text-slate-900 font-heritage">All Destination Highlights</h3>
+          <p id="places-count-label" class="text-xs text-slate-500 font-medium">Displaying all 30 verified destinations across Maharashtra</p>
+        </div>
+      </div>
+
+      <!-- Destination Cards Grid -->
+      <div id="places-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 p-8 shadow-xs">
+        <div class="text-4xl mb-3">🔍</div>
+        <h4 class="text-base font-bold text-slate-800">No destinations match your search</h4>
+        <p class="text-xs text-slate-500 mt-1 max-w-sm mx-auto">Try clearing your search query or choosing another region filter from the top bar.</p>
+        <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-orange-600 text-white text-xs font-bold rounded-xl shadow-xs hover:bg-orange-700 transition-colors">
+          Reset All Filters
+        </button>
+      </div>
+    </section>
+
+    <!-- Curated Itineraries Section -->
+    <section id="itinerary-section" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs scroll-mt-24">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center text-xl font-bold">
+          🗓️
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-black text-slate-900 font-heritage">Curated Travel Itineraries</h3>
+          <p class="text-xs text-slate-500 font-medium">Thoughtfully planned routes for weekends, heritage pilgrimages, and grand expeditions</p>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3 mb-6 text-xs">
+        <button class="itinerary-tab-btn active px-4 py-2 rounded-xl font-bold bg-orange-600 text-white transition-all" data-tab="itin-0">
+          3-Day Express Golden Triangle
+        </button>
+        <button class="itinerary-tab-btn px-4 py-2 rounded-xl font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-tab="itin-1">
+          5-Day Heritage & Wine Odyssey
+        </button>
+        <button class="itinerary-tab-btn px-4 py-2 rounded-xl font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all" data-tab="itin-2">
+          7-Day Grand Sahyadri & Konkan
+        </button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div id="itinerary-panels">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Taste of Maharashtra (Cuisine Section) -->
+    <section id="cuisine-section" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs scroll-mt-24">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl font-bold">
+          🍲
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-black text-slate-900 font-heritage">Taste of Maharashtra: Authentic Culinary Heritage</h3>
+          <p class="text-xs text-slate-500 font-medium">From fiery Kolhapuri Misal and Mumbai Vada Pav to Puran Poli, Modak, and Malvani Solkadhi</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="cuisine-container">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Festivals & Cultural Calendar -->
+    <section id="festivals-section" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs scroll-mt-24">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-red-100 text-red-700 flex items-center justify-center text-xl font-bold">
+          🎉
+        </div>
+        <div>
+          <h3 class="text-lg sm:text-xl font-black text-slate-900 font-heritage">Festivals & Cultural Traditions</h3>
+          <p class="text-xs text-slate-500 font-medium">Experience grand Dhol-Tasha processions, Varkari devotional wari, and royal Maratha commemorations</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="festivals-container">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Packing Checklist & Highway Transit Matrix (Two Column Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Smart Packing Checklist -->
+      <section id="checklist-section" class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs scroll-mt-24 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl font-bold">
+              🎒
+            </div>
+            <div>
+              <h3 class="text-base sm:text-lg font-black text-slate-900 font-heritage">Sahyadri, Caves & Safari Checklist</h3>
+              <p class="text-xs text-slate-500 font-medium">Essential items for Maharashtra's forts, beaches, and tiger reserves</p>
+            </div>
+          </div>
+          <div class="space-y-3 mt-4" id="checklist-container">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+          <span id="checklist-status">0 of 6 packed</span>
+          <button onclick="resetChecklist()" class="text-orange-600 font-bold hover:underline">Reset Checklist</button>
+        </div>
+      </section>
+
+      <!-- Highway Transit Matrix -->
+      <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center text-xl font-bold">
+              🛣️
+            </div>
+            <div>
+              <h3 class="text-base sm:text-lg font-black text-slate-900 font-heritage">Inter-City Transit Matrix</h3>
+              <p class="text-xs text-slate-500 font-medium">Approximate highway distances & driving durations across Maharashtra</p>
+            </div>
+          </div>
+          <div class="overflow-x-auto mt-4">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-200 text-slate-400 font-bold">
+                  <th class="py-2 pr-3">Origin</th>
+                  <th class="py-2 px-3">Destination</th>
+                  <th class="py-2 px-3">Distance</th>
+                  <th class="py-2 pl-3">Transit Mode / Time</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100" id="transit-container">
+                <!-- Rendered by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-500 flex items-center gap-2">
+          <span>ℹ️ Connected via Mumbai-Pune Expressway, Samruddhi Mahamarg & Konkan Railway networks.</span>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-10 px-4 sm:px-6 lg:px-8 border-t border-slate-800 mt-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-orange-600 text-white flex items-center justify-center font-bold text-sm">
+          🚩
+        </div>
+        <div>
+          <div class="font-bold text-slate-200 font-heritage text-sm">Maharashtra Tourism & Heritage Guide</div>
+          <div class="text-[11px] text-slate-500">2,500+ Years of Rock-Cut Sanctuaries, Maratha Citadels & Arabian Sea Splendors</div>
+        </div>
+      </div>
+      <div class="text-[11px] text-slate-500">
+        Curated for discerning travelers, pilgrims, and explorers across the Heart of India.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script & Web Audio Synthesizer -->
+  <script>
+    // Injected Data
+    const appData = {"state": "Maharashtra", "tagline": "Gateway to Empires, Ancient Caves & Sahyadri Fortresses", "welcome_greeting": "\ud83d\udea9 Jai Maharashtra! Welcome to Maharashtra \u2014 The Great Land of Maratha Forts, UNESCO Caves & Konkan Shores", "heritage_years": "2,500+ Yrs Heritage", "instrument_name": "Maratha Tutari & Puneri Dhol", "instrument_desc": "Traditional curved brass trumpet of the Maratha Empire sounded for royal salutes, paired with the thunderous pulse of the Puneri Dhol.", "clusters_count": 7, "destinations_count": 28, "unesco_count": 5, "clusters": [{"id": "mumbai", "name": "Mumbai: The Financial Capital & Coastal Metropolis", "tagline": "Colonial landmarks, Arabian Sea promenades, and ancient island rock sanctuaries", "icon": "\ud83c\udfd9\ufe0f", "places": [{"name": "Gateway of India", "tagline": "Majestic basalt arch facing Mumbai Harbour, erected to commemorate King George V's visit", "category": "Colonial Monument", "gps": "18.9220\u00b0 N, 72.8347\u00b0 E", "lat": 18.922, "lng": 72.8347, "map_url": "https://www.google.com/maps/search/?api=1&query=Gateway+of+India+Mumbai", "importance": "Designed by George Wittet in Indo-Saracenic architectural style with 16th-century Gujarati influences, this 26-meter-high basalt triumphal arch was completed in 1924. It served as the ceremonial entrance to British India and later witnessed the symbolic departure of the last British troops (First Battalion, Somerset Light Infantry) on February 28, 1948.", "visiting_hours": "Open 24 hours daily (Best at sunrise & evening 5:00 PM \u2013 8:00 PM)", "entry_fee": "Free entry; Ferry tickets to Elephanta Caves approx. \u20b9260 return", "best_season": "October to March (Pleasant coastal winter breeze)", "audio_text": "Welcome to the Gateway of India, Mumbai's most iconic maritime landmark. Standing 26 meters tall in yellow basalt, this monumental arch overlooks Mumbai Harbour. Completed in 1924, it combines Indo-Saracenic grandeur with Gujarati architectural nuances. It is also the sacred site where the final British troops departed independent India in 1948."}, {"name": "Marine Drive", "tagline": "The 3.6-km C-shaped sea-facing boulevard affectionately titled the 'Queen's Necklace'", "category": "Coastal Promenade", "gps": "18.9432\u00b0 N, 72.8230\u00b0 E", "lat": 18.9432, "lng": 72.823, "map_url": "https://www.google.com/maps/search/?api=1&query=Marine+Drive+Mumbai", "importance": "A sweeping 3.6-kilometer arc alongside Netaji Subhash Chandra Bose Road bordering the Arabian Sea. It forms part of Mumbai's UNESCO-recognized Victorian Gothic and Art Deco Ensembles, boasting the world's second-largest collection of Art Deco residential buildings. At night, the glittering streetlights along the curve resemble a string of pearls, earning its famed moniker 'Queen's Necklace'.", "visiting_hours": "Open 24 hours daily (Most vibrant between 5:30 PM and 11:00 PM)", "entry_fee": "Free public access", "best_season": "October to March for serene sunset strolls; Monsoon (July\u2013August) for dramatic crashing Arabian Sea waves", "audio_text": "You are gazing across Marine Drive, Mumbai's beloved Queen's Necklace. Extending three point six kilometers from Nariman Point to Girgaon Chowpatty, this promenade is flanked by one of the planet's densest ensembles of 1930s Art Deco architecture, recognized by UNESCO."}, {"name": "Elephanta Caves", "tagline": "UNESCO World Heritage rock-cut cave temples dedicated to Lord Shiva on Gharapuri Island", "category": "UNESCO World Heritage Site", "gps": "18.9633\u00b0 N, 72.9315\u00b0 E", "lat": 18.9633, "lng": 72.9315, "map_url": "https://www.google.com/maps/search/?api=1&query=Elephanta+Caves+Gharapuri+Island+Mumbai", "importance": "Dating from the 5th to 7th centuries CE under the Kalachuri and Konkan Mauryan dynasties, these monumental basalt rock-cut caverns on Gharapuri Island feature the legendary 7-meter-tall Sadashiva (Trimurti) sculpture depicting Lord Shiva as Creator (Vamadeva), Preserver (Tatpurusha), and Destroyer (Aghora/Bhairava).", "visiting_hours": "9:00 AM \u2013 5:30 PM (Closed on Mondays; Ferries operate 9:00 AM \u2013 2:00 PM from Gateway)", "entry_fee": "\u20b940 for Indians; \u20b9600 for foreign nationals; Toy train \u20b910", "best_season": "November to February (Calm sea conditions for ferry crossing)", "audio_text": "Behold the Elephanta Caves on Gharapuri Island, a UNESCO World Heritage treasure. Carved between the fifth and eighth centuries CE into solid basalt, Cave 1 enshrines the sublime six-meter Trimurti sculpture of Lord Shiva, capturing cosmic creation, divine preservation, and fierce destruction in magnificent balance."}, {"name": "Chhatrapati Shivaji Maharaj Terminus (CSMT)", "tagline": "UNESCO World Heritage masterpiece of High Victorian Gothic Revival and Indian palace architecture", "category": "UNESCO Heritage Railway Station", "gps": "18.9400\u00b0 N, 72.8353\u00b0 E", "lat": 18.94, "lng": 72.8353, "map_url": "https://www.google.com/maps/search/?api=1&query=Chhatrapati+Shivaji+Maharaj+Terminus+Mumbai", "importance": "Designed by British architect F. W. Stevens and opened in 1887 (originally Victoria Terminus), this architectural wonder fuses High Victorian Gothic architecture with traditional Indian palace stone spires, stained glass, gargoyles, ribbed stone vaults, and a colossal octagonal central ribbed dome crowned by the allegorical statue of Progress.", "visiting_hours": "Operational 24/7; Exterior illuminated daily from 7:00 PM to 11:00 PM (Heritage museum tours by appointment)", "entry_fee": "Free public access to exterior; Platform ticket \u20b910\u2013\u20b950 for platforms", "best_season": "Year-round (Evenings offer spectacular architectural illumination)", "audio_text": "Here stands Chhatrapati Shivaji Maharaj Terminus, a UNESCO World Heritage wonder inaugurated in 1887. Architect Frederick William Stevens blended Victorian Gothic revival with Indian stone carving traditions, creating turreted spires, vaulted ceilings, and a soaring central dome that remains the bustling heart of Indian Railways."}, {"name": "Juhu Beach", "tagline": "Vibrant shoreline known for Mumbai street food, Arabian Sea sunsets, and Bollywood residencies", "category": "Public Beach & Food Hub", "gps": "19.0988\u00b0 N, 72.8264\u00b0 E", "lat": 19.0988, "lng": 72.8264, "map_url": "https://www.google.com/maps/search/?api=1&query=Juhu+Beach+Mumbai", "importance": "One of India's most celebrated urban beaches, stretching 6 km along the western suburbs of Mumbai. Renowned for its lively evening atmosphere, sunset views over the Arabian Sea, iconic food stalls serving authentic Pav Bhaji, Bhel Puri, and Sev Puri, and its proximity to celebrity residences in Juhu and Vile Parle.", "visiting_hours": "Open 24 hours daily (Most festive 4:30 PM \u2013 10:30 PM)", "entry_fee": "Free public access", "best_season": "October to March for breezy evenings", "audio_text": "Welcome to Juhu Beach, Mumbai's pulsing open-air cultural arena. Spanning six kilometers along the Arabian Sea, it is renowned for its golden sunsets, aromatic street gastronomy featuring butter-soaked pav bhaji and tangy bhel puri, and its proximity to iconic Bollywood estates."}, {"name": "Bandra-Worli Sea Link", "tagline": "8-lane cable-stayed architectural marvel spanning Mahim Bay", "category": "Engineering Landmark", "gps": "19.0366\u00b0 N, 72.8173\u00b0 E", "lat": 19.0366, "lng": 72.8173, "map_url": "https://www.google.com/maps/search/?api=1&query=Bandra+Worli+Sea+Link+Mumbai", "importance": "Officially named Rajiv Gandhi Sea Link, this 5.6-kilometer, 8-lane cable-stayed expressway bridge across the open waters of Mahim Bay links Bandra in Western Mumbai to Worli in South Mumbai, cutting travel time from 60 minutes to under 10 minutes. Its soaring concrete pylons reach 128 meters in height.", "visiting_hours": "Operational 24/7 for motorized vehicular traffic (Pedestrians and two-wheelers not permitted)", "entry_fee": "Toll: ~\u20b985 one-way for passenger cars", "best_season": "Year-round (Best viewed from Bandra Fort or Worli Seaface at dusk)", "audio_text": "This is the Bandra-Worli Sea Link, India's flagship cable-stayed engineering triumph. Stretching five point six kilometers over the open Arabian waters of Mahim Bay, its hundred-and-twenty-eight-meter steel-cable towers form a dramatic silhouette against Mumbai's dynamic ocean skyline."}]}, {"id": "pune", "name": "Pune & Western Ghats: Cultural Capital & Maratha Citadels", "tagline": "Historic seats of Peshwa power, formidable mountain fortresses, and hill city gateways", "icon": "\ud83c\udff0", "places": [{"name": "Shaniwar Wada", "tagline": "18th-century fortified seat of the Peshwa rulers of the Maratha Empire", "category": "Maratha Fort Palace", "gps": "18.5196\u00b0 N, 73.8553\u00b0 E", "lat": 18.5196, "lng": 73.8553, "map_url": "https://www.google.com/maps/search/?api=1&query=Shaniwar+Wada+Pune", "importance": "Commissioned in 1732 by Peshwa Baji Rao I as the supreme administrative headquarters of the Maratha Empire. Surviving features include the formidable Dilli Darwaza (Delhi Gate) equipped with heavy anti-elephant steel spikes, bastions, foundations of multi-storeyed palaces, and ornamental Mughal-Maratha gardens.", "visiting_hours": "9:30 AM \u2013 5:30 PM daily (Light & Sound Show in Marathi & English in the evenings)", "entry_fee": "\u20b925 for Indians; \u20b9300 for foreign tourists; Light show ticket \u20b950", "best_season": "October to March", "audio_text": "Step into Shaniwar Wada, the legendary fortified capital of the Maratha Peshwas built in 1732 by Peshwa Baji Rao the First. Stand before the colossal Dilli Darwaza, fortified with nine-inch steel spikes designed to repel war elephants, and discover the epic rise and turbulent drama of the Maratha confederacy."}, {"name": "Sinhagad Fort", "tagline": "The Lion's Fort perched at 1,312 meters, forever tied to the valor of Tanaji Malusare", "category": "Hilltop Fortress", "gps": "18.3663\u00b0 N, 73.7559\u00b0 E", "lat": 18.3663, "lng": 73.7559, "map_url": "https://www.google.com/maps/search/?api=1&query=Sinhagad+Fort+Pune", "importance": "Perched on an isolated cliff in the Sahyadri range 30 km southwest of Pune, this ancient fort was recaptured in 1670 by Maratha commander Tanaji Malusare in an audacious night assault up sheer cliffs. Chhatrapati Shivaji Maharaj's historic lament 'Gad aala, pan sinh gela' ('The fort is won, but the lion is lost') gave the fort its eternal name.", "visiting_hours": "6:00 AM \u2013 6:00 PM daily", "entry_fee": "\u20b950 vehicle entry fee; \u20b920 eco-tax", "best_season": "July to February (Lush mist-veiled monsoons and cool winter mornings)", "audio_text": "Ascend to Sinhagad Fort, the Lion's Bastion standing 1,312 meters above sea level. In 1670, Maratha subedar Tanaji Malusare scaled its near-vertical cliffs in a daring midnight operation to reclaim the citadel, prompting Shivaji Maharaj's poignant words: The fort is captured, but the lion has fallen."}, {"name": "Aga Khan Palace", "tagline": "Italianate palace where Mahatma Gandhi, Kasturba Gandhi, and Sarojini Naidu were detained during Quit India", "category": "National Memorial & Heritage Palace", "gps": "18.5524\u00b0 N, 73.9015\u00b0 E", "lat": 18.5524, "lng": 73.9015, "map_url": "https://www.google.com/maps/search/?api=1&query=Aga+Khan+Palace+Pune", "importance": "Built in 1892 by Sultan Muhammed Shah Aga Khan III to aid famine-stricken villagers around Pune. During the 1942 Quit India Movement, the British imprisoned Mahatma Gandhi, his wife Kasturba Gandhi, secretary Mahadev Desai, and Sarojini Naidu here. It houses the sacred Samadhis of Kasturba Gandhi and Mahadev Desai, as well as a poignant museum of Gandhiji's personal items.", "visiting_hours": "9:00 AM \u2013 5:30 PM daily", "entry_fee": "\u20b925 for Indians; \u20b9300 for foreign visitors", "best_season": "October to March", "audio_text": "You are at the serene Aga Khan Palace, built in 1892. This Italianate estate witnessed crucial chapters of India's Freedom Struggle when Mahatma Gandhi was interned here following the 1942 Quit India declaration. In its peaceful gardens rest the sacred memorials of Kasturba Gandhi and Mahadev Desai."}, {"name": "Access to Lavasa", "tagline": "Planned Mediterranean-style waterfront hill city nestled in the Mose Valley of the Sahyadri mountains", "category": "Scenic Hill Retreat & Lakefront", "gps": "18.4103\u00b0 N, 73.5074\u00b0 E", "lat": 18.4103, "lng": 73.5074, "map_url": "https://www.google.com/maps/search/?api=1&query=Lavasa+Hill+City+Maharashtra", "importance": "Located 65 km from Pune in the Sahyadri mountains, Lavasa was planned around the backwaters of Warasgaon Lake and modeled stylistically after the Italian fishing town of Portofino. It offers winding mountain ghat drives, waterfront promenades, water sports, and tranquil viewpoints.", "visiting_hours": "Accessible daily; Day visits best during daylight hours (8:00 AM \u2013 6:00 PM)", "entry_fee": "Vehicle entry and toll passes apply at gate (~\u20b9200\u2013\u20b9500)", "best_season": "July to February (Spectacular monsoon fog and lush waterfalls along Temghar ghat)", "audio_text": "Travel through the Sahyadri mountain roads leading to Lavasa, set along the scenic backwaters of Warasgaon Dam. Known for its colorful European-style waterfront promenades and tranquil mountain vistas, the route features dramatic ghat viewpoints and cascades during monsoon."}]}, {"id": "lonavala_khandala_matheran", "name": "Lonavala, Khandala & Matheran: Sahyadri Escarpments & Forest Retreats", "tagline": "Misty gorges, roaring dams, ancient Buddhist rock-cut monasteries, and automobile-free red soil paths", "icon": "\u26f0\ufe0f", "places": [{"name": "Tiger's Leap", "tagline": "Dramatic cliff precipice offering a sheer 650-meter drop into the Sahyadri valley resembling a leaping tiger", "category": "Mountain Viewpoint", "gps": "18.7297\u00b0 N, 73.3768\u00b0 E", "lat": 18.7297, "lng": 73.3768, "map_url": "https://www.google.com/maps/search/?api=1&query=Tigers+Leap+Lonavala", "importance": "Known locally as Vaghdhari, this dramatic promontory resembles the shape of a tiger leaping into the deep valley. It provides sweeping panoramic vistas over the Sahyadri escarpment, Konkan coastal plains below, and a small eco-stream that transforms into a cascade during the monsoon.", "visiting_hours": "6:00 AM \u2013 6:30 PM daily", "entry_fee": "Free entry; Local parking charges ~\u20b950", "best_season": "June to February (Monsoon cloud carpets and crisp winter sunshine)", "audio_text": "Welcome to Tiger's Leap, or Vaghdhari, perched on the edge of a six-hundred-and-fifty-meter cliff in Lonavala. The rock outcrop contours into the silhouette of a tiger mid-spring, offering jaw-dropping panoramas of deep green ravines and swirling Sahyadri monsoon mist."}, {"name": "Bhushi Dam", "tagline": "Iconic masonry dam on the Indrayani River where cascading waters overflow across terraced steps", "category": "Monsoon Dam & Water Cascade", "gps": "18.7289\u00b0 N, 73.4187\u00b0 E", "lat": 18.7289, "lng": 73.4187, "map_url": "https://www.google.com/maps/search/?api=1&query=Bhushi+Dam+Lonavala", "importance": "Built in the late 19th century by the Great Indian Peninsula Railway to provide water for steam locomotives, this stone masonry dam on the Indrayani River becomes Maharashtra's most popular monsoon attraction as clear water cascades over tiered stone steps, creating safe shallow wading pools.", "visiting_hours": "9:00 AM \u2013 5:00 PM daily during monsoon season (Safety barriers enforced)", "entry_fee": "Free public access; Parking fees apply", "best_season": "July to September (Peak water overflow during active monsoon)", "audio_text": "Here is Bhushi Dam, constructed in the 1860s to fuel British steam engines traversing the steep Bhor Ghat. During the monsoon, the reservoir overflows across tiered stone steps, creating a lively water attraction surrounded by mist and mountain foliage."}, {"name": "Karla and Bhaja Caves", "tagline": "Ancient 2nd-century BCE rock-cut Buddhist monasteries featuring India's largest rock-cut Chaityagriha", "category": "Ancient Buddhist Cave Temples", "gps": "18.7824\u00b0 N, 73.4706\u00b0 E", "lat": 18.7824, "lng": 73.4706, "map_url": "https://www.google.com/maps/search/?api=1&query=Karla+Caves+Lonavala", "importance": "Dating back to the 2nd century BCE to 5th century CE, the Karla cave complex boasts the Great Chaityagriha (Cave 8)\u2014the largest and best-preserved rock-cut Buddhist prayer hall in India, measuring 45 meters long with original 2,000-year-old teakwood vaulted ribs. Nearby Bhaja Caves feature 22 rock-cut shrines, an open-air stupa gallery, and exquisite carvings of Surya and Indra.", "visiting_hours": "9:00 AM \u2013 5:00 PM daily", "entry_fee": "\u20b925 for Indians; \u20b9300 for foreign visitors (ASI fee at Karla)", "best_season": "October to March for comfortable stair climbs; July to September for green waterfall surroundings", "audio_text": "Step into Karla and Bhaja Caves, excavated over two thousand two hundred years ago along ancient Sahyadri trade routes. Karla features India's grandest rock-cut Chaitya hall, whose soaring stone nave retains its original teakwood vaulted arches and intricately carved elephant capitals."}, {"name": "Asia's only automobile-free hill retreat (Matheran)", "tagline": "Eco-sensitive hill haven at 800m altitude where all motor vehicles are strictly banned", "category": "Automobile-Free Eco Hill Station", "gps": "18.9865\u00b0 N, 73.2677\u00b0 E", "lat": 18.9865, "lng": 73.2677, "map_url": "https://www.google.com/maps/search/?api=1&query=Matheran+Hill+Station+Maharashtra", "importance": "Declared an eco-sensitive zone by India's Ministry of Environment and Forests, Matheran is officially Asia's only automobile-free hill station. All motorized vehicles must stop at Dasturi Naka, from where visitors navigate red laterite dirt trails on foot, by horseback, or on hand-pulled rickshaws. The historic Neral-Matheran Toy Train (built 1907) winds through 21 km of dense forest.", "visiting_hours": "Open 24 hours daily (Neral to Matheran toy train runs on seasonal schedules)", "entry_fee": "Matheran Municipal Council Eco-tax: \u20b950 per adult; Toy train ticket ~\u20b975\u2013\u20b9300", "best_season": "October to May for pleasant climate; July to September for mystical cloud walks", "audio_text": "Welcome to Matheran, Asia's only automobile-free hill station, perched eight hundred meters high in the Western Ghats. Free from vehicle pollution and modern traffic noise, this serene haven of red laterite trails is traversed purely on foot, on horseback, or via its historic 1907 heritage toy train."}]}, {"id": "mahabaleshwar_panchgani", "name": "Mahabaleshwar & Panchgani: Strawberry Valleys & Tableland Heights", "tagline": "The Queen of Maharashtra Hill Stations, volcanic laterite plateaus, and Krishna River headwaters", "icon": "\ud83c\udf53", "places": [{"name": "Arthur\u2019s Seat", "tagline": "The 'Queen of all Points' overlooking the dramatic 600-meter drop into the Savitri River basin", "category": "Geological Viewpoint", "gps": "17.9866\u00b0 N, 73.6148\u00b0 E", "lat": 17.9866, "lng": 73.6148, "map_url": "https://www.google.com/maps/search/?api=1&query=Arthurs+Seat+Mahabaleshwar", "importance": "Perched at 1,340 meters altitude, Arthur's Seat provides a fascinating geological cross-section of the Deccan Traps. It clearly demonstrates the geographical difference between the Konkan coastal lowlands on the left and the fertile Deccan plateau on the right. Lighter objects thrown over the edge float back upward due to aerodynamic thermal updrafts.", "visiting_hours": "8:00 AM \u2013 6:00 PM daily", "entry_fee": "Free public access; Forest vehicle parking ~\u20b950", "best_season": "October to June", "audio_text": "Stand upon Arthur's Seat, the Queen of Points in Mahabaleshwar at 1,340 meters elevation. Named after Sir Arthur Malet, this cliff provides a dramatic geological divide showing the Deccan Traps falling away into the Konkan canyon, with thermal air currents strong enough to defy gravity."}, {"name": "Venna Lake", "tagline": "Picturesque 28-acre lake framed by dense eucalyptus groves offering paddle and row boating", "category": "Scenic Lake & Leisure Hub", "gps": "17.9237\u00b0 N, 73.6698\u00b0 E", "lat": 17.9237, "lng": 73.6698, "map_url": "https://www.google.com/maps/search/?api=1&query=Venna+Lake+Mahabaleshwar", "importance": "Constructed in 1842 by Shri Appasaheb Maharaj, the ruler of Satara, to supply fresh water to the hill town. Today it is the recreational center of Mahabaleshwar, featuring colorful paddle and row boats, horse rides along the perimeter, and lakeside stalls serving fresh strawberries with cream, roasted corn, and hot spiced tea.", "visiting_hours": "8:00 AM \u2013 8:00 PM daily", "entry_fee": "Free entry; Boating: \u20b9250\u2013\u20b9500 depending on boat type", "best_season": "October to June (Evening boating accompanied by cool mountain breezes)", "audio_text": "This is Venna Lake, created in 1842 by the Maharaja of Satara. Surrounded by tall eucalyptus trees, it is Mahabaleshwar's favorite gathering spot for serene boat rides and sampling sweet farm-fresh strawberries doused in clotted cream."}, {"name": "Mapro Garden strawberry farms", "tagline": "Agro-tourism paradise celebrated for fresh strawberry harvests, wood-fired pizzas, and berry preserves", "category": "Agro-Tourism & Culinary Estate", "gps": "17.9255\u00b0 N, 73.7420\u00b0 E", "lat": 17.9255, "lng": 73.742, "map_url": "https://www.google.com/maps/search/?api=1&query=Mapro+Garden+Panchgani+Mahabaleshwar", "importance": "Situated at Gureghar between Panchgani and Mahabaleshwar, Mapro Garden is the pioneer of agro-tourism in Maharashtra. Mahabaleshwar produces over 85% of India's total strawberry yield. The estate offers tours of organic berry cultivation, an open-kitchen restaurant famous for wood-fired pizzas and fresh strawberry sundaes, and hosts the annual Easter Strawberry Festival.", "visiting_hours": "8:00 AM \u2013 9:00 PM daily", "entry_fee": "Free entry", "best_season": "November to April (Peak strawberry harvesting season)", "audio_text": "Welcome to Mapro Garden in Panchgani, the sweetest stop in the Western Ghats. Mahabaleshwar accounts for eighty-five percent of India's strawberries, and here you can tour strawberry cultivation, savor hot wood-fired pizzas, and indulge in signature fresh strawberry ice cream bowls."}, {"name": "Table Land plateau", "tagline": "Asia's second-longest mountain plateau spanning 95 acres of flat volcanic rock at 1,387m", "category": "Volcanic Plateau & Viewpoint", "gps": "17.9264\u00b0 N, 73.8052\u00b0 E", "lat": 17.9264, "lng": 73.8052, "map_url": "https://www.google.com/maps/search/?api=1&query=Table+Land+Panchgani", "importance": "Perched at 1,387 meters, Table Land is an expansive 95-acre laterite rock plateau, recognized as the second-longest mountain plateau in Asia after the Tibetan Plateau. Formed by ancient volcanic activity of the Deccan Traps, it offers 360-degree vistas of the surrounding valleys, Devil's Kitchen caves (associated with the Pandavas), and horse-carriage rides.", "visiting_hours": "6:00 AM \u2013 7:00 PM daily", "entry_fee": "Free entry; Horse riding \u20b9300\u2013\u20b9600", "best_season": "September to May (Brilliant sunrises and sunsets; expansive clear horizons)", "audio_text": "You are standing on Table Land in Panchgani, Asia's second-largest mountain plateau. Covering ninety-five uninterrupted acres of volcanic laterite rock at 1,387 meters, it commands breathtaking three-hundred-and-sixty-degree vistas of the Krishna valley and distant Sahyadri peaks."}]}, {"id": "chhatrapati_sambhajinagar", "name": "Chhatrapati Sambhajinagar (Aurangabad): UNESCO Caves & Medieval Splendors", "tagline": "World-famous rock-cut Buddhist frescoes, the Kailasa monolithic temple, and formidable hill forts", "icon": "\ud83c\udfdb\ufe0f", "places": [{"name": "Ajanta (Buddhist frescoes) UNESCO Caves", "tagline": "30 rock-cut Buddhist cave monuments preserving ancient masterworks of Indian religious fresco painting", "category": "UNESCO World Heritage Site", "gps": "20.5519\u00b0 N, 75.7033\u00b0 E", "lat": 20.5519, "lng": 75.7033, "map_url": "https://www.google.com/maps/search/?api=1&query=Ajanta+Caves+Maharashtra", "importance": "Carved into a horseshoe-shaped volcanic cliff along the Waghur River between the 2nd century BCE and 6th century CE (under Satavahana and Vakataka patronages). The caves house universally celebrated tempera wall frescoes illustrating the Jataka tales, featuring the serene Bodhisattva Padmapani and Vajrapani in Cave 1, representing the pinnacle of ancient Indian painting.", "visiting_hours": "9:00 AM \u2013 5:00 PM (Closed on Mondays; Eco-bus shuttle operates from T-junction parking)", "entry_fee": "\u20b940 for Indians; \u20b9600 for foreign tourists; Eco-bus shuttle ~\u20b930", "best_season": "October to March (Comfortable walking weather through the gorge)", "audio_text": "Enter the sublime world of Ajanta Caves, a UNESCO World Heritage wonder carved into a sheer horseshoe cliff. Dating from 200 BCE, its masterfully preserved wall frescoes illustrate the life and previous incarnations of the Buddha, led by the peerless, compassionate gaze of Bodhisattva Padmapani."}, {"name": "Ellora (Kailasa rock-cut monolithic temple) UNESCO Caves", "tagline": "The world's largest single monolithic rock excavation, chiselled top-down out of a sheer basalt cliff", "category": "UNESCO World Heritage Site", "gps": "20.0268\u00b0 N, 75.1780\u00b0 E", "lat": 20.0268, "lng": 75.178, "map_url": "https://www.google.com/maps/search/?api=1&query=Kailasa+Temple+Ellora+Caves", "importance": "A UNESCO World Heritage marvel comprising 34 excavated monasteries and temples representing Buddhism, Hinduism, and Jainism (6th to 10th centuries CE). Its crowning jewel is Cave 16\u2014the Kailasa Temple, excavated vertically top-down from a single basalt cliff under Rashtrakuta King Krishna I (c. 756\u2013773 CE). Over 200,000 tonnes of volcanic rock were removed by hand to reveal a freestanding multi-storeyed temple twice the area of the Parthenon in Athens.", "visiting_hours": "6:00 AM \u2013 6:00 PM (Closed on Tuesdays)", "entry_fee": "\u20b940 for Indians; \u20b9600 for foreign visitors", "best_season": "October to March", "audio_text": "Gaze upon the Kailasa Temple at Ellora Caves, the greatest architectural rock-cut triumph on earth. Commissioned in the eighth century by Rashtrakuta monarch Krishna the First, sculptors carved downwards from the clifftop, excavating two hundred thousand tons of basalt to reveal a breathtaking, fully adorned temple complex."}, {"name": "Daulatabad Fort", "tagline": "Unconquerable 12th-century hill citadel featuring a labyrinthine dark passage (Bhulbhulaiya)", "category": "Medieval Hill Citadel", "gps": "19.9431\u00b0 N, 75.2131\u00b0 E", "lat": 19.9431, "lng": 75.2131, "map_url": "https://www.google.com/maps/search/?api=1&query=Daulatabad+Fort+Maharashtra", "importance": "Originally built by the Yadava dynasty as Deogiri in 1187 CE, this pyramid-shaped hill citadel was renamed Daulatabad by Muhammad bin Tughlaq, who briefly shifted the capital of India here from Delhi in 1327 CE. Its defense architecture is legendary, featuring three concentric fortified walls, a deep moat with crocodiles, and the pitch-black subterranean labyrinth known as the Andhari/Bhulbhulaiya.", "visiting_hours": "9:00 AM \u2013 6:00 PM daily", "entry_fee": "\u20b925 for Indians; \u20b9300 for foreign tourists", "best_season": "October to February (Cool weather essential for the 750-step climb to the summit)", "audio_text": "Welcome to Daulatabad Fort, ancient Deogiri, rising two hundred meters atop a conical rock. In 1327, Sultan Muhammad bin Tughlaq moved his entire imperial capital here from Delhi. Its multi-layered moats, sheer scraped cliffs, and bewildering pitch-black underground labyrinth made it nearly impossible to conquer by force."}, {"name": "Bibi Ka Maqbara", "tagline": "The 'Taj of the Deccan' built in 1668 CE by Prince Azam Shah in memory of his mother Dilras Banu Begum", "category": "Mughal Mausoleum", "gps": "19.9014\u00b0 N, 75.3202\u00b0 E", "lat": 19.9014, "lng": 75.3202, "map_url": "https://www.google.com/maps/search/?api=1&query=Bibi+Ka+Maqbara+Chhatrapati+Sambhajinagar", "importance": "Commissioned by Mughal Emperor Aurangzeb's son, Prince Azam Shah, in 1668 CE as a tribute to his mother, Empress Dilras Banu Begum (Rabia-ud-Daurani). Designed by architect Ata-Ullah (son of Ustad Ahmad Lahori, principal designer of the Taj Mahal), it features an octagonal marble lattice screen, four towering minarets, and geometric Charbagh water canals.", "visiting_hours": "8:00 AM \u2013 8:00 PM daily (Beautifully lit in the evening)", "entry_fee": "\u20b925 for Indians; \u20b9300 for foreign visitors", "best_season": "October to March", "audio_text": "Here is Bibi Ka Maqbara, widely celebrated as the Taj of the Deccan. Erected in 1668 by Prince Azam Shah for his mother Dilras Banu Begum, this marble and stucco mausoleum sits amid formal Persian Charbagh gardens with four graceful corner minarets."}]}, {"id": "shirdi_nashik", "name": "Shirdi & Nashik: Spiritual Sanctuaries & Wine Country", "tagline": "The sacred abode of Sai Baba, Godavari river ghats, ancient Jyotirlinga, and rolling vineyards", "icon": "\ud83c\udf47", "places": [{"name": "Sai Baba Sansthan Temple", "tagline": "World-renowned pilgrimage shrine enshrining the Samadhi of the revered 19th-century saint Sai Baba", "category": "Sacred Pilgrimage Temple", "gps": "19.7667\u00b0 N, 74.4764\u00b0 E", "lat": 19.7667, "lng": 74.4764, "map_url": "https://www.google.com/maps/search/?api=1&query=Shirdi+Sai+Baba+Temple", "importance": "The divine spiritual center where Shri Sai Baba lived, taught universal brotherhood ('Sabka Malik Ek'), and took Mahasamadhi on October 15, 1918. The temple complex encloses the Samadhi Mandir with its white Italian marble idol, Gurusthan under the sacred neem tree, Dwarkamai mosque where Baba maintained the eternal fire (Dhuni), and Chavadi.", "visiting_hours": "4:00 AM \u2013 11:15 PM daily (Kakad Aarti at 4:30 AM, Shej Aarti at 10:30 PM)", "entry_fee": "Free general darshan; VIP/Special passes \u20b9200\u2013\u20b9500 via official Sansthan portal", "best_season": "October to March (Special rush on Thursdays and Guru Purnima)", "audio_text": "Welcome to Shirdi, the holy sanctuary of Shri Sai Baba. Millions of pilgrims gather here each year to pay homage at the Samadhi Mandir, visit the historic Dwarkamai mosque where the eternal Dhuni flame burns continuously, and celebrate Baba's timeless gospel of devotion and universal harmony."}, {"name": "Trimbakeshwar Jyotirlinga", "tagline": "Ancient sacred Jyotirlinga shrine where the lingam uniquely embodies Brahma, Vishnu, and Shiva", "category": "Sacred Jyotirlinga & River Origin", "gps": "19.9324\u00b0 N, 73.5308\u00b0 E", "lat": 19.9324, "lng": 73.5308, "map_url": "https://www.google.com/maps/search/?api=1&query=Trimbakeshwar+Shiva+Temple+Nashik", "importance": "One of the 12 sacred Jyotirlingas of Lord Shiva, located at the foothills of Brahmagiri Mountain, the source of the holy Godavari River (Dakshin Ganga). Unlike all other Jyotirlingas, the lingam here features three faces representing the Holy Trinity: Lord Brahma, Lord Vishnu, and Lord Rudra/Shiva. Rebuilt in black basalt stone by Peshwa Balaji Baji Rao in 1755\u20131786.", "visiting_hours": "5:30 AM \u2013 9:00 PM daily", "entry_fee": "Free general darshan; Special VIP queue ticket \u20b9200", "best_season": "October to March; Shravan month (August\u2013September) for sacred festivities", "audio_text": "You are at Trimbakeshwar Temple, nestled at the foot of Brahmagiri Mountain, the divine birthplace of the Godavari River. Built of intricately carved black basalt, it is unique among all twelve Jyotirlingas for enshrining a three-faced lingam embodying the sacred trinity of Brahma, Vishnu, and Shiva."}, {"name": "Panchavati", "tagline": "Mythological Dandakaranya grove on the Godavari River linked to Lord Rama's exile and Kumbh Mela", "category": "Epic Pilgrimage Site", "gps": "19.9975\u00b0 N, 73.7910\u00b0 E", "lat": 19.9975, "lng": 73.791, "map_url": "https://www.google.com/maps/search/?api=1&query=Panchavati+Ramkund+Nashik", "importance": "Steeped in the Ramayana epic, Panchavati (named for five sacred banyan trees) is where Lord Rama, Sita, and Lakshmana resided during their exile in Dandakaranya forest. Key sites include Ramkund ghat (where Rama took sacred baths and where ashes of departed souls are immersed), the historic Kalaram Temple built with black stone in 1782, and Sita Gumpha (cave). Nashik also hosts the sacred Simhastha Kumbh Mela every 12 years.", "visiting_hours": "Temples open 5:00 AM \u2013 9:00 PM daily; Ramkund open 24/7", "entry_fee": "Free public access", "best_season": "October to March", "audio_text": "Step into Panchavati in Nashik, alongside the sacred waters of the Godavari River. Here Lord Rama, Sita, and Lakshmana dwelt during their forest exile under five auspicious banyan trees. Pilgrims gather at Ramkund for sacred ablutions, while the grand black-stone Kalaram Temple honors Lord Rama."}, {"name": "Sula Vineyards wine-tasting estates", "tagline": "India's premier winery estate pioneer in Nashik, the acclaimed 'Wine Capital of India'", "category": "Wine Tourism & Tasting Estate", "gps": "20.0072\u00b0 N, 73.6896\u00b0 E", "lat": 20.0072, "lng": 73.6896, "map_url": "https://www.google.com/maps/search/?api=1&query=Sula+Vineyards+Nashik", "importance": "Founded in 1999 by Rajeev Samant, Sula Vineyards pioneered commercial viticulture in Maharashtra, transforming Nashik into the 'Wine Capital of India'. The scenic estate offers guided vineyard and winery tours, barrel room visits, Sommelier-led wine tasting sessions, boutique resort stays, and the celebrated annual SulaFest music and wine festival.", "visiting_hours": "11:30 AM \u2013 10:30 PM daily (Winery tours run every 45 minutes between 11:30 AM and 6:30 PM)", "entry_fee": "Tour & tasting package: ~\u20b9400\u2013\u20b91,000 per person", "best_season": "January to March (Grape harvesting and crushing season; vibrant climate)", "audio_text": "Welcome to Sula Vineyards, the crown of Nashik's wine country. Framed by rolling hills and Gangapur Dam waters, Sula revolutionized Indian viticulture. Stroll through sunlit grapevines, discover French oak barrel aging techniques, and sample crisp Chenin Blanc, Sauvignon Blanc, and rich Dindori Shiraz."}]}, {"id": "konkan_wildlife", "name": "Konkan Coast & Wildlife: Tropical Beaches & Royal Bengal Tigers", "tagline": "Golden sands, historic sea forts, coral reefs, and prime tiger habitats in central India", "icon": "\ud83d\udc05", "places": [{"name": "Alibaug", "tagline": "Celebrated coastal getaway famous for the 17th-century Kolaba Sea Fort and black-sand beaches", "category": "Coastal Town & Sea Fort", "gps": "18.6414\u00b0 N, 72.8722\u00b0 E", "lat": 18.6414, "lng": 72.8722, "map_url": "https://www.google.com/maps/search/?api=1&query=Alibaug+Beach+Kolaba+Fort", "importance": "Located across Mumbai Harbour (accessible by speedboats/ferries from Gateway of India to Mandwa). It served as the premier naval headquarters of Maratha Navy Admiral Kanhoji Angre. The offshore Kolaba Fort, built by Chhatrapati Shivaji Maharaj in 1680, can be reached on foot or by horse cart during low tide across the seabed.", "visiting_hours": "Beach open 24/7; Kolaba Fort open 10:00 AM \u2013 5:00 PM (strictly governed by ocean tide schedules)", "entry_fee": "Kolaba Fort ASI fee: \u20b925; Ferry from Gateway to Mandwa: \u20b9180\u2013\u20b9350", "best_season": "October to May for beach outings; November to February for calm waters", "audio_text": "Discover Alibaug on the Konkan coast, historic naval base of the legendary Maratha Admiral Kanhoji Angre. Venture out during low tide to Kolaba Fort, constructed in 1680 directly in the Arabian Sea, boasting freshwater wells within its saltwater stone battlements."}, {"name": "Ganpatipule Beach Temple", "tagline": "400-year-old self-manifested (Swayambhu) beachside shrine of Lord Ganesha facing the Arabian Sea", "category": "Sacred Shore Temple & Beach", "gps": "17.1472\u00b0 N, 73.2681\u00b0 E", "lat": 17.1472, "lng": 73.2681, "map_url": "https://www.google.com/maps/search/?api=1&query=Ganpatipule+Temple+Ratnagiri", "importance": "A 400-year-old coastal sanctuary in Ratnagiri district enshrining a monolithic Swayambhu idol of Lord Ganesha, uniquely facing west to protect the western shores. Devotees circumambulate the entire natural green hillock (Pradakshina) shaped like Ganesha. The temple sits directly on a pristine white-sand beach lined with coconut groves.", "visiting_hours": "5:00 AM \u2013 9:00 PM daily", "entry_fee": "Free entry", "best_season": "October to March (Pristine clean seas and balmy breezes)", "audio_text": "You are at Ganpatipule, where spirituality meets the Arabian Sea. The four-hundred-year-old Swayambhu Ganpati temple houses a self-manifested monolith facing west toward the waves. Pilgrims perform a sacred circumambulation around the verdant coastal hill before strolling along the tranquil coconut-lined shore."}, {"name": "Tarkarli scuba diving", "tagline": "Pristine Konkan coastline celebrated for coral reef diving, dolphins, and Sindhudurg island fort", "category": "Marine Sanctuary & Scuba Diving", "gps": "16.0354\u00b0 N, 73.4912\u00b0 E", "lat": 16.0354, "lng": 73.4912, "map_url": "https://www.google.com/maps/search/?api=1&query=Tarkarli+Scuba+Diving+Malvan", "importance": "Located near Malvan in southern Konkan, Tarkarli is Maharashtra's premier marine hub with crystal-clear waters, white-sand beaches, and vibrant shallow coral reefs. Home to the Indian Institute of Scuba Diving and Aquatic Sports (IISDA), it offers PADI-certified scuba diving, dolphin-spotting boat trips, Karli backwater boat cruises, and access to Chhatrapati Shivaji Maharaj's offshore fortress, Sindhudurg Fort.", "visiting_hours": "Scuba diving sessions operate 7:00 AM \u2013 3:00 PM daily (Weather permitting)", "entry_fee": "Scuba diving packages range from \u20b91,200 to \u20b93,500 including underwater video", "best_season": "October to May (Peak underwater visibility of 15\u201320 feet)", "audio_text": "Welcome to Tarkarli on the Malvan coast, Maharashtra's marine wonderland. Dive into crystal-clear turquoise waters to explore vibrant coral beds, swim alongside exotic reef fish, spot playful Arabian Sea dolphins, and gaze across at the mighty sea fort of Sindhudurg."}, {"name": "Tadoba-Andhari Tiger Reserve", "tagline": "The 'Jewel of Vidarbha' and Maharashtra's oldest and largest tiger reserve with supreme tiger sightings", "category": "Project Tiger National Park", "gps": "20.2444\u00b0 N, 79.3082\u00b0 E", "lat": 20.2444, "lng": 79.3082, "map_url": "https://www.google.com/maps/search/?api=1&query=Tadoba+Andhari+Tiger+Reserve+Chandrapur", "importance": "Spanning 1,727 sq km in Chandrapur district of Vidarbha, Tadoba is Maharashtra's premier tiger reserve, celebrated for having one of the highest densities of Royal Bengal Tigers in India. Dominated by teak and bamboo forests around Tadoba Lake, it is also home to leopards, sloth bears, Indian wild dogs (dholes), gaur (Indian bison), and over 280 bird species.", "visiting_hours": "Morning Safari: 6:00 AM \u2013 10:00 AM; Afternoon Safari: 2:30 PM \u2013 6:30 PM (Core zones closed Tuesdays; Buffer zones open year-round)", "entry_fee": "Jeep Safari: ~\u20b94,500\u2013\u20b98,500 per gypsy (Permit + Vehicle + Forest Guide; book well in advance via Maharashtra Eco-tourism portal)", "best_season": "October to June (March to May offers highest tiger sightings near waterholes; November to February offers pleasant weather)", "audio_text": "Enter Tadoba-Andhari Tiger Reserve, the legendary Jewel of Vidarbha and Maharashtra's oldest national park. Renowned for its thriving population of Royal Bengal Tigers, this dense teak and bamboo wilderness provides unmatched wildlife safaris around Tadoba Lake and the Erai riverbanks."}]}], "itineraries": [{"title": "3-Day Express Golden Triangle (Mumbai \u2013 Lonavala \u2013 Pune)", "duration": "3 Days / 2 Nights", "desc": "Perfect short weekend getaway exploring the Victorian coastal landmarks of Mumbai, misty Sahyadri viewpoints in Lonavala, and the Maratha history of Pune.", "route": ["Day 1: Gateway of India, Elephanta Caves ferry, CSMT heritage facade, and sunset at Marine Drive / Juhu Beach.", "Day 2: Drive via Mumbai-Pune Expressway to Lonavala; visit Tiger's Leap, Bhushi Dam cascades, and ancient Karla Caves.", "Day 3: Scenic ghat descent to Pune; tour the historic Shaniwar Wada, Aga Khan Palace, and climb Sinhagad Fort before evening departure."]}, {"title": "5-Day Heritage & Wine Odyssey (Mumbai \u2013 Nashik \u2013 Shirdi \u2013 Sambhajinagar)", "duration": "5 Days / 4 Nights", "desc": "An inspiring spiritual and cultural journey connecting Maharashtra's premier wine estates, holy Jyotirlinga, Sai Baba shrine, and world-renowned UNESCO cave monuments.", "route": ["Day 1: Mumbai to Nashik via Kasara Ghat; visit Trimbakeshwar Jyotirlinga, Panchavati, and Ramkund.", "Day 2: Morning wine tour and tasting at Sula Vineyards; afternoon drive to Shirdi for Sai Baba temple evening aarti.", "Day 3: Morning at Shirdi (Dwarkamai & Chavadi); drive to Chhatrapati Sambhajinagar; explore the formidable Daulatabad Fort and Bibi Ka Maqbara.", "Day 4: Full-day excursion to the magnificent Ajanta UNESCO Buddhist fresco caves.", "Day 5: Marvel at Cave 16 Kailasa Temple and Ellora monolithic caves; return drive or flight to Mumbai/Pune."]}, {"title": "7-Day Grand Sahyadri, Konkan & Caves Expedition", "duration": "7 Days / 6 Nights", "desc": "The ultimate comprehensive showcase of Maharashtra: modern metropolis, ancient rock-cut art, hill station berry farms, and sun-kissed Konkan coast.", "route": ["Days 1\u20132: Mumbai & Chhatrapati Sambhajinagar (Elephanta, CSMT, Ajanta frescoes, and the monolithic Kailasa at Ellora).", "Day 3: Shirdi Sai Baba darshan and Nashik Sula Vineyards wine tasting.", "Day 4: Sahyadri scenic crossing to Lonavala & Matheran's red-dirt automobile-free paths.", "Day 5: Mahabaleshwar & Panchgani (Arthur's Seat, Table Land, Venna Lake boating, Mapro Garden strawberries).", "Day 6: Konkan coastal descent to Ganpatipule Beach Temple and Ratnagiri mango orchards.", "Day 7: Tarkarli coral reef scuba diving, Sindhudurg Sea Fort exploration, and Malvani coastal seafood feast."]}], "culinary": [{"dish": "Misal Pav (Kolhapuri & Puneri)", "type": "Spicy Street Breakfast", "icon": "\ud83c\udf72", "desc": "A fiery sprout curry (usal) topped with crispy farsan, fresh onions, coriander, and lemon, served with hot buttered pav and extra spicy red chili gravy (kat/tarri)."}, {"dish": "Vada Pav", "type": "Iconic Mumbai Street Snack", "icon": "\ud83c\udf54", "desc": "The quintessential 'Indian Burger' \u2014 deep-fried spiced potato ball (batata vada) tucked inside a pav bun slathered with tangy tamarind, mint, and dry garlic-peanut chutney."}, {"dish": "Puran Poli with Ghee & Katachi Amti", "type": "Traditional Festive Sweet", "icon": "\ud83e\udd5e", "desc": "Delicate whole-wheat flatbread stuffed with a sweet aromatic filling of chana dal, jaggery, cardamom, and nutmeg, served warm with melted desi ghee and spicy dal broth."}, {"dish": "Ukadiche Modak", "type": "Ganesh Chaturthi Sacred Delicacy", "icon": "\ud83e\udd5f", "desc": "Steamed dumplings made of soft rice flour dough filled with freshly grated coconut, jaggery, and cardamom, drizzled with pure saffron milk or melted clarified butter."}, {"dish": "Pithla Bhakri with Thecha", "type": "Rustic Maharashtrian Comfort Food", "icon": "\ud83e\uded3", "desc": "Savory gram flour (besan) porridge tempered with mustard seeds, garlic, and turmeric, paired with thick jowar or bajra bhakri flatbreads and fiery green chili-garlic thecha."}, {"dish": "Malvani Fish Curry & Solkadhi", "type": "Konkan Coastal Specialty", "icon": "\ud83d\udc1f", "desc": "Fresh pomfret or surmai simmered in a coconut milk and kokum gravy with stone-ground Malvani spices, followed by refreshing pink solkadhi digestive drink."}, {"dish": "Fresh Strawberry with Clotted Cream", "type": "Mahabaleshwar Hill Treat", "icon": "\ud83c\udf53", "desc": "Sun-ripened, hand-picked strawberries from Mahabaleshwar farms served in tall bowls overflowing with thick, sweet whipped dairy cream."}], "festivals": [{"name": "Ganesh Chaturthi", "month": "August / September (Bhadrapada)", "highlight": "Grand 10-day celebration marked by iconic public pandals (Lalbaugcha Raja, Dagdusheth Halwai), vibrant dhol-tasha rhythms, and joyous coastal sea immersions."}, {"name": "Gudi Padwa", "month": "March / April (Chaitra)", "highlight": "Traditional Marathi New Year marked by hoisting decorative Gudi flags outside homes, vibrant street Shobha Yatras with traditional saffron turbans, and sweet puran poli feasts."}, {"name": "Chhatrapati Shivaji Maharaj Jayanti", "month": "February 19", "highlight": "Statewide patriotic commemoration of the founder of the Maratha Empire with majestic royal processions, Tutari horn fanfares, and cultural celebrations at Sahyadri forts."}, {"name": "Pandharpur Wari (Ashadhi Ekadashi)", "month": "June / July (Ashadha)", "highlight": "Centuries-old 21-day pilgrimage on foot where over a million Varkari devotees chant 'Vitthal Vitthal' while accompanying the sacred footprints (P\u0101dukas) of Sant Dnyaneshwar and Sant Tukaram."}, {"name": "Banganga & Elephanta Cultural Festivals", "month": "January / February", "highlight": "Prestigious classical music, vocal, and dance recitals staged in atmospheric historical settings beside Malabar Hill's ancient water tank and on Elephanta Island."}], "packing_checklist": ["Monsoon Gear: Waterproof jacket, quick-dry activewear, and anti-slip trekking shoes for Sahyadri waterfalls and forts.", "Konkan Beach Essentials: Cotton clothing, reef-safe sunscreen, sunglasses, and dry bags for watersports in Tarkarli and Alibaug.", "Sacred Temple Attire: Modest clothing (covered shoulders and legs) for Shirdi Sai Baba, Trimbakeshwar, and Ganpatipule shrines.", "Cave Exploration Gear: Lightweight breathable shoes and a compact flashlight for examining details inside Ajanta and Ellora rock carvings.", "Tadoba Jungle Safari Kit: Earthy neutral tones (olive green, khaki, beige), binoculars, telephoto lens, and a dust scarf for open-top jeep safaris.", "Personal Health: Hydration bottle, electrolyte sachets, insect repellent, and motion-sickness tablets for winding mountain ghat roads."], "transit_matrix": [{"from": "Mumbai", "to": "Pune", "distance": "150 km", "time": "2.5 \u2013 3 hrs via Mumbai-Pune Expressway"}, {"from": "Mumbai", "to": "Lonavala", "distance": "85 km", "time": "1.5 \u2013 2 hrs via Expressway"}, {"from": "Pune", "to": "Mahabaleshwar", "distance": "120 km", "time": "2.5 \u2013 3 hrs via NH 48 & Wai Ghat"}, {"from": "Mumbai", "to": "Nashik", "distance": "165 km", "time": "3 \u2013 3.5 hrs via NH 160 & Kasara Ghat"}, {"from": "Nashik", "to": "Shirdi", "distance": "85 km", "time": "1.5 \u2013 2 hrs via NH 160"}, {"from": "Shirdi", "to": "Chhatrapati Sambhajinagar", "distance": "110 km", "time": "2 \u2013 2.5 hrs via Samruddhi Mahamarg"}, {"from": "Mumbai", "to": "Alibaug", "distance": "100 km road (or 50 mins speedboat Gateway to Mandwa)"}, {"from": "Pune", "to": "Tadoba Tiger Reserve", "distance": "710 km", "time": "12 hrs road / Flight to Nagpur + 2.5 hrs drive"}]};
+
+    // State
+    let activeCluster = 'all';
+    let searchQuery = '';
+    let showBookmarksOnly = false;
+    let bookmarks = JSON.parse(localStorage.getItem('mh_bookmarks') || '[]');
+    let checkedItems = JSON.parse(localStorage.getItem('mh_checklist') || '[]');
+
+    // Audio Chime: Authentic Maratha Tutari Clarion Fanfare & Puneri Dhol
+    function playTutariDhol() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        // 1. Maratha Tutari Horn Fanfare (Ascending Royal Clarion Call)
+        // Sequence: C4 (261.63Hz), G4 (392Hz), C5 (523.25Hz), E5 (659.25Hz), G5 (783.99Hz)
+        const tutariNotes = [
+          { time: 0.00, freq: 261.63, dur: 0.18, gain: 0.45 },
+          { time: 0.16, freq: 392.00, dur: 0.18, gain: 0.50 },
+          { time: 0.32, freq: 523.25, dur: 0.22, gain: 0.55 },
+          { time: 0.52, freq: 659.25, dur: 0.22, gain: 0.55 },
+          { time: 0.72, freq: 783.99, dur: 0.85, gain: 0.60 }
+        ];
+
+        tutariNotes.forEach(n => {
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          const filter = audioCtx.createBiquadFilter();
+          const gain = audioCtx.createGain();
+
+          // Brass horn simulation: Sawtooth fundamental + Slight detuned sawtooth for brass body buzz
+          osc1.type = 'sawtooth';
+          osc1.frequency.setValueAtTime(n.freq, audioCtx.currentTime + n.time);
+
+          osc2.type = 'triangle';
+          osc2.frequency.setValueAtTime(n.freq * 2, audioCtx.currentTime + n.time); // Bright 2nd harmonic
+
+          // Lowpass filter to mimic acoustic curved brass bell
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(1600, audioCtx.currentTime + n.time);
+          filter.frequency.exponentialRampToValueAtTime(2400, audioCtx.currentTime + n.time + 0.1);
+
+          // Envelope
+          gain.gain.setValueAtTime(0.001, audioCtx.currentTime + n.time);
+          gain.gain.linearRampToValueAtTime(n.gain, audioCtx.currentTime + n.time + 0.04);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + n.time + n.dur);
+
+          osc1.connect(filter);
+          osc2.connect(filter);
+          filter.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          osc1.start(audioCtx.currentTime + n.time);
+          osc2.start(audioCtx.currentTime + n.time);
+          osc1.stop(audioCtx.currentTime + n.time + n.dur);
+          osc2.stop(audioCtx.currentTime + n.time + n.dur);
+        });
+
+        // 2. Puneri Dhol-Tasha Resonance (Deep Bass Barrel Drum at climax: t = 0.70s and t = 1.10s)
+        const dholBeats = [0.70, 1.10];
+        dholBeats.forEach(startTime => {
+          const drumOsc = audioCtx.createOscillator();
+          const drumGain = audioCtx.createGain();
+
+          drumOsc.type = 'sine';
+          // Pitch drop mimicking a large taut goat-skin barrel drum
+          drumOsc.frequency.setValueAtTime(110, audioCtx.currentTime + startTime);
+          drumOsc.frequency.exponentialRampToValueAtTime(55, audioCtx.currentTime + startTime + 0.35);
+
+          drumGain.gain.setValueAtTime(0.7, audioCtx.currentTime + startTime);
+          drumGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + startTime + 0.55);
+
+          drumOsc.connect(drumGain);
+          drumGain.connect(audioCtx.destination);
+
+          drumOsc.start(audioCtx.currentTime + startTime);
+          drumOsc.stop(audioCtx.currentTime + startTime + 0.55);
+
+          // Tasha rim click
+          const tashaNoise = audioCtx.createOscillator();
+          const tashaGain = audioCtx.createGain();
+          tashaNoise.type = 'triangle';
+          tashaNoise.frequency.setValueAtTime(380, audioCtx.currentTime + startTime);
+          tashaGain.gain.setValueAtTime(0.3, audioCtx.currentTime + startTime);
+          tashaGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + startTime + 0.08);
+
+          tashaNoise.connect(tashaGain);
+          tashaGain.connect(audioCtx.destination);
+          tashaNoise.start(audioCtx.currentTime + startTime);
+          tashaNoise.stop(audioCtx.currentTime + startTime + 0.08);
+        });
+
+      } catch (err) {
+        console.warn('Web Audio API not supported or user interaction required', err);
+      }
+    }
+
+    // Speech Narration
+    let currentUtterance = null;
+    function toggleAudioGuide(text, btnElement) {
+      if (!('speechSynthesis' in window)) {
+        console.warn('Text-to-speech audio narration is not supported on this browser.');
+        return;
+      }
+
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        document.querySelectorAll('.audio-btn').forEach(b => {
+          b.innerHTML = '<span>🔊 Listen Guide</span>';
+          b.classList.remove('bg-amber-100', 'text-amber-900', 'border-amber-300');
+        });
+        if (currentUtterance && currentUtterance._text === text) {
+          currentUtterance = null;
+          return;
+        }
+      }
+
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance._text = text;
+      currentUtterance.rate = 0.95;
+      currentUtterance.pitch = 1.0;
+
+      btnElement.innerHTML = '<span>⏹️ Stop Audio</span>';
+      btnElement.classList.add('bg-amber-100', 'text-amber-900', 'border-amber-300');
+
+      currentUtterance.onend = () => {
+        btnElement.innerHTML = '<span>🔊 Listen Guide</span>';
+        btnElement.classList.remove('bg-amber-100', 'text-amber-900', 'border-amber-300');
+        currentUtterance = null;
+      };
+
+      currentUtterance.onerror = () => {
+        btnElement.innerHTML = '<span>🔊 Listen Guide</span>';
+        btnElement.classList.remove('bg-amber-100', 'text-amber-900', 'border-amber-300');
+        currentUtterance = null;
+      };
+
+      window.speechSynthesis.speak(currentUtterance);
+    }
+
+    // Bookmark Toggle
+    function toggleBookmark(placeName) {
+      const idx = bookmarks.indexOf(placeName);
+      if (idx > -1) {
+        bookmarks.splice(idx, 1);
+      } else {
+        bookmarks.push(placeName);
+      }
+      localStorage.setItem('mh_bookmarks', JSON.stringify(bookmarks));
+      updateBookmarkBadge();
+      renderPlaces();
+    }
+
+    function updateBookmarkBadge() {
+      const badge = document.getElementById('bookmark-badge-count');
+      if (badge) {
+        badge.textContent = bookmarks.length;
+      }
+    }
+
+    // Render Places
+    function renderPlaces() {
+      const container = document.getElementById('places-container');
+      const emptyState = document.getElementById('empty-state');
+      const countLabel = document.getElementById('places-count-label');
+
+      let allPlaces = [];
+      appData.clusters.forEach(c => {
+        c.places.forEach(p => {
+          allPlaces.push({ ...p, clusterId: c.id, clusterName: c.name, clusterIcon: c.icon });
+        });
+      });
+
+      // Filter by cluster
+      if (activeCluster !== 'all') {
+        allPlaces = allPlaces.filter(p => p.clusterId === activeCluster);
+      }
+
+      // Filter by bookmarks
+      if (showBookmarksOnly) {
+        allPlaces = allPlaces.filter(p => bookmarks.includes(p.name));
+      }
+
+      // Filter by search query
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase().trim();
+        allPlaces = allPlaces.filter(p => 
+          p.name.toLowerCase().includes(q) ||
+          p.tagline.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q) ||
+          p.importance.toLowerCase().includes(q) ||
+          p.clusterName.toLowerCase().includes(q)
+        );
+      }
+
+      countLabel.textContent = `Displaying ${allPlaces.length} verified destination${allPlaces.length === 1 ? '' : 's'} across Maharashtra`;
+
+      if (allPlaces.length === 0) {
+        container.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      container.innerHTML = allPlaces.map(place => {
+        const isBookmarked = bookmarks.includes(place.name);
+        const safeAudioText = place.audio_text.replace(/'/g, "\\'");
+
+        return `
+          <div class="bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-lg hover:border-orange-300 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+            <div class="p-6">
+              
+              <!-- Header Badges -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-lg bg-orange-50 text-orange-800 border border-orange-200/80">
+                  <span>${place.clusterIcon}</span>
+                  <span>${place.category}</span>
+                </span>
+                
+                <button onclick="toggleBookmark('${place.name.replace(/'/g, "\\'")}')" class="p-1.5 rounded-xl border transition-colors ${isBookmarked ? 'bg-amber-100 border-amber-300 text-amber-700' : 'bg-slate-50 border-slate-200 text-slate-400 hover:text-amber-600'}" title="${isBookmarked ? 'Remove Bookmark' : 'Add Bookmark'}">
+                  ${isBookmarked ? '⭐' : '☆'}
+                </button>
+              </div>
+
+              <!-- Title & Tagline -->
+              <h4 class="text-lg font-black text-slate-900 group-hover:text-orange-700 transition-colors font-heritage leading-snug">
+                ${place.name}
+              </h4>
+              <p class="text-xs text-slate-500 font-medium mt-1 leading-relaxed">
+                ${place.tagline}
+              </p>
+
+              <!-- Exact GPS Coordinates Badge -->
+              <div class="mt-3.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 text-slate-700 border border-slate-200 text-[11px] font-mono font-medium">
+                <span>📍</span>
+                <span>${place.gps}</span>
+              </div>
+
+              <!-- Historical & Cultural Significance -->
+              <div class="mt-4 pt-3.5 border-t border-slate-100">
+                <h5 class="text-[11px] font-black uppercase tracking-wider text-slate-400 mb-1">Heritage & Significance</h5>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  ${place.importance}
+                </p>
+              </div>
+
+              <!-- Key Practical Visiting Intel -->
+              <div class="mt-4 space-y-1.5 text-[11px] text-slate-500 bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                <div class="flex items-start gap-1.5">
+                  <span class="text-slate-400">🕒</span>
+                  <span><strong class="text-slate-700">Hours:</strong> ${place.visiting_hours}</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <span class="text-slate-400">🎟️</span>
+                  <span><strong class="text-slate-700">Entry:</strong> ${place.entry_fee}</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <span class="text-slate-400">🌤️</span>
+                  <span><strong class="text-slate-700">Best Season:</strong> ${place.best_season}</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Footer Action Buttons -->
+            <div class="px-6 py-4 bg-slate-50/70 border-t border-slate-100 flex items-center justify-between gap-2 text-xs">
+              <a href="${place.map_url}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-white hover:bg-orange-600 hover:text-white text-slate-700 border border-slate-200 hover:border-orange-600 px-3 py-2 rounded-xl font-bold flex items-center justify-center gap-1.5 transition-all shadow-2xs">
+                <span>📍 View on Google Maps</span>
+              </a>
+              <button onclick="toggleAudioGuide('${safeAudioText}', this)" class="audio-btn bg-white hover:bg-amber-50 text-slate-700 hover:text-amber-900 border border-slate-200 px-3 py-2 rounded-xl font-bold flex items-center justify-center gap-1 transition-all shadow-2xs">
+                <span>🔊 Listen Guide</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Render Itineraries
+    function renderItineraries() {
+      const container = document.getElementById('itinerary-panels');
+      container.innerHTML = appData.itineraries.map((itin, idx) => `
+        <div id="itin-${idx}" class="itinerary-panel ${idx === 0 ? '' : 'hidden'} space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <h4 class="text-base font-black text-slate-900 font-heritage">${itin.title}</h4>
+            <span class="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-bold w-fit">
+              ⏱️ ${itin.duration}
+            </span>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed">${itin.desc}</p>
+          <div class="space-y-2 mt-4">
+            ${itin.route.map(step => `
+              <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-2xl border border-slate-100 text-xs text-slate-700">
+                <span class="w-6 h-6 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">✓</span>
+                <span class="leading-relaxed">${step}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+
+      // Add tab listeners
+      document.querySelectorAll('.itinerary-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.itinerary-tab-btn').forEach(b => {
+            b.classList.remove('active', 'bg-orange-600', 'text-white');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.add('active', 'bg-orange-600', 'text-white');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+          const tabId = btn.getAttribute('data-tab');
+          document.querySelectorAll('.itinerary-panel').forEach(p => p.classList.add('hidden'));
+          document.getElementById(tabId).classList.remove('hidden');
+        });
+      });
+    }
+
+    // Render Cuisine
+    function renderCuisine() {
+      const container = document.getElementById('cuisine-container');
+      container.innerHTML = appData.culinary.map(item => `
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex items-start gap-3.5 hover:border-amber-300 transition-colors">
+          <div class="text-2xl p-2 bg-white rounded-xl border border-slate-200 shadow-2xs shrink-0">
+            ${item.icon}
+          </div>
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-wider text-amber-700">${item.type}</div>
+            <h5 class="text-sm font-bold text-slate-900 mt-0.5 font-heritage">${item.dish}</h5>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">${item.desc}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Festivals
+    function renderFestivals() {
+      const container = document.getElementById('festivals-container');
+      container.innerHTML = appData.festivals.map(fest => `
+        <div class="p-5 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col justify-between hover:border-red-200 transition-colors">
+          <div>
+            <span class="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-red-100 text-red-800 mb-2">
+              📅 ${fest.month}
+            </span>
+            <h5 class="text-sm font-bold text-slate-900 font-heritage">${fest.name}</h5>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">${fest.highlight}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Render Checklist
+    function renderChecklist() {
+      const container = document.getElementById('checklist-container');
+      container.innerHTML = appData.packing_checklist.map((item, idx) => {
+        const isChecked = checkedItems.includes(idx);
+        return `
+          <label class="flex items-start gap-3 p-3 bg-slate-50 hover:bg-slate-100/80 rounded-2xl border border-slate-100 cursor-pointer transition-colors text-xs text-slate-700">
+            <input type="checkbox" onchange="toggleChecklistItem(${idx})" ${isChecked ? 'checked' : ''} class="mt-0.5 w-4 h-4 rounded text-orange-600 focus:ring-orange-500 border-slate-300">
+            <span class="${isChecked ? 'line-through text-slate-400' : 'text-slate-700'} leading-relaxed">${item}</span>
+          </label>
+        `;
+      }).join('');
+      updateChecklistStatus();
+    }
+
+    function toggleChecklistItem(idx) {
+      const pos = checkedItems.indexOf(idx);
+      if (pos > -1) {
+        checkedItems.splice(pos, 1);
+      } else {
+        checkedItems.push(idx);
+      }
+      localStorage.setItem('mh_checklist', JSON.stringify(checkedItems));
+      renderChecklist();
+    }
+
+    function updateChecklistStatus() {
+      const statusEl = document.getElementById('checklist-status');
+      if (statusEl) {
+        statusEl.textContent = `${checkedItems.length} of ${appData.packing_checklist.length} packed`;
+      }
+    }
+
+    function resetChecklist() {
+      checkedItems = [];
+      localStorage.setItem('mh_checklist', JSON.stringify(checkedItems));
+      renderChecklist();
+    }
+
+    // Render Transit Matrix
+    function renderTransit() {
+      const container = document.getElementById('transit-container');
+      container.innerHTML = appData.transit_matrix.map(row => `
+        <tr class="hover:bg-slate-50 transition-colors">
+          <td class="py-2.5 pr-3 font-bold text-slate-800">${row.from}</td>
+          <td class="py-2.5 px-3 font-semibold text-slate-700">${row.to}</td>
+          <td class="py-2.5 px-3 text-orange-700 font-bold">${row.distance}</td>
+          <td class="py-2.5 pl-3 text-slate-500">${row.time}</td>
+        </tr>
+      `).join('');
+    }
+
+    // Reset Filters
+    function resetFilters() {
+      activeCluster = 'all';
+      searchQuery = '';
+      showBookmarksOnly = false;
+      document.getElementById('destination-search').value = '';
+      
+      document.querySelectorAll('#cluster-pills button').forEach(b => {
+        b.classList.remove('active', 'bg-orange-600', 'text-white', 'shadow-xs');
+        b.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      const allBtn = document.querySelector('#cluster-pills button[data-cluster="all"]');
+      if (allBtn) {
+        allBtn.classList.add('active', 'bg-orange-600', 'text-white', 'shadow-xs');
+        allBtn.classList.remove('bg-slate-100', 'text-slate-700');
+      }
+
+      const bookmarkBtn = document.getElementById('bookmark-filter-btn');
+      bookmarkBtn.classList.remove('bg-amber-600', 'text-white');
+      bookmarkBtn.classList.add('bg-amber-50', 'text-amber-900');
+
+      document.getElementById('current-view-title').textContent = 'All Destination Highlights';
+      renderPlaces();
+    }
+
+    // Initialization & Event Listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPlaces();
+      renderItineraries();
+      renderCuisine();
+      renderFestivals();
+      renderChecklist();
+      renderTransit();
+      updateBookmarkBadge();
+
+      // Audio Chime Button
+      document.getElementById('audio-bell-btn').addEventListener('click', playTutariDhol);
+
+      // Search input
+      const searchInput = document.getElementById('destination-search');
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderPlaces();
+      });
+
+      document.getElementById('clear-search-btn').addEventListener('click', resetFilters);
+
+      // Cluster Pills
+      document.querySelectorAll('#cluster-pills button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#cluster-pills button').forEach(b => {
+            b.classList.remove('active', 'bg-orange-600', 'text-white', 'shadow-xs');
+            b.classList.add('bg-slate-100', 'text-slate-700');
+          });
+          btn.classList.add('active', 'bg-orange-600', 'text-white', 'shadow-xs');
+          btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+          activeCluster = btn.getAttribute('data-cluster');
+          showBookmarksOnly = false;
+          const bookmarkBtn = document.getElementById('bookmark-filter-btn');
+          bookmarkBtn.classList.remove('bg-amber-600', 'text-white');
+          bookmarkBtn.classList.add('bg-amber-50', 'text-amber-900');
+
+          const clusterObj = appData.clusters.find(c => c.id === activeCluster);
+          document.getElementById('current-view-title').textContent = clusterObj ? clusterObj.name : 'All Destination Highlights';
+          renderPlaces();
+        });
+      });
+
+      // Bookmark Filter Button
+      document.getElementById('bookmark-filter-btn').addEventListener('click', () => {
+        showBookmarksOnly = !showBookmarksOnly;
+        const btn = document.getElementById('bookmark-filter-btn');
+        if (showBookmarksOnly) {
+          btn.classList.add('bg-amber-600', 'text-white');
+          btn.classList.remove('bg-amber-50', 'text-amber-900');
+          document.getElementById('current-view-title').textContent = 'Your Bookmarked Destinations';
+        } else {
+          btn.classList.remove('bg-amber-600', 'text-white');
+          btn.classList.add('bg-amber-50', 'text-amber-900');
+          document.getElementById('current-view-title').textContent = 'All Destination Highlights';
+        }
+        renderPlaces();
+      });
+    });
+  </script>
+</body>
+</html>

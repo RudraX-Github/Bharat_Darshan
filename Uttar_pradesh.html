@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uttar Pradesh Explorer — Cultural Heritage & Travel Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ganga: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              500: '#64748b',
+              900: '#0f172a',
+            },
+            kesariya: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            awadh: {
+              emerald: '#064e3b',
+              gold: '#d97706',
+              ivory: '#fffbeb',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            heritage: ['"Cinzel"', 'serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+    }
+    .scrollbar-thin::-webkit-scrollbar {
+      height: 6px;
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    .hero-glow {
+      text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-orange-600 selection:text-white min-h-screen flex flex-col">
+
+  <!-- Top Cultural Announcement Bar (Ganga-Yamuna-Saraswati Sangam Palette) -->
+  <div class="bg-gradient-to-r from-amber-950 via-rose-950 to-sky-950 text-amber-200 text-xs py-2 px-4 text-center font-medium tracking-wide border-b border-amber-600/40 flex items-center justify-center gap-2">
+    <span>🏛️</span>
+    <span>Pranam & Welcome to Uttar Pradesh: The Land of the Taj Mahal, Eternal Kashi, Nawabi Awadh, Sacred Ayodhya, Braj Bhoomi, Triveni Sangam & Terai Forests</span>
+    <span>🪔</span>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-600 via-rose-600 to-indigo-700 text-white flex items-center justify-center text-2xl shadow-md shadow-orange-600/20 flex-shrink-0">
+          🏛️
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black font-heritage tracking-tight text-slate-900 flex items-center gap-2">
+            Uttar Pradesh Explorer
+            <span class="text-[10px] font-sans font-bold uppercase tracking-wider bg-gradient-to-r from-amber-100 to-orange-100 text-amber-900 px-2.5 py-0.5 rounded-full border border-amber-200">Ganga-Jamuni Tehzeeb</span>
+          </h1>
+          <p class="text-xs text-slate-500 font-medium truncate max-w-xs sm:max-w-md lg:max-w-xl">
+            🙏 Pranam! Welcome to Uttar Pradesh — Your Welcoming Guide to Agra, Varanasi, Lucknow, Ayodhya, Mathura & Vrindavan, Prayagraj & Dudhwa
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Action Utilities -->
+      <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <button id="chime-btn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 text-xs font-bold transition-all shadow-2xs hover:scale-105 active:scale-95" title="Play Traditional Shehnai & Sitar Chime">
+          <span>🎵</span>
+          <span class="hidden md:inline">Shehnai & Sitar Chime</span>
+        </button>
+
+        <a href="#itinerary-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-orange-50 hover:bg-orange-100 text-orange-900 border border-orange-200 text-xs font-semibold transition-all">
+          <span>🗺️</span>
+          <span class="hidden lg:inline">Itineraries</span>
+        </a>
+
+        <a href="#cuisine-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 text-xs font-semibold transition-all">
+          <span>🍲</span>
+          <span class="hidden lg:inline">Cuisine</span>
+        </a>
+
+        <a href="#festivals-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-900 border border-rose-200 text-xs font-semibold transition-all">
+          <span>🎉</span>
+          <span class="hidden lg:inline">Festivals</span>
+        </a>
+
+        <a href="#checklist-section" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-cyan-50 hover:bg-cyan-100 text-cyan-900 border border-cyan-200 text-xs font-semibold transition-all">
+          <span>🎒</span>
+          <span class="hidden lg:inline">Checklist</span>
+        </a>
+
+        <button id="bookmark-filter-btn" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200 text-xs font-semibold transition-all">
+          <span>🔖</span>
+          <span id="bookmark-badge">Bookmarks (0)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner (Ganga-Jamuni Saffron, Imperial Sandstone & Indigo Night) -->
+  <section class="bg-gradient-to-b from-slate-950 via-amber-950 to-slate-900 text-white py-10 px-4 sm:px-6 lg:px-8 border-b border-orange-900/60 relative overflow-hidden">
+    <!-- Subtle architectural lattice overlay -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-950/80 border border-orange-700 text-orange-200 text-xs font-semibold">
+          <span>✨ Heart of India's Spiritual & Imperial Civilizations</span>
+          <span>•</span>
+          <span>World Wonders, Moksha Ghats, Nawabi Palaces & Sacred Rivers</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heritage tracking-tight text-amber-300 leading-tight">
+          Taj Mahal Wonder, Eternal Kashi & Sacred Awadhi Heritage
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+          From the peerless white marble of the Taj Mahal and the 3,000-year-old living spiritual theater of Varanasi's Ganga ghats to the royal Awadhi elegance of Lucknow's Imambaras, the grand Janmabhoomi temple of Ayodhya, the divine Leelas of Mathura-Vrindavan, the triple-river confluence at Prayagraj, and the wild Terai grasslands of Dudhwa — explore the unparalleled tapestry of Uttar Pradesh.
+        </p>
+      </div>
+
+      <!-- Hero Stat Cards -->
+      <div class="grid grid-cols-2 gap-3 w-full lg:w-auto text-center flex-shrink-0">
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-rose-300 font-heritage">7</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Diverse Regions</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-amber-300 font-heritage">24</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Iconic Sites</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-cyan-300 font-heritage">1</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">World Wonder</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md border border-white/15 p-3.5 rounded-2xl">
+          <div class="text-2xl font-black text-orange-400 font-heritage">3,000+</div>
+          <div class="text-[11px] text-slate-300 uppercase tracking-wider font-semibold mt-0.5">Yrs Heritage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overlapping Floating Search & Filter Toolbar with Distinct Regional Color Buttons -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 z-20 relative w-full">
+    <div class="bg-white rounded-2xl shadow-xl border border-orange-200/80 p-3 sm:p-4 flex flex-col md:flex-row items-center justify-between gap-3">
+      <!-- Search Input -->
+      <div class="relative w-full md:w-96">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">🔍</span>
+        <input type="text" id="search-input" placeholder="Search Taj Mahal, Kashi, Lucknow, Ayodhya, Braj, Sangam..." class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm focus:outline-hidden focus:ring-2 focus:ring-orange-600 focus:bg-white transition-all text-slate-800 placeholder-slate-400 font-medium">
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0" id="filter-tabs">
+        <button data-cat="All" class="filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-gradient-to-r from-amber-700 to-rose-700 text-white shadow-xs transition-all flex-shrink-0">All Regions</button>
+        <button data-cat="Mughal World Wonders, Imperial Fortresses & Red Sandstone Capitals" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Agra & Fatehpur</button>
+        <button data-cat="Sacred Jyotirlingas, Eternal Ganga Ghats & Buddhist Cradle" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Varanasi (Kashi)</button>
+        <button data-cat="Awadhi Nawabi Architecture, Labyrinth Vaults & Tehzeeb Boulevards" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Lucknow Nawabs</button>
+        <button data-cat="Sacred Janmabhoomi Temples, Nagara Architecture & River Ghats" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Ayodhya Dham</button>
+        <button data-cat="Braj Heritage, Krishna Janmabhoomi & Bhakti Temples" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Mathura-Vrindavan</button>
+        <button data-cat="Sacred Triple River Confluence, Maha Kumbh Mela & Freedom Mansions" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Prayagraj Sangam</button>
+        <button data-cat="Terai Sal Forest Ecosystems, Greater One-Horned Rhinos & Tigers" class="filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0">Dudhwa Terai</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10 flex-grow">
+
+    <!-- 1. Suggested Route Planner -->
+    <section id="itinerary-section" class="bg-white rounded-2xl border border-orange-100 p-5 shadow-sm space-y-4">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-orange-900 bg-orange-100 px-2.5 py-0.5 rounded-full">Curated Circuits</span>
+          <h3 class="text-lg font-bold text-slate-900 font-heritage mt-1">Suggested Route Planner</h3>
+          <p class="text-xs text-slate-500">Select your travel duration to view recommended day-by-day routes and transit windows:</p>
+        </div>
+        <div class="flex items-center gap-2" id="itinerary-selector">
+          <button data-days="3" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-700 text-white shadow-xs transition-all">3 Days (Agra Taj Mahal & Varanasi Ghats)</button>
+          <button data-days="5" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">5 Days (Agra, Lucknow, Ayodhya & Kashi)</button>
+          <button data-days="7" class="itinerary-pill px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">7 Days (Grand Uttar Pradesh Heritage Odyssey)</button>
+        </div>
+      </div>
+      <div id="itinerary-details" class="pt-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-3 text-xs">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- 2. Dual Feature Row: Taste of Uttar Pradesh & Sacred Festivals -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Feature A: Taste of Uttar Pradesh -->
+      <section id="cuisine-section" class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-5 shadow-xs flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-amber-200/70">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full">Gastronomic Heritage</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Taste of Uttar Pradesh: Nawabi Dastarkhwan & Street Savories</h4>
+            </div>
+            <span class="text-2xl">🍲</span>
+          </div>
+
+          <p class="text-xs text-slate-600 mt-2">
+            From Lucknow's slow-cooked dum royal banquets to Banaras's street chaats and Mathura's milk pedas:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-xs">
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Awadhi Dum Biryani & Galouti Kebabs</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">Lucknow's melt-in-mouth culinary crown: finely minced tender meat marinated with raw papaya and over 25 secret royal spices, paired with slow-cooked fragrant Basmati rice dum biryani.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Banarasi Tamatar Chaat & Malaiyo</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">Varanasi's legendary winter culinary pairing: fiery crushed spiced tomato and dry fruit chaat served in clay pots, followed by airy, saffron-infused frothy milk foam studded with pistachios.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Mathura Peda & Makhan Mishri</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">Braj's divine confections: slow-caramelized reduced whole milk (khoya) fudge dusted with cardamom sugar, alongside Lord Krishna's favorite freshly churned white butter with rock sugar.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Agra Petha & Bedmi Puri-Aloo</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">Agra's signature treats: translucent crystallized ash gourd cubes prepared in kesar, angoori, and paan flavors, served alongside crispy lentil-stuffed fried puris with spicy fenugreek-scented potato curry.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Prayagraj Dahi Jalebi & Chaat</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">The quintessential Sangam breakfast: golden, crispy hot jalebis paired with thick chilled sweetened curd, followed by spicy aloo tikki and roasted chana chaat in Civil Lines.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-amber-200 shadow-2xs">
+              <div class="font-bold text-amber-950 font-heritage">Shahi Tukda & Sheermal</div>
+              <p class="text-slate-600 text-[11px] mt-1 leading-snug">Imperial Awadhi sweets: golden fried bread crisps soaked in saffron-cardamom syrup and smothered with thick rabri, paired with warm saffron-milk-kneaded traditional tandoori flatbread.</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-amber-200/60 text-[11px] text-amber-900 flex items-center gap-1.5 font-medium">
+          <span>💡</span>
+          <span>Foodie Tip: Try authentic Tunday Kababi in Lucknow's Aminabad and hot Tamatar Chaat at Kashi Chaat Bhandar in Godowlia, Varanasi.</span>
+        </div>
+      </section>
+
+      <!-- Feature B: Sacred Festivals -->
+      <section id="festivals-section" class="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl border border-rose-200 p-5 shadow-xs flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-rose-200/70">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-rose-900 bg-rose-100 px-2.5 py-0.5 rounded-full">Living Traditions</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Sacred Festivals of Uttar Pradesh: Epic Gatherings & Divine Lights</h4>
+            </div>
+            <span class="text-2xl">🎉</span>
+          </div>
+
+          <p class="text-xs text-slate-600 mt-2">
+            Uttar Pradesh hosts the world's most stupendous religious assemblies, celebrated with millions of lamps and sacred chants:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-xs">
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Maha Kumbh Mela & Magh Mela (Prayagraj)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">January–February (Maha Kumbh every 12 Yrs / Magh Mela Annual)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">The world's largest gathering of humanity at the sacred Triveni Sangam. Millions of sadhus, akharas, and pilgrims take holy dips in the auspicious confluence waters.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Dev Deepawali (Varanasi)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">November (Kartik Purnima)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">The Festival of Lights of the Gods: all 84 stone ghats of Varanasi are illuminated with over one million sparkling earthen lamps (diyas), accompanied by river fireworks and grand Vedic aartis.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Lathmar & Braj Holi (Mathura & Vrindavan)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">March (Phalguna Shukla Navami to Purnima)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">World-famous week-long festival of colors across Barsana, Nandgaon, Mathura, and Vrindavan. Women playfully beat men's shields with sticks amid clouds of herbal gulal and flower petals.</p>
+            </div>
+            
+            <div class="bg-white/90 p-3 rounded-xl border border-rose-200 shadow-2xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-950 font-heritage">Deepotsav (Ayodhya)</span>
+              </div>
+              <span class="text-[10px] font-semibold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded-sm inline-block mt-1">October–November (Diwali Eve)</span>
+              <p class="text-slate-600 text-[11px] mt-1.5 leading-snug">A breathtaking Guinness World Record festival of lights across Ram Ki Paidi and Saryu ghats, featuring over 2.2 million glowing oil lamps, laser shows, and musical Ramayana pageants.</p>
+            </div>
+            
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-rose-200/60 text-[11px] text-rose-900 flex items-center gap-1.5 font-medium">
+          <span>💡</span>
+          <span>Cultural Tip: Visit Varanasi during Kartik Purnima to witness Dev Deepawali, when all 84 ghats glow with over a million earthen diyas.</span>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 3. Travel Essentials & Regional Transit Matrix Row -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Smart Checklist -->
+      <div id="checklist-section" class="bg-white rounded-2xl border border-orange-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-orange-800 bg-orange-100 px-2.5 py-0.5 rounded-full">Travel Essentials</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Smart Heritage, Ghat & Wildlife Checklist</h4>
+            </div>
+            <span class="text-2xl">🎒</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Interactive gear list for marble monuments, holy river ghats, and Terai national parks:</p>
+
+          <!-- Interactive Checklist -->
+          <div class="mt-4 space-y-2 text-xs" id="checklist-container">
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-orange-50/50 cursor-pointer transition-colors border border-transparent hover:border-orange-100">
+              <input type="checkbox" data-index="0" class="checklist-item mt-0.5 h-4 w-4 text-orange-600 rounded-sm border-slate-300 focus:ring-orange-500">
+              <span class="text-slate-700 leading-snug">Online ASI E-Tickets booked in advance for Taj Mahal sunrise entry and Agra Fort</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-orange-50/50 cursor-pointer transition-colors border border-transparent hover:border-orange-100">
+              <input type="checkbox" data-index="1" class="checklist-item mt-0.5 h-4 w-4 text-orange-600 rounded-sm border-slate-300 focus:ring-orange-500">
+              <span class="text-slate-700 leading-snug">Modest cotton clothing with headscarves for temples, ghats, and Awadhi Imambaras</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-orange-50/50 cursor-pointer transition-colors border border-transparent hover:border-orange-100">
+              <input type="checkbox" data-index="2" class="checklist-item mt-0.5 h-4 w-4 text-orange-600 rounded-sm border-slate-300 focus:ring-orange-500">
+              <span class="text-slate-700 leading-snug">Slip-on walking shoes or sandals for easy removal before entering sanctums and ghats</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-orange-50/50 cursor-pointer transition-colors border border-transparent hover:border-orange-100">
+              <input type="checkbox" data-index="3" class="checklist-item mt-0.5 h-4 w-4 text-orange-600 rounded-sm border-slate-300 focus:ring-orange-500">
+              <span class="text-slate-700 leading-snug">Pre-reserved dawn boat ticket for sunrise navigation along the 84 Varanasi ghats</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-orange-50/50 cursor-pointer transition-colors border border-transparent hover:border-orange-100">
+              <input type="checkbox" data-index="4" class="checklist-item mt-0.5 h-4 w-4 text-orange-600 rounded-sm border-slate-300 focus:ring-orange-500">
+              <span class="text-slate-700 leading-snug">Physical government Photo ID (Aadhaar or Passport) for temple and safari clearances</span>
+            </label>
+            
+            <label class="flex items-start gap-2.5 p-2 rounded-xl hover:bg-orange-50/50 cursor-pointer transition-colors border border-transparent hover:border-orange-100">
+              <input type="checkbox" data-index="5" class="checklist-item mt-0.5 h-4 w-4 text-orange-600 rounded-sm border-slate-300 focus:ring-orange-500">
+              <span class="text-slate-700 leading-snug">Binoculars and camera with telephoto lens for Dudhwa wildlife safaris and birdwatching</span>
+            </label>
+            
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+          <span id="checklist-status">0 of 6 completed</span>
+          <button id="reset-checklist-btn" class="text-orange-700 hover:text-orange-900 font-bold hover:underline">Reset Checklist</button>
+        </div>
+      </div>
+
+      <!-- Regional Highway Transit Matrix -->
+      <div class="bg-white rounded-2xl border border-sky-200 p-5 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-sky-800 bg-sky-100 px-2.5 py-0.5 rounded-full">Transit Logistics</span>
+              <h4 class="text-base font-bold text-slate-900 font-heritage mt-1">Regional Highway & Expressway Matrix</h4>
+            </div>
+            <span class="text-2xl">🚗</span>
+          </div>
+
+          <p class="text-xs text-slate-500 mt-2">Verified driving distances and expressways connecting Uttar Pradesh's major cultural hubs:</p>
+
+          <div class="mt-3 overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-200 bg-sky-50/60 text-slate-700 font-semibold">
+                  <th class="py-2 px-3">Route Segment</th>
+                  <th class="py-2 px-2 text-center">Distance</th>
+                  <th class="py-2 px-2 text-center">Est. Time</th>
+                  <th class="py-2 px-3">Primary Highway & Expressway</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-600">
+                
+                <tr class="hover:bg-sky-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Delhi ➔ Agra (Taj Expressway)</td>
+                  <td class="py-2 px-2 text-center font-mono">210 km</td>
+                  <td class="py-2 px-2 text-center text-sky-800 font-medium">2.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">6-lane high-speed Yamuna Expressway</td>
+                </tr>
+                
+                <tr class="hover:bg-sky-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Agra ➔ Lucknow (Capital Corridor)</td>
+                  <td class="py-2 px-2 text-center font-mono">335 km</td>
+                  <td class="py-2 px-2 text-center text-sky-800 font-medium">3.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Access-controlled 6-lane Agra-Lucknow Expressway</td>
+                </tr>
+                
+                <tr class="hover:bg-sky-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Lucknow ➔ Ayodhya (Ram Mandir)</td>
+                  <td class="py-2 px-2 text-center font-mono">135 km</td>
+                  <td class="py-2 px-2 text-center text-sky-800 font-medium">2.2 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">4-lane National Highway NH 27 / Purvanchal Expressway</td>
+                </tr>
+                
+                <tr class="hover:bg-sky-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Ayodhya ➔ Varanasi (Kashi Corridor)</td>
+                  <td class="py-2 px-2 text-center font-mono">200 km</td>
+                  <td class="py-2 px-2 text-center text-sky-800 font-medium">4.0 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH 330 & NH 31 via Sultanpur and Jaunpur</td>
+                </tr>
+                
+                <tr class="hover:bg-sky-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Varanasi ➔ Prayagraj (Sangam Way)</td>
+                  <td class="py-2 px-2 text-center font-mono">125 km</td>
+                  <td class="py-2 px-2 text-center text-sky-800 font-medium">2.0 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">Smooth 6-lane Golden Quadrilateral NH 19</td>
+                </tr>
+                
+                <tr class="hover:bg-sky-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Lucknow ➔ Dudhwa National Park</td>
+                  <td class="py-2 px-2 text-center font-mono">220 km</td>
+                  <td class="py-2 px-2 text-center text-sky-800 font-medium">4.5 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">NH 30 to Sitapur, then SH 26 via Lakhimpur Kheri</td>
+                </tr>
+                
+                <tr class="hover:bg-sky-50/40 transition-colors">
+                  <td class="py-2 px-3 font-semibold text-slate-900">Delhi ➔ Mathura & Vrindavan</td>
+                  <td class="py-2 px-2 text-center font-mono">160 km</td>
+                  <td class="py-2 px-2 text-center text-sky-800 font-medium">2.0 hrs</td>
+                  <td class="py-2 px-3 text-[11px]">6-lane Yamuna Expressway via Mathura Toll Plaza</td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 flex items-center gap-1.5 font-medium">
+          <span>💡</span>
+          <span>Transit Tip: Uttar Pradesh has India's finest expressway network; the Yamuna and Agra-Lucknow Expressways allow smooth 100 km/h cruising.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4. Active Filter Status Bar -->
+    <div class="flex items-center justify-between text-xs text-slate-500 px-1 border-b border-slate-200 pb-2">
+      <div id="filter-status-text" class="font-medium">
+        Showing: <span class="font-bold text-slate-900">7 Regions</span> • <span class="font-bold text-slate-900">24 Key Sites</span>
+      </div>
+      <div class="text-[11px] text-slate-400">
+        Click any place card to view full dossier notes
+      </div>
+    </div>
+
+    <!-- 5. Clusters Container -->
+    <div id="clusters-container" class="space-y-10">
+      <!-- Clusters Injected via JavaScript with authentic place and heritage color schemes -->
+    </div>
+
+    <!-- 6. Empty State -->
+    <div id="empty-state" class="hidden py-16 text-center space-y-3 bg-white rounded-2xl border border-dashed border-slate-300">
+      <div class="text-4xl">🔍</div>
+      <h3 class="text-base font-bold text-slate-800">No destinations match your search</h3>
+      <p class="text-xs text-slate-500 max-w-sm mx-auto">Try clearing your search terms or selecting 'All Regions' to view all destinations across Uttar Pradesh.</p>
+      <button id="clear-search-btn" class="px-4 py-1.5 rounded-lg bg-orange-700 text-white text-xs font-bold shadow-xs hover:bg-orange-800 transition-all">Clear Search Filter</button>
+    </div>
+
+  </main>
+
+  <!-- 7. Detailed Reading Modal -->
+  <div id="reading-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-orange-200 p-6 space-y-5 transform scale-95 transition-transform duration-200" id="modal-content">
+      <div class="flex items-start justify-between gap-4 border-b border-slate-100 pb-4">
+        <div>
+          <span id="modal-category" class="text-[11px] font-bold uppercase tracking-wider text-orange-800 bg-orange-100 px-2.5 py-0.5 rounded-full">Region Dossier</span>
+          <h3 id="modal-title" class="text-xl font-black text-slate-900 font-heritage mt-1.5">Destination Title</h3>
+          <p id="modal-coords" class="text-xs text-slate-500 font-mono mt-0.5">GPS Coordinates</p>
+        </div>
+        <button id="close-modal-btn" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center text-sm font-bold transition-colors">✕</button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-700 leading-relaxed" id="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+        <a id="modal-map-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-orange-700 hover:bg-orange-800 text-white text-xs font-bold transition-all shadow-xs">
+          <span>📍</span>
+          <span>View on Google Maps</span>
+        </a>
+        <button id="modal-copy-btn" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all">
+          📋 Copy Travel Notes
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-xl text-xs font-medium flex items-center gap-2 transform translate-y-16 opacity-0 transition-all duration-300">
+    <span id="toast-icon">✨</span>
+    <span id="toast-msg">Notification Message</span>
+  </div>
+
+  <!-- 9. Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400 font-heritage font-bold">Uttar Pradesh Explorer</span>
+        <span>•</span>
+        <span>Dedicated to Sustainable Cultural Tourism, World Heritage & Sacred Traditions</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Curated with 🪔 Uttar Pradesh Pride</span>
+        <button id="back-to-top-btn" class="hover:text-white transition-colors underline font-medium">Scroll to Top ↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Data & Logic -->
+  <script>
+    const clustersData = [{"id": "agra-fatehpur", "title": "Agra & Fatehpur Sikri: The Imperial Mughal Heartland", "tagline": "Taj Mahal (monument of love, UNESCO World Wonder), Agra Fort, and Emperor Akbar’s imperial capital at Fatehpur Sikri", "category": "Mughal World Wonders, Imperial Fortresses & Red Sandstone Capitals", "theme": {"border": "border-rose-200/90", "headerGradient": "from-stone-950 via-rose-950 to-amber-950", "headerBorder": "border-rose-800", "badgeBg": "bg-rose-950/80 text-rose-300 border border-rose-700", "placeNumBg": "bg-rose-800", "typeColor": "text-rose-900", "mapBtnColor": "text-rose-700 hover:text-rose-900", "historyBg": "bg-rose-50/60 border border-rose-100", "historyHeading": "text-rose-950", "bulletColor": "text-rose-600", "modalBtn": "bg-amber-400 hover:bg-amber-300 text-slate-950", "tagColor": "bg-rose-50 text-rose-700 hover:bg-rose-100", "heritageBadge": "👑 Mughal Sandstone & Makrana Marble"}, "tags": ["Taj Mahal (monument of love, UNESCO World Wonder)", "Agra Fort", "Fatehpur Sikri", "Emperor Akbar", "Shah Jahan", "UNESCO World Heritage", "Mughal Architecture"], "bestTime": "October to March (Mild sunny days with enchanting sunrise mist over the Yamuna River)", "duration": "2 Days", "overview": "Cradled along the sweeping banks of the Yamuna River, Agra was the preeminent imperial seat of the Mughal Empire under emperors Akbar, Jahangir, and Shah Jahan. Home to three UNESCO World Heritage masterpieces, the city showcases the apex of Indo-Islamic civil engineering, from the immaculate, symmetrical white Makrana marble of the Taj Mahal to the colossal semicircular red sandstone ramparts of Agra Fort and Akbar's ghost capital at Fatehpur Sikri.", "places": [{"name": "Taj Mahal (monument of love, UNESCO World Wonder)", "type": "1648 CE Pure White Makrana Marble Mausoleum & New 7 Wonders of the World", "coords": "27.1751° N, 78.0421° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taj+Mahal+Agra+Uttar+Pradesh", "history": "Commissioned in 1631 by Mughal Emperor Shah Jahan as an eternal tribute of love to house the tomb of his favorite empress, Mumtaz Mahal. Built over 22 years by an international guild of over 20,000 artisans led by master architect Ustad Ahmad Lahori.", "keyFacts": ["Taj Mahal (monument of love, UNESCO World Wonder) stands on a raised square plinth measuring 95.5 metres on each side, flanked by four 40-metre-tall minarets designed with a subtle outward tilt to protect the main dome in earthquakes.", "Constructed from pure translucent white Makrana marble inlaid with 28 varieties of semi-precious gemstones (pietra dura or 'parchin kari') including lapis lazuli, jade, malachite, turquoise, and carnelian.", "Surrounded by an expansive 300-metre Persian 'Charbagh' formal garden featuring water channels reflecting the central dome.", "Changes color subtly through the day: soft blush-pink at sunrise, dazzling pearly white at midday, and luminous golden-amber beneath the full moon."], "bestTime": "Sunrise to Sunset (Closed on Fridays; dawn entry at 6:00 AM offers the finest light, fewest crowds, and mist reflections)", "insiderTip": "Book tickets online in advance via the official ASI portal to bypass the long East Gate ticket queues; head directly across the central reflecting pool for the iconic dawn silhouette."}, {"name": "Agra Fort", "type": "1573 CE Imperial Red Sandstone Citadel & UNESCO World Heritage Site", "coords": "27.1795° N, 78.0211° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Agra+Fort+Agra+Uttar+Pradesh", "history": "Originally a brick fort known as Badalgarh, rebuilt in glorious red sandstone by Emperor Akbar between 1565 and 1573 to serve as the main residence of the Mughal emperors until 1648, when the capital moved to Delhi. Later embellished with pure white marble halls by Shah Jahan.", "keyFacts": ["Enclosed by monumental 70-foot-high double-crenellated red sandstone walls stretching 2.5 kilometers along the Yamuna riverfront.", "Houses legendary royal chambers including the Sheesh Mahal (Palace of Mirrors), Diwan-i-Khas, Diwan-i-Aam, and the Jahangiri Mahal.", "Features the historic octagonal marble tower 'Musamman Burj', where Emperor Shah Jahan was imprisoned by his son Aurangzeb, spending his final years gazing across the river at the Taj Mahal.", "Contains original acoustic hollow wall heating systems, Persian bathing hammams, and royal underground escape tunnels."], "bestTime": "6:00 AM to 6:00 PM (Late afternoon light bathes the red sandstone battlements in fiery crimson)", "insiderTip": "Walk onto the balcony of Musamman Burj to view the identical framed vantage point from which the captive Shah Jahan gazed upon Mumtaz Mahal's tomb."}, {"name": "Emperor Akbar’s imperial capital at Fatehpur Sikri", "type": "1571 CE Royal Ghost City, Buland Darwaza & UNESCO World Heritage Site", "coords": "27.0945° N, 77.6679° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Fatehpur+Sikri+Uttar+Pradesh", "history": "Founded in 1571 by Emperor Akbar in honor of the revered Sufi saint Sheikh Salim Chishti, who had prophesied the birth of his son Prince Salim (Jahangir). Served as the glorious capital of the Mughal Empire for 14 years before being abandoned due to water scarcity.", "keyFacts": ["Emperor Akbar’s imperial capital at Fatehpur Sikri stands as a virtually intact red sandstone city, fusing Hindu, Persian, and Jain architectural idioms.", "Guarded by the colossal 'Buland Darwaza' (Gate of Magnificence), rising 54 metres (177 feet) high—the highest gateway in the entire world, built to commemorate Akbar's victory over Gujarat.", "Features the pristine white marble Tomb of Sheikh Salim Chishti, where pilgrims of all faiths tie red threads to intricately carved jali lattice screens praying for wishes.", "Includes the enigmatic Diwan-i-Khas with its central carved lotus pillar capital supporting Akbar's elevated throne seat, and the 5-tiered pillared palace of Panch Mahal."], "bestTime": "Sunrise to Sunset (Located 37 km west of Agra; plan a 3-hour morning or early afternoon excursion)", "insiderTip": "Hire an official ASI-badged guide at the entry gate to unravel the symbolic syncretic carvings across the Diwan-i-Khas central lotus pillar."}]}, {"id": "varanasi-kashi", "title": "Varanasi (Kashi): The Sacred City of Light & Ancient Moksha", "tagline": "Kashi Vishwanath Jyotirlinga, Dashashwamedh Ghat Ganga Aarti, Manikarnika Ghat, boat rides at dawn, and nearby Sarnath", "category": "Sacred Jyotirlingas, Eternal Ganga Ghats & Buddhist Cradle", "theme": {"border": "border-amber-200/90", "headerGradient": "from-amber-950 via-orange-950 to-yellow-950", "headerBorder": "border-amber-800", "badgeBg": "bg-amber-950/80 text-amber-300 border border-amber-700", "placeNumBg": "bg-amber-600", "typeColor": "text-amber-900", "mapBtnColor": "text-amber-700 hover:text-amber-900", "historyBg": "bg-amber-50/60 border border-amber-100", "historyHeading": "text-amber-950", "bulletColor": "text-amber-600", "modalBtn": "bg-orange-500 hover:bg-orange-400 text-white", "tagColor": "bg-amber-50 text-amber-700 hover:bg-amber-100", "heritageBadge": "🪔 Sacred Kashi Moksha & Ganga Aarti Gold"}, "tags": ["Kashi Vishwanath Jyotirlinga", "Dashashwamedh Ghat Ganga Aarti", "Manikarnika Ghat", "boat rides at dawn", "nearby Sarnath", "Varanasi", "Lord Shiva", "Ganga", "Buddhism"], "bestTime": "October to March (Cool river breezes, vibrant morning devotional chants, and festive Dev Deepawali)", "duration": "2 to 3 Days", "overview": "Continuously inhabited for over 3,000 years, Varanasi (ancient Kashi or Banaras) is the spiritual heart of Hinduism, where the sacred Ganges flows northwards (Uttravahini). Revered as the luminous earthly abode of Lord Shiva, Varanasi offers profound life-and-death encounters along its 84 crescent-shaped stone ghats, anchored by the golden spires of the Kashi Vishwanath Jyotirlinga, the grand evening brass lamps of Dashashwamedh Ghat, the eternal fires of Manikarnika Ghat, tranquil sunrise wooden boat safaris, and nearby Sarnath where Gautama Buddha turned the Wheel of Law.", "places": [{"name": "Kashi Vishwanath Jyotirlinga", "type": "Supreme Shaivite Jyotirlinga & Newly Reimagined Heritage River Corridor", "coords": "25.3109° N, 83.0107° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kashi+Vishwanath+Temple+Varanasi", "history": "One of the 12 supreme Jyotirlingas, standing on the western bank of the Ganges. The current sanctum was rebuilt in 1780 by Maharani Ahilyabai Holkar of Indore, and its spires were plated with 800 kilograms of pure gold in 1835 by Maharaja Ranjit Singh of Punjab.", "keyFacts": ["Kashi Vishwanath Jyotirlinga is universally revered as the supreme spiritual center of Kashi, where Lord Shiva is believed to grant liberation (Moksha) to all departed souls.", "The temple spires are plated in over a tonne of pure gold, giving it the celebrated moniker 'The Golden Temple of Varanasi'.", "The historic Vishwanath Dham Corridor (inaugurated in 2021) now links the sacred sanctum directly to Manikarnika and Lalita Ghats across a 50,000-square-metre paved marble complex.", "Hosts five daily sacred aartis, including the divine Mangala Aarti at 3:00 AM and the serene Shayan Aarti at 10:30 PM."], "bestTime": "4:00 AM to 11:00 PM (Morning Sparsh Darshan allows direct touching of the Jyotirlinga; book online via Shri Kashi Vishwanath portal)", "insiderTip": "Book your Sparsh Darshan or Mangala Aarti ticket days in advance on the official temple trust website to enter through the streamlined VIP queue."}, {"name": "Dashashwamedh Ghat Ganga Aarti", "type": "Ancient Vedic Ghat & Iconic Nightly Synchronized Brass Lamp Aarti", "coords": "25.3059° N, 83.0104° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dashashwamedh+Ghat+Varanasi", "history": "According to Hindu mythology, Lord Brahma created this ghat to welcome Lord Shiva and performed the sacred Dasa-Ashwamedha (ten horse sacrifice) here. It remains the most vibrant and centrally located of Varanasi's 84 stone ghats.", "keyFacts": ["Dashashwamedh Ghat Ganga Aarti is an awe-inspiring 45-minute synchronized devotional choreography performed every evening at sunset by saffron-robed Vedic priests.", "Priests wield tiered brass lamps weighing over 4 kilograms each, blowing conch shells, waving peacock-feather fans, and chanting Vedic mantras in unison.", "Thousands of devotees gather on the stone steps and aboard wooden riverboats, releasing floral leaf-boats (diyas) that float downstream like a constellation of stars.", "Focal point of the colossal annual Dev Deepawali celebration, when over one million earthen lamps illuminate the riverfront on Kartik Purnima."], "bestTime": "6:30 PM in summer / 5:30 PM in winter (Arrive by 5:00 PM to secure prime front-row steps or board a wooden hand-rowed boat)", "insiderTip": "Hire a shared or private wooden rowboat from Rajendra Prasad Ghat 45 minutes before twilight to view the multi-tiered brass lamp spectacle directly from the water."}, {"name": "Manikarnika Ghat", "type": "Primary Sacred Cremation Ghat & Holy Well of Goddess Parvati's Earring", "coords": "25.3105° N, 83.0140° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Manikarnika+Ghat+Varanasi", "history": "Considered the holiest cremation ground in Hinduism. Believed to be where Goddess Parvati dropped her earring (Manikarnika) into a sacred pond dug by Lord Vishnu with his chakra before the world was created. The funeral fires here have burned perpetually for thousands of years.", "keyFacts": ["Manikarnika Ghat embodies the sacred Hindu belief in 'Kashi Labh'—that anyone cremated here achieves immediate release from the endless cycle of rebirth (Samsara).", "The sacred cremation fire (Akhand Dhuni) is maintained 24/7 by the ancestral Dom Raja community, descendants of King Harishchandra.", "Contains the ancient sacred Manikarnika Kund (Chakra-Pushkarini reservoir) situated directly behind the burning ghat steps.", "A profound, reverent philosophical confrontation with human mortality; visitors are asked to observe in solemn silence without photography."], "bestTime": "Viewable respectfully from wooden boats traveling along the river at sunrise or late afternoon (Strictly NO photography permitted on the ghat)", "insiderTip": "Always observe quietly from a respectful distance offshore on a boat; avoid street touts asking for firewood donations around the burning ghats."}, {"name": "Boat rides at dawn along the 84 Ghats", "type": "Centuries-Old Spiritual River Navigation from Assi to Rajghat", "coords": "25.2974° N, 83.0068° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Assi+Ghat+Varanasi", "history": "For centuries, travelers, poets, and pilgrims—from Mark Twain to Kabir—have described sunrise on the Ganges as one of the most hypnotic sights on Earth, watching life awake along the 6-kilometer crescent of stone palaces and ghats.", "keyFacts": ["Boat rides at dawn along the 84 Ghats reveal the morning rituals of Varanasi: pilgrims bathing, yogis performing Surya Namaskar, and Sanskrit chants echoing over the water.", "Witness the golden rays of the rising sun striking the red sandstone riverfront palaces built by Maratha, Rajput, and Bengali royal families.", "Traditional hand-rowed wooden boats ('bajras') offer an authentic, serene glide without the engine noise of motor launches.", "Passes iconic ghats including Assi, Tulsi, Harishchandra, Kedar, Dashashwamedh, Manikarnika, and Panchganga."], "bestTime": "5:30 AM to 7:00 AM (Depart from Assi Ghat or Dashashwamedh Ghat 20 minutes before official sunrise)", "insiderTip": "Choose a hand-rowed wooden boat over a noisy motorboat; request the boatman to cross to the sandy eastern shore for a panoramic wide-angle photograph of the ghat crescent."}, {"name": "Nearby Sarnath", "type": "Cradle of Buddhism, Dhamek Stupa & Lion Capital of Ashoka", "coords": "25.3811° N, 83.0214° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sarnath+Varanasi+Uttar+Pradesh", "history": "Located just 10 km northeast of Varanasi. This is the sacred Deer Park (Isipatana) where Gautama Buddha delivered his first sermon (Dhammacakkappavattana Sutta) to his five former companions after attaining enlightenment under the Bodhi tree in Bodh Gaya, setting the Wheel of Law in motion.", "keyFacts": ["Nearby Sarnath is one of the four principal pilgrimage destinations of world Buddhism.", "Dominated by the colossal 43.6-metre-high cylindrical stone Dhamek Stupa, originally commissioned by Emperor Ashoka in 249 BCE.", "The Sarnath Archaeological Museum houses the original polished sandstone 3rd-century BCE Lion Capital of Ashoka, which serves as the National Emblem of India.", "Features serene contemporary monasteries built by Buddhist communities from Japan, Thailand, Sri Lanka, Tibet, and Myanmar."], "bestTime": "9:00 AM to 5:00 PM (Museum closed on Fridays; late morning or afternoon excursion from Varanasi)", "insiderTip": "Do not miss the world-class Sarnath Archaeological Museum right opposite the stupa to view the pristine Ashoka Lion Capital and the 5th-century Gupta Buddha in preaching posture."}]}, {"id": "lucknow-nawabs", "title": "Lucknow: The City of Nawabs & Architectural Elegance", "tagline": "Bara Imambara (Bhool Bhulaiya maze), Chota Imambara, Rumi Darwaza, British Residency, and Hazratganj", "category": "Awadhi Nawabi Architecture, Labyrinth Vaults & Tehzeeb Boulevards", "theme": {"border": "border-emerald-200/90", "headerGradient": "from-emerald-950 via-teal-950 to-slate-950", "headerBorder": "border-emerald-800", "badgeBg": "bg-emerald-950/80 text-emerald-300 border border-emerald-700", "placeNumBg": "bg-emerald-800", "typeColor": "text-emerald-900", "mapBtnColor": "text-emerald-700 hover:text-emerald-900", "historyBg": "bg-emerald-50/60 border border-emerald-100", "historyHeading": "text-emerald-950", "bulletColor": "text-emerald-600", "modalBtn": "bg-emerald-400 hover:bg-emerald-300 text-slate-950", "tagColor": "bg-emerald-50 text-emerald-700 hover:bg-emerald-100", "heritageBadge": "🕌 Awadhi Nawabi Emerald & Tehzeeb"}, "tags": ["Bara Imambara (Bhool Bhulaiya maze)", "Chota Imambara", "Rumi Darwaza", "British Residency", "Hazratganj", "Lucknow", "Nawabs", "Chikankari", "Awadhi"], "bestTime": "October to March (Delightful winter weather perfect for walking tours, heritage bazaars, and kebab dining)", "duration": "2 Days", "overview": "Sprawled along the winding Gomti River, Lucknow is the cultured capital of Uttar Pradesh and the historic seat of the Nawabs of Awadh. Celebrated globally for its refined etiquette (tehzeeb), exquisite Chikankari hand embroidery, Urdu literature, and legendary Awadhi culinary arts, Lucknow pairs the monumental column-less brick vault of the Bara Imambara and its baffling rooftop maze (Bhool Bhulaiya) with the gilded chandeliers of the Chota Imambara, the towering Turkish arches of Rumi Darwaza, battle-scarred walls of the British Residency, and the neoclassical promenade of Hazratganj.", "places": [{"name": "Bara Imambara (Bhool Bhulaiya maze)", "type": "1784 CE Pillar-less Vaulted Monument & Legendary Intricate Rooftop Labyrinth", "coords": "26.8690° N, 80.9126° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Bara+Imambara+Lucknow", "history": "Commissioned in 1784 by Nawab Asaf-ud-Daula as a grand famine relief public works project to employ thousands of citizens during a catastrophic food shortage. Designed by master architect Kifayatullah using indigenous Lakhauri brick, lime, and shell mortar without a single iron beam.", "keyFacts": ["Bara Imambara (Bhool Bhulaiya maze) features the world's largest unsupported vaulted central hall (50 metres long and 15 metres high), constructed entirely without wooden or metal pillars.", "The upper roof levels house the famed 'Bhool Bhulaiya'—an intricate three-dimensional maze of over 1,000 interconnecting passages, identical staircases, and 489 identical doorways.", "Features extraordinary acoustic engineering: a whisper at one end of a 50-metre balcony travels clearly to the other side along hollow conduit walls.", "Complex includes the grand Asafi Mosque, the tiered Shahi Baoli stepwell, and landscaped Mughal courtyards."], "bestTime": "9:00 AM to 5:30 PM (Allocate at least 2 hours; guide strongly recommended for navigating the labyrinth)", "insiderTip": "Hire an authorized monument guide at the main ticket gate; they will demonstrate the uncanny whispering acoustics and guide you safely through the labyrinth to the open rooftop terrace."}, {"name": "Chota Imambara", "type": "1838 CE Palace of Lights, Gilded Calligraphy & Belgian Crystal Chandeliers", "coords": "26.8741° N, 80.9048° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Chota+Imambara+Lucknow", "history": "Built in 1838 by Muhammad Ali Shah, the third Nawab of Awadh, to serve as his own mausoleum and a congregation hall for Shia Muslims during Muharram. Known colloquially as the 'Palace of Lights' (Hussainabad Imambara).", "keyFacts": ["Houses an astonishing collection of thousands of 19th-century Belgian crystal chandeliers, colored glass globes, and gilded mirrors that illuminate the marble halls during festive nights.", "Its exterior white facade is intricately decorated with Islamic calligraphy, gilded floral arabesques, and fine stucco reliefs.", "The courtyard features a miniature replica of the Taj Mahal built as the tomb of Princess Zinat Algiya, daughter of Muhammad Ali Shah.", "Supplied by water channels fed by the Gomti River, featuring statues, brass lanterns, and a striking golden dome."], "bestTime": "9:00 AM to 5:30 PM (Afternoon light illuminates the mirrored crystal glass halls beautifully)", "insiderTip": "Notice the delicate silver pulpit (mimbar) and the royal horse carriages parked in the eastern courtyard."}, {"name": "Rumi Darwaza", "type": "1784 CE 60-Foot Awadhi Royal Gateway Modeled on Constantinople", "coords": "26.8708° N, 80.9119° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Rumi+Darwaza+Lucknow", "history": "Built by Nawab Asaf-ud-Daula in 1784 alongside the Bara Imambara. Modeled closely after the historic Bab-i-Humayun (Sublime Porte) gateway in Constantinople (modern Istanbul), giving it the name 'Rumi Darwaza' (Turkish Gate).", "keyFacts": ["Stands 60 feet (18 metres) high, serving as the monumental imperial western entrance to the historic walled citadel of Lucknow.", "Carved with delicate floral flourishes, ornamental chhatris, and a gigantic semi-circular arch crowned by a carved lantern cupola that was once illuminated with water jets and lanterns.", "The enduring cultural and architectural symbol of Lucknow and Awadh.", "Features exquisite Lakhauri brickwork and lime stucco that has withstood 240 years of monsoon weather."], "bestTime": "Best photographed in early morning light or illuminated in the evening (Spans the main heritage road between Bara and Chota Imambara)", "insiderTip": "Walk through the archway on foot during morning hours to capture the iconic perspective looking toward the Hussainabad Clock Tower and Picture Gallery."}, {"name": "British Residency", "type": "1800 CE Historic Complex, Siege of Lucknow Memorial & Museum", "coords": "26.8617° N, 80.9268° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+British+Residency+Lucknow", "history": "Constructed between 1780 and 1800 for the British Resident stationed at the court of the Nawab. The focal point of the dramatic 147-day Siege of Lucknow during the 1857 First War of Indian Independence (Indian Mutiny).", "keyFacts": ["Preserved in its evocative, romantic ruined condition, with bullet pockmarks and cannonball craters clearly visible across its red brick walls.", "Sprawls across 33 peaceful acres of manicured botanical lawns, rose gardens, and grand old banyan trees.", "The central Residency Museum displays a detailed scale model of the 1857 compound, original oil paintings, lithographs, letters, and 19th-century weapons.", "Houses the cemetery where over 2,000 British soldiers and civilians, including Sir Henry Lawrence, were laid to rest."], "bestTime": "10:00 AM to 5:00 PM (Closed on Mondays; ideal for a quiet, reflective morning history walk)", "insiderTip": "Visit the basement banquet hall museum to inspect the authentic miniature model showing the complete battle positions during the 1857 siege."}, {"name": "Hazratganj", "type": "1810 CE Heritage Shopping Boulevard & 'Ganjing' Evening Promenade", "coords": "26.8500° N, 80.9469° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hazratganj+Lucknow", "history": "Established in 1810 by Nawab Saadat Ali Khan and transformed in the 19th and early 20th centuries into an imperial European-style boulevard modeled on London's Queen Street. Restored in 2010 to uniform cream-and-pink colonial facades.", "keyFacts": ["Gave rise to the beloved local cultural tradition of 'Ganjing'—strolling languidly down the broad neoclassical boulevards, browsing handloom boutiques, and savoring street delicacies.", "The premier retail destination for authentic hand-embroidered Lucknowi Chikankari, Zardozi silk fabrics, and royal attars (essential oils).", "Home to legendary heritage eateries including the historic Royal Cafe (origin of the famous Basket Chaat) and century-old Ram Asrey sweet shop.", "Features vintage lamp posts, cast-iron street benches, stone pavers, and the historic 1930s Mayfair cinema building."], "bestTime": "4:00 PM to 10:00 PM (Evening is lively with illuminated shopfronts, family promenades, and bustling food stalls)", "insiderTip": "Stop by Royal Cafe in Hazratganj to sample their legendary multi-ingredient 'Basket Chaat' before browsing Chikankari kurta collections at Janpath Market."}]}, {"id": "ayodhya-sacred", "title": "Ayodhya: The Sacred City of Shri Rama & Saryu Ghats", "tagline": "Shri Ram Janmabhoomi Mandir, Hanuman Garhi, Kanak Bhawan, and Ram Ki Paidi ghats on the Saryu River", "category": "Sacred Janmabhoomi Temples, Nagara Architecture & River Ghats", "theme": {"border": "border-orange-200/90", "headerGradient": "from-orange-950 via-amber-950 to-red-950", "headerBorder": "border-orange-800", "badgeBg": "bg-orange-950/80 text-orange-300 border border-orange-700", "placeNumBg": "bg-orange-600", "typeColor": "text-orange-900", "mapBtnColor": "text-orange-700 hover:text-orange-900", "historyBg": "bg-orange-50/60 border border-orange-100", "historyHeading": "text-orange-950", "bulletColor": "text-orange-600", "modalBtn": "bg-amber-400 hover:bg-amber-300 text-slate-950", "tagColor": "bg-orange-50 text-orange-700 hover:bg-orange-100", "heritageBadge": "🏹 Shri Ram Janmabhoomi Saffron & Saryu Sandalwood"}, "tags": ["Shri Ram Janmabhoomi Mandir", "Hanuman Garhi", "Kanak Bhawan", "Ram Ki Paidi ghats on the Saryu River", "Ayodhya", "Saryu River", "Nagara Style", "Ramayana"], "bestTime": "October to March (Pleasant winter climate; ideal during Diwali Deepotsav and Ram Navami celebrations)", "duration": "1 to 2 Days", "overview": "Nestled on the serene holy banks of the Saryu River, Ayodhya is one of the seven sacred Moksha-giving cities (Sapta Puri) of ancient India. Revered as the historic birthplace of Bhagwan Shri Rama and the imperial capital of the legendary Suryavansha (Solar) dynasty, Ayodhya has undergone a breathtaking renaissance. The city is crowned by the monumental pink sandstone Nagara-style Shri Ram Janmabhoomi Mandir, the ancient hilltop guardian fortress of Hanuman Garhi, the gilded palace of Kanak Bhawan, and the stepped river promenade of Ram Ki Paidi, where millions of earthen lamps glow during Deepotsav.", "places": [{"name": "Shri Ram Janmabhoomi Mandir", "type": "Monumental Pink Sandstone Nagara-Style Temple & Sacred Birthplace", "coords": "26.7956° N, 82.1944° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ram+Janmabhoomi+Mandir+Ayodhya", "history": "Built on the sacred birthplace of Bhagwan Shri Rama following centuries of cultural reverence. Formally consecrated (Pran Pratishtha) in January 2024. Designed by renowned temple architect Chandrakant Sompura in traditional classical Nagara architectural style.", "keyFacts": ["Shri Ram Janmabhoomi Mandir is constructed entirely from 4.7 million cubic feet of carved pink Bansi Paharpur sandstone from Rajasthan, without using a single piece of steel or iron.", "Spans a length of 380 feet, width of 250 feet, and soars to a height of 161 feet with three storeys, five mandapas (halls), and 392 sculpted pillars.", "The inner sanctum (Garbha Griha) enshrines the divine 51-inch black shaligram stone idol of Ram Lalla, sculpted by master artist Arun Yogiraj.", "Features an innovative 'Surya Tilak' optomechanical mirror-lens system that directs natural sunlight precisely onto Ram Lalla's forehead at noon on every Ram Navami."], "bestTime": "6:30 AM to 9:30 PM (Morning darshan from 7:00 AM to 11:30 AM; evening aarti at 7:00 PM)", "insiderTip": "Leave mobile phones and electronic devices in the free secure locker facilities provided at the pilgrimage facilitation center before joining the darshan queue."}, {"name": "Hanuman Garhi", "type": "10th-Century Hilltop Fort Temple & Guardian Shrine of Ayodhya", "coords": "26.7975° N, 82.2033° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hanuman+Garhi+Ayodhya", "history": "Built in the form of a four-sided fortified castle on a prominent hill in the heart of Ayodhya. Historically patronized by Nawab Shuja-ud-Daula. Tradition dictates that devotees must first seek the blessings of Lord Hanuman here before proceeding to the Ram Janmabhoomi temple.", "keyFacts": ["Devotees ascend 76 grand stone stairs to reach the fortified hilltop courtyard surrounded by defensive bastions.", "Enshrines an extraordinary, beloved deity depicting young Lord Hanuman seated in the lap of his mother Anjani.", "Believed to have been Lord Hanuman's watchtower residence from where he protected the royal capital of Ayodhya.", "The temple courtyard echoes continuously with the powerful recitation of the Hanuman Chalisa and devotional bells."], "bestTime": "5:00 AM to 10:00 PM (Early morning or sunset darshan avoids daytime staircase heat)", "insiderTip": "Climb the 76 steps in the early morning; purchase traditional besan laddoos from the bustling sweet shops at the foot of the hill as sacred prasad."}, {"name": "Kanak Bhawan", "type": "Palace of Gold, Exquisite Bundeli Architecture & Sita-Rama Temple", "coords": "26.8017° N, 82.2006° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kanak+Bhawan+Ayodhya", "history": "According to legend, this golden palace was gifted to Devi Sita by Queen Kaikeyi upon her marriage to Lord Rama. The present magnificent palace-temple was constructed in 1891 by Queen Vrishbhanu Kunwari of Orchha in Bundelkhand.", "keyFacts": ["Known as the 'Palace of Gold' (Sone-ka-Ghar) for its gilded sanctum and celestial thrones housing crown-bearing idols of Shri Rama and Mata Sita.", "Features magnificent Bundeli and Rajasthani palace architecture with scalloped arched courtyards, marble balconies, and ornate ceiling frescoes.", "Houses three sets of divine couple deities installed across different historical eras by King Vikramaditya, Samudragupta, and the Queen of Orchha.", "Renowned for soul-stirring morning and evening musical bhajans performed in classical Hindustani ragas."], "bestTime": "8:00 AM to 11:30 AM and 4:30 PM to 9:00 PM (Evening musical aarti is wonderfully peaceful and devotional)", "insiderTip": "Sit quietly in the open marble courtyard during the evening Sandhya Aarti to enjoy the classical devotional singing and flute melodies."}, {"name": "Ram Ki Paidi ghats on the Saryu River", "type": "Stepped Riverfront Promenade, Musical Fountains & Deepotsav Epicenter", "coords": "26.8058° N, 82.2114° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ram+Ki+Paidi+Ayodhya", "history": "A grand series of stepped bathing ghats and water channels created along the holy Saryu River. Renovated into an expansive riverfront promenade and public cultural square.", "keyFacts": ["Ram Ki Paidi ghats on the Saryu River host the world-famous annual Deepotsav festival, setting Guinness World Records with over 2.2 million illuminated earthen lamps (diyas).", "Supplied by a dedicated hydraulic pumping system that circulates fresh water from the Saryu River through stepped pools and ornamental fountains.", "Features an evening laser, light, and sound show projected onto water screens narrating epic episodes of the Ramayana.", "A vibrant community gathering space for evening walks, boating, and viewing the sacred Maha Aarti on the Saryu River."], "bestTime": "5:30 PM to 8:30 PM (Evening breeze, glowing ghat illuminations, and the synchronized laser show)", "insiderTip": "Walk over to the adjoining Naya Ghat around 6:30 PM to participate in the grand Saryu Aarti before watching the illuminated laser show at Ram Ki Paidi."}]}, {"id": "mathura-vrindavan", "title": "Mathura & Vrindavan: The Eternal Realm of Lord Krishna", "tagline": "Krishna Janmabhoomi temple complex, Banke Bihari Temple, Prem Mandir, and ISKCON Vrindavan", "category": "Braj Heritage, Krishna Janmabhoomi & Bhakti Temples", "theme": {"border": "border-sky-200/90", "headerGradient": "from-indigo-950 via-blue-950 to-sky-950", "headerBorder": "border-sky-800", "badgeBg": "bg-sky-950/80 text-sky-300 border border-sky-700", "placeNumBg": "bg-sky-700", "typeColor": "text-sky-900", "mapBtnColor": "text-sky-700 hover:text-sky-900", "historyBg": "bg-sky-50/60 border border-sky-100", "historyHeading": "text-sky-950", "bulletColor": "text-sky-600", "modalBtn": "bg-sky-400 hover:bg-sky-300 text-slate-950", "tagColor": "bg-sky-50 text-sky-700 hover:bg-sky-100", "heritageBadge": "🦚 Braj Bhoomi Peetambar & Peacock Blue"}, "tags": ["Krishna Janmabhoomi temple complex", "Banke Bihari Temple", "Prem Mandir", "ISKCON Vrindavan", "Mathura", "Vrindavan", "Lord Krishna", "Braj", "Holi"], "bestTime": "October to March (Ideal during Janmashtami in August/September and world-famous Braj Holi in March)", "duration": "1 to 2 Days", "overview": "Spanning both banks of the Yamuna River, Mathura and Vrindavan form the sacred nucleus of Braj Bhoomi—the legendary playground where Lord Krishna was born, spent his childhood, and performed his divine lilas. Mathura houses the sacred underground prison cell of the Krishna Janmabhoomi complex, while the holy town of Vrindavan resonates with ecstatic devotion at the 1864 Banke Bihari Temple, the illuminated Italian Carrara marble carvings of Prem Mandir, and the international kirtans of ISKCON Krishna Balaram Temple.", "places": [{"name": "Krishna Janmabhoomi temple complex", "type": "Sacred Underground Prison Cell (Garbha Griha) & Janmasthan Sanctum", "coords": "27.5050° N, 77.6694° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Krishna+Janmabhoomi+Temple+Mathura", "history": "Regarded for millennia as the exact site of the underground prison cell where Lord Krishna was born to Devaki and Vasudeva while held captive by King Kansa. The magnificent modern temple complex was rebuilt in the mid-20th century through the patronages of Pandit Madan Mohan Malaviya and the Birla family.", "keyFacts": ["Krishna Janmabhoomi temple complex centers upon the sacred subterranean stone cell (Garbha Griha) believed to be the exact birthplace of Lord Krishna.", "Houses the grand Keshavdeva Temple and the expansive Bhagavat Bhavan adorned with vivid ceiling frescoes depicting the life of Krishna.", "Features the sacred 10th-century Potra Kund—the stepped stone pond where baby Krishna's clothes were washed.", "Epicenter of global Janmashtami festivities, drawing hundreds of thousands of pilgrims for midnight celebrations."], "bestTime": "5:30 AM to 12:00 PM and 4:00 PM to 8:30 PM (Strict security checks; all electronics must be deposited in cloakrooms)", "insiderTip": "Arrive early around 7:00 AM to avoid heavy queues; note that no mobile phones, cameras, or smartwatches are permitted inside the sanctum."}, {"name": "Banke Bihari Temple", "type": "1864 CE Supreme Seat of Braj Devotion & Swami Haridas Sanctuary", "coords": "27.5819° N, 77.6989° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Banke+Bihari+Temple+Vrindavan", "history": "Established by the great saint-musician Swami Haridas (guru of Tansen), who manifested the divine idol of Banke Bihari (Krishna in the bent Tribhanga posture) through his musical devotion in Nidhivan. The current Rajasthani-style temple was constructed in 1864.", "keyFacts": ["The black stone deity of Banke Bihari is uniquely worshiped as a living child: no morning temple bells are rung so as not to disturb the Lord's slumber.", "Features the famous 'Parda' (curtain) ritual: the sanctum curtain is pulled shut and opened every few minutes to prevent devotees from swooning in ecstasy under the Lord's mesmerizing gaze.", "Renowned for the joyous celebration of Phoolon Wali Holi (Holi of flower petals) and Jhulan Yatra (swing festival).", "Located amidst the vibrant winding narrow lanes of old Vrindavan lined with sweet shops selling hot milk and kachoris."], "bestTime": "7:45 AM to 12:00 PM and 5:30 PM to 9:30 PM (Expect enthusiastic, dense crowds during aarti times)", "insiderTip": "Beware of mischievous Vrindavan temple monkeys who snatch spectacles and bags; keep glasses safely in pockets while walking the access lanes."}, {"name": "Prem Mandir", "type": "2012 CE Italian Carrara Marble Wonder & 3D Krishna Leela Sculptures", "coords": "27.5719° N, 77.6744° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Prem+Mandir+Vrindavan", "history": "Conceived by spiritual leader Jagadguru Shri Kripalu Ji Maharaj, constructed over 11 years by 1,000 master artisans and consecrated in February 2012. Spans 54 acres on the outskirts of Vrindavan.", "keyFacts": ["Carved from 30,000 tonnes of pure Italian white Carrara marble, standing 125 feet tall with intricate floral pillars and sculpted ceilings.", "The temple gardens feature life-sized, vividly painted 3D dioramas depicting Krishna lifting Govardhan Hill, the Raslila dance, and the Kaliya Dahan.", "Illuminated every evening with dynamic color-changing LED architectural floodlights that transform the marble facade into rainbow hues.", "Features a spectacular synchronized musical water fountain show every evening at 7:30 PM."], "bestTime": "5:30 AM to 12:00 PM and 4:30 PM to 8:30 PM (Arrive at 6:30 PM to admire the illuminated gardens and musical fountain)", "insiderTip": "Arrive an hour before sunset to see the pure white marble in daylight, then stay as the dazzling multi-colored illuminations turn on at twilight."}, {"name": "ISKCON Vrindavan (Sri Sri Krishna Balaram Temple)", "type": "1975 CE International Bhakti Center & Srila Prabhupada Samadhi", "coords": "27.5728° N, 77.6833° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=ISKCON+Vrindavan", "history": "Inaugurated in 1975 by A.C. Bhaktivedanta Swami Prabhupada, founder of ISKCON. The first temple built by ISKCON in India, standing on sacred Raman Reti where Krishna and Balaram grazed their calves.", "keyFacts": ["Enshrines three divine altars: Sri Sri Radha Shyamsundar, Sri Sri Krishna Balaram, and Sri Sri Gaura Nitai.", "Famous worldwide for its non-stop 24-hour Akhanda Kirtan, where devotees from over 50 nations sing and play mridanga drums in continuous shifts.", "The complex includes the white marble Samadhi Mandir and museum preserving the personal quarters of Srila Prabhupada.", "Features a magnificent central open-air courtyard with a sacred Tamal tree where Krishna is said to have rested."], "bestTime": "4:30 AM to 12:45 PM and 4:30 PM to 8:30 PM (The 4:30 AM Mangala Aarti and 7:00 PM Sandhya Aarti are deeply energetic)", "insiderTip": "Spend time sitting in the central courtyard during the evening aarti to experience the uplifting international Hare Krishna kirtan."}]}, {"id": "prayagraj-sangam", "title": "Prayagraj: The Sacred Triveni Sangam & Maha Kumbh Capital", "tagline": "Triveni Sangam (confluence of Ganga, Yamuna, and Saraswati rivers, host of the Maha Kumbh Mela) and Anand Bhavan", "category": "Sacred Triple River Confluence, Maha Kumbh Mela & Freedom Mansions", "theme": {"border": "border-cyan-200/90", "headerGradient": "from-slate-950 via-cyan-950 to-blue-950", "headerBorder": "border-cyan-800", "badgeBg": "bg-cyan-950/80 text-cyan-300 border border-cyan-700", "placeNumBg": "bg-cyan-700", "typeColor": "text-cyan-900", "mapBtnColor": "text-cyan-700 hover:text-cyan-900", "historyBg": "bg-cyan-50/60 border border-cyan-100", "historyHeading": "text-cyan-950", "bulletColor": "text-cyan-600", "modalBtn": "bg-cyan-400 hover:bg-cyan-300 text-slate-950", "tagColor": "bg-cyan-50 text-cyan-700 hover:bg-cyan-100", "heritageBadge": "🌊 Sacred Triveni Sangam & Maha Kumbh Azure"}, "tags": ["Triveni Sangam (confluence of Ganga, Yamuna, and Saraswati rivers, host of the Maha Kumbh Mela)", "Anand Bhavan", "Prayagraj", "Allahabad", "Maha Kumbh", "Saraswati", "Ganga", "Yamuna"], "bestTime": "October to March (Winter brings pleasant boat weather, migratory Siberian gulls, and the holy Magh Mela)", "duration": "1 to 2 Days", "overview": "Anciently known as Prayag ('Place of Sacrifice') and lauded in the Puranas as 'Tirtharaj' (the King of all Pilgrimages), Prayagraj is consecrated by the holy Triveni Sangam—the sacred confluence of the pale-green Yamuna, the muddy-brown Ganges, and the subterranean mystical Saraswati rivers. Host of the epic Maha Kumbh Mela—the largest human gathering on planet Earth—Prayagraj also preserves deep modern historical significance at Anand Bhavan, the historic mansion of the Nehru family and epicenter of India's freedom struggle.", "places": [{"name": "Triveni Sangam (confluence of Ganga, Yamuna, and Saraswati rivers, host of the Maha Kumbh Mela)", "type": "Holiest Triple River Confluence on Earth & Epic Maha Kumbh Grounds", "coords": "25.4299° N, 81.8828° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Triveni+Sangam+Prayagraj", "history": "Revered since Vedic antiquity as the holy confluence of three rivers: the visible Ganga, the visible Yamuna, and the mythical subterranean Saraswati. The celestial site where drops of the nectar of immortality (Amrita) fell during the cosmic churning of the ocean (Samudra Manthan).", "keyFacts": ["Triveni Sangam (confluence of Ganga, Yamuna, and Saraswati rivers, host of the Maha Kumbh Mela) hosts the UNESCO-inscribed Maha Kumbh Mela every 12 years and the Ardh Kumbh every 6 years.", "Visitors can clearly observe the distinct natural water colors merging in mid-river: the calm, deep-greenish waters of the Yamuna meeting the rapid, ochre-tinted currents of the sacred Ganges.", "Taking a holy dip (snan) at the precise confluence point aboard anchored wooden platforms is believed to wash away all lifetimes of sins.", "During winter months, tens of thousands of migratory Siberian gulls flock to the boats, circling overhead as pilgrims offer them puffed grain."], "bestTime": "Sunrise to Sunset (Early morning boat ride from Sangam Ghat or Qila Ghat to the mid-river confluence)", "insiderTip": "Hire a government-regulated wooden boat from the ghats out to the mid-river bathing platforms; keep a bag of grain handy to feed the Siberian gulls flying around your boat."}, {"name": "Anand Bhavan", "type": "1930 CE Historic Neoclassical Freedom Mansion & Nehru-Gandhi Memorial Museum", "coords": "25.4594° N, 81.8597° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Anand+Bhavan+Prayagraj", "history": "Constructed in 1930 by freedom fighter Pandit Motilal Nehru to replace Swaraj Bhavan as the family residence. Served as the nerve center of the Indian National Congress during the independence movement, hosting Mahatma Gandhi, Jawaharlal Nehru, and Indira Gandhi.", "keyFacts": ["A grand two-storied neoclassical mansion set amidst lush rolling lawns, complete with period wooden furnishings, an extensive personal library, and personal memorabilia.", "Preserves the original bedroom and study of Pandit Jawaharlal Nehru, where pivotal freedom movement policies and the blueprint of modern India were drafted.", "Features the room where Indira Gandhi (then Priyadarshini) married Feroze Gandhi in 1942.", "The estate houses the modern Jawahar Planetarium, offering astronomical shows about space exploration.", "Donated to the Indian nation by Prime Minister Indira Gandhi in 1970."], "bestTime": "9:30 AM to 5:00 PM (Closed on Mondays; plan a 1.5 to 2 hour tour of the museum and grounds)", "insiderTip": "Visit the adjacent Swaraj Bhavan (the birthplace of Indira Gandhi) and take in the 45-minute celestial sky show at the on-site Jawahar Planetarium."}]}, {"id": "dudhwa-national-park", "title": "Dudhwa National Park: Terai Forest & Tiger Sanctuary", "tagline": "Dudhwa National Park: Terai wildlife reserve harboring swamp deer (barasingha), tigers, and Indian rhinos", "category": "Terai Sal Forest Ecosystems, Greater One-Horned Rhinos & Tigers", "theme": {"border": "border-green-200/90", "headerGradient": "from-emerald-950 via-green-950 to-stone-900", "headerBorder": "border-green-800", "badgeBg": "bg-green-950/80 text-green-300 border border-green-700", "placeNumBg": "bg-green-700", "typeColor": "text-green-900", "mapBtnColor": "text-green-700 hover:text-green-900", "historyBg": "bg-green-50/60 border border-green-100", "historyHeading": "text-green-950", "bulletColor": "text-green-600", "modalBtn": "bg-green-400 hover:bg-green-300 text-slate-950", "tagColor": "bg-green-50 text-green-700 hover:bg-green-100", "heritageBadge": "🐅 Terai Jungle Jade & Swamp Deer Sanctuary"}, "tags": ["Dudhwa National Park", "Terai wildlife reserve harboring swamp deer (barasingha), tigers, and Indian rhinos", "Lakhimpur Kheri", "Bengal Tiger", "Indian Rhinoceros", "Barasingha", "Sal Forest"], "bestTime": "November to April (Park remains closed during the monsoon from mid-June to mid-November; February to April is peak wildlife spotting)", "duration": "2 Days (220 km north of Lucknow near Indo-Nepal border)", "overview": "Stretching across the lush Terai plains of Lakhimpur Kheri along the Indo-Nepal border, Dudhwa National Park preserves one of the rarest, most endangered ecosystems in northern India. Spearheaded by legendary conservationist 'Billy' Arjan Singh, Dudhwa protects colossal towering Sal (Shorea robusta) forests, sprawling alluvial grasslands, and labyrinthine wetlands. It is renowned worldwide as the last stronghold of the critically endangered Northern swamp deer (Barasingha), a thriving population of reintroduced Greater one-horned Indian rhinoceroses, and majestic Bengal tigers.", "places": [{"name": "Dudhwa National Park (Terai wildlife reserve harboring swamp deer, tigers, and Indian rhinos)", "type": "Protected Terai Biosphere, Project Tiger & Elephant Safari Haven", "coords": "28.5133° N, 80.6483° E", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dudhwa+National+Park+Palia+Kalan", "history": "Declared a wildlife sanctuary in 1958 to protect the swamp deer and elevated to a National Park in 1977 due to the relentless efforts of conservationist 'Billy' Arjan Singh. Merged with Kishanpur and Katarniaghat Wildlife Sanctuaries to establish the Dudhwa Tiger Reserve in 1987.", "keyFacts": ["Dudhwa National Park: Terai wildlife reserve harboring swamp deer (barasingha), tigers, and Indian rhinos across 1,284 square kilometers.", "Home to over half of the world's surviving population of the magnificent 12-tined Northern swamp deer (Barasingha).", "A premier conservation success story featuring a thriving population of Greater one-horned Indian rhinoceroses successfully reintroduced from Assam and Nepal in 1984.", "Harbors healthy populations of Royal Bengal tigers, leopards, wild Asian elephants, sloth bears, fishing cats, and hispid hares.", "A paradise for birdwatchers, sheltering over 450 avian species including the endangered Bengal florican, sarus crane, and great hornbill."], "bestTime": "Sunrise Safari (6:00 AM to 9:30 AM) & Afternoon Safari (2:30 PM to 6:00 PM; November to April)", "insiderTip": "Book the specialized elephant-back rhino-tracking safari inside the fenced Rhinoceros Rehabilitation Area in the Salukapur range for close-up sightings of wild rhinos."}]}];
+    const itinerariesData = {"3": [{"day": "Day 1", "title": "Agra: The Royal Mughal Splendour", "desc": "Witness sunrise over the Taj Mahal, explore the sandstone ramparts of Agra Fort, tour Akbar's deserted capital at Fatehpur Sikri, and sample Agra petha."}, {"day": "Day 2", "title": "Varanasi: Eternal Ghats & Evening Aarti", "desc": "Morning high-speed train or flight to Varanasi; explore ancient narrow alleys to Kashi Vishwanath Jyotirlinga, and witness the spellbinding Dashashwamedh Ghat Ganga Aarti."}, {"day": "Day 3", "title": "Dawn Boat Safari & Sarnath Stupas", "desc": "Take a tranquil dawn boat ride along the 84 ghats from Assi to Manikarnika, visit Sarnath's Dhamek Stupa and the original Ashoka Lion Capital, and depart."}], "5": [{"day": "Day 1", "title": "Agra World Wonders & Fatehpur Sikri", "desc": "Sunrise tour of Taj Mahal, exploration of Agra Fort's Musamman Burj, and afternoon excursion to the Buland Darwaza at Fatehpur Sikri."}, {"day": "Day 2", "title": "Lucknow: The Nawabi Tehzeeb & Imambaras", "desc": "Drive via the 6-lane Agra-Lucknow Expressway to Lucknow; navigate the Bhool Bhulaiya maze at Bara Imambara, admire Chota Imambara, and stroll Hazratganj."}, {"day": "Day 3", "title": "Sacred Ayodhya & Saryu River Promenade", "desc": "Morning drive to Ayodhya (2 hrs); seek blessings at Shri Ram Janmabhoomi Mandir and Hanuman Garhi, visit Kanak Bhawan, and watch the illuminated laser show at Ram Ki Paidi."}, {"day": "Day 4", "title": "Varanasi: Kashi Vishwanath & Ganga Aarti", "desc": "Transit to ancient Kashi; walk the newly built Vishwanath Dham corridor, explore silk handloom weaving centers, and take an evening boat for Dashashwamedh Aarti."}, {"day": "Day 5", "title": "Dawn Ghat Cruise & Buddhist Cradle Sarnath", "desc": "Morning boat cruise observing morning prayers along Manikarnika and Dashashwamedh; afternoon tour of the ancient Buddhist monastic ruins at Sarnath before departure."}], "7": [{"day": "Day 1", "title": "Mathura & Vrindavan: Krishna's Sacred Realm", "desc": "Arrive in Mathura; visit Krishna Janmabhoomi, attend Banke Bihari Temple darshan, and watch the evening light show at Prem Mandir in Vrindavan."}, {"day": "Day 2", "title": "Agra: The Taj Mahal & Mughal Strongholds", "desc": "Early morning drive to Agra; sunrise entry at the Taj Mahal, explore Agra Fort, and take an afternoon excursion to Fatehpur Sikri."}, {"day": "Day 3", "title": "Lucknow: Nawabi Citadels & Kebabs", "desc": "Expressway drive to Lucknow; explore the pillar-less vault of Bara Imambara, the labyrinthine Bhool Bhulaiya, Rumi Darwaza, and feast on Galouti kebabs."}, {"day": "Day 4", "title": "Dudhwa Terai Safari: Rhinos & Tigers", "desc": "Scenic morning drive north to Dudhwa National Park; embark on an afternoon 4x4 jungle jeep safari through towering Sal forests to track swamp deer and tigers."}, {"day": "Day 5", "title": "Ayodhya: Shri Ram Janmabhoomi & Saryu Ghats", "desc": "Morning drive south to Ayodhya; darshan at Shri Ram Janmabhoomi Mandir, climb the steps of Hanuman Garhi, and enjoy evening laser aarti at Ram Ki Paidi."}, {"day": "Day 6", "title": "Prayagraj: Sacred Triveni Sangam Confluence", "desc": "Drive to Prayagraj; embark on a wooden boat ride out to the sacred Sangam where Ganga and Yamuna merge, and tour the historic freedom mansion of Anand Bhavan."}, {"day": "Day 7", "title": "Varanasi: Eternal Kashi & Sarnath Stupa", "desc": "Drive to Varanasi; dawn boat safari along the 84 ghats, darshan at Kashi Vishwanath Jyotirlinga, visit Sarnath's Dhamek Stupa, and attend the grand evening Dashashwamedh Aarti."}]};
+
+    // Cultural Category Filter Styles
+    const categoryTabStyles = {
+      'All': 'bg-gradient-to-r from-amber-700 to-rose-700 text-white',
+      'Mughal World Wonders, Imperial Fortresses & Red Sandstone Capitals': 'bg-rose-900 text-white',
+      'Sacred Jyotirlingas, Eternal Ganga Ghats & Buddhist Cradle': 'bg-amber-700 text-white',
+      'Awadhi Nawabi Architecture, Labyrinth Vaults & Tehzeeb Boulevards': 'bg-emerald-800 text-white',
+      'Sacred Janmabhoomi Temples, Nagara Architecture & River Ghats': 'bg-orange-700 text-white',
+      'Braj Heritage, Krishna Janmabhoomi & Bhakti Temples': 'bg-sky-800 text-white',
+      'Sacred Triple River Confluence, Maha Kumbh Mela & Freedom Mansions': 'bg-cyan-800 text-white',
+      'Terai Sal Forest Ecosystems, Greater One-Horned Rhinos & Tigers': 'bg-green-800 text-white',
+      'Bookmarks': 'bg-purple-800 text-white'
+    };
+
+    // State Variables
+    let currentCategory = 'All';
+    let searchQuery = '';
+    let bookmarkedPlaces = JSON.parse(localStorage.getItem('up_bookmarks') || '[]');
+    let checklistState = JSON.parse(localStorage.getItem('up_checklist') || '{}');
+
+    // DOM Elements
+    const clustersContainer = document.getElementById('clusters-container');
+    const emptyState = document.getElementById('empty-state');
+    const searchInput = document.getElementById('search-input');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const filterStatusText = document.getElementById('filter-status-text');
+    const bookmarkBadge = document.getElementById('bookmark-badge');
+    const bookmarkFilterBtn = document.getElementById('bookmark-filter-btn');
+    const clearSearchBtn = document.getElementById('clear-search-btn');
+    const chimeBtn = document.getElementById('chime-btn');
+    const readingModal = document.getElementById('reading-modal');
+    const modalContent = document.getElementById('modal-content');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalTitle = document.getElementById('modal-title');
+    const modalCategory = document.getElementById('modal-category');
+    const modalCoords = document.getElementById('modal-coords');
+    const modalBody = document.getElementById('modal-body');
+    const modalMapLink = document.getElementById('modal-map-link');
+    const modalCopyBtn = document.getElementById('modal-copy-btn');
+    const toast = document.getElementById('toast');
+    const toastIcon = document.getElementById('toast-icon');
+    const toastMsg = document.getElementById('toast-msg');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+
+    // Show Toast Notification
+    function showToast(msg, icon = '✨') {
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 3000);
+    }
+
+    // Synthesize Shehnai Flourish & Sitar Chime via Web Audio API
+    function playUPChime() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) {
+          showToast('Audio API not supported in this browser', '⚠️');
+          return;
+        }
+        const ctx = new AudioContext();
+        const now = ctx.currentTime;
+
+        // 1. Resonant Brass Temple Bell / Ghanta
+        const bellOsc = ctx.createOscillator();
+        const bellGain = ctx.createGain();
+        bellOsc.type = 'sine';
+        bellOsc.frequency.setValueAtTime(587.33, now); // D5
+        bellGain.gain.setValueAtTime(0.4, now);
+        bellGain.gain.exponentialRampToValueAtTime(0.001, now + 1.8);
+        bellOsc.connect(bellGain);
+        bellGain.connect(ctx.destination);
+        bellOsc.start(now);
+        bellOsc.stop(now + 1.8);
+
+        // 2. Shehnai Reed Melody (Raag Bhairavi Flourish)
+        const shehnaiNotes = [293.66, 329.63, 349.23, 440.00, 523.25, 587.33]; // D4, E4, F4, A4, C5, D5
+        const noteTimes = [0.1, 0.35, 0.6, 0.85, 1.1, 1.4];
+
+        shehnaiNotes.forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(freq, now + noteTimes[idx]);
+
+          // Shehnai characteristic vibrato
+          const vib = ctx.createOscillator();
+          const vGain = ctx.createGain();
+          vib.frequency.value = 6.0;
+          vGain.gain.value = 5.0;
+          vib.connect(osc.frequency);
+          vib.start(now + noteTimes[idx]);
+          vib.stop(now + noteTimes[idx] + 0.45);
+
+          gain.gain.setValueAtTime(0.001, now + noteTimes[idx]);
+          gain.gain.linearRampToValueAtTime(0.12, now + noteTimes[idx] + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + noteTimes[idx] + 0.4);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(now + noteTimes[idx]);
+          osc.stop(now + noteTimes[idx] + 0.45);
+        });
+
+        showToast('Playing Benares Shehnai & Temple Bell Chime 🎵', '🪔');
+      } catch (err) {
+        console.warn('Web Audio playback error:', err);
+      }
+    }
+
+    // Render Itinerary Cards
+    function renderItinerary(days) {
+      const container = document.getElementById('itinerary-details');
+      const items = itinerariesData[days] || [];
+      container.innerHTML = items.map(item => `
+        <div class="bg-slate-50 border border-slate-200 p-3 rounded-xl hover:border-orange-300 transition-colors">
+          <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+            <span class="font-bold text-orange-900 font-heritage">${item.day}</span>
+            <span class="text-[10px] bg-orange-100 text-orange-800 px-1.5 py-0.5 rounded-full font-bold">Recommended</span>
+          </div>
+          <div class="font-bold text-slate-900 mt-2 text-xs">${item.title}</div>
+          <p class="text-slate-600 text-[11px] mt-1 leading-snug">${item.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    // Update Checklist UI
+    function updateChecklistUI() {
+      const checkboxes = document.querySelectorAll('.checklist-item');
+      let checkedCount = 0;
+      checkboxes.forEach((cb, idx) => {
+        if (checklistState[idx]) {
+          cb.checked = true;
+          checkedCount++;
+        } else {
+          cb.checked = false;
+        }
+      });
+      document.getElementById('checklist-status').textContent = `${checkedCount} of ${checkboxes.length} completed`;
+      localStorage.setItem('up_checklist', JSON.stringify(checklistState));
+    }
+
+    // Bookmark Toggle
+    function toggleBookmark(placeName) {
+      const idx = bookmarkedPlaces.indexOf(placeName);
+      if (idx > -1) {
+        bookmarkedPlaces.splice(idx, 1);
+        showToast(`Removed ${placeName} from bookmarks`, '🔖');
+      } else {
+        bookmarkedPlaces.push(placeName);
+        showToast(`Saved ${placeName} to bookmarks!`, '⭐');
+      }
+      localStorage.setItem('up_bookmarks', JSON.stringify(bookmarkedPlaces));
+      updateBookmarkBadge();
+      renderClusters();
+    }
+
+    function updateBookmarkBadge() {
+      bookmarkBadge.textContent = `Bookmarks (${bookmarkedPlaces.length})`;
+    }
+
+    // Open Reading Modal
+    function openModal(clusterId, placeIdx) {
+      const cluster = clustersData.find(c => c.id === clusterId);
+      if (!cluster) return;
+      const place = cluster.places[placeIdx];
+      if (!place) return;
+
+      modalTitle.textContent = place.name;
+      modalCategory.textContent = cluster.category;
+      modalCoords.textContent = `GPS: ${place.coords} • Region: ${cluster.title.split(':')[0]}`;
+      modalMapLink.href = place.mapUrl;
+
+      modalBody.innerHTML = `
+        <div class="bg-orange-50/70 border border-orange-200 p-3 rounded-2xl">
+          <div class="font-bold text-orange-950 font-heritage text-xs">Architectural & Historical Importance</div>
+          <p class="text-slate-700 text-xs mt-1 leading-relaxed">${place.history}</p>
+        </div>
+
+        <div>
+          <div class="font-bold text-slate-900 font-heritage text-xs uppercase tracking-wide text-orange-900 mb-2">Key Heritage & Cultural Facts</div>
+          <ul class="space-y-1.5 text-xs text-slate-700">
+            ${place.keyFacts.map(fact => `
+              <li class="flex items-start gap-2">
+                <span class="text-orange-600 font-bold">✦</span>
+                <span>${fact}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Best Visiting Window</span>
+            <span class="font-semibold text-slate-800 text-xs mt-0.5 block">🌤️ ${place.bestTime}</span>
+          </div>
+          <div class="bg-amber-50/80 p-3 rounded-xl border border-amber-200">
+            <span class="text-[10px] font-bold text-amber-800 uppercase tracking-wider block">Insider Guide Tip</span>
+            <span class="text-amber-950 text-xs mt-0.5 block">💡 ${place.insiderTip}</span>
+          </div>
+        </div>
+      `;
+
+      modalCopyBtn.onclick = () => {
+        const textToCopy = `${place.name}\nType: ${place.type}\nCoordinates: ${place.coords}\n\nHistorical Importance:\n${place.history}\n\nKey Facts:\n${place.keyFacts.map(f => '• ' + f).join('\n')}\n\nBest Time: ${place.bestTime}\nInsider Tip: ${place.insiderTip}\nGoogle Maps: ${place.mapUrl}`;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast('Copied travel dossier to clipboard!', '📋');
+        });
+      };
+
+      readingModal.classList.remove('hidden');
+      setTimeout(() => {
+        readingModal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeModal() {
+      readingModal.classList.add('opacity-0');
+      modalContent.classList.add('scale-95');
+      setTimeout(() => {
+        readingModal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Render Clusters & Places with Destination-Specific Cultural Color Theming
+    function renderClusters() {
+      const query = searchQuery.toLowerCase().trim();
+      let totalVisibleClusters = 0;
+      let totalVisiblePlaces = 0;
+
+      clustersContainer.innerHTML = '';
+
+      clustersData.forEach(cluster => {
+        // Filter by Category
+        const matchesCategory = (currentCategory === 'All' || cluster.category === currentCategory);
+
+        // Filter places
+        const filteredPlaces = cluster.places.filter(place => {
+          const isBookmarked = bookmarkedPlaces.includes(place.name);
+          if (currentCategory === 'Bookmarks' && !isBookmarked) return false;
+
+          if (!query) return true;
+
+          const matchText = (
+            place.name + ' ' +
+            place.type + ' ' +
+            place.history + ' ' +
+            place.keyFacts.join(' ') + ' ' +
+            place.insiderTip + ' ' +
+            cluster.title + ' ' +
+            cluster.overview + ' ' +
+            cluster.tags.join(' ')
+          ).toLowerCase();
+
+          return matchText.includes(query);
+        });
+
+        if ((matchesCategory || currentCategory === 'Bookmarks') && filteredPlaces.length > 0) {
+          totalVisibleClusters++;
+          totalVisiblePlaces += filteredPlaces.length;
+
+          const article = document.createElement('article');
+          article.className = `bg-white rounded-3xl border ${cluster.theme.border} shadow-md overflow-hidden transition-all hover:shadow-xl space-y-4`;
+
+          article.innerHTML = `
+            <!-- Cluster Header Banner with Heritage Palette -->
+            <div class="bg-gradient-to-r ${cluster.theme.headerGradient} text-white p-5 sm:p-6 border-b ${cluster.theme.headerBorder} flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+              <div class="space-y-1.5 max-w-3xl">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-[11px] font-bold uppercase tracking-wider ${cluster.theme.badgeBg} px-2.5 py-0.5 rounded-full">${cluster.category}</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white px-2 py-0.5 rounded-full border border-white/20">${cluster.theme.heritageBadge}</span>
+                  <span class="text-xs text-slate-200 font-medium">⏳ Duration: ${cluster.duration}</span>
+                  <span class="text-xs text-slate-200 font-medium">• 🌤️ ${cluster.bestTime.split('(')[0]}</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-black font-heritage text-white tracking-tight">${cluster.title}</h3>
+                <p class="text-xs text-amber-200/90 font-medium">${cluster.tagline}</p>
+              </div>
+              <button onclick="openModal('${cluster.id}', 0)" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl ${cluster.theme.modalBtn} text-xs font-bold transition-all shadow-sm flex-shrink-0">
+                <span>📖</span>
+                <span>Read Full Dossier</span>
+              </button>
+            </div>
+
+            <!-- Overview & Tags -->
+            <div class="px-5 sm:px-6 pt-1">
+              <p class="text-xs text-slate-600 leading-relaxed font-normal">${cluster.overview}</p>
+              <div class="flex items-center gap-1.5 flex-wrap mt-3">
+                ${cluster.tags.map(tag => `
+                  <span class="text-[10px] ${cluster.theme.tagColor} px-2 py-0.5 rounded-md font-medium transition-colors">#${tag}</span>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Places Grid -->
+            <div class="p-5 sm:p-6 pt-2 grid grid-cols-1 ${filteredPlaces.length > 1 ? 'md:grid-cols-2' : 'md:grid-cols-1'} gap-5">
+              ${filteredPlaces.map((place, idx) => {
+                const isBookmarked = bookmarkedPlaces.includes(place.name);
+                return `
+                  <div class="bg-slate-50/80 border border-slate-200 rounded-2xl p-4 sm:p-5 flex flex-col justify-between hover:border-slate-300 hover:bg-white transition-all space-y-4">
+                    <div class="space-y-3">
+                      <!-- Place Header -->
+                      <div class="flex items-start justify-between gap-3">
+                        <div>
+                          <div class="flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-full ${cluster.theme.placeNumBg} text-white text-xs font-bold flex items-center justify-center flex-shrink-0">${idx + 1}</span>
+                            <h4 class="text-base font-bold text-slate-900 font-heritage leading-snug">${place.name}</h4>
+                          </div>
+                          <p class="text-[11px] ${cluster.theme.typeColor} font-semibold mt-1 pl-8">${place.type}</p>
+                        </div>
+                        <button onclick="toggleBookmark('${place.name}')" class="w-8 h-8 rounded-full border border-slate-200 bg-white hover:bg-slate-100 flex items-center justify-center text-sm transition-all flex-shrink-0" title="Bookmark Destination">
+                          ${isBookmarked ? '⭐' : '☆'}
+                        </button>
+                      </div>
+
+                      <!-- Coords & Direct Map Link -->
+                      <div class="flex items-center justify-between text-[11px] bg-white p-2 rounded-xl border border-slate-200 font-mono text-slate-600">
+                        <span>📍 ${place.coords}</span>
+                        <a href="${place.mapUrl}" target="_blank" rel="noopener noreferrer" class="${cluster.theme.mapBtnColor} font-bold hover:underline flex items-center gap-1 font-sans">
+                          <span>View on Google Maps</span>
+                          <span>↗</span>
+                        </a>
+                      </div>
+
+                      <!-- Historical Importance -->
+                      <div class="text-xs text-slate-700 ${cluster.theme.historyBg} p-3 rounded-xl leading-relaxed">
+                        <strong class="${cluster.theme.historyHeading} font-heritage block text-[11px] uppercase tracking-wider mb-1">Historical Significance:</strong>
+                        ${place.history}
+                      </div>
+
+                      <!-- Key Facts -->
+                      <div>
+                        <strong class="text-slate-900 text-xs font-bold block mb-1.5">✦ Architectural & Cultural Highlights:</strong>
+                        <ul class="space-y-1 text-xs text-slate-600 pl-1">
+                          ${place.keyFacts.map(fact => `
+                            <li class="flex items-start gap-2">
+                              <span class="${cluster.theme.bulletColor} font-bold">✦</span>
+                              <span>${fact}</span>
+                            </li>
+                          `).join('')}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Footer Info -->
+                    <div class="pt-3 border-t border-slate-200/70 space-y-2 text-xs">
+                      <div class="flex items-start gap-1.5 text-slate-600">
+                        <span class="text-sm">🌤️</span>
+                        <span><strong>Best Time:</strong> ${place.bestTime}</span>
+                      </div>
+                      <div class="flex items-start gap-1.5 text-amber-950 bg-amber-50/80 p-2 rounded-lg border border-amber-200/70 text-[11px]">
+                        <span class="text-sm">💡</span>
+                        <span><strong>Tip:</strong> ${place.insiderTip}</span>
+                      </div>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          `;
+
+          clustersContainer.appendChild(article);
+        }
+      });
+
+      // Toggle Empty State
+      if (totalVisiblePlaces === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+
+      // Update Filter Status
+      filterStatusText.innerHTML = `Showing: <span class="font-bold text-slate-900">${totalVisibleClusters} Regions</span> • <span class="font-bold text-slate-900">${totalVisiblePlaces} Key Sites</span>`;
+    }
+
+    // Event Listeners
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderClusters();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchQuery = '';
+      searchInput.value = '';
+      currentCategory = 'All';
+      filterTabs.forEach(t => {
+        t.className = 'filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0';
+      });
+      const allTab = document.querySelector('.filter-tab[data-cat="All"]');
+      if (allTab) {
+        allTab.className = 'filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold bg-gradient-to-r from-amber-700 to-rose-700 text-white shadow-xs transition-all flex-shrink-0';
+      }
+      renderClusters();
+    });
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.className = 'filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0';
+        });
+        const activeStyle = categoryTabStyles[tab.dataset.cat] || 'bg-amber-700 text-white';
+        tab.className = `filter-tab active px-3.5 py-1.5 rounded-lg text-xs font-bold ${activeStyle} shadow-xs transition-all flex-shrink-0`;
+        currentCategory = tab.dataset.cat;
+        renderClusters();
+      });
+    });
+
+    bookmarkFilterBtn.addEventListener('click', () => {
+      currentCategory = 'Bookmarks';
+      filterTabs.forEach(t => {
+        t.className = 'filter-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex-shrink-0';
+      });
+      renderClusters();
+      showToast('Filtering bookmarked sites', '🔖');
+    });
+
+    // Checklist Event Listeners
+    document.querySelectorAll('.checklist-item').forEach(cb => {
+      cb.addEventListener('change', (e) => {
+        const idx = e.target.dataset.index;
+        checklistState[idx] = e.target.checked;
+        updateChecklistUI();
+      });
+    });
+
+    document.getElementById('reset-checklist-btn').addEventListener('click', () => {
+      checklistState = {};
+      updateChecklistUI();
+      showToast('Checklist reset', '🎒');
+    });
+
+    // Itinerary Pills
+    document.querySelectorAll('.itinerary-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.itinerary-pill').forEach(p => {
+          p.classList.remove('bg-orange-700', 'text-white');
+          p.classList.add('bg-slate-100', 'text-slate-700');
+        });
+        pill.classList.add('bg-orange-700', 'text-white');
+        pill.classList.remove('bg-slate-100', 'text-slate-700');
+        renderItinerary(pill.dataset.days);
+      });
+    });
+
+    // Chime & Modal Controls
+    chimeBtn.addEventListener('click', playUPChime);
+    closeModalBtn.addEventListener('click', closeModal);
+    readingModal.addEventListener('click', (e) => {
+      if (e.target === readingModal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !readingModal.classList.contains('hidden')) {
+        closeModal();
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Initialization
+    renderItinerary('3');
+    updateChecklistUI();
+    updateBookmarkBadge();
+    renderClusters();
+  </script>
+</body>
+</html>
