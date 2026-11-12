@@ -39,6 +39,66 @@
   </div>
 
   <!-- Header -->
+  
+  <!-- Bharat Darshan Cross-State Navigation Strip -->
+  <nav aria-label="Bharat Darshan State Navigation" class="bg-slate-900 text-slate-100 border-b border-slate-800 py-2 px-4 sm:px-6 lg:px-8 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <a href="Index.html" class="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1 rounded-lg transition-colors shadow-2xs">
+          <span>🪷</span>
+          <span>All-India Atlas (Index)</span>
+        </a>
+        <span class="hidden sm:inline text-slate-400">•</span>
+        <span class="hidden sm:inline text-slate-300 font-medium">Bharat Darshan</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <label for="bharat-jump-select" class="text-slate-300 font-semibold hidden md:inline">Switch State / UT:</label>
+        <select id="bharat-jump-select" onchange="if(this.value) window.location.href=this.value;" class="bg-slate-800 border border-slate-700 text-amber-200 text-xs font-semibold rounded-lg px-2.5 py-1 focus:outline-none focus:ring-2 focus:ring-amber-400">
+          <optgroup label="28 States">
+            <option value="Andhra_pradesh.html" >Andhra Pradesh</option>
+<option value="Arunachal_pradesh.html" >Arunachal Pradesh</option>
+<option value="Assam.html" >Assam</option>
+<option value="Bihar.html" >Bihar</option>
+<option value="Chhattisgarh.html" >Chhattisgarh</option>
+<option value="Goa.html" >Goa</option>
+<option value="Gujarat.html" >Gujarat</option>
+<option value="Haryana.html" >Haryana</option>
+<option value="Himachal_pradesh.html" >Himachal Pradesh</option>
+<option value="Jharkhand.html" >Jharkhand</option>
+<option value="Karnataka.html" >Karnataka</option>
+<option value="Kerala.html" >Kerala</option>
+<option value="Madhya_pradesh.html" >Madhya Pradesh</option>
+<option value="Maharashtra.html" >Maharashtra</option>
+<option value="Manipur.html" >Manipur</option>
+<option value="Meghalaya.html" >Meghalaya</option>
+<option value="Mizoram.html" >Mizoram</option>
+<option value="Nagaland.html" >Nagaland</option>
+<option value="Odisha.html" >Odisha</option>
+<option value="Punjab.html" >Punjab</option>
+<option value="Rajasthan.html" selected>Rajasthan</option>
+<option value="Sikkim.html" >Sikkim</option>
+<option value="Tamil_nadu.html" >Tamil Nadu</option>
+<option value="Telangana.html" >Telangana</option>
+<option value="Tripura.html" >Tripura</option>
+<option value="Uttar_pradesh.html" >Uttar Pradesh</option>
+<option value="Uttarakhand.html" >Uttarakhand</option>
+<option value="West_bengal.html" >West Bengal</option>
+          </optgroup>
+          <optgroup label="8 Union Territories">
+            <option value="Andaman_nicobar.html" >Andaman & Nicobar Islands</option>
+<option value="Chandigarh.html" >Chandigarh</option>
+<option value="DNH_daman_and_diu.html" >Dadra & Nagar Haveli and Daman & Diu</option>
+<option value="Delhi_NCT.html" >Delhi (NCT)</option>
+<option value="Jammu_kashmir.html" >Jammu & Kashmir</option>
+<option value="Ladakh.html" >Ladakh</option>
+<option value="Lakshadweep.html" >Lakshadweep</option>
+<option value="Puducherry.html" >Puducherry</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+  </nav>
+
   <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div class="flex items-center gap-3.5">
@@ -526,6 +586,34 @@
   </div>
 
   <!-- Footer -->
+  
+  <!-- Bharat Darshan Inter-State Pager & Regional Links -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 w-full">
+    <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-md space-y-4">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+        <a href="Punjab.html" class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-colors">
+          <span>←</span>
+          <span>Previous: Punjab</span>
+        </a>
+        <a href="Index.html" class="flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-amber-700 text-white text-xs font-bold transition-colors shadow-xs">
+          <span>🪷</span>
+          <span>Back to All-India Atlas</span>
+        </a>
+        <a href="Sikkim.html" class="flex items-center justify-end gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold transition-colors">
+          <span>Next: Sikkim</span>
+          <span>→</span>
+        </a>
+      </div>
+      <div class="pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mr-1">🧭 Nearby & Connected Guides:</span>
+        <a href="Gujarat.html" class="px-3 py-1.5 rounded-xl bg-white hover:bg-amber-50 text-slate-800 border border-slate-200 hover:border-amber-400 text-xs font-semibold transition-all shadow-2xs">Gujarat →</a>
+<a href="Madhya_pradesh.html" class="px-3 py-1.5 rounded-xl bg-white hover:bg-amber-50 text-slate-800 border border-slate-200 hover:border-amber-400 text-xs font-semibold transition-all shadow-2xs">Madhya Pradesh →</a>
+<a href="Uttar_pradesh.html" class="px-3 py-1.5 rounded-xl bg-white hover:bg-amber-50 text-slate-800 border border-slate-200 hover:border-amber-400 text-xs font-semibold transition-all shadow-2xs">Uttar Pradesh →</a>
+<a href="Delhi_NCT.html" class="px-3 py-1.5 rounded-xl bg-white hover:bg-amber-50 text-slate-800 border border-slate-200 hover:border-amber-400 text-xs font-semibold transition-all shadow-2xs">Delhi (NCT) →</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">

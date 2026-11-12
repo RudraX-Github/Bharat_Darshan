@@ -196,7 +196,7 @@
           <label for="link-mode-select" class="text-xs font-bold text-slate-500 uppercase tracking-wider">🔗 Links:</label>
           <select id="link-mode-select" class="bg-indigo-50 border border-indigo-200 text-indigo-950 text-xs font-bold rounded-xl px-2.5 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600">
             <option value="drive">☁️ Google Drive</option>
-            <option value="local">📁 Local Folder</option>
+            <option value="local">🌐 GitHub / Local</option>
           </select>
 
           <button id="reset-all-btn" class="text-xs text-amber-800 hover:text-amber-950 font-bold underline px-2 py-1">Reset</button>
@@ -263,7 +263,7 @@
           <span id="active-filter-label" class="font-medium text-amber-900 ml-1"></span>
         </div>
         <div class="text-slate-400">
-          Switch between <strong class="text-slate-600">☁️ Google Drive</strong> and <strong class="text-slate-600">📁 Local Folder</strong> links above anytime
+          Uses <strong class="text-slate-600">🌐 GitHub / Local</strong> links on GitHub Pages & local folders, or <strong class="text-slate-600">☁️ Google Drive</strong> in preview
         </div>
       </div>
 
@@ -315,7 +315,7 @@
     let showSavedOnly = false;
     let savedNames = [];
     // Default to 'local' only when opened directly from a local file:// folder; use 'drive' in Canvas/web preview
-    let linkMode = window.location.protocol === 'file:' ? 'local' : 'drive';
+    let linkMode = (window.location.hostname.includes('github.io') || window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'local' : 'drive';
 
     // Sequential 36-State & UT Chime Player state
     let chimePlaying = false;
